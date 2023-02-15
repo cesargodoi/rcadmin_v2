@@ -1,0 +1,47 @@
+{% load i18n %}
+
+<div class="form-row align-items-center">
+  <div class="col-sm-2 mb-2">
+    <div class="input-group">
+      <input name="ps_term"
+            class="form-control"
+            id="ps_term"
+            placeholder="{% trans 'person' %}"
+            {% if request.session.search.ps_term %}value={{ request.session.search.ps_term }}{% endif %}>
+      <div class="input-group-append">
+        <div class="input-group-text">
+          <a href="?ps_term=+" class="text-secondary">
+            <i class="fas fa-backspace" data-toggle="tooltip" data-placement="top" title="{% trans "Clean" %}"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-2 mb-2">
+    <select class="form-control" name="ps_aspect">
+      {% for asp in aspect_list %}
+      <option value="{% if asp.0 == '--' %}all{% else %}{{ asp.0 }}{% endif %}"
+              {% if asp.0 == request.session.search.ps_aspect %}selected{% endif %}>
+        {% if asp.0 == "--" %}{% trans 'aspect' %}{% else %}{{ asp.1 }}{% endif %}
+      </option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="col-sm-2 mb-2">
+    <select class="form-control" name="ps_status">
+      {% for stt in status_list %}
+      <option value="{% if stt.0 == '---' %}all{% else %}{{ stt.0 }}{% endif %}"
+              {% if stt.0 == request.session.search.ps_status %}selected{% endif %}>
+        {% if stt.0 == "---" %}{% trans 'status' %}{% else %}{{ stt.1 }}{% endif %}
+      </option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="col-sm mb-2">
+    {% include 'base/elements/checkbox_all.html' %}
+    <button class="btn btn-success" type="submit">
+      <i class="fas fa-search"></i>
+      {% trans 'Search' %}
+    </button> 
+  </div>
+</div>

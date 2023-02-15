@@ -1,0 +1,12 @@
+{% load i18n %} 
+
+{% autoescape off %}
+<h1 style="color:#3366cc">{% trans 'Congratulations' %} {{ name }}!</h1>
+<p>{% trans 'Your registration was successful!' %}</p>
+<p>{% trans 'You will be included in a “Welcome” group and in the next few days, one of the students responsible for this group should contact you (by message, call or email), to give you directions and upcoming activities.' %}</p>
+<p>{% trans 'If this does not occur within 7 days, please contact us via email: '%} 
+  <a href="mailto:rcadmin@rosacruzaurea.org.br">rcadmin@rosacruzaurea.org.br</a> </p>
+<br>
+<p>{% trans 'Best regards' %}e</p>
+<h4>{% trans 'team rc@dmin' %}</h4>
+{% endautoescape %}

@@ -1,0 +1,17 @@
+{% load i18n %}{% autoescape off %}
+Parabéns {{ name }}!
+
+Seu cadastro foi realizado com sucesso!
+Você será incluído em um grupo de “Boas-vindas” e nos próximos dias, 
+um dos alunos responsáveis por este grupo deve entrar em contato com você 
+(por mensagem, ligação ou email), para lhe passar orientações e as próximas 
+atividades.
+
+Caso isso não ocorra num prazo de 7 dias, pedimos o favor, de entrar em
+contato conosco através do email: 
+
+rcadmin@rosacruzaurea.org.br
+
+Atenciosamente
+equipe rc@dmin
+{% endautoescape %}

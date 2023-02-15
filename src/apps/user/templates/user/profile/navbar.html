@@ -1,0 +1,71 @@
+{% load base_extras %}
+{% load i18n %}
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" id="submenu">
+  <a class="navbar-brand mr-0 mr-md-2" 
+     href="{% url 'profile_detail' %}" aria-label="Bootstrap">
+     {% trans "Profile" %}
+  </a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+
+      <!-- <li class="nav-item">
+        <a class="nav-link {% if tab == 'frequencies' %}active{% endif %}" 
+           href="{% url 'user_frequencies' %}">
+           {% trans "Frequencies" %}
+        </a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link {% if tab == 'historic' %}active{% endif %}" 
+           href="{% url 'user_historic' %}">
+           {% trans "Historic" %}
+        </a>
+      </li>
+      {% if request.user.person.center.treasury %}
+        <li class="nav-item">
+          <a class="nav-link {% if tab == 'payments' %}active{% endif %}" 
+            href="{% url 'user_payments' %}">
+            {% trans "Payments" %}
+          </a>
+        </li>
+      {% endif %}
+
+    </ul>
+  </div>
+
+  <!-- actions -->
+  <ul class="navbar-nav ml-md-auto">
+    {% if tab == "detail" %}
+      <li class="nav-item">
+        <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-warning" 
+          href="{% url 'password_change' %}">
+          <i class="fas fa-key"></i> 
+          {% trans "Change" %}
+        </a>
+      </li>
+    {% endif %}
+
+    <!--{% if tab == "frequencies" %}
+      <li class="nav-item">
+        <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-info" 
+          href="{% url 'scan_qrcode_event' %}">
+          <i class="fas fa-qrcode "></i> 
+          {% trans "Scan QR-CODE" %}
+        </a>
+      </li>
+    {% endif %}-->
+
+    {% if tab == "payments" %}
+      <li class="nav-item">
+        <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-primary" 
+          href="{% url 'user_new_order' %}">
+          <i class="fas fa-plus"></i> 
+          {% trans "New order" %}
+        </a>
+      </li>
+    {% endif %}
+
+  </ul>
+
+</header>

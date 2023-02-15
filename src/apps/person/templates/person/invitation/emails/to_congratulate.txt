@@ -1,0 +1,38 @@
+{% load i18n %}{% autoescape off %}
+Parabéns {{ object.name }}!
+
+{% if object.migration %}
+Seu cadastro foi realizado com sucesso e você já foi incluído(a) no sistema de nossa escola, 
+no(a) {{ object.center.name }}. 
+{% else %}
+Seu cadastro foi realizado com sucesso e você já foi incluído(a) no grupo de
+alunos do {{ object.get_aspect_display }} de nossa escola, 
+no(a) {{ object.center.name }}. 
+
+Nos próximos dias a secretaria do núcleo entrará em contato com você
+para lhe passar maiores imformações.
+{% endif %}
+
+No link abaixo você tem acesso à sua página de perfil de aluno onde 
+estão seus dados. É sua responsabilidade mantê-los atualizados.
+
+rcadmin.rosacruzaurea.org.br
+
+{% if not object.migration %}
+Será uma alegria te conhecer pessoalmente!
+{% endif %}
+
+Atenciosamente
+
+Direção da Rosacruz Áurea
+
+-------------------------------------------------------------------------------
+  {{ object.center.name }}
+  {{ object.center.phone_1 }}
+  {{ object.center.email }}
+  
+    {{ object.center.address }}, {{ object.center.number }} - {{ object.center.complement }}
+    {{ object.center.district }} - {{ object.center.city }} - {{ object.center.state }} 
+    {{ object.center.get_country_display }} - {{ object.center.zip_code }}
+-------------------------------------------------------------------------------
+{% endautoescape %}

@@ -1,0 +1,55 @@
+{% load base_extras %}
+{% load i18n %}
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" id="submenu">
+  <a class="navbar-brand mr-0 mr-md-2" 
+     href="#" aria-label="Bootstrap">
+     {% trans 'Member' %}
+  </a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link {% if tab == 'info' %}active{% endif %}" 
+          href="{% url 'mentoring_member_detail' group_pk object.pk %}">
+          {% trans 'Info' %}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if tab == 'frequencies' %}active{% endif %}" 
+          href="{% url 'mentoring_member_frequencies' group_pk object.pk %}">
+          {% trans 'Frequencies' %}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if tab == 'historic' %}active{% endif %}" 
+           href="{% url 'mentoring_member_historic' group_pk object.pk %}">
+           {% trans 'Historic' %}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- actions -->
+  <ul class="navbar-nav ml-md-auto">
+    {% if nav == "detail" and tab == "frequencies" and object.is_active %}
+      <li class="nav-item">
+        <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-primary"
+           href="{% url 'membership_add_frequency' group_pk object.id %}?init=on">
+          <i class="fas fa-plus"></i> 
+          {% trans 'Frequency' %}
+        </a>
+      </li>
+    {% endif %}
+
+    <li class="nav-item">
+      <a class="nav-link pl-2 px-1 mx-1 py-3 my-n2 text-info" 
+         href="{{ goback }}">
+        <i class="fas fa-chevron-left"></i> 
+        {% trans 'Back' %}
+      </a>
+    </li>
+    
+  </ul>
+
+</header>

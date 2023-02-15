@@ -1,0 +1,62 @@
+{% load i18n %}
+
+<h4>{% trans 'Event' %}</h4>
+
+<div class="row border-top border-secondary">
+  <div class="col-sm-2">{{ request.session.frequencies.event.date }}</div>
+  <div class="col-sm-5">
+    <strong>{{ request.session.frequencies.event.name }}</strong>
+  </div>
+  <div class="col-sm-5">
+    <strong>{{ request.session.frequencies.event.center }}</strong>
+  </div>
+</div>
+
+<br>
+<h4>{% trans 'Who participated?' %}</h4>
+
+<form class="form-control-sm" method="POST" id="form">
+  {% csrf_token %}
+  {% for listener in request.session.frequencies.listeners %}
+  <div class="row border-top border-secondary pt-2 pb-2">
+    
+    <div class="col-sm-4 mt-1 mb-1">
+      {% if not listener.frequency %}
+      <input type="hidden" value="{{ listener.person.id }}" name="id-{{ forloop.counter }}">
+      <input type="hidden" value="{{ listener.aspect }}" name="asp-{{ forloop.counter }}">
+      {% endif %}
+      {{ listener.person.name }} 
+      <small class="text-muted">
+        &nbsp;&nbsp;
+        <em>
+          {{ listener.person.center }}
+        </em>
+      </small>
+    </div>
+
+    <div class="col-sm-1 text-right mt-1 mb-1">
+      {% if not listener.frequency %}
+        <input type="checkbox" 
+              class="form-check-input"  
+              value="on" 
+              name="freq-{{ forloop.counter }}">
+      {% else %}
+        <i class="fas fa-check-square mr-2"></i>
+      {% endif %}
+    </div>
+
+    <div class="col-sm-7 mt-1 mb-1">
+      {% if not listener.frequency %}
+        <input type="text" 
+               class="form-control form-control-sm" 
+               value="{{ listener.observations }}"
+               placeholder="observations"
+               name="obs-{{ forloop.counter }}">
+      {% else %}
+        {% if listener.observations %}{{ listener.observations }}  {% endif %}
+      {% endif %}
+    </div>
+
+  </div>
+  {% endfor %}
+</form>

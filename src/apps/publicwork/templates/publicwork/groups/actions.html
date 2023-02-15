@@ -1,0 +1,26 @@
+{% load base_extras %}
+{% load i18n %}
+
+<!-- actions -->
+<div class="text-right mb-2 mt-2">
+  {% if request.session.frequencies.lecture %}
+    <a class="btn btn-primary" 
+        href="#" 
+        onclick="document.getElementById('form').submit();">
+      <i class="fas fa-check"></i> 
+      {% trans 'Register' %}
+    </a>
+  {% endif %}
+
+  {% if nav == 'add_frequencies' or nav == 'add_mentor' or nav == 'add_member' %}
+  <a class="btn btn-light text-info" 
+    href="{% if nav == 'add_frequencies' %}
+            {% url 'group_frequencies' object.pk %}
+          {% else %}
+            {% url 'group_detail' object.pk %}
+          {% endif %}">
+    <i class="fas fa-chevron-left"></i> 
+    {% trans 'Back' %}
+  </a>
+  {% endif %}
+</div>

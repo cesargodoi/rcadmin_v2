@@ -1,0 +1,76 @@
+{% load base_extras %}
+{% load i18n %}
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" id="submenu">
+  <a class="navbar-brand mr-0 mr-md-2" 
+     href="#" aria-label="Bootstrap">
+    {% if nav == 'home' %}{% trans 'Events' %}{% else %}{% trans 'Event' %}{% endif %}
+  </a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+    </ul>
+  </div>
+
+  <!-- actions -->
+  <ul class="navbar-nav ml-md-auto">
+    {% if nav == "home" and not request.user|has_group:"presidium" %}
+      <li class="nav-item">
+        <a 
+          href="#"
+          class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-primary" 
+          onclick="manageData('{% url 'event_create' %}')"
+        >
+          <i class="fas fa-plus"></i> 
+          {% trans 'Event' %}
+        </a>
+      </li>
+    {% endif %}
+
+    {% if nav == "detail" and not request.user|has_group:"presidium" %}
+      <li class="nav-item">
+        <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-primary" 
+           href="{% url 'frequencies_add' object.pk %}">
+          <i class="fas fa-plus"></i>
+          {% trans 'Frequencies' %}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a 
+          href="#"
+          class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-warning" 
+          onclick="manageData('{% url 'event_update' object.id %}')"
+        >
+          <i class="fas fa-edit"></i> 
+          {% trans 'Edit' %}
+        </a>
+      </li>
+      {% if not object_list %}
+        <li class="nav-item">
+          <a 
+            href="#"  
+            onclick="manageData('{% url 'event_delete' object.id %}')"
+            class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-danger" 
+          >
+            <i class="fas fa-trash-alt"></i> 
+            {% trans 'Delete' %}
+          </a>
+        </li>
+      {% endif %}
+    {% endif %}
+
+    <li class="nav-item">
+      <a class="nav-link px-1 mx-1 py-3 my-n2 text-info" 
+          href="{%if nav == 'home' %}
+                  {% url 'home' %}
+                {% else %}
+                  {% url 'event_home' %}
+                {% endif %}">
+        <i class="fas fa-chevron-left"></i> 
+        {% trans 'Back' %}
+      </a>
+    </li>
+    
+  </ul>
+
+</header>

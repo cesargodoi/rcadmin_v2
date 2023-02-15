@@ -1,0 +1,150 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load base_extras %}
+
+{% block content %}
+
+{% if request.user|has_group:'user' and request.user.groups.all|length == 1 %}
+<div class="content-section mb-1">
+{% else %}
+<div 
+  class="content-section mb-1 is-link" 
+  onclick="location.href='{% url 'center_detail' object.pk %}?from=home'"
+>
+{% endif %}
+  <div class="article-metadata">{% trans 'Welcome to' %}</div>
+  <div class="row">
+    <div class="col-lg-2">
+      {% if object.image %}
+        <img 
+          class="rounded-circle article-img" 
+          src="{{ object.image.url }}"
+        >
+      {% else %}
+        <img 
+          class="rounded-circle article-img"
+          src="{% static 'img/default_center.jpg' %}"
+        >
+      {% endif %}
+    </div>
+    
+    <div class="media-body col-lg-10">
+        <h1> {{ object.name }}</h1>
+        {% if object.phone_1 %}
+        <i class="fas fa-phone"></i> {{ object.phone_1 }} &nbsp;&nbsp;
+        {% endif %}
+        {% if object.phone_2 %}
+        <i class="fas fa-phone"></i> {{ object.phone_2 }} &nbsp;&nbsp;
+        {% endif %}
+        {% if object.email %}
+        <i class="fas fa-envelope"></i> {{ object.email }} &nbsp;&nbsp;
+        {% endif %}
+        {% if object.secretary %}
+        <!-- need to create a link to: profile -->
+        <i class="fas fa-user"></i> {{ object.secretary.person.name }}
+        <!-- end link -->
+        {% endif %}
+    </div>
+  </div>
+</div>
+{% if request.user|has_group:'user' and request.user.groups.all|length == 1 %}
+<div class="text-center">
+  <a 
+    class="btn btn-outline-primary btn-lg mt-4"
+    href="{% url 'profile_detail' %}"
+  >
+    <i class="fa-solid fa-id-card"></i>
+    Ir para minha página de perfil
+  </a>
+</div>
+{% endif %}
+
+
+<div class="row-pg-initial">
+  {% if request.user.is_superuser or request.user|has_group:"admin" or request.user|has_group:"office" or request.user|has_group:"office_jr" or request.user|has_group:"treasury" %}
+  <div class="col-lg-3 card-principal-col-lg-3 is-link"
+    onclick="location.href='{% url 'center_home' %}?init=on';">
+      <div class="card h-100 card-principal-backimage ">
+        <img src="{% static 'images/center.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-principal-title">{% trans 'Centers' %}</h5>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% if request.user.is_superuser or request.user|has_group:"admin" or request.user|has_group:"office" or request.user|has_group:"office_jr" %}
+  <div class="col-lg-3 card-principal-col-lg-3 is-link"
+        onclick="location.href='{% url 'person_home' %}?init=on';">
+    <div class="card h-100 card-principal-backimage ">
+      <img src="{% static 'images/persons.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-principal-title">{% trans 'Persons' %}</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 card-principal-col-lg-3 is-link"
+        onclick="location.href='{% url 'event_home' %}?init=on';">
+    <div class="card h-100 card-principal-backimage ">
+      <img src="{% static 'images/events.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-principal-title">{% trans 'Events' %}</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 card-principal-col-lg-3 is-link"
+        onclick="location.href='{% url 'workgroup_home' %}?init=on';">
+    <div class="card h-100 card-principal-backimage ">
+      <img src="{% static 'images/workgroups.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-principal-title">{% trans 'Workgroups' %}</h5>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if request.user.person.center.mentoring %}
+    {% if request.user.is_superuser or request.user|has_group:"mentoring" %}
+    <div class="col-lg-3 card-principal-col-lg-3 is-link"
+          onclick="location.href='{% url 'mentoring_home' %}';">
+      <div class="card h-100 card-principal-backimage ">
+        <img src="{% static 'images/mentoring.png' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-principal-title">{% trans 'Mentoring' %}</h5>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  {% endif %}
+
+  {% if request.user.person.center.publicwork %}
+    {% if request.user.is_superuser or request.user|has_group:"publicwork" or request.user|has_group:"publicwork_jr" %}
+    <div class="col-lg-3 card-principal-col-lg-3 is-link"
+          onclick="location.href='{% url 'publicwork_home' %}';">
+      <div class="card h-100 card-principal-backimage ">
+        <img src="{% static 'images/publicwork.png' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-principal-title">{% trans 'Public Work' %}</h5>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  {% endif %}
+
+  {% if request.user.person.center.treasury %}
+    {% if request.user.is_superuser or request.user|has_group:"treasury" or request.user|has_group:"treasury_jr" %}
+    <div class="col-lg-3 card-principal-col-lg-3 is-link"
+          onclick="location.href='{% url 'treasury_home' %}';">
+      <div class="card h-100 card-principal-backimage ">
+        <img src="{% static 'images/reports.png' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-principal-title" onclick="location.href='{% url 'treasury_home' %}';">{% trans 'Treasury' %}</h5>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  {% endif %}
+
+</div>
+
+{% endblock content %}

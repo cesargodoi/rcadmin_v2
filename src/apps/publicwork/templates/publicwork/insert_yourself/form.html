@@ -1,0 +1,89 @@
+{% extends "user/base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block recaptcha %}
+  <script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}"></script>
+{% endblock recaptcha %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
+
+<section class="head-jady">
+  <img class="logo-rca" src="{% static 'img/RCA-Symbol.png' %}" alt="rca-logo">
+</section>
+<div class="row box-jady">
+  <div class="col-lg-5 alert-jady alert-primary-jady text-justify">
+    <h2 class="text-left">{% trans 'Dear friend' %}</h2>
+    <br>
+    <p>{% trans 'We are very happy to hear that you want to participate in the activities of the Spiritual School of the Golden Rosicrucian!' %}</p>
+    <p>{% trans 'As you are arriving now, some of our students will accompany you in this first moment, through a “Welcome” group, in which you are our guest.' %}</p>
+    <p>{% trans 'In this group, you will meet and participate in the main activities of our students (Templar Services, Conferences and meetings), in order to have a very clear understanding of what it is to be a Golden Rosicrucian student.' %}</p>
+    <p>{% trans 'Participating in this group does not represent any commitment to the School and you can leave it whenever you want.' %}</p>
+    <p>{% trans 'After this period, we hope that you will have more clarity about the path proposed by the School and whether it makes sense to follow it or not.' %}</p>
+    <p>{% trans 'Initially, we need you to provide us with some data to register in our system and confirm that you accept our data usage policy.' %}</p>
+    <br>
+    <p>{% trans 'Please fill in the form below:' %}</p>
+  </div>
+  <div class="col-lg-7 alert-jady alert-secondary-jady">
+    <form class="form-group text-justify" 
+          method="post" 
+          enctype="multipart/form-data"
+          id="form">
+      {% csrf_token %}
+      {{ form.name | as_crispy_field }}
+      <div class="row">
+        <div class="col-lg-6">{{ form.birth | as_crispy_field }}</div>
+        <div class="col-lg-6">{{ form.gender | as_crispy_field }}</div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">{{ form.city | as_crispy_field }}</div>
+        <div class="col-lg-2">{{ form.state | as_crispy_field }}</div>
+        <div class="col-lg-4">{{ form.country | as_crispy_field }}</div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">{{ form.phone | as_crispy_field }}</div>
+        <div class="col-lg-6">{{ form.email | as_crispy_field }}</div>
+      </div>
+      {{ form.image | as_crispy_field }}
+      {{ form.solicited_on | as_crispy_field }}
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="accept" name="accept">
+        <label class="form-check-label" for="accept">
+          {% trans 'I have read and accepted the terms of' %} 
+          <a data-toggle="modal" 
+             data-target="#modal"
+             href="#"> {% trans 'data use policy' %} </a>
+             {% trans 'of Golden Rosicrucian.' %}
+        </label>
+      </div>
+      <!-- reCAPTCHA input -->
+      <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+      
+      <div class="text-right mt-4">
+        <input type="submit" 
+          class="btn btn-primary btn-lg" 
+          value="{% translate 'Register' %}" id="submit-button" disabled>
+        <a class="btn btn-info btn-lg" href="#" onclick="window.history.go(-1); return false;">{% trans 'Go back' %}</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% include "base/data_policy/modal.html" %}
+
+<script type="text/javascript" src="{% static 'js/form.js' %}"></script>
+
+<script>
+  //global grecaptcha
+  grecaptcha.ready(function() {
+    grecaptcha.execute('{{recaptcha_site_key}}', {action: "/contact/"}).then(function(token) {
+      document.getElementById('g-recaptcha-response').value = token;
+    });
+  });
+</script>
+
+{% endblock %}

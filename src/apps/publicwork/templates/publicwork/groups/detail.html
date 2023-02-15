@@ -1,0 +1,54 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+{% if nav == "info" or nav == "frequencies" %}
+  {% include 'publicwork/groups/navbar.html' %}
+{% endif %}
+
+{% if nav == "add_frequencies" or nav == "add_member" or nav == "add_mentor" %}
+  {% include "publicwork/groups/actions.html" %}
+{% endif %}
+
+<article class="media content-section mb-1">
+  <div class="media-body">
+    
+    {% if nav == "info" or nav == "frequencies" %}
+      {% include "publicwork/groups/header.html" %}
+    {% endif %}
+    <br>
+    {% if nav == "info" %}
+      {% include 'publicwork/groups/seekers.html' %}
+    {% elif nav == "frequencies" %}
+      {% include "publicwork/groups/frequencies.html" %}
+    {% elif nav == "add_frequencies" %}
+      {% if not request.session.frequencies.lecture %}
+        {% include "publicwork/groups/select_lecture.html" %}
+      {% else %}
+        {% include "publicwork/groups/who_participated.html" %}
+      {% endif %}
+    {% elif nav == "add_member" %}
+      {% include "publicwork/groups/add_member.html" %}
+    {% elif nav == "add_mentor" %}
+      {% include "publicwork/groups/add_mentor.html" %}
+    {% endif %}
+    
+  </div>
+</article>
+
+  {% include "base/elements/modal_form.html" %}
+
+{% endblock content %}
+
+{% block scripts %}
+  <script>
+    function manageData(url) {
+      htmx.ajax('GET', url, '#formBody')
+    }
+  </script>
+
+  <script src="{% static 'js/modal_form.js' %}" defer></script>
+
+{% endblock scripts %}

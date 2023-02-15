@@ -1,0 +1,9 @@
+{% load i18n %}
+
+<h4>{% trans 'Insert Member' %}</h4>
+<form class="form-control-sm border-top" method="GET">
+  {% include "base/searchs/seeker.html" %}
+</form>
+<br>
+
+{% include 'publicwork/groups/seekers.html' %}

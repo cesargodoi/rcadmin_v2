@@ -1,0 +1,27 @@
+{% load i18n %} 
+
+{% autoescape off %}
+<h1>Saudações {{ name }}!</h1>
+
+<p>Você está recebendo este e-mail porque solicitou o seu ingresso como aluno 
+  na Escola Espiritual da Rosacruz Áurea.</p>
+
+<p>Por favor, clique no link abaixo para confirmar sua inscrição e fornecer 
+  alguns dados complementares.</p>
+
+<h2 style="color:#3366cc"><a href="{{ link }}">link de confirmação</a> <i>[*]</i></h2>
+
+<p>Se você não fez essa solicitação, por favor, desconsidere este e-mail.</p>
+
+<p>Atenciosamente.</p>
+<h4>Equipe rc@dmin</h4>
+<div style="color:#3366cc">
+  <i>[*]</i>
+</div>
+<div style="color:#3366cc">
+  <i> caso não consiga clicar no link, copie uma url abaixo e cole no seu navegador: <br>
+    {{ link }}
+  </i>
+</div>
+<br>
+{% endautoescape %}

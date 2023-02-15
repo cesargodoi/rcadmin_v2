@@ -1,0 +1,80 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+{% include "event/navbar.html" %}
+
+<article class="media content-section">
+  <div class="media-body">
+    <div id="eventHeader">
+      {% include 'event/header.html' %}
+    </div>
+
+    <br>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" 
+          id="pills-frequencies-tab" 
+          data-toggle="pill" 
+          href="#pills-frequencies" 
+          role="tab"
+          aria-controls="pills-frequencies" 
+          aria-selected="true">
+          {% trans 'Frequencies' %}
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+          id="pills-qr-code-tab" 
+          data-toggle="pill" 
+          href="#pills-qr-code" 
+          role="tab"
+          aria-controls="pills-qr-code" 
+          aria-selected="false">
+          {% trans 'QR - Code' %}
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" 
+        id="pills-frequencies" 
+        role="tabpanel"
+        aria-labelledby="pills-frequencies-tab">
+
+        {% include 'event/frequencies.html' %}
+
+      </div>
+      <div class="tab-pane fade" 
+        id="pills-qr-code" 
+        role="tabpanel" 
+        aria-labelledby="pills-qr-code-tab">
+        <div class="text-center">
+          <h4>{% trans 'Scan this QR-Code to sign-in Event' %}</h4>
+          <img 
+            class="img-thumbnail rounded mx-auto d-block mb-4" 
+            src="{{ object.qr_code.url }}">
+          <h4>{{ object.id}}</h4>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+{% include "base/elements/modal_form.html" %}
+
+{% endblock content %}
+
+{% block scripts %}
+  <script>
+    function manageData(url) {
+      htmx.ajax('GET', url, '#formBody')
+    }
+  </script>
+
+  <script src="{% static 'js/modal_form.js' %}" defer></script>
+
+{% endblock scripts %}

@@ -1,0 +1,86 @@
+{% extends "base/base.html" %}
+{% load i18n %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="text-right mb-2 mt-4">
+  <a class="btn btn-light text-info mt-2 mr-3"
+    href="{% url 'orders' %}">
+    <i class="fas fa-chevron-left "></i> 
+    {% trans 'Back' %}
+  </a>
+</div>
+
+<article class="media content-section mb-1">
+  <div class="media-body">
+    <h2 class="border-bottom pb-2 pl-4">
+      {% if to_create %}
+        {% trans 'Create' %}
+      {% else %}
+        {% trans 'Update' %}
+      {% endif %} 
+      {% trans 'Order' %}
+    </h2>
+
+    {% include "treasury/order/elements/person_div.html" %}
+    {% include "treasury/order/elements/payments_div.html" %}
+    {% include "treasury/order/elements/payforms_div.html" %}
+    {% include "treasury/order/elements/others_div.html" %}
+    
+    <div class="alert text-right d-none">
+      <button 
+        class="btn btn-primary" 
+        id="payNow"
+        onclick="document.getElementById('registerForm').submit();"
+      >
+        <i class="fa-solid fa-coins"></i>
+        {% trans 'Pay now' %}
+      </button>
+      <a 
+        type="button" 
+        class="btn btn-secondary" 
+        href="{% url 'orders' %}"
+      >
+        <i class="fa-solid fa-xmark"></i>
+        {% trans 'Cancel' %}
+      </a>
+    </div>
+
+  </div>
+</article>
+
+<div id="orderModal" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div id="modalBody" class="modal-content text-dark">
+      <!-- modal body -->
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script type="text/javascript" src="{% static 'js/treasury_order_create.js' %}" defer></script>
+
+<script>
+  // CSRF request in the headers
+  document.body.addEventListener('htmx:configRequest', (event) => {
+    event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+  })
+
+  // variables that will be used later
+  var modal = null;
+  var divIdEvent = null;
+  var idEvent = null;
+  var idPaytype = null;
+  var idPayformType = null;
+  var divIdBankFlag = null;
+  var divIdCtrlNumber = null;
+  var divIdComplement = null;
+  var divIdVoucherImg = null;
+</script>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+
+{% include "workgroup/mentoring/navbar.html" %}
+
+<article class="media content-section">
+  <div class="media-body">
+
+  {% include "workgroup/mentoring/header.html" %}
+
+  <br>
+  
+  {% if tab == "members" %}
+    {% include "workgroup/mentoring/members.html" %}
+  {% elif tab == "frequencies" %}
+    {% include "workgroup/mentoring/frequencies.html" %}
+  {% endif %}
+
+  </div>
+</article>
+
+{% endblock content %}
+
+{% block scripts %}
+
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
+  </script>
+
+{% endblock scripts %}

@@ -1,0 +1,184 @@
+{% load base_extras %}
+{% load i18n %}
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" id="submenu">
+  <a class="navbar-brand mr-0 mr-md-2" 
+     href="#" aria-label="Bootstrap">
+    {% if nav == 'detail' %}{% trans 'Person' %}{% else %}{% trans 'Persons' %}{% endif %}
+  </a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      {% if nav == 'home' %}
+        <li class="nav-item">
+          <a 
+            class="nav-link {% if nav == 'invitations' %}active{% endif %}" 
+            href="{% url 'invitations' %}"
+          >
+            {% trans 'Invitations' %}
+          </a>
+        </li>
+        {% if not request.user|has_group:"presidium" %}
+          <li class="nav-item dropdown">
+            <a class="nav-item nav-link dropdown-toggle mr-md-2" 
+              href="#" 
+              id="person-tools" 
+              data-toggle="dropdown" 
+              aria-haspopup="true" 
+              aria-expanded="false">
+              {% trans 'Tools' %}
+            </a>
+            <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="person-tools">
+              <a class="dropdown-item" href="{% url 'import_from_seekers' %}">{% trans 'Import from Seekers' %}</a>
+              <!-- <div class="dropdown-divider"></div> -->
+            </div>
+          </li>
+        {% endif %}
+        {% include 'person/elements/reports_menu.html' %}
+      {% endif %}
+      
+      {% if nav == 'detail' %}
+        <li class="nav-item">
+          <a class="nav-link {% if tab == 'info' %}active{% endif %}" 
+             href="{% url 'person_detail' object.id %}">
+             {% trans 'Info' %}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if tab == 'historic' %}active{% endif %}" 
+             href="{% url 'person_historic' object.id %}">
+             {% trans 'Historic' %}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if tab == 'frequencies' %}active{% endif %}" 
+             href="{% url 'frequency_ps_list' object.id %}">
+             {% trans 'Frequencies' %}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if tab == 'membership' %}active{% endif %}" 
+             href="{% url 'membership_ps_list' object.id %}">
+             {% trans 'Membership' %}
+          </a>
+        </li>
+
+      {% endif %}
+
+    </ul>
+  </div>
+
+  <!-- actions -->
+  <ul class="navbar-nav ml-md-auto">
+    {% if nav == "invitations" and not request.user|has_group:"presidium" %}
+      <li class="nav-item">
+        <a 
+          href="#"
+          class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-primary" 
+          onclick="manageData('{% url 'invite_person' %}')"
+        >
+          <i class="fas fa-plus"></i>
+          {% trans 'Invite person' %}
+        </a>
+      </li>
+    {% endif %}
+
+    {% if nav == "home" and request.user.is_superuser %}
+      <li class="nav-item">
+        <a 
+          href="#"
+          class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-primary" 
+          onclick="manageData('{% url 'person_create' %}')"
+        >
+          <i class="fas fa-plus"></i>
+          {% trans 'Person' %}
+        </a>
+      </li>
+    {% endif %}
+
+    {% if nav == "detail" and not request.user|has_group:"presidium" %}
+      {% if tab == "info" %}
+        <li class="nav-item">
+          <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-success" 
+            href="{% url 'person_badge' object.id %}"
+            target="blank">
+            <i class="fas fa-address-card"></i> 
+            {% trans 'Badge' %}
+          </a>
+        </li>
+        {% if object.user.is_active %}
+          <li class="nav-item">
+            <a 
+              href="#"
+              class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-danger" 
+              onclick="manageData('{% url 'person_delete' object.id %}')"
+            >
+              <i class="fas fa-trash-alt"></i> 
+              {% trans 'Delete' %}
+            </a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a
+              href="#"
+              class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-success" 
+              onclick="manageData('{% url 'person_reinsert' object.id %}')"
+            >
+              <i class="fas fa-sign-in-alt"></i> 
+              {% trans 'Reinsert' %}
+            </a>
+          </li>
+        {% endif %}
+      {% endif %}
+
+      {% if object.is_active %}
+        {% if tab == "historic" %}
+          <li class="nav-item">
+            <a 
+              href="#"
+              class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-primary" 
+              onclick="manageData('{% url 'historic_create' object.id %}')"
+            >
+              <i class="fas fa-plus"></i> 
+              {% trans 'Historic' %}
+            </a>
+          </li>
+        {% endif %}
+
+        {% if tab == "frequencies" %}
+          <li class="nav-item">
+            <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-primary" 
+               href="{% url 'frequency_ps_insert' object.id %}?init=on">
+              <i class="fas fa-plus"></i> 
+              {% trans 'Frequency' %}
+            </a>
+          </li>
+        {% endif %}
+
+        {% if tab == "membership" %}
+          <li class="nav-item">
+            <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-primary" 
+               href="{% url 'membership_ps_create' object.id %}?init=on">
+              <i class="fas fa-plus"></i> 
+              {% trans 'Membership' %}
+            </a>
+          </li>
+        {% endif %}
+      {% endif %}
+
+    {% endif %}
+
+    <li class="nav-item">
+      <a class="nav-link px-1 mx-1 py-3 my-n2 text-info" 
+          href="{% if nav == 'home' %}
+                  {% url 'home' %}
+                {% else %}
+                  {% url 'person_home' %}
+                {% endif %}">
+        <i class="fas fa-chevron-left"></i> 
+        {% trans 'Back' %}
+      </a>
+    </li>
+  </ul>
+
+</header>

@@ -1,0 +1,39 @@
+{% load i18n %}
+
+<!-- Modal -->
+{% load crispy_forms_tags %}
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form class="form-control-sm border-top" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="modal-header">
+          <h5 class="modal-title text-secondary" id="modalLabel">{% trans 'Select a .csv file to import' %}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          {{ form|crispy }}
+          <div class="form-group">
+            <label for="fields">Colunas</label>
+            <input type="text" class="form-control" name="columns" id="columns" aria-describedby="textHelp">
+            <small id="textHelp" class="form-text text-muted">Exemplo: <em>email, birth, A1</em> ...</small>
+          </div>
+          <div class="form-group">
+            <label for="fields">Colunas de Datas</label>
+            <input type="text" class="form-control" name="dates" id="dates" aria-describedby="textHelp">
+            <small id="textHelp" class="form-text text-muted">exemplo: <em>birth, A1</em> ...</small>
+          </div>
+          <div class="form-group">
+            <input type="file" name="import_file" id="import_file" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">{% trans 'Close' %}</button>
+          <button class="btn btn btn-success ml-2" type="submit"><i class="fas fa-chart-bar"></i> {% trans 'Import' %}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

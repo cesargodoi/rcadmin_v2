@@ -1,0 +1,55 @@
+{% load base_extras %}
+{% load i18n %}
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" id="submenu">
+  <a class="navbar-brand mr-0 mr-md-2" 
+     href="#" aria-label="Bootstrap">
+    {% if nav == 'home' %}{% trans 'Mentoring' %}{% else %}{% trans 'Group' %}{% endif %}
+  </a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      {% if nav == "detail" %}
+        <li class="nav-item">
+          <a class="nav-link {% if tab == 'members' %}active{% endif %}" 
+            href="{% url 'mentoring_group_detail' object.pk %}">
+            {% trans 'Members' %}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if tab == 'frequencies' or tab == 'add_frequencies' %}active{% endif %}" 
+            href="{% url 'mentoring_group_frequencies' object.pk %}">
+            {% trans 'Frequencies' %}
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+
+  <!-- actions -->
+  <ul class="navbar-nav ml-md-auto">
+    {% if nav == "detail" %}
+      {% if not request.session.frequencies.event and tab == "frequencies" %}
+        <a class="nav-link pl-2 px-1 mx-1 py-3 my-n2 text-primary" 
+           href="{% url 'mentoring_add_frequencies' object.id %}?init=on">
+          <i class="fas fa-calendar-plus"></i>
+          {% trans 'Frequencies' %}
+        </a>
+      {% endif %}
+    {% endif %}
+
+    <li class="nav-item">
+      <a class="nav-link pl-2 px-1 mx-1 py-3 my-n2 text-info" 
+         href="{% if nav == 'home' %}
+                 {% url 'home' %}
+               {% elif nav == 'detail' %}
+                 {{ goback }}?init=on
+               {% endif %}">
+        <i class="fas fa-chevron-left"></i> 
+        {% trans 'Back' %}
+      </a>
+    </li>
+    
+  </ul>
+
+</header>

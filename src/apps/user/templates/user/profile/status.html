@@ -1,0 +1,11 @@
+<span class="{% if object.person.status == 'LIC' %}
+               text-success
+             {% elif object.person.status == 'DIS' %}
+               text-warning
+             {% elif object.person.status == 'REM' %}
+               text-danger
+             {% elif object.person.status == 'DEA' %}
+               text-secondary
+             {% endif %}">
+  {{ object.person.get_status_display }}
+</span>

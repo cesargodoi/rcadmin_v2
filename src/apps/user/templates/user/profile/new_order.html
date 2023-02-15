@@ -1,0 +1,60 @@
+{% extends "base/base.html" %}
+{% load i18n %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="text-right mb-2 mt-4">
+  <a type="button" 
+    class="btn btn-light text-info mr-3"
+    href="{% url 'user_payments' %}">
+    <i class="fas fa-chevron-left "></i> 
+    {% trans 'Back' %}
+  </a>
+</div>
+
+<article class="media content-section">
+  <div class="media-body">
+    <h2 class="border-bottom pb-2 pl-4">{% trans 'New Order' %}</h2>
+
+    {% include "user/profile/elements/payments_div.html" %}
+    {% include "user/profile/elements/payform_div.html" %}
+    {% include "user/profile/elements/controllers_div.html" %}
+    
+  </div>
+</article>
+
+
+<div id="userOrderModal" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div id="modalBody" class="modal-content text-dark">
+      <!-- modal body -->
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script type="text/javascript" src="{% static 'js/profile_order_create.js' %}" defer></script>
+
+<script>
+  // CSRF request in the headers
+  document.body.addEventListener('htmx:configRequest', (event) => {
+    event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+  })
+
+  // variables that will be used later
+  var modal = null;
+  var divIdEvent = null;
+  var idEvent = null;
+  var idPaytype = null;
+  var idPayformType = null;
+  var divIdBankFlag = null;
+  var divIdCtrlNumber = null;
+  var divIdVoucherImg = null;
+</script>
+
+{% endblock %}

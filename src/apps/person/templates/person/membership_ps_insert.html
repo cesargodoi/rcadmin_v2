@@ -1,0 +1,40 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="text-right mb-3">
+  <a class="btn btn-light text-info mt-2 mr-3"
+    href="{% url 'membership_ps_list' person_id %}">
+    <i class="fas fa-chevron-left"></i> 
+    {% trans 'Back' %}
+  </a>
+</div>
+
+<article class="media content-section">
+  <div class="media-body">
+    <h4>{% trans 'Insert Membership' %}</h4>
+    <form class="form-control-sm border-top" method="GET">
+      {% include "base/searchs/workgroup.html" %}
+    </form>
+    <br>
+    {% include 'person/workgroups.html' %}
+  </div>
+</article>
+
+{% include "base/elements/modal_form.html" %}
+
+{% endblock content %}
+
+{% block scripts %}
+  <script>
+    function manageData(url) {
+      htmx.ajax('GET', url, '#formBody')
+    }
+  </script>
+
+  <script src="{% static 'js/modal_form.js' %}" defer></script>
+
+{% endblock scripts %}

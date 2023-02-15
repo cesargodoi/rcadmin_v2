@@ -1,0 +1,29 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block content %}
+
+  {% include "person/navbar.html" %}
+
+  {% if nav == "home" %}
+    {% include "person/person_home.html" %}
+  {% elif nav == "invitations" %}
+    {% include "person/invitation/invitation_home.html" %}
+  {% endif %}
+  
+  <br>
+
+  {% include "base/elements/modal_form.html" %}
+
+{% endblock content %}
+
+{% block scripts %}
+  <script>
+    function manageData(url) {
+      htmx.ajax('GET', url, '#formBody')
+    }
+  </script>
+
+  <script src="{% static 'js/modal_form.js' %}" defer></script>
+
+{% endblock scripts %}

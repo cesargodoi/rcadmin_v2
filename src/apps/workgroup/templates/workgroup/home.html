@@ -1,0 +1,33 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block content %}
+
+{% include "workgroup/navbar.html" %}
+
+<article class="media content-section mb-1">
+  <div class="media-body">
+    <form class="form-control-sm mt-1" method="GET">
+      {% include "base/searchs/workgroup.html" %}
+    </form>
+    <br>
+    <div id="workgroupList">
+      {% include 'workgroup/workgroups.html' %}
+    </div>
+  </div>
+</article>
+
+{% include "base/elements/modal_form.html" %}
+
+{% endblock content %}
+
+{% block scripts %}
+  <script>
+    function manageData(url) {
+      htmx.ajax('GET', url, '#formBody')
+    }
+  </script>
+
+  <script src="{% static 'js/modal_form.js' %}" defer></script>
+
+{% endblock scripts %}

@@ -1,0 +1,39 @@
+# pastas
+.vscode/
+.idea/
+.DS_Store/
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# images/
+venv/
+__pycache__/
+# migrations/
+jupyter/
+
+# arquivos
+*.pyc
+*.sqlite3
+.env
+*.ipynb
+.DS_Store
+
+geckodriver.log
+
+# Ignore dynaconf secret files /
+.secrets.*
+settings.yaml
+
+# Other files and folders
+.coverage
+pyproject.toml
+poetry.lock
+center_pics/
+center_pix_pics/
+event_qr_codes/
+profile_pics/
+seeker_pics/
+voucher_pics/
+imports/
+exports/

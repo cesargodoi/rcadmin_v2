@@ -1,0 +1,8 @@
+{% load i18n %}
+
+<h4>{% trans 'Select a lecture' %}</h4>
+<form class="form-control-sm border-top" method="GET">
+  {% include "base/searchs/lecture.html" %}
+</form>
+<br>
+{% include 'publicwork/groups/lectures.html' %}

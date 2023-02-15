@@ -1,0 +1,31 @@
+{% extends "base/base.html" %}
+{% load i18n %}
+
+{% block content %}
+
+{% include "treasury/navbar.html" %}
+
+<article class="media content-section mb-1">
+  <div class="media-body">
+    <h2>{% trans 'Cash Balance' %}</h2>
+    <form class="form-control-sm border-top" method="GET">
+      {% csrf_token %}
+      {% include "treasury/elements/search_dates.html" %}
+    </form>
+  </div>
+</article>
+
+<div class="row mt-2">
+  <div class="col-lg-4">
+    {% include "treasury/elements/payments_summary.html" %}
+  </div>
+  <div class="col-lg-8">
+    {% for object in object_list %}
+    {% include "treasury/elements/payform_by_type.html" %}
+    {% endfor %}
+
+    <div id="showModal"></div>
+  </div>
+</div>
+
+{% endblock content %}

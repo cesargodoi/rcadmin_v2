@@ -1,0 +1,31 @@
+{% extends "base/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+  {% include search %}
+  {% include "base/reports/navbar.html" %}
+  {% include "base/reports/header.html" %}
+
+  {% if report_data %}
+    <div class="pandas-table">
+      {{ report_data | safe }}
+    </div>
+  {% else %}
+    <div class="alert alert-info" role="alert">
+      <h4 class="alert-heading">{% trans 'define the reporting terms' %}</h4>
+    </div>
+  {% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function(){
+      var reportData = '{{ report_data }}';
+      if (!reportData) {
+        $('#modal').modal('show');
+      }
+    });
+  </script>
+{% endblock %}

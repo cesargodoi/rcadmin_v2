@@ -1,0 +1,15 @@
+{% load i18n %}{% autoescape off %}
+Saudações {{ name }}!
+
+Você está recebendo este e-mail porque solicitou o seu ingresso como aluno na 
+Escola Espiritual da Rosacruz Áurea.
+
+Por favor, clique no link abaixo para confirmar sua inscrição e fornecer 
+alguns dados complementares.
+{{ link }}
+
+Se você não fez essa solicitação, por favor, desconsidere este e-mail.
+
+Atenciosamente.
+equipe rc@dmin
+{% endautoescape %}

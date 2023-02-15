@@ -1,0 +1,111 @@
+{% load base_extras %}
+{% load i18n %}
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" id="submenu">
+  <a class="navbar-brand mr-0 mr-md-2" 
+     href="#" aria-label="Bootstrap">
+     {% trans 'Seeker' %}
+  </a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link {% if tab == 'info' %}active{% endif %}" 
+           href="{% url 'seeker_detail' object.pk %}">
+           {% trans 'Info' %}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if tab == 'frequencies' %}active{% endif %}" 
+           href="{% url 'seeker_frequencies' object.pk %}">
+           {% trans 'Frequencies' %}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if tab == 'historic' %}active{% endif %}" 
+           href="{% url 'seeker_historic' object.pk %}">
+           {% trans 'Historic' %}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- actions -->
+  <ul class="navbar-nav ml-md-auto">
+
+    {% if tab == "info" and not request.user|has_group:"presidium" %}
+      <li class="nav-item">
+        <a 
+          href="#"
+          class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-warning" 
+          onclick="manageData('{% url 'seeker_update' object.id %}')"
+        >
+          <i class="fas fa-edit"></i>
+          {% trans 'Edit' %}  
+        </a>
+      </li>
+      {% if not request.session.pwg %}
+        {% if object.is_active %}
+          <li class="nav-item">
+            <a 
+              href="#"
+              class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-danger" 
+              onclick="manageData('{% url 'seeker_delete' object.id %}')"
+            >
+              <i class="fas fa-trash-alt"></i>
+              {% trans 'Delete' %}
+            </a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a 
+              href="#"
+              class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-success" 
+              onclick="manageData('{% url 'seeker_reinsert' object.id %}')"
+            >
+              <i class="fas fa-sign-in-alt"></i>
+              {% trans 'Reinsert' %}
+            </a>
+          </li>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+
+    {% if tab == "frequencies" and not request.user|has_group:"presidium" %}
+      <li class="nav-item">
+        <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-primary" 
+          href="{% url 'add_frequency' object.id %}?init=on">
+          <i class="fas fa-plus"></i> 
+          {% trans 'Frequency' %}
+        </a>
+      </li>
+    {% endif %}
+
+    {% if tab == "historic" and not request.user|has_group:"presidium" %}
+      <li class="nav-item">
+        <a 
+          href="#"
+          class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-primary" 
+          onclick="manageData('{% url 'create_historic' object.id %}')"
+        >
+          <i class="fas fa-plus"></i> 
+          {% trans 'Historic' %}
+        </a>
+      </li>
+    {% endif %}
+
+    <li class="nav-item">
+      <a class="nav-link px-1 mx-1 py-3 my-n2 text-info" 
+          href="{% if request.session.pwg %}
+                  {% url 'group_detail' request.session.pwg %}
+                {% else %}
+                  {% url 'seeker_home' %}
+                {% endif %}">
+        <i class="fas fa-chevron-left"></i> 
+        {% trans 'Back' %}
+      </a>
+    </li>
+
+  </ul>
+
+</header>
