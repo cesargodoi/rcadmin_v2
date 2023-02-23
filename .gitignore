@@ -28,6 +28,7 @@ settings.yaml
 # Other files and folders
 .coverage
 pyproject.toml
+poetry.toml
 poetry.lock
 center_pics/
 center_pix_pics/

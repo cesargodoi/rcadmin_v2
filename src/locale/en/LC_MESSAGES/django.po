@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-06 19:17-0300\n"
+"POT-Creation-Date: 2023-02-23 16:24-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,1187 +18,1242 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: base/forms.py:10 base/templates/base/import_people.html:50
-#: center/templates/center/navbar.html:5 center/templates/center/navbar.html:23
+#: src/apps/base/forms.py:10 src/apps/base/templates/base/import_people.html:50
+#: src/apps/center/templates/center/navbar.html:5
+#: src/apps/center/templates/center/navbar.html:23
 msgid "Center"
 msgstr ""
 
-#: base/templates/base/404.html:18
+#: src/apps/base/templates/base/404.html:18
 msgid "Oops!"
 msgstr ""
 
-#: base/templates/base/404.html:19
+#: src/apps/base/templates/base/404.html:19
 msgid "I think we lost this page."
 msgstr ""
 
-#: base/templates/base/404.html:20
+#: src/apps/base/templates/base/404.html:20
 msgid "But, we can still help you..."
 msgstr ""
 
-#: base/templates/base/404.html:22
+#: src/apps/base/templates/base/404.html:22
 msgid "Click"
 msgstr ""
 
-#: base/templates/base/404.html:22
+#: src/apps/base/templates/base/404.html:22
 msgid "here"
 msgstr ""
 
-#: base/templates/base/404.html:22
+#: src/apps/base/templates/base/404.html:22
 msgid "to return"
 msgstr ""
 
-#: base/templates/base/404.html:23
+#: src/apps/base/templates/base/404.html:23
 msgid "or contact our support"
 msgstr ""
 
-#: base/templates/base/500.html:18
+#: src/apps/base/templates/base/500.html:18
 msgid "Uh!"
 msgstr ""
 
-#: base/templates/base/500.html:19
+#: src/apps/base/templates/base/500.html:19
 msgid "Internal error."
 msgstr ""
 
-#: base/templates/base/500.html:20
+#: src/apps/base/templates/base/500.html:20
 msgid "Please, try again later..."
 msgstr ""
 
-#: base/templates/base/500.html:22
+#: src/apps/base/templates/base/500.html:22
 msgid "or contact our support:"
 msgstr ""
 
-#: base/templates/base/action_not_allowed.html:8
+#: src/apps/base/templates/base/action_not_allowed.html:8
 msgid "Action not allowed!"
 msgstr ""
 
-#: base/templates/base/action_not_allowed.html:11
-#: base/templates/base/import_fields_to_persons.html:43
-#: base/templates/base/reports/navbar.html:33
-#: person/templates/person/elements/confirm_to_import.html:23
-#: person/templates/person/invitation/forms/data_registration.html:148
-#: publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:23
-#: publicwork/templates/publicwork/groups/confirm_remove_member.html:23
-#: publicwork/templates/publicwork/insert_yourself/form.html:70
-#: treasury/templates/treasury/elements/treasury_navbar.html:53
-#: user/templates/user/auth/password_change_done.html:13
-#: user/templates/user/profile/confirm_del.html:20
+#: src/apps/base/templates/base/action_not_allowed.html:11
+#: src/apps/base/templates/base/import_fields_to_persons.html:43
+#: src/apps/base/templates/base/reports/navbar.html:37
+#: src/apps/person/templates/person/elements/confirm_to_import.html:23
+#: src/apps/person/templates/person/invitation/forms/data_registration.html:152
+#: src/apps/publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:23
+#: src/apps/publicwork/templates/publicwork/groups/confirm_remove_member.html:23
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form.html:70
+#: src/apps/treasury/templates/treasury/elements/treasury_navbar.html:53
+#: src/apps/user/templates/user/auth/password_change_done.html:13
+#: src/apps/user/templates/user/profile/confirm_del.html:20
 msgid "Go back"
 msgstr ""
 
-#: base/templates/base/confirm_delete.html:8
+#: src/apps/base/templates/base/confirm_delete.html:8
 msgid "Atention!"
 msgstr ""
 
-#: base/templates/base/confirm_delete.html:9
+#: src/apps/base/templates/base/confirm_delete.html:9
 msgid "Are you sure you want to delete"
 msgstr ""
 
-#: base/templates/base/confirm_delete.html:18
-#: center/templates/center/confirm/delete.html:37
-#: center/templates/center/confirm/delete_hx.html:37
-#: center/templates/center/confirm/reinsert.html:36
-#: center/templates/center/forms/add_responsible.html:40
-#: center/templates/center/forms/create_center.html:67
-#: center/templates/center/forms/update_image.html:42
-#: center/templates/center/forms/update_info.html:94
-#: center/templates/center/forms/update_others.html:43
-#: event/templates/event/confirm/delete.html:47
-#: event/templates/event/forms/event.html:71
-#: person/templates/person/confirm/delete.html:42
-#: person/templates/person/confirm/delete.html:47
-#: person/templates/person/confirm/insert.html:36
-#: person/templates/person/confirm/reinsert.html:36
-#: person/templates/person/elements/confirm_to_delete_freq.html:19
-#: person/templates/person/elements/confirm_to_import.html:22
-#: person/templates/person/elements/confirm_to_reinsert_person.html:18
-#: person/templates/person/forms/create_person.html:67
-#: person/templates/person/forms/historic.html:50
-#: person/templates/person/forms/membership_update.html:40
-#: person/templates/person/forms/update_image.html:44
-#: person/templates/person/forms/update_profile.html:42
-#: person/templates/person/invitation/confirm/delete.html:34
-#: person/templates/person/invitation/confirm/resend_invitation.html:36
-#: person/templates/person/invitation/forms/invite_pupil.html:55
-#: publicwork/templates/publicwork/confirm/delete.html:42
-#: publicwork/templates/publicwork/confirm/delete.html:47
-#: publicwork/templates/publicwork/confirm/insert.html:36
-#: publicwork/templates/publicwork/confirm/reinsert.html:36
-#: publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:19
-#: publicwork/templates/publicwork/groups/confirm_remove_member.html:19
-#: publicwork/templates/publicwork/groups/forms/group.html:45
-#: publicwork/templates/publicwork/lecture/forms/lecture.html:68
-#: publicwork/templates/publicwork/listener/confirm/insert.html:73
-#: publicwork/templates/publicwork/listener/forms/listener.html:65
-#: publicwork/templates/publicwork/seeker/confirm/delete.html:33
-#: publicwork/templates/publicwork/seeker/confirm_to_reinsert.html:18
-#: publicwork/templates/publicwork/seeker/forms/frequency.html:74
-#: publicwork/templates/publicwork/seeker/forms/historic.html:64
-#: publicwork/templates/publicwork/seeker/forms/seeker.html:91
-#: treasury/templates/treasury/elements/confirm_delete.html:25
-#: user/templates/user/forms/updt_image.html:44
-#: user/templates/user/forms/updt_profile.html:42
-#: user/templates/user/profile/confirm_del.html:16
-#: workgroup/templates/workgroup/confirm/delete.html:42
-#: workgroup/templates/workgroup/confirm/delete.html:47
-#: workgroup/templates/workgroup/confirm/insert.html:36
-#: workgroup/templates/workgroup/elements/confirm_add_frequency.html:29
-#: workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:32
-#: workgroup/templates/workgroup/elements/confirm_to_insert_membership.html:19
-#: workgroup/templates/workgroup/forms/member_frequency.html:78
-#: workgroup/templates/workgroup/forms/membership_update.html:51
-#: workgroup/templates/workgroup/forms/workgroup.html:54
+#: src/apps/base/templates/base/confirm_delete.html:18
+#: src/apps/center/templates/center/confirm/delete.html:37
+#: src/apps/center/templates/center/confirm/delete_hx.html:37
+#: src/apps/center/templates/center/confirm/reinsert.html:36
+#: src/apps/center/templates/center/forms/add_responsible.html:40
+#: src/apps/center/templates/center/forms/create_center.html:67
+#: src/apps/center/templates/center/forms/update_image.html:42
+#: src/apps/center/templates/center/forms/update_info.html:94
+#: src/apps/center/templates/center/forms/update_others.html:43
+#: src/apps/event/templates/event/confirm/delete.html:47
+#: src/apps/event/templates/event/forms/event.html:71
+#: src/apps/person/templates/person/confirm/delete.html:42
+#: src/apps/person/templates/person/confirm/delete.html:47
+#: src/apps/person/templates/person/confirm/insert.html:36
+#: src/apps/person/templates/person/confirm/reinsert.html:36
+#: src/apps/person/templates/person/elements/confirm_to_delete_freq.html:19
+#: src/apps/person/templates/person/elements/confirm_to_import.html:22
+#: src/apps/person/templates/person/elements/confirm_to_reinsert_person.html:18
+#: src/apps/person/templates/person/forms/create_person.html:67
+#: src/apps/person/templates/person/forms/historic.html:50
+#: src/apps/person/templates/person/forms/membership_update.html:40
+#: src/apps/person/templates/person/forms/update_image.html:44
+#: src/apps/person/templates/person/forms/update_profile.html:42
+#: src/apps/person/templates/person/invitation/confirm/delete.html:34
+#: src/apps/person/templates/person/invitation/confirm/resend_invitation.html:36
+#: src/apps/person/templates/person/invitation/forms/invite_pupil.html:55
+#: src/apps/publicwork/templates/publicwork/confirm/delete.html:42
+#: src/apps/publicwork/templates/publicwork/confirm/delete.html:47
+#: src/apps/publicwork/templates/publicwork/confirm/insert.html:36
+#: src/apps/publicwork/templates/publicwork/confirm/reinsert.html:36
+#: src/apps/publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:19
+#: src/apps/publicwork/templates/publicwork/groups/confirm_remove_member.html:19
+#: src/apps/publicwork/templates/publicwork/groups/forms/group.html:45
+#: src/apps/publicwork/templates/publicwork/lecture/forms/lecture.html:68
+#: src/apps/publicwork/templates/publicwork/listener/confirm/insert.html:73
+#: src/apps/publicwork/templates/publicwork/listener/forms/listener.html:65
+#: src/apps/publicwork/templates/publicwork/seeker/confirm/delete.html:33
+#: src/apps/publicwork/templates/publicwork/seeker/confirm_to_reinsert.html:18
+#: src/apps/publicwork/templates/publicwork/seeker/forms/frequency.html:74
+#: src/apps/publicwork/templates/publicwork/seeker/forms/historic.html:64
+#: src/apps/publicwork/templates/publicwork/seeker/forms/seeker.html:91
+#: src/apps/treasury/templates/treasury/elements/confirm_delete.html:25
+#: src/apps/user/templates/user/forms/updt_image.html:44
+#: src/apps/user/templates/user/forms/updt_profile.html:42
+#: src/apps/user/templates/user/profile/confirm_del.html:16
+#: src/apps/workgroup/templates/workgroup/confirm/delete.html:42
+#: src/apps/workgroup/templates/workgroup/confirm/delete.html:47
+#: src/apps/workgroup/templates/workgroup/confirm/insert.html:36
+#: src/apps/workgroup/templates/workgroup/elements/confirm_add_frequency.html:29
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:32
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_insert_membership.html:19
+#: src/apps/workgroup/templates/workgroup/forms/member_frequency.html:78
+#: src/apps/workgroup/templates/workgroup/forms/membership_update.html:51
+#: src/apps/workgroup/templates/workgroup/forms/workgroup.html:54
 msgid "Confirm"
 msgstr ""
 
-#: base/templates/base/confirm_delete.html:22 base/templates/base/form.html:17
-#: base/templates/base/import_people.html:38
-#: base/templates/base/module_not_avaiable.html:16
-#: center/templates/center/elements/actions.html:9
-#: center/templates/center/navbar.html:64
-#: event/templates/event/activity/navbar.html:29
-#: event/templates/event/elements/frequencies-add.html:18
-#: event/templates/event/navbar.html:70
-#: person/templates/person/elements/confirm_to_delete_freq.html:23
-#: person/templates/person/elements/confirm_to_reinsert_person.html:22
-#: person/templates/person/forms/historic-ant.html:17
-#: person/templates/person/forms/membership.html:17
-#: person/templates/person/frequency_insert.html:12
-#: person/templates/person/membership_ps_insert.html:12
-#: person/templates/person/navbar.html:179
-#: publicwork/templates/publicwork/groups/actions.html:23
-#: publicwork/templates/publicwork/groups/navbar.html:106
-#: publicwork/templates/publicwork/lecture/navbar.html:54
-#: publicwork/templates/publicwork/listener/add.html:13
-#: publicwork/templates/publicwork/navbar.html:91
-#: publicwork/templates/publicwork/seeker/add_or_change.html:19
-#: publicwork/templates/publicwork/seeker/confirm_to_reinsert.html:22
-#: publicwork/templates/publicwork/seeker/navbar.html:105
-#: treasury/templates/treasury/bankflag/navbar.html:28
-#: treasury/templates/treasury/elements/confirm_delete.html:30
-#: treasury/templates/treasury/form_of_payment/navbar.html:28
-#: treasury/templates/treasury/navbar.html:60
-#: treasury/templates/treasury/order/create.html:12
-#: treasury/templates/treasury/payment/navbar.html:28
-#: treasury/templates/treasury/paytype/navbar.html:28
-#: user/templates/user/auth/password_change_form.html:17
-#: user/templates/user/profile/elements/add_payment.html:18
-#: user/templates/user/profile/new_order.html:13
-#: user/templates/user/profile/scan_qrcode_event.html:10
-#: workgroup/templates/workgroup/elements/confirm_add_frequency.html:33
-#: workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:36
-#: workgroup/templates/workgroup/elements/confirm_to_insert_membership.html:24
-#: workgroup/templates/workgroup/member/add_frequency.html:13
-#: workgroup/templates/workgroup/member/navbar.html:49
-#: workgroup/templates/workgroup/member/update_frequency.html:18
-#: workgroup/templates/workgroup/membership_insert.html:13
-#: workgroup/templates/workgroup/mentoring/add_frequencies.html:18
-#: workgroup/templates/workgroup/mentoring/navbar.html:49
-#: workgroup/templates/workgroup/navbar.html:68
+#: src/apps/base/templates/base/confirm_delete.html:22
+#: src/apps/base/templates/base/form.html:17
+#: src/apps/base/templates/base/import_people.html:38
+#: src/apps/base/templates/base/module_not_avaiable.html:16
+#: src/apps/center/templates/center/elements/actions.html:9
+#: src/apps/center/templates/center/navbar.html:64
+#: src/apps/event/templates/event/activity/navbar.html:29
+#: src/apps/event/templates/event/elements/frequencies-add.html:18
+#: src/apps/event/templates/event/navbar.html:70
+#: src/apps/person/templates/person/elements/confirm_to_delete_freq.html:23
+#: src/apps/person/templates/person/elements/confirm_to_reinsert_person.html:22
+#: src/apps/person/templates/person/forms/historic-ant.html:17
+#: src/apps/person/templates/person/forms/membership.html:17
+#: src/apps/person/templates/person/frequency_insert.html:12
+#: src/apps/person/templates/person/membership_ps_insert.html:12
+#: src/apps/person/templates/person/navbar.html:179
+#: src/apps/publicwork/templates/publicwork/groups/actions.html:23
+#: src/apps/publicwork/templates/publicwork/groups/navbar.html:106
+#: src/apps/publicwork/templates/publicwork/lecture/navbar.html:54
+#: src/apps/publicwork/templates/publicwork/listener/add.html:13
+#: src/apps/publicwork/templates/publicwork/navbar.html:91
+#: src/apps/publicwork/templates/publicwork/seeker/add_or_change.html:19
+#: src/apps/publicwork/templates/publicwork/seeker/confirm_to_reinsert.html:22
+#: src/apps/publicwork/templates/publicwork/seeker/navbar.html:105
+#: src/apps/treasury/templates/treasury/bankflag/navbar.html:28
+#: src/apps/treasury/templates/treasury/elements/confirm_delete.html:30
+#: src/apps/treasury/templates/treasury/form_of_payment/navbar.html:28
+#: src/apps/treasury/templates/treasury/navbar.html:60
+#: src/apps/treasury/templates/treasury/order/create.html:12
+#: src/apps/treasury/templates/treasury/payment/navbar.html:28
+#: src/apps/treasury/templates/treasury/paytype/navbar.html:28
+#: src/apps/user/templates/user/auth/password_change_form.html:17
+#: src/apps/user/templates/user/profile/elements/add_payment.html:18
+#: src/apps/user/templates/user/profile/new_order.html:13
+#: src/apps/user/templates/user/profile/scan_qrcode_event.html:10
+#: src/apps/workgroup/templates/workgroup/elements/confirm_add_frequency.html:33
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:36
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_insert_membership.html:24
+#: src/apps/workgroup/templates/workgroup/member/add_frequency.html:13
+#: src/apps/workgroup/templates/workgroup/member/navbar.html:49
+#: src/apps/workgroup/templates/workgroup/member/update_frequency.html:18
+#: src/apps/workgroup/templates/workgroup/membership_insert.html:13
+#: src/apps/workgroup/templates/workgroup/mentoring/add_frequencies.html:18
+#: src/apps/workgroup/templates/workgroup/mentoring/navbar.html:49
+#: src/apps/workgroup/templates/workgroup/navbar.html:68
 msgid "Back"
 msgstr ""
 
-#: base/templates/base/data_policy/modal.html:11
+#: src/apps/base/templates/base/data_policy/modal.html:11
 msgid "Privacy Policy"
 msgstr ""
 
-#: base/templates/base/data_policy/modal.html:22
+#: src/apps/base/templates/base/data_policy/modal.html:22
 msgid "I agree"
 msgstr ""
 
-#: base/templates/base/data_policy/modal.html:25
-#: base/templates/base/import_people.html:172
-#: base/templates/base/import_people.html:195
-#: base/templates/base/searchs/modal_frequencies.html:64
-#: base/templates/base/searchs/modal_import_fields_to_persons.html:33
-#: base/templates/base/searchs/modal_import_people.html:21
-#: base/templates/base/searchs/modal_lectures.html:64
-#: base/templates/base/searchs/modal_period.html:40
-#: base/templates/base/searchs/modal_status.html:34
-#: center/templates/center/elements/modal_pix.html:27
+#: src/apps/base/templates/base/data_policy/modal.html:25
+#: src/apps/base/templates/base/import_people.html:172
+#: src/apps/base/templates/base/import_people.html:195
+#: src/apps/base/templates/base/searchs/modal_frequencies.html:64
+#: src/apps/base/templates/base/searchs/modal_import_fields_to_persons.html:33
+#: src/apps/base/templates/base/searchs/modal_import_people.html:21
+#: src/apps/base/templates/base/searchs/modal_lectures.html:64
+#: src/apps/base/templates/base/searchs/modal_period.html:40
+#: src/apps/base/templates/base/searchs/modal_status.html:34
+#: src/apps/center/templates/center/elements/modal_pix.html:27
 msgid "Close"
 msgstr ""
 
-#: base/templates/base/elements/checkbox_all.html:12
-#: base/templates/base/searchs/modal_frequencies.html:42
-#: base/templates/base/searchs/modal_frequencies.html:58
-#: base/templates/base/searchs/modal_lectures.html:58
-#: base/templates/base/searchs/modal_status.html:22
+#: src/apps/base/templates/base/elements/checkbox_all.html:12
+#: src/apps/base/templates/base/searchs/modal_frequencies.html:42
+#: src/apps/base/templates/base/searchs/modal_frequencies.html:58
+#: src/apps/base/templates/base/searchs/modal_lectures.html:58
+#: src/apps/base/templates/base/searchs/modal_status.html:22
 msgid "all"
 msgstr ""
 
-#: base/templates/base/elements/menu.html:6 base/templates/base/home.html:54
-#: center/templates/center/navbar.html:5
+#: src/apps/base/templates/base/elements/menu.html:6
+#: src/apps/base/templates/base/home.html:70
+#: src/apps/center/templates/center/navbar.html:5
 msgid "Centers"
 msgstr ""
 
-#: base/templates/base/elements/menu.html:11 base/templates/base/home.html:65
-#: person/templates/person/navbar.html:7
+#: src/apps/base/templates/base/elements/menu.html:11
+#: src/apps/base/templates/base/home.html:81
+#: src/apps/person/templates/person/navbar.html:7
 msgid "Persons"
 msgstr ""
 
-#: base/templates/base/elements/menu.html:14 base/templates/base/home.html:74
-#: event/templates/event/navbar.html:7
+#: src/apps/base/templates/base/elements/menu.html:14
+#: src/apps/base/templates/base/home.html:90
+#: src/apps/event/templates/event/navbar.html:7
 msgid "Events"
 msgstr ""
 
-#: base/templates/base/elements/menu.html:17 base/templates/base/home.html:83
-#: workgroup/templates/workgroup/navbar.html:7
+#: src/apps/base/templates/base/elements/menu.html:17
+#: src/apps/base/templates/base/home.html:99
+#: src/apps/workgroup/templates/workgroup/navbar.html:7
 msgid "Workgroups"
 msgstr ""
 
-#: base/templates/base/elements/menu.html:24 base/templates/base/home.html:96
-#: workgroup/templates/workgroup/mentoring/navbar.html:7
+#: src/apps/base/templates/base/elements/menu.html:24
+#: src/apps/base/templates/base/home.html:112
+#: src/apps/workgroup/templates/workgroup/mentoring/navbar.html:7
 msgid "Mentoring"
 msgstr ""
 
-#: base/templates/base/elements/menu.html:32 base/templates/base/home.html:110
-#: publicwork/templates/publicwork/navbar.html:7
+#: src/apps/base/templates/base/elements/menu.html:32
+#: src/apps/base/templates/base/home.html:126
+#: src/apps/publicwork/templates/publicwork/navbar.html:7
 msgid "Public Work"
 msgstr ""
 
-#: base/templates/base/elements/menu.html:40 base/templates/base/home.html:124
-#: treasury/templates/treasury/elements/treasury_navbar.html:5
-#: treasury/templates/treasury/navbar.html:6
+#: src/apps/base/templates/base/elements/menu.html:40
+#: src/apps/base/templates/base/home.html:140
+#: src/apps/treasury/templates/treasury/elements/treasury_navbar.html:5
+#: src/apps/treasury/templates/treasury/navbar.html:6
 msgid "Treasury"
 msgstr ""
 
-#: base/templates/base/elements/menu_admin.html:4
+#: src/apps/base/templates/base/elements/menu_admin.html:4
 msgid "Admin"
 msgstr ""
 
-#: base/templates/base/elements/menu_admin.html:6
-#: event/templates/event/activity/activities.html:4
-#: event/templates/event/activity/navbar.html:7 event/views/activity.py:18
+#: src/apps/base/templates/base/elements/menu_admin.html:6
+#: src/apps/event/templates/event/activity/activities.html:4
+#: src/apps/event/templates/event/activity/navbar.html:7
+#: src/apps/event/views/activity.py:18
 msgid "Activities"
 msgstr ""
 
-#: base/templates/base/elements/menu_admin.html:8
-#: treasury/templates/treasury/order/detail.html:41
-#: treasury/templates/treasury/order/elements/payments_div.html:6
-#: treasury/templates/treasury/payment/navbar.html:6
-#: treasury/templates/treasury/payment/payments.html:4
-#: treasury/templates/treasury/reports/elements/show_person.html:4
-#: treasury/templates/treasury/reports/payments_by_person copy.html:30
-#: treasury/views/payments.py:21
-#: user/templates/user/profile/elements/payments_div.html:6
-#: user/templates/user/profile/navbar-ant.html:22
-#: user/templates/user/profile/navbar.html:29
+#: src/apps/base/templates/base/elements/menu_admin.html:8
+#: src/apps/treasury/templates/treasury/order/detail.html:41
+#: src/apps/treasury/templates/treasury/order/elements/payments_div.html:6
+#: src/apps/treasury/templates/treasury/payment/navbar.html:6
+#: src/apps/treasury/templates/treasury/payment/payments.html:4
+#: src/apps/treasury/templates/treasury/reports/elements/show_person.html:4
+#: src/apps/treasury/templates/treasury/reports/payments_by_person copy.html:30
+#: src/apps/treasury/views/payments.py:21
+#: src/apps/user/templates/user/profile/elements/payments_div.html:6
+#: src/apps/user/templates/user/profile/navbar-ant.html:22
+#: src/apps/user/templates/user/profile/navbar.html:29
 msgid "Payments"
 msgstr ""
 
-#: base/templates/base/elements/menu_admin.html:9
+#: src/apps/base/templates/base/elements/menu_admin.html:9
 msgid "Forms of payments"
 msgstr ""
 
-#: base/templates/base/elements/menu_admin.html:10
+#: src/apps/base/templates/base/elements/menu_admin.html:10
 msgid "Payment types"
 msgstr ""
 
-#: base/templates/base/elements/menu_admin.html:11
-#: treasury/templates/treasury/bankflag/bankflags.html:4
-#: treasury/views/bankflag.py:21
+#: src/apps/base/templates/base/elements/menu_admin.html:11
+#: src/apps/treasury/templates/treasury/bankflag/bankflags.html:4
+#: src/apps/treasury/views/bankflag.py:21
 msgid "Banks or Flags"
 msgstr ""
 
-#: base/templates/base/elements/menu_admin.html:13
-#: base/templates/base/import_people.html:14
+#: src/apps/base/templates/base/elements/menu_admin.html:13
+#: src/apps/base/templates/base/import_people.html:14
 msgid "Import people"
 msgstr ""
 
-#: base/templates/base/elements/modal_form.html:5
-#: center/templates/center/home.html:26
-#: person/templates/person/invitation/invitation_home.html:19
+#: src/apps/base/templates/base/elements/modal_form.html:5
+#: src/apps/center/templates/center/home.html:26
+#: src/apps/person/templates/person/invitation/invitation_home.html:19
 msgid "Loading..."
 msgstr ""
 
-#: base/templates/base/elements/navbar.html:48
-#: person/templates/person/info.html:12
-#: user/templates/user/profile/navbar-ant.html:4
-#: user/templates/user/profile/navbar.html:7
+#: src/apps/base/templates/base/elements/navbar.html:46
+#: src/apps/person/templates/person/info.html:12
+#: src/apps/user/templates/user/profile/navbar-ant.html:4
+#: src/apps/user/templates/user/profile/navbar.html:7
 msgid "Profile"
 msgstr ""
 
-#: base/templates/base/elements/navbar.html:52
+#: src/apps/base/templates/base/elements/navbar.html:50
 msgid "Logout"
 msgstr ""
 
-#: base/templates/base/elements/navbar.html:71
+#: src/apps/base/templates/base/elements/navbar.html:69
 msgid "Login"
 msgstr ""
 
-#: base/templates/base/elements/results.html:6
-#: base/templates/base/elements/search_result.html:5
+#: src/apps/base/templates/base/elements/results.html:6
+#: src/apps/base/templates/base/elements/search_result.html:5
 msgid "Search result"
 msgstr ""
 
-#: base/templates/base/elements/results.html:9
-#: base/templates/base/elements/search_result.html:8
+#: src/apps/base/templates/base/elements/results.html:9
+#: src/apps/base/templates/base/elements/search_result.html:8
 msgid "records were found in the database"
 msgstr ""
 
-#: base/templates/base/form.html:12
-#: person/templates/person/forms/historic-ant.html:12
-#: workgroup/templates/workgroup/member/update_frequency.html:13
+#: src/apps/base/templates/base/form.html:12
+#: src/apps/person/templates/person/forms/historic-ant.html:12
+#: src/apps/workgroup/templates/workgroup/member/update_frequency.html:13
 msgid "Save"
 msgstr ""
 
-#: base/templates/base/form.html:23
-#: person/templates/person/forms/historic-ant.html:24
-#: person/templates/person/forms/membership.html:23
-#: person/templates/person/forms/update_pupil.html:45
-#: treasury/templates/treasury/order/create.html:20
+#: src/apps/base/templates/base/form.html:23
+#: src/apps/person/templates/person/forms/historic-ant.html:24
+#: src/apps/person/templates/person/forms/membership.html:23
+#: src/apps/person/templates/person/forms/update_pupil.html:45
+#: src/apps/treasury/templates/treasury/order/create.html:20
 msgid "Create"
 msgstr ""
 
-#: base/templates/base/form.html:23
-#: person/templates/person/forms/historic-ant.html:24
-#: person/templates/person/forms/membership.html:23
-#: publicwork/templates/publicwork/seeker/add_or_change.html:12
-#: publicwork/templates/publicwork/seeker/create_historic.html:9
-#: treasury/templates/treasury/order/create.html:22
-#: treasury/templates/treasury/order/detail.html:110
+#: src/apps/base/templates/base/form.html:23
+#: src/apps/person/templates/person/forms/historic-ant.html:24
+#: src/apps/person/templates/person/forms/membership.html:23
+#: src/apps/publicwork/templates/publicwork/seeker/add_or_change.html:12
+#: src/apps/publicwork/templates/publicwork/seeker/create_historic.html:9
+#: src/apps/treasury/templates/treasury/order/create.html:22
+#: src/apps/treasury/templates/treasury/order/detail.html:110
 msgid "Update"
 msgstr ""
 
-#: base/templates/base/home.html:10
+#: src/apps/base/templates/base/home.html:16
 msgid "Welcome to"
 msgstr ""
 
-#: base/templates/base/import_fields_to_persons.html:37
-#: base/templates/base/import_people.html:31
+#: src/apps/base/templates/base/home.html:59
+msgid "My Profile"
+msgstr ""
+
+#: src/apps/base/templates/base/import_fields_to_persons.html:37
+#: src/apps/base/templates/base/import_people.html:31
 msgid "New import"
 msgstr ""
 
-#: base/templates/base/import_fields_to_persons.html:85
-#: base/templates/base/import_people.html:144
+#: src/apps/base/templates/base/import_fields_to_persons.html:85
+#: src/apps/base/templates/base/import_people.html:144
 msgid "Select a .csv file to import."
 msgstr ""
 
-#: base/templates/base/import_people.html:51
+#: src/apps/base/templates/base/import_people.html:51
 msgid "File"
 msgstr ""
 
-#: base/templates/base/import_people.html:52
+#: src/apps/base/templates/base/import_people.html:52
 msgid "Imported"
 msgstr ""
 
-#: base/templates/base/import_people.html:59
+#: src/apps/base/templates/base/import_people.html:59
 msgid "No file - Sign LGPD"
 msgstr ""
 
-#: base/templates/base/import_people.html:61
-#: person/templates/person/elements/header.html:11
-#: person/templates/person/elements/tab_pupil.html:33
-#: publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:10
-#: treasury/templates/treasury/reports/elements/person_card.html:7
-#: user/templates/user/profile/elements/header.html:13
-#: workgroup/templates/workgroup/elements/confirm_add_frequency.html:10
-#: workgroup/templates/workgroup/elements/confirm_to_insert_membership.html:10
+#: src/apps/base/templates/base/import_people.html:61
+#: src/apps/person/templates/person/elements/header.html:11
+#: src/apps/person/templates/person/elements/tab_pupil.html:33
+#: src/apps/publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:10
+#: src/apps/treasury/templates/treasury/reports/elements/person_card.html:7
+#: src/apps/user/templates/user/profile/elements/header.html:13
+#: src/apps/workgroup/templates/workgroup/elements/confirm_add_frequency.html:10
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_insert_membership.html:10
 msgid "in"
 msgstr ""
 
-#: base/templates/base/import_people.html:67
+#: src/apps/base/templates/base/import_people.html:67
 msgid "People to sign LGPD"
 msgstr ""
 
-#: base/templates/base/import_people.html:71
+#: src/apps/base/templates/base/import_people.html:71
 msgid "To send email"
 msgstr ""
 
-#: base/templates/base/import_people.html:82
-#: base/templates/base/import_people.html:131
-#: base/templates/base/import_people.html:155
+#: src/apps/base/templates/base/import_people.html:82
+#: src/apps/base/templates/base/import_people.html:131
+#: src/apps/base/templates/base/import_people.html:155
 msgid "Details"
 msgstr ""
 
-#: base/templates/base/import_people.html:89
+#: src/apps/base/templates/base/import_people.html:89
 msgid "Entries"
 msgstr ""
 
-#: base/templates/base/import_people.html:93
+#: src/apps/base/templates/base/import_people.html:93
 msgid "Importeds"
 msgstr ""
 
-#: base/templates/base/import_people.html:102
+#: src/apps/base/templates/base/import_people.html:102
 msgid "Duplicate email"
 msgstr ""
 
-#: base/templates/base/import_people.html:111
+#: src/apps/base/templates/base/import_people.html:111
 msgid "Without email"
 msgstr ""
 
-#: base/templates/base/import_people.html:120
+#: src/apps/base/templates/base/import_people.html:120
 msgid "Used email"
 msgstr ""
 
-#: base/templates/base/import_people.html:184
+#: src/apps/base/templates/base/import_people.html:184
 msgid "Error"
 msgstr ""
 
-#: base/templates/base/module_not_avaiable.html:25
+#: src/apps/base/templates/base/module_not_avaiable.html:25
 msgid "Module not avaiable"
 msgstr ""
 
-#: base/templates/base/reports/navbar.html:5
+#: src/apps/base/templates/base/reports/navbar.html:5
 msgid "Report"
 msgstr ""
 
-#: base/templates/base/reports/navbar.html:21
+#: src/apps/base/templates/base/reports/navbar.html:21
 msgid "New search"
 msgstr ""
 
-#: base/templates/base/reports/navbar.html:25
+#: src/apps/base/templates/base/reports/navbar.html:25
 msgid "To print"
 msgstr ""
 
-#: base/templates/base/reports/navbar.html:29
+#: src/apps/base/templates/base/reports/navbar.html:33
 msgid "Get file"
 msgstr ""
 
-#: base/templates/base/reports/show_report.html:16
+#: src/apps/base/templates/base/reports/show_report.html:16
 msgid "define the reporting terms"
 msgstr ""
 
-#: base/templates/base/searchs/center.html:11 center/models.py:117
-#: center/models.py:127 event/models.py:42 person/models.py:31
-#: person/models.py:91 publicwork/models.py:76 publicwork/models.py:172
-#: publicwork/models.py:229 rcadmin/common.py:31 treasury/models.py:172
-#: workgroup/models.py:13
+#: src/apps/base/templates/base/searchs/center.html:11
+#: src/apps/center/models.py:117 src/apps/center/models.py:127
+#: src/apps/event/models.py:42 src/apps/person/models.py:31
+#: src/apps/person/models.py:91 src/apps/publicwork/models.py:76
+#: src/apps/publicwork/models.py:172 src/apps/publicwork/models.py:229
+#: src/apps/treasury/models.py:172 src/apps/workgroup/models.py:13
+#: src/rcadmin/common.py:31
 msgid "center"
 msgstr ""
 
-#: base/templates/base/searchs/center.html:29
-#: base/templates/base/searchs/event.html:46
-#: base/templates/base/searchs/invite_person.html:29
-#: base/templates/base/searchs/lecture.html:46
-#: base/templates/base/searchs/orders.html:62
-#: base/templates/base/searchs/person.html:44
-#: base/templates/base/searchs/pw_group.html:38
-#: base/templates/base/searchs/seeker.html:69
-#: base/templates/base/searchs/workgroup.html:35
+#: src/apps/base/templates/base/searchs/center.html:29
+#: src/apps/base/templates/base/searchs/event.html:46
+#: src/apps/base/templates/base/searchs/invite_person.html:29
+#: src/apps/base/templates/base/searchs/lecture.html:46
+#: src/apps/base/templates/base/searchs/orders.html:62
+#: src/apps/base/templates/base/searchs/person.html:44
+#: src/apps/base/templates/base/searchs/pw_group.html:38
+#: src/apps/base/templates/base/searchs/seeker.html:69
+#: src/apps/base/templates/base/searchs/workgroup.html:35
 msgid "Search"
 msgstr ""
 
-#: base/templates/base/searchs/event.html:7
-#: base/templates/base/searchs/lecture.html:7
-#: base/templates/base/searchs/modal_frequencies.html:19
-#: base/templates/base/searchs/modal_lectures.html:19
-#: base/templates/base/searchs/modal_period.html:19
-#: base/templates/base/searchs/orders.html:7
-#: treasury/templates/treasury/elements/search_dates.html:7
+#: src/apps/base/templates/base/searchs/event.html:7
+#: src/apps/base/templates/base/searchs/lecture.html:7
+#: src/apps/base/templates/base/searchs/modal_frequencies.html:19
+#: src/apps/base/templates/base/searchs/modal_lectures.html:19
+#: src/apps/base/templates/base/searchs/modal_period.html:19
+#: src/apps/base/templates/base/searchs/orders.html:7
+#: src/apps/treasury/templates/treasury/elements/search_dates.html:7
 msgid "from"
 msgstr ""
 
-#: base/templates/base/searchs/event.html:19
-#: base/templates/base/searchs/lecture.html:19
-#: base/templates/base/searchs/modal_frequencies.html:29
-#: base/templates/base/searchs/modal_lectures.html:29
-#: base/templates/base/searchs/modal_period.html:29
-#: base/templates/base/searchs/orders.html:19
-#: event/templates/event/header.html:9
-#: treasury/templates/treasury/elements/search_dates.html:19
+#: src/apps/base/templates/base/searchs/event.html:19
+#: src/apps/base/templates/base/searchs/lecture.html:19
+#: src/apps/base/templates/base/searchs/modal_frequencies.html:29
+#: src/apps/base/templates/base/searchs/modal_lectures.html:29
+#: src/apps/base/templates/base/searchs/modal_period.html:29
+#: src/apps/base/templates/base/searchs/orders.html:19
+#: src/apps/event/templates/event/header.html:9
+#: src/apps/treasury/templates/treasury/elements/search_dates.html:19
 msgid "to"
 msgstr ""
 
-#: base/templates/base/searchs/event.html:32
-#: base/templates/base/searchs/workgroup.html:24
+#: src/apps/base/templates/base/searchs/event.html:32
+#: src/apps/base/templates/base/searchs/workgroup.html:24
 msgid "all types"
 msgstr ""
 
-#: base/templates/base/searchs/event.html:37
-#: base/templates/base/searchs/modal_lectures.html:39 center/models.py:62
-#: event/models.py:19 person/models.py:101
-#: person/templates/person/elements/tab_pupil.html:10 publicwork/models.py:175
-#: treasury/models.py:18 treasury/models.py:122 workgroup/models.py:16
+#: src/apps/base/templates/base/searchs/event.html:37
+#: src/apps/base/templates/base/searchs/modal_lectures.html:39
+#: src/apps/center/models.py:62 src/apps/event/models.py:19
+#: src/apps/person/models.py:101
+#: src/apps/person/templates/person/elements/tab_pupil.html:10
+#: src/apps/publicwork/models.py:175 src/apps/treasury/models.py:18
+#: src/apps/treasury/models.py:122 src/apps/workgroup/models.py:16
 msgid "type"
 msgstr ""
 
-#: base/templates/base/searchs/invite_person.html:11 center/models.py:29
-#: event/models.py:17 person/models.py:33 person/models.py:93
-#: publicwork/models.py:28 publicwork/models.py:78 publicwork/models.py:227
-#: treasury/models.py:16 treasury/models.py:84 workgroup/models.py:11
-#: workgroup/templates/workgroup/forms/member_frequency.html:35
+#: src/apps/base/templates/base/searchs/invite_person.html:11
+#: src/apps/center/models.py:29 src/apps/event/models.py:17
+#: src/apps/person/models.py:33 src/apps/person/models.py:93
+#: src/apps/publicwork/models.py:28 src/apps/publicwork/models.py:78
+#: src/apps/publicwork/models.py:227 src/apps/treasury/models.py:16
+#: src/apps/treasury/models.py:84 src/apps/workgroup/models.py:11
+#: src/apps/workgroup/templates/workgroup/forms/member_frequency.html:35
 msgid "name"
 msgstr ""
 
-#: base/templates/base/searchs/lecture.html:32
+#: src/apps/base/templates/base/searchs/lecture.html:32
 msgid "types"
 msgstr ""
 
-#: base/templates/base/searchs/modal_frequencies.html:9
-#: publicwork/templates/publicwork/home.html:56
-#: publicwork/templates/publicwork/reports/menu.html:7
+#: src/apps/base/templates/base/searchs/modal_frequencies.html:9
+#: src/apps/publicwork/templates/publicwork/home.html:56
+#: src/apps/publicwork/templates/publicwork/reports/menu.html:7
 msgid "Frequencies per period"
 msgstr ""
 
-#: base/templates/base/searchs/modal_frequencies.html:39
-#: base/templates/base/searchs/modal_status.html:19
-#: base/templates/base/searchs/person.html:35
-#: base/templates/base/searchs/seeker.html:53
-#: base/templates/base/searchs/seeker.html:58
-#: person/templates/person/elements/tab_pupil.html:40
-#: publicwork/templates/publicwork/seeker/info.html:24
-#: treasury/templates/treasury/order/detail.html:30
+#: src/apps/base/templates/base/searchs/modal_frequencies.html:39
+#: src/apps/base/templates/base/searchs/modal_status.html:19
+#: src/apps/base/templates/base/searchs/person.html:35
+#: src/apps/base/templates/base/searchs/seeker.html:53
+#: src/apps/base/templates/base/searchs/seeker.html:58
+#: src/apps/person/templates/person/elements/tab_pupil.html:40
+#: src/apps/publicwork/templates/publicwork/seeker/info.html:24
+#: src/apps/treasury/templates/treasury/order/detail.html:30
 msgid "status"
 msgstr ""
 
-#: base/templates/base/searchs/modal_frequencies.html:65
-#: base/templates/base/searchs/modal_lectures.html:65
-#: base/templates/base/searchs/modal_period.html:41
-#: base/templates/base/searchs/modal_status.html:35
+#: src/apps/base/templates/base/searchs/modal_frequencies.html:65
+#: src/apps/base/templates/base/searchs/modal_lectures.html:65
+#: src/apps/base/templates/base/searchs/modal_period.html:41
+#: src/apps/base/templates/base/searchs/modal_status.html:35
 msgid "Generate"
 msgstr ""
 
-#: base/templates/base/searchs/modal_import_fields_to_persons.html:11
-#: base/templates/base/searchs/modal_import_people.html:11
+#: src/apps/base/templates/base/searchs/modal_import_fields_to_persons.html:11
+#: src/apps/base/templates/base/searchs/modal_import_people.html:11
 msgid "Select a .csv file to import"
 msgstr ""
 
-#: base/templates/base/searchs/modal_import_fields_to_persons.html:34
-#: base/templates/base/searchs/modal_import_people.html:22
+#: src/apps/base/templates/base/searchs/modal_import_fields_to_persons.html:34
+#: src/apps/base/templates/base/searchs/modal_import_people.html:22
 msgid "Import"
 msgstr ""
 
-#: base/templates/base/searchs/modal_lectures.html:9
-#: publicwork/templates/publicwork/home.html:62
-#: publicwork/templates/publicwork/reports/menu.html:8
+#: src/apps/base/templates/base/searchs/modal_lectures.html:9
+#: src/apps/publicwork/templates/publicwork/home.html:62
+#: src/apps/publicwork/templates/publicwork/reports/menu.html:8
 msgid "Lectures per period"
 msgstr ""
 
-#: base/templates/base/searchs/modal_period.html:9
+#: src/apps/base/templates/base/searchs/modal_period.html:9
 msgid "Period"
 msgstr ""
 
-#: base/templates/base/searchs/modal_status.html:9
-#: publicwork/templates/publicwork/home.html:68
-#: publicwork/templates/publicwork/reports/menu.html:9
+#: src/apps/base/templates/base/searchs/modal_status.html:9
+#: src/apps/publicwork/templates/publicwork/home.html:68
+#: src/apps/publicwork/templates/publicwork/reports/menu.html:9
 msgid "Status per center"
 msgstr ""
 
-#: base/templates/base/searchs/orders.html:48
+#: src/apps/base/templates/base/searchs/orders.html:48
 msgid "all status"
 msgstr ""
 
-#: base/templates/base/searchs/person.html:9 event/models.py:97
-#: person/models.py:137 person/models.py:147 treasury/models.py:43
-#: treasury/models.py:175 treasury/templates/treasury/order/detail.html:22
-#: workgroup/models.py:49
-#: workgroup/templates/workgroup/forms/membership_update.html:24
+#: src/apps/base/templates/base/searchs/person.html:9
+#: src/apps/event/models.py:97 src/apps/person/models.py:137
+#: src/apps/person/models.py:147 src/apps/treasury/models.py:43
+#: src/apps/treasury/models.py:175
+#: src/apps/treasury/templates/treasury/order/detail.html:22
+#: src/apps/workgroup/models.py:49
+#: src/apps/workgroup/templates/workgroup/forms/membership_update.html:24
 msgid "person"
 msgstr ""
 
-#: base/templates/base/searchs/person.html:14
+#: src/apps/base/templates/base/searchs/person.html:14
 msgid "Clean"
 msgstr ""
 
-#: base/templates/base/searchs/person.html:25 event/models.py:100
-#: person/models.py:104 person/templates/person/elements/tab_pupil.html:28
-#: rcadmin/common.py:74 workgroup/templates/workgroup/member/info.html:14
+#: src/apps/base/templates/base/searchs/person.html:25
+#: src/apps/event/models.py:100 src/apps/person/models.py:104
+#: src/apps/person/templates/person/elements/tab_pupil.html:28
+#: src/apps/workgroup/templates/workgroup/member/info.html:14
+#: src/rcadmin/common.py:74
 msgid "aspect"
 msgstr ""
 
-#: base/views/tools.py:26
+#: src/apps/base/views/tools.py:24
 msgid "import people"
 msgstr ""
 
-#: center/models.py:31 center/templates/center/elements/tab_others.html:11
-#: person/models.py:96 publicwork/models.py:81
+#: src/apps/center/models.py:31
+#: src/apps/center/templates/center/elements/tab_others.html:11
+#: src/apps/person/models.py:96 src/apps/publicwork/models.py:81
 msgid "short name"
 msgstr ""
 
-#: center/models.py:33 center/templates/center/elements/tab_info.html:23
-#: person/models.py:41 person/templates/person/elements/tab_profile.html:29
-#: user/models.py:97 user/templates/user/profile/elements/tab_profile.html:28
+#: src/apps/center/models.py:33
+#: src/apps/center/templates/center/elements/tab_info.html:23
+#: src/apps/person/models.py:41
+#: src/apps/person/templates/person/elements/tab_profile.html:29
+#: src/apps/user/models.py:97
+#: src/apps/user/templates/user/profile/elements/tab_profile.html:28
 msgid "address"
 msgstr ""
 
-#: center/models.py:34 person/models.py:42 user/models.py:98
+#: src/apps/center/models.py:34 src/apps/person/models.py:42
+#: src/apps/user/models.py:98
 msgid "number"
 msgstr ""
 
-#: center/models.py:35 person/models.py:43 treasury/models.py:135
-#: user/models.py:99
+#: src/apps/center/models.py:35 src/apps/person/models.py:43
+#: src/apps/treasury/models.py:135 src/apps/user/models.py:99
 msgid "complement"
 msgstr ""
 
-#: center/models.py:36 person/models.py:44 user/models.py:100
+#: src/apps/center/models.py:36 src/apps/person/models.py:44
+#: src/apps/user/models.py:100
 msgid "district"
 msgstr ""
 
-#: center/models.py:37 person/models.py:45 publicwork/models.py:39
-#: publicwork/models.py:93 user/models.py:101
+#: src/apps/center/models.py:37 src/apps/person/models.py:45
+#: src/apps/publicwork/models.py:39 src/apps/publicwork/models.py:93
+#: src/apps/user/models.py:101
 msgid "city"
 msgstr ""
 
-#: center/models.py:38 person/models.py:46 publicwork/models.py:40
-#: publicwork/models.py:94 user/models.py:102
+#: src/apps/center/models.py:38 src/apps/person/models.py:46
+#: src/apps/publicwork/models.py:40 src/apps/publicwork/models.py:94
+#: src/apps/user/models.py:102
 msgid "state"
 msgstr ""
 
-#: center/models.py:40 person/models.py:48 publicwork/models.py:42
-#: publicwork/models.py:96 user/models.py:104
+#: src/apps/center/models.py:40 src/apps/person/models.py:48
+#: src/apps/publicwork/models.py:42 src/apps/publicwork/models.py:96
+#: src/apps/user/models.py:104
 msgid "country"
 msgstr ""
 
-#: center/models.py:42 person/models.py:50 user/models.py:106
+#: src/apps/center/models.py:42 src/apps/person/models.py:50
+#: src/apps/user/models.py:106
 msgid "zip"
 msgstr ""
 
-#: center/models.py:43 center/templates/center/elements/tab_info.html:11
-#: person/models.py:51 person/templates/person/elements/tab_profile.html:14
-#: publicwork/models.py:44 publicwork/models.py:98
-#: publicwork/templates/publicwork/seeker/info.html:44 user/models.py:107
-#: user/templates/user/profile/elements/tab_profile.html:13
-#: workgroup/templates/workgroup/member/info.html:40
+#: src/apps/center/models.py:43
+#: src/apps/center/templates/center/elements/tab_info.html:11
+#: src/apps/person/models.py:51
+#: src/apps/person/templates/person/elements/tab_profile.html:14
+#: src/apps/publicwork/models.py:44 src/apps/publicwork/models.py:98
+#: src/apps/publicwork/templates/publicwork/seeker/info.html:44
+#: src/apps/user/models.py:107
+#: src/apps/user/templates/user/profile/elements/tab_profile.html:13
+#: src/apps/workgroup/templates/workgroup/member/info.html:40
 msgid "phone"
 msgstr ""
 
-#: center/models.py:44 center/templates/center/elements/tab_info.html:15
+#: src/apps/center/models.py:44
+#: src/apps/center/templates/center/elements/tab_info.html:15
 msgid "backup phone"
 msgstr ""
 
-#: center/models.py:47 publicwork/models.py:34 publicwork/models.py:88
-#: treasury/models.py:139 user/models.py:95
+#: src/apps/center/models.py:47 src/apps/publicwork/models.py:34
+#: src/apps/publicwork/models.py:88 src/apps/treasury/models.py:139
+#: src/apps/user/models.py:95
 msgid "image"
 msgstr ""
 
-#: center/models.py:53
+#: src/apps/center/models.py:53
 msgid "pix image"
 msgstr ""
 
-#: center/models.py:59 center/templates/center/elements/tab_others.html:15
+#: src/apps/center/models.py:59
+#: src/apps/center/templates/center/elements/tab_others.html:15
 msgid "pix key"
 msgstr ""
 
-#: center/models.py:69 center/templates/center/elements/header.html:21
-#: rcadmin/common.py:32
+#: src/apps/center/models.py:69
+#: src/apps/center/templates/center/elements/header.html:21
+#: src/rcadmin/common.py:32
 msgid "conference center"
 msgstr ""
 
-#: center/models.py:75 center/models.py:144
+#: src/apps/center/models.py:75 src/apps/center/models.py:144
 msgid "responsible"
 msgstr ""
 
-#: center/models.py:78 center/templates/center/elements/tab_others.html:26
-#: event/models.py:103 person/models.py:60 person/models.py:108
-#: person/templates/person/elements/tab_pupil.html:51 publicwork/models.py:102
-#: publicwork/models.py:214 publicwork/templates/publicwork/seeker/info.html:58
-#: treasury/models.py:55
+#: src/apps/center/models.py:78
+#: src/apps/center/templates/center/elements/tab_others.html:26
+#: src/apps/event/models.py:103 src/apps/person/models.py:60
+#: src/apps/person/models.py:108
+#: src/apps/person/templates/person/elements/tab_pupil.html:51
+#: src/apps/publicwork/models.py:102 src/apps/publicwork/models.py:214
+#: src/apps/publicwork/templates/publicwork/seeker/info.html:58
+#: src/apps/treasury/models.py:55
 msgid "observations"
 msgstr ""
 
-#: center/models.py:118 center/views.py:42
+#: src/apps/center/models.py:118 src/apps/center/views.py:40
 msgid "centers"
 msgstr ""
 
-#: center/models.py:132 user/models.py:76 user/models.py:88
+#: src/apps/center/models.py:132 src/apps/user/models.py:76
+#: src/apps/user/models.py:88
 msgid "user"
 msgstr ""
 
-#: center/models.py:135
+#: src/apps/center/models.py:135
 msgid "rule"
 msgstr ""
 
-#: center/models.py:145
+#: src/apps/center/models.py:145
 msgid "responsibles"
 msgstr ""
 
-#: center/templates/center/add_responsible.html:11
+#: src/apps/center/templates/center/add_responsible.html:11
 msgid "Insert Responsible"
 msgstr ""
 
-#: center/templates/center/add_responsible.html:27
-#: event/templates/event/activity/activities.html:25
-#: event/templates/event/events.html:12
-#: person/templates/person/elements/event_list.html:29
-#: person/templates/person/membership.html:22
-#: person/templates/person/persons.html:13
-#: person/templates/person/workgroups.html:12
-#: publicwork/templates/publicwork/groups/add_mentor.html:19
-#: publicwork/templates/publicwork/groups/groups.html:13
-#: publicwork/templates/publicwork/groups/lectures.html:13
-#: publicwork/templates/publicwork/groups/seekers.html:30
-#: publicwork/templates/publicwork/lecture/lectures.html:13
-#: publicwork/templates/publicwork/listener/lectures.html:13
-#: publicwork/templates/publicwork/listener/seekers.html:21
-#: publicwork/templates/publicwork/seeker/seekers.html:19
-#: treasury/templates/treasury/bankflag/bankflags.html:54
-#: treasury/templates/treasury/form_of_payment/forms_of_payments.html:65
-#: treasury/templates/treasury/order/orders.html:14
-#: treasury/templates/treasury/payment/payments.html:80
-#: treasury/templates/treasury/paytype/paytypes.html:58
-#: workgroup/templates/workgroup/member/members.html:20
-#: workgroup/templates/workgroup/mentoring/frequencies.html:21
-#: workgroup/templates/workgroup/workgroups.html:13
+#: src/apps/center/templates/center/add_responsible.html:27
+#: src/apps/event/templates/event/activity/activities.html:25
+#: src/apps/event/templates/event/events.html:12
+#: src/apps/person/templates/person/elements/event_list.html:29
+#: src/apps/person/templates/person/membership.html:22
+#: src/apps/person/templates/person/persons.html:13
+#: src/apps/person/templates/person/workgroups.html:12
+#: src/apps/publicwork/templates/publicwork/groups/add_mentor.html:19
+#: src/apps/publicwork/templates/publicwork/groups/groups.html:13
+#: src/apps/publicwork/templates/publicwork/groups/lectures.html:13
+#: src/apps/publicwork/templates/publicwork/groups/seekers.html:30
+#: src/apps/publicwork/templates/publicwork/lecture/lectures.html:13
+#: src/apps/publicwork/templates/publicwork/listener/lectures.html:13
+#: src/apps/publicwork/templates/publicwork/listener/seekers.html:21
+#: src/apps/publicwork/templates/publicwork/seeker/seekers.html:19
+#: src/apps/treasury/templates/treasury/bankflag/bankflags.html:54
+#: src/apps/treasury/templates/treasury/form_of_payment/forms_of_payments.html:65
+#: src/apps/treasury/templates/treasury/order/orders.html:14
+#: src/apps/treasury/templates/treasury/payment/payments.html:80
+#: src/apps/treasury/templates/treasury/paytype/paytypes.html:58
+#: src/apps/workgroup/templates/workgroup/member/members.html:20
+#: src/apps/workgroup/templates/workgroup/mentoring/frequencies.html:21
+#: src/apps/workgroup/templates/workgroup/workgroups.html:13
 msgid "choose your search terms"
 msgstr ""
 
-#: center/templates/center/add_responsible.html:29
-#: publicwork/templates/publicwork/groups/add_mentor.html:21
+#: src/apps/center/templates/center/add_responsible.html:29
+#: src/apps/publicwork/templates/publicwork/groups/add_mentor.html:21
 msgid "person not found"
 msgstr ""
 
-#: center/templates/center/confirm/delete.html:9
-#: center/templates/center/confirm/delete_hx.html:9
-#: center/templates/center/confirm/reinsert.html:7
-#: event/templates/event/confirm/delete.html:6
-#: person/templates/person/confirm/delete.html:6
-#: person/templates/person/confirm/insert.html:7
-#: person/templates/person/confirm/reinsert.html:7
-#: person/templates/person/elements/confirm_to_delete_freq.html:8
-#: person/templates/person/elements/confirm_to_import.html:8
-#: person/templates/person/elements/confirm_to_reinsert_person.html:8
-#: person/templates/person/invitation/confirm/delete.html:9
-#: person/templates/person/invitation/confirm/resend_invitation.html:7
-#: person/templates/person/invitation/confirm/warning.html:6
-#: publicwork/templates/publicwork/confirm/delete.html:6
-#: publicwork/templates/publicwork/confirm/insert.html:7
-#: publicwork/templates/publicwork/confirm/reinsert.html:7
-#: publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:8
-#: publicwork/templates/publicwork/groups/confirm_remove_member.html:8
-#: publicwork/templates/publicwork/seeker/confirm/delete.html:6
-#: publicwork/templates/publicwork/seeker/confirm_to_reinsert.html:8
-#: treasury/templates/treasury/elements/confirm_delete.html:7
-#: user/templates/user/profile/confirm_del.html:8
-#: workgroup/templates/workgroup/confirm/delete.html:6
-#: workgroup/templates/workgroup/confirm/insert.html:7
-#: workgroup/templates/workgroup/elements/confirm_add_frequency.html:8
-#: workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:8
-#: workgroup/templates/workgroup/elements/confirm_to_insert_membership.html:8
+#: src/apps/center/templates/center/confirm/delete.html:9
+#: src/apps/center/templates/center/confirm/delete_hx.html:9
+#: src/apps/center/templates/center/confirm/reinsert.html:7
+#: src/apps/event/templates/event/confirm/delete.html:6
+#: src/apps/person/templates/person/confirm/delete.html:6
+#: src/apps/person/templates/person/confirm/insert.html:7
+#: src/apps/person/templates/person/confirm/reinsert.html:7
+#: src/apps/person/templates/person/elements/confirm_to_delete_freq.html:8
+#: src/apps/person/templates/person/elements/confirm_to_import.html:8
+#: src/apps/person/templates/person/elements/confirm_to_reinsert_person.html:8
+#: src/apps/person/templates/person/invitation/confirm/delete.html:9
+#: src/apps/person/templates/person/invitation/confirm/resend_invitation.html:7
+#: src/apps/person/templates/person/invitation/confirm/warning.html:6
+#: src/apps/publicwork/templates/publicwork/confirm/delete.html:6
+#: src/apps/publicwork/templates/publicwork/confirm/insert.html:7
+#: src/apps/publicwork/templates/publicwork/confirm/reinsert.html:7
+#: src/apps/publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:8
+#: src/apps/publicwork/templates/publicwork/groups/confirm_remove_member.html:8
+#: src/apps/publicwork/templates/publicwork/seeker/confirm/delete.html:6
+#: src/apps/publicwork/templates/publicwork/seeker/confirm_to_reinsert.html:8
+#: src/apps/treasury/templates/treasury/elements/confirm_delete.html:7
+#: src/apps/user/templates/user/profile/confirm_del.html:8
+#: src/apps/workgroup/templates/workgroup/confirm/delete.html:6
+#: src/apps/workgroup/templates/workgroup/confirm/insert.html:7
+#: src/apps/workgroup/templates/workgroup/elements/confirm_add_frequency.html:8
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:8
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_insert_membership.html:8
 msgid "Atention"
 msgstr ""
 
-#: center/templates/center/confirm/delete.html:17
-#: center/templates/center/confirm/delete_hx.html:17
-#: event/templates/event/confirm/delete.html:15
-#: person/templates/person/confirm/delete.html:14
-#: person/templates/person/elements/confirm_to_delete_freq.html:9
-#: person/templates/person/invitation/confirm/delete.html:17
-#: publicwork/templates/publicwork/confirm/delete.html:14
-#: publicwork/templates/publicwork/seeker/confirm/delete.html:14
-#: workgroup/templates/workgroup/confirm/delete.html:14
+#: src/apps/center/templates/center/confirm/delete.html:17
+#: src/apps/center/templates/center/confirm/delete_hx.html:17
+#: src/apps/event/templates/event/confirm/delete.html:15
+#: src/apps/person/templates/person/confirm/delete.html:14
+#: src/apps/person/templates/person/elements/confirm_to_delete_freq.html:9
+#: src/apps/person/templates/person/invitation/confirm/delete.html:17
+#: src/apps/publicwork/templates/publicwork/confirm/delete.html:14
+#: src/apps/publicwork/templates/publicwork/seeker/confirm/delete.html:14
+#: src/apps/workgroup/templates/workgroup/confirm/delete.html:14
 msgid "Are you shure you want to remove"
 msgstr ""
 
-#: center/templates/center/confirm/delete.html:33
-#: center/templates/center/confirm/delete_hx.html:33
-#: center/templates/center/confirm/reinsert.html:29
-#: center/templates/center/forms/add_responsible.html:33
-#: center/templates/center/forms/create_center.html:60
-#: center/templates/center/forms/update_image.html:35
-#: center/templates/center/forms/update_info.html:87
-#: center/templates/center/forms/update_others.html:35
-#: event/templates/event/confirm/delete.html:39
-#: event/templates/event/forms/event.html:64
-#: person/templates/person/confirm/delete.html:31
-#: person/templates/person/confirm/insert.html:29
-#: person/templates/person/confirm/reinsert.html:29
-#: person/templates/person/forms/create_person.html:60
-#: person/templates/person/forms/historic.html:43
-#: person/templates/person/forms/membership_update.html:33
-#: person/templates/person/forms/update_image.html:37
-#: person/templates/person/forms/update_profile.html:35
-#: person/templates/person/forms/update_pupil.html:35
-#: person/templates/person/invitation/confirm/delete.html:30
-#: person/templates/person/invitation/confirm/resend_invitation.html:29
-#: person/templates/person/invitation/confirm/warning.html:27
-#: person/templates/person/invitation/forms/invite_pupil.html:48
-#: publicwork/templates/publicwork/confirm/delete.html:31
-#: publicwork/templates/publicwork/confirm/insert.html:29
-#: publicwork/templates/publicwork/confirm/reinsert.html:29
-#: publicwork/templates/publicwork/groups/forms/group.html:38
-#: publicwork/templates/publicwork/lecture/forms/lecture.html:61
-#: publicwork/templates/publicwork/listener/confirm/insert.html:66
-#: publicwork/templates/publicwork/listener/forms/listener.html:58
-#: publicwork/templates/publicwork/seeker/confirm/delete.html:29
-#: publicwork/templates/publicwork/seeker/forms/frequency.html:67
-#: publicwork/templates/publicwork/seeker/forms/historic.html:57
-#: publicwork/templates/publicwork/seeker/forms/seeker.html:84
-#: treasury/templates/treasury/order/create.html:47
-#: user/templates/user/forms/updt_image.html:37
-#: user/templates/user/forms/updt_profile.html:35
-#: user/templates/user/profile/elements/controllers_div.html:28
-#: workgroup/templates/workgroup/confirm/delete.html:31
-#: workgroup/templates/workgroup/confirm/insert.html:29
-#: workgroup/templates/workgroup/forms/member_frequency.html:71
-#: workgroup/templates/workgroup/forms/membership_update.html:44
-#: workgroup/templates/workgroup/forms/workgroup.html:47
+#: src/apps/center/templates/center/confirm/delete.html:33
+#: src/apps/center/templates/center/confirm/delete_hx.html:33
+#: src/apps/center/templates/center/confirm/reinsert.html:29
+#: src/apps/center/templates/center/forms/add_responsible.html:33
+#: src/apps/center/templates/center/forms/create_center.html:60
+#: src/apps/center/templates/center/forms/update_image.html:35
+#: src/apps/center/templates/center/forms/update_info.html:87
+#: src/apps/center/templates/center/forms/update_others.html:35
+#: src/apps/event/templates/event/confirm/delete.html:39
+#: src/apps/event/templates/event/forms/event.html:64
+#: src/apps/person/templates/person/confirm/delete.html:31
+#: src/apps/person/templates/person/confirm/insert.html:29
+#: src/apps/person/templates/person/confirm/reinsert.html:29
+#: src/apps/person/templates/person/forms/create_person.html:60
+#: src/apps/person/templates/person/forms/historic.html:43
+#: src/apps/person/templates/person/forms/membership_update.html:33
+#: src/apps/person/templates/person/forms/update_image.html:37
+#: src/apps/person/templates/person/forms/update_profile.html:35
+#: src/apps/person/templates/person/forms/update_pupil.html:35
+#: src/apps/person/templates/person/invitation/confirm/delete.html:30
+#: src/apps/person/templates/person/invitation/confirm/resend_invitation.html:29
+#: src/apps/person/templates/person/invitation/confirm/warning.html:27
+#: src/apps/person/templates/person/invitation/forms/invite_pupil.html:48
+#: src/apps/publicwork/templates/publicwork/confirm/delete.html:31
+#: src/apps/publicwork/templates/publicwork/confirm/insert.html:29
+#: src/apps/publicwork/templates/publicwork/confirm/reinsert.html:29
+#: src/apps/publicwork/templates/publicwork/groups/forms/group.html:38
+#: src/apps/publicwork/templates/publicwork/lecture/forms/lecture.html:61
+#: src/apps/publicwork/templates/publicwork/listener/confirm/insert.html:66
+#: src/apps/publicwork/templates/publicwork/listener/forms/listener.html:58
+#: src/apps/publicwork/templates/publicwork/seeker/confirm/delete.html:29
+#: src/apps/publicwork/templates/publicwork/seeker/forms/frequency.html:67
+#: src/apps/publicwork/templates/publicwork/seeker/forms/historic.html:57
+#: src/apps/publicwork/templates/publicwork/seeker/forms/seeker.html:84
+#: src/apps/treasury/templates/treasury/order/create.html:47
+#: src/apps/user/templates/user/forms/updt_image.html:37
+#: src/apps/user/templates/user/forms/updt_profile.html:35
+#: src/apps/user/templates/user/profile/elements/controllers_div.html:28
+#: src/apps/workgroup/templates/workgroup/confirm/delete.html:31
+#: src/apps/workgroup/templates/workgroup/confirm/insert.html:29
+#: src/apps/workgroup/templates/workgroup/forms/member_frequency.html:71
+#: src/apps/workgroup/templates/workgroup/forms/membership_update.html:44
+#: src/apps/workgroup/templates/workgroup/forms/workgroup.html:47
 msgid "Cancel"
 msgstr ""
 
-#: center/templates/center/confirm/reinsert.html:14
-#: person/templates/person/confirm/reinsert.html:14
-#: person/templates/person/elements/confirm_to_reinsert_person.html:9
-#: publicwork/templates/publicwork/confirm/reinsert.html:14
-#: publicwork/templates/publicwork/seeker/confirm_to_reinsert.html:9
+#: src/apps/center/templates/center/confirm/reinsert.html:14
+#: src/apps/person/templates/person/confirm/reinsert.html:14
+#: src/apps/person/templates/person/elements/confirm_to_reinsert_person.html:9
+#: src/apps/publicwork/templates/publicwork/confirm/reinsert.html:14
+#: src/apps/publicwork/templates/publicwork/seeker/confirm_to_reinsert.html:9
 msgid "Are you shure you want to reinsert"
 msgstr ""
 
-#: center/templates/center/elements/center_list.html:47
+#: src/apps/center/templates/center/elements/center_list.html:47
 msgid "centers not found"
 msgstr ""
 
-#: center/templates/center/elements/header.html:11
+#: src/apps/center/templates/center/elements/header.html:11
 msgid "pupils"
 msgstr ""
 
-#: center/templates/center/elements/header.html:27
-#: event/templates/event/header.html:20
-#: publicwork/templates/publicwork/groups/elements/frequency_list_item.html:14
-#: publicwork/templates/publicwork/groups/elements/group_list_item.html:18
-#: publicwork/templates/publicwork/groups/header.html:14
-#: publicwork/templates/publicwork/lecture/elements/lecture_list_item.html:23
-#: publicwork/templates/publicwork/lecture/header.html:13
-#: publicwork/templates/publicwork/listener/elements/listener_list_item.html:24
-#: publicwork/templates/publicwork/seeker/header.html:16
-#: workgroup/templates/workgroup/member/header.html:17
+#: src/apps/center/templates/center/elements/header.html:27
+#: src/apps/event/templates/event/header.html:20
+#: src/apps/publicwork/templates/publicwork/groups/elements/frequency_list_item.html:14
+#: src/apps/publicwork/templates/publicwork/groups/elements/group_list_item.html:18
+#: src/apps/publicwork/templates/publicwork/groups/header.html:14
+#: src/apps/publicwork/templates/publicwork/lecture/elements/lecture_list_item.html:23
+#: src/apps/publicwork/templates/publicwork/lecture/header.html:13
+#: src/apps/publicwork/templates/publicwork/listener/elements/listener_list_item.html:24
+#: src/apps/publicwork/templates/publicwork/seeker/header.html:16
+#: src/apps/workgroup/templates/workgroup/member/header.html:17
 msgid "inactive"
 msgstr ""
 
-#: center/templates/center/elements/modal_pix.html:13
+#: src/apps/center/templates/center/elements/modal_pix.html:13
 msgid "Center PIX"
 msgstr ""
 
-#: center/templates/center/elements/tab_info.html:19
-#: person/templates/person/elements/tab_profile.html:18
-#: publicwork/templates/publicwork/seeker/info.html:48
-#: user/templates/user/profile/elements/tab_profile.html:17
-#: workgroup/templates/workgroup/member/info.html:46
+#: src/apps/center/templates/center/elements/tab_info.html:19
+#: src/apps/person/templates/person/elements/tab_profile.html:18
+#: src/apps/publicwork/templates/publicwork/seeker/info.html:48
+#: src/apps/user/templates/user/profile/elements/tab_profile.html:17
+#: src/apps/workgroup/templates/workgroup/member/info.html:46
 msgid "email"
 msgstr ""
 
-#: center/templates/center/elements/tab_info.html:38
-#: center/templates/center/elements/tab_others.html:42
-#: event/templates/event/navbar.html:45
-#: person/templates/person/elements/tab_profile.html:42
-#: person/templates/person/elements/tab_pupil.html:64
-#: publicwork/templates/publicwork/groups/navbar.html:62
-#: publicwork/templates/publicwork/lecture/navbar.html:32
-#: publicwork/templates/publicwork/seeker/navbar.html:44
-#: treasury/templates/treasury/order/detail.html:116
-#: user/templates/user/profile/elements/tab_profile.html:79
-#: workgroup/templates/workgroup/navbar.html:45
+#: src/apps/center/templates/center/elements/tab_info.html:38
+#: src/apps/center/templates/center/elements/tab_others.html:42
+#: src/apps/event/templates/event/navbar.html:45
+#: src/apps/person/templates/person/elements/tab_profile.html:42
+#: src/apps/person/templates/person/elements/tab_pupil.html:64
+#: src/apps/publicwork/templates/publicwork/groups/navbar.html:62
+#: src/apps/publicwork/templates/publicwork/lecture/navbar.html:32
+#: src/apps/publicwork/templates/publicwork/seeker/navbar.html:44
+#: src/apps/treasury/templates/treasury/order/detail.html:116
+#: src/apps/user/templates/user/profile/elements/tab_profile.html:79
+#: src/apps/workgroup/templates/workgroup/navbar.html:45
 msgid "Edit"
 msgstr ""
 
-#: center/templates/center/elements/tab_responsibles.html:41
-#: event/templates/event/activity/navbar.html:22
-#: publicwork/templates/publicwork/seeker/add_or_change.html:12
-#: publicwork/templates/publicwork/seeker/create_historic.html:9
-#: treasury/templates/treasury/bankflag/navbar.html:21
-#: treasury/templates/treasury/form_of_payment/navbar.html:21
-#: treasury/templates/treasury/order/elements/payforms_div.html:18
-#: treasury/templates/treasury/order/elements/payment_add.html:26
-#: treasury/templates/treasury/order/elements/payments_div.html:18
-#: treasury/templates/treasury/payment/navbar.html:21
-#: treasury/templates/treasury/paytype/navbar.html:21
-#: user/templates/user/profile/elements/how_to_pay.html:26
-#: user/templates/user/profile/elements/payment_add.html:26
-#: user/templates/user/profile/elements/payments_div.html:18
-#: workgroup/templates/workgroup/mentoring/add_frequencies.html:12
+#: src/apps/center/templates/center/elements/tab_responsibles.html:41
+#: src/apps/event/templates/event/activity/navbar.html:22
+#: src/apps/publicwork/templates/publicwork/seeker/add_or_change.html:12
+#: src/apps/publicwork/templates/publicwork/seeker/create_historic.html:9
+#: src/apps/treasury/templates/treasury/bankflag/navbar.html:21
+#: src/apps/treasury/templates/treasury/form_of_payment/navbar.html:21
+#: src/apps/treasury/templates/treasury/order/elements/payforms_div.html:18
+#: src/apps/treasury/templates/treasury/order/elements/payment_add.html:26
+#: src/apps/treasury/templates/treasury/order/elements/payments_div.html:18
+#: src/apps/treasury/templates/treasury/payment/navbar.html:21
+#: src/apps/treasury/templates/treasury/paytype/navbar.html:21
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:26
+#: src/apps/user/templates/user/profile/elements/payment_add.html:26
+#: src/apps/user/templates/user/profile/elements/payments_div.html:18
+#: src/apps/workgroup/templates/workgroup/mentoring/add_frequencies.html:12
 msgid "Add"
 msgstr ""
 
-#: center/templates/center/elements/tabs.html:11
-#: person/templates/person/detail.html:16
-#: person/templates/person/navbar.html:44
-#: publicwork/templates/publicwork/seeker/detail.html:19
-#: publicwork/templates/publicwork/seeker/navbar.html:15
-#: user/templates/user/profile/detail.html:15
-#: user/templates/user/profile/navbar-ant.html:13
-#: workgroup/templates/workgroup/member/detail.html:16
-#: workgroup/templates/workgroup/member/navbar.html:15
+#: src/apps/center/templates/center/elements/tabs.html:11
+#: src/apps/person/templates/person/detail.html:16
+#: src/apps/person/templates/person/navbar.html:44
+#: src/apps/publicwork/templates/publicwork/seeker/detail.html:19
+#: src/apps/publicwork/templates/publicwork/seeker/navbar.html:15
+#: src/apps/user/templates/user/profile/detail.html:15
+#: src/apps/user/templates/user/profile/navbar-ant.html:13
+#: src/apps/workgroup/templates/workgroup/member/detail.html:16
+#: src/apps/workgroup/templates/workgroup/member/navbar.html:15
 msgid "Info"
 msgstr ""
 
-#: center/templates/center/elements/tabs.html:20
+#: src/apps/center/templates/center/elements/tabs.html:20
 msgid "Others"
 msgstr ""
 
-#: center/templates/center/elements/tabs.html:29
+#: src/apps/center/templates/center/elements/tabs.html:29
 msgid "Responsibles"
 msgstr ""
 
-#: center/templates/center/forms/add_responsible.html:12
+#: src/apps/center/templates/center/forms/add_responsible.html:12
 msgid "Add Responsible"
 msgstr ""
 
-#: center/templates/center/navbar.html:38 event/templates/event/navbar.html:56
-#: person/templates/person/navbar.html:117
-#: publicwork/templates/publicwork/lecture/navbar.html:43
-#: publicwork/templates/publicwork/seeker/navbar.html:56
-#: treasury/templates/treasury/order/detail.html:122
+#: src/apps/center/templates/center/navbar.html:38
+#: src/apps/event/templates/event/navbar.html:56
+#: src/apps/person/templates/person/navbar.html:117
+#: src/apps/publicwork/templates/publicwork/lecture/navbar.html:43
+#: src/apps/publicwork/templates/publicwork/seeker/navbar.html:56
+#: src/apps/treasury/templates/treasury/order/detail.html:122
 msgid "Delete"
 msgstr ""
 
-#: center/templates/center/navbar.html:49
-#: person/templates/person/navbar.html:128
-#: publicwork/templates/publicwork/groups/navbar.html:84
-#: publicwork/templates/publicwork/seeker/navbar.html:67
+#: src/apps/center/templates/center/navbar.html:49
+#: src/apps/person/templates/person/navbar.html:128
+#: src/apps/publicwork/templates/publicwork/groups/navbar.html:84
+#: src/apps/publicwork/templates/publicwork/seeker/navbar.html:67
 msgid "Reinsert"
 msgstr ""
 
-#: center/views.py:33
+#: src/apps/center/views.py:31
 msgid "The Center has been updated!"
 msgstr ""
 
-#: center/views.py:77
+#: src/apps/center/views.py:75
 msgid "center detail"
 msgstr ""
 
-#: center/views.py:111
+#: src/apps/center/views.py:109
 msgid "Create center"
 msgstr ""
 
-#: center/views.py:147
+#: src/apps/center/views.py:145
 msgid "Update info"
 msgstr ""
 
-#: center/views.py:177 person/views/person.py:271 user/views.py:110
+#: src/apps/center/views.py:175 src/apps/person/views/person.py:271
+#: src/apps/user/views.py:110
 msgid "Update image"
 msgstr ""
 
-#: center/views.py:209
+#: src/apps/center/views.py:207
 msgid "Update others info"
 msgstr ""
 
-#: center/views.py:312
+#: src/apps/center/views.py:310
 msgid "add responsible"
 msgstr ""
 
-#: center/views.py:335
+#: src/apps/center/views.py:333
 #, python-brace-format
 msgid "The '{_user}' has been deleted!"
 msgstr ""
 
-#: event/admin.py:18
+#: src/apps/event/admin.py:18
 #, python-format
 msgid "%d event was successfully marked as 'inactive'."
 msgid_plural "%d events were successfully marked as 'inactives'."
 msgstr[0] ""
 msgstr[1] ""
 
-#: event/admin.py:31
+#: src/apps/event/admin.py:31
 #, python-format
 msgid "%d event was successfully marked as 'active'."
 msgid_plural "%d events were successfully marked as 'actives'."
 msgstr[0] ""
 msgstr[1] ""
 
-#: event/models.py:21
+#: src/apps/event/models.py:21
 msgid "multi date"
 msgstr ""
 
-#: event/models.py:22 person/templates/person/elements/tab_pupil.html:43
-#: publicwork/models.py:103 publicwork/models.py:185 publicwork/models.py:240
-#: rcadmin/common.py:47 treasury/models.py:20 treasury/models.py:85
-#: user/models.py:62
+#: src/apps/event/models.py:22
+#: src/apps/person/templates/person/elements/tab_pupil.html:43
+#: src/apps/publicwork/models.py:103 src/apps/publicwork/models.py:185
+#: src/apps/publicwork/models.py:240 src/apps/treasury/models.py:20
+#: src/apps/treasury/models.py:85 src/apps/user/models.py:62
+#: src/rcadmin/common.py:47
 msgid "active"
 msgstr ""
 
-#: event/models.py:28 event/models.py:36
+#: src/apps/event/models.py:28 src/apps/event/models.py:36
 msgid "activity"
 msgstr ""
 
-#: event/models.py:29
+#: src/apps/event/models.py:29
 msgid "activities"
 msgstr ""
 
-#: event/models.py:39
+#: src/apps/event/models.py:39
 msgid "qr code"
 msgstr ""
 
-#: event/models.py:45 person/models.py:106 person/models.py:152
-#: publicwork/models.py:143 publicwork/models.py:178
-#: publicwork/templates/publicwork/listener/confirm/insert.html:45
-#: publicwork/templates/publicwork/listener/forms/listener.html:36
-#: publicwork/templates/publicwork/seeker/forms/frequency.html:45
-#: treasury/templates/treasury/order/detail.html:26
-#: workgroup/templates/workgroup/forms/member_frequency.html:50
+#: src/apps/event/models.py:45 src/apps/person/models.py:106
+#: src/apps/person/models.py:152 src/apps/publicwork/models.py:143
+#: src/apps/publicwork/models.py:178
+#: src/apps/publicwork/templates/publicwork/listener/confirm/insert.html:45
+#: src/apps/publicwork/templates/publicwork/listener/forms/listener.html:36
+#: src/apps/publicwork/templates/publicwork/seeker/forms/frequency.html:45
+#: src/apps/treasury/templates/treasury/order/detail.html:26
+#: src/apps/workgroup/templates/workgroup/forms/member_frequency.html:50
 msgid "date"
 msgstr ""
 
-#: event/models.py:47
+#: src/apps/event/models.py:47
 msgid "end"
 msgstr ""
 
-#: event/models.py:48
+#: src/apps/event/models.py:48
 msgid "dead line"
 msgstr ""
 
-#: event/models.py:53 person/models.py:154 publicwork/models.py:145
-#: publicwork/models.py:180 publicwork/models.py:232 treasury/models.py:186
-#: treasury/templates/treasury/order/detail.html:71 workgroup/models.py:19
+#: src/apps/event/models.py:53 src/apps/person/models.py:154
+#: src/apps/publicwork/models.py:145 src/apps/publicwork/models.py:180
+#: src/apps/publicwork/models.py:232 src/apps/treasury/models.py:186
+#: src/apps/treasury/templates/treasury/order/detail.html:71
+#: src/apps/workgroup/models.py:19
 msgid "description"
 msgstr ""
 
-#: event/models.py:56 event/models.py:113
-#: user/templates/user/profile/frequencies.html:22
+#: src/apps/event/models.py:56 src/apps/event/models.py:113
+#: src/apps/user/templates/user/profile/frequencies.html:22
 msgid "frequencies"
 msgstr ""
 
-#: event/models.py:86 event/models.py:94 treasury/models.py:50
-#: workgroup/templates/workgroup/forms/member_frequency.html:40
+#: src/apps/event/models.py:86 src/apps/event/models.py:94
+#: src/apps/treasury/models.py:50
+#: src/apps/workgroup/templates/workgroup/forms/member_frequency.html:40
 msgid "event"
 msgstr ""
 
-#: event/models.py:87
+#: src/apps/event/models.py:87
 msgid "events"
 msgstr ""
 
-#: event/models.py:112
+#: src/apps/event/models.py:112
 msgid "frequency"
 msgstr ""
 
-#: event/templates/event/activity/activities.html:27
+#: src/apps/event/templates/event/activity/activities.html:27
 msgid "activities not found"
 msgstr ""
 
-#: event/templates/event/activity/activity.html:22
+#: src/apps/event/templates/event/activity/activity.html:22
 msgid "is multi date"
 msgstr ""
 
-#: event/templates/event/detail.html:25
-#: event/templates/event/frequencies.html:6
-#: event/templates/event/navbar.html:35
-#: person/templates/person/frequencies.html:7
-#: person/templates/person/navbar.html:56
-#: publicwork/templates/publicwork/groups/frequencies.html:7
-#: publicwork/templates/publicwork/groups/navbar.html:20
-#: publicwork/templates/publicwork/groups/navbar.html:96
-#: publicwork/templates/publicwork/seeker/frequencies.html:7
-#: publicwork/templates/publicwork/seeker/navbar.html:21
-#: user/templates/user/profile/frequencies.html:3
-#: user/templates/user/profile/navbar-ant.html:16
-#: user/templates/user/profile/navbar.html:16
-#: workgroup/templates/workgroup/member/frequencies.html:7
-#: workgroup/templates/workgroup/member/navbar.html:21
-#: workgroup/templates/workgroup/mentoring/frequencies.html:8
-#: workgroup/templates/workgroup/mentoring/navbar.html:22
-#: workgroup/templates/workgroup/mentoring/navbar.html:36
+#: src/apps/event/templates/event/detail.html:25
+#: src/apps/event/templates/event/frequencies.html:6
+#: src/apps/event/templates/event/navbar.html:35
+#: src/apps/person/templates/person/frequencies.html:7
+#: src/apps/person/templates/person/navbar.html:56
+#: src/apps/publicwork/templates/publicwork/groups/frequencies.html:7
+#: src/apps/publicwork/templates/publicwork/groups/navbar.html:20
+#: src/apps/publicwork/templates/publicwork/groups/navbar.html:96
+#: src/apps/publicwork/templates/publicwork/seeker/frequencies.html:7
+#: src/apps/publicwork/templates/publicwork/seeker/navbar.html:21
+#: src/apps/user/templates/user/profile/frequencies.html:3
+#: src/apps/user/templates/user/profile/navbar-ant.html:16
+#: src/apps/user/templates/user/profile/navbar.html:16
+#: src/apps/workgroup/templates/workgroup/member/frequencies.html:7
+#: src/apps/workgroup/templates/workgroup/member/navbar.html:21
+#: src/apps/workgroup/templates/workgroup/mentoring/frequencies.html:8
+#: src/apps/workgroup/templates/workgroup/mentoring/navbar.html:22
+#: src/apps/workgroup/templates/workgroup/mentoring/navbar.html:36
 msgid "Frequencies"
 msgstr ""
 
-#: event/templates/event/detail.html:36
+#: src/apps/event/templates/event/detail.html:36
 msgid "QR - Code"
 msgstr ""
 
-#: event/templates/event/detail.html:55
+#: src/apps/event/templates/event/detail.html:55
 msgid "Scan this QR-Code to sign-in Event"
 msgstr ""
 
-#: event/templates/event/elements/frequencies-add.html:13
+#: src/apps/event/templates/event/elements/frequencies-add.html:13
 msgid "Insert"
 msgstr ""
 
-#: event/templates/event/elements/frequencies-add.html:24
+#: src/apps/event/templates/event/elements/frequencies-add.html:24
 msgid "Insert Frequencies"
 msgstr ""
 
-#: event/templates/event/elements/frequencies-add.html:31
+#: src/apps/event/templates/event/elements/frequencies-add.html:31
 msgid "Important"
 msgstr ""
 
-#: event/templates/event/elements/frequencies-add.html:33
+#: src/apps/event/templates/event/elements/frequencies-add.html:33
 msgid "Enter pupils registration numbers, separated by commas."
 msgstr ""
 
-#: event/templates/event/elements/frequencies-add.html:34
+#: src/apps/event/templates/event/elements/frequencies-add.html:34
 msgid "Example"
 msgstr ""
 
-#: event/templates/event/elements/frequencies-add.html:40
+#: src/apps/event/templates/event/elements/frequencies-add.html:40
 msgid "Unknown records"
 msgstr ""
 
-#: event/templates/event/elements/frequencies-add.html:48
+#: src/apps/event/templates/event/elements/frequencies-add.html:48
 msgid "Ignore"
 msgstr ""
 
-#: event/templates/event/events.html:14
-#: person/templates/person/elements/event_list.html:31
+#: src/apps/event/templates/event/events.html:14
+#: src/apps/person/templates/person/elements/event_list.html:31
 msgid "events not found"
 msgstr ""
 
-#: event/templates/event/frequencies.html:9
-#: person/templates/person/frequencies.html:10
-#: person/templates/person/historic.html:10
-#: person/templates/person/membership.html:10
-#: publicwork/templates/publicwork/groups/frequencies.html:10
-#: publicwork/templates/publicwork/groups/seekers.html:10
-#: publicwork/templates/publicwork/listener/listeners.html:10
-#: publicwork/templates/publicwork/listener/seekers.html:11
-#: publicwork/templates/publicwork/seeker/frequencies.html:10
-#: publicwork/templates/publicwork/seeker/historic.html:10
-#: workgroup/templates/workgroup/member/frequencies.html:10
-#: workgroup/templates/workgroup/member/historic.html:10
-#: workgroup/templates/workgroup/member/members.html:10
-#: workgroup/templates/workgroup/mentoring/frequencies.html:11
-#: workgroup/templates/workgroup/mentoring/members.html:10
+#: src/apps/event/templates/event/frequencies.html:9
+#: src/apps/person/templates/person/frequencies.html:10
+#: src/apps/person/templates/person/historic.html:10
+#: src/apps/person/templates/person/membership.html:10
+#: src/apps/publicwork/templates/publicwork/groups/frequencies.html:10
+#: src/apps/publicwork/templates/publicwork/groups/seekers.html:10
+#: src/apps/publicwork/templates/publicwork/listener/listeners.html:10
+#: src/apps/publicwork/templates/publicwork/listener/seekers.html:11
+#: src/apps/publicwork/templates/publicwork/seeker/frequencies.html:10
+#: src/apps/publicwork/templates/publicwork/seeker/historic.html:10
+#: src/apps/workgroup/templates/workgroup/member/frequencies.html:10
+#: src/apps/workgroup/templates/workgroup/member/historic.html:10
+#: src/apps/workgroup/templates/workgroup/member/members.html:10
+#: src/apps/workgroup/templates/workgroup/mentoring/frequencies.html:11
+#: src/apps/workgroup/templates/workgroup/mentoring/members.html:10
 msgid "records in the database"
 msgstr ""
 
-#: event/templates/event/frequencies.html:19
-#: publicwork/templates/publicwork/groups/frequencies.html:18
-#: publicwork/templates/publicwork/seeker/frequencies.html:19
-#: user/templates/user/profile/frequencies.html:32
-#: workgroup/templates/workgroup/member/frequencies.html:18
+#: src/apps/event/templates/event/frequencies.html:19
+#: src/apps/publicwork/templates/publicwork/groups/frequencies.html:18
+#: src/apps/publicwork/templates/publicwork/seeker/frequencies.html:19
+#: src/apps/user/templates/user/profile/frequencies.html:32
+#: src/apps/workgroup/templates/workgroup/member/frequencies.html:18
 msgid "no frequencies found"
 msgstr ""
 
-#: event/templates/event/header.html:12
+#: src/apps/event/templates/event/header.html:12
 msgid "deadline"
 msgstr ""
 
-#: event/templates/event/navbar.html:7 event/templates/event/navbar.html:25
-#: workgroup/templates/workgroup/mentoring/who_participated.html:3
+#: src/apps/event/templates/event/navbar.html:7
+#: src/apps/event/templates/event/navbar.html:25
+#: src/apps/workgroup/templates/workgroup/mentoring/who_participated.html:3
 msgid "Event"
 msgstr ""
 
-#: event/views/activity.py:30
+#: src/apps/event/views/activity.py:30
 msgid "The Activity has been created!"
 msgstr ""
 
-#: event/views/activity.py:40
+#: src/apps/event/views/activity.py:40
 msgid "Create Activity"
 msgstr ""
 
-#: event/views/activity.py:53
+#: src/apps/event/views/activity.py:53
 msgid "The Activity has been updated!"
 msgstr ""
 
-#: event/views/activity.py:62
+#: src/apps/event/views/activity.py:62
 msgid "Update Activity"
 msgstr ""
 
-#: event/views/activity.py:77
+#: src/apps/event/views/activity.py:77
 msgid "The Activity has been deleted!"
 msgstr ""
 
-#: event/views/activity.py:83 treasury/views/bankflag.py:87
-#: treasury/views/form_of_payment.py:83 treasury/views/order.py:493
-#: treasury/views/payments.py:83 treasury/views/paytypes.py:87
+#: src/apps/event/views/activity.py:83 src/apps/treasury/views/bankflag.py:87
+#: src/apps/treasury/views/form_of_payment.py:83
+#: src/apps/treasury/views/order.py:493 src/apps/treasury/views/payments.py:83
+#: src/apps/treasury/views/paytypes.py:87
 msgid "confirm to delete"
 msgstr ""
 
-#: event/views/event.py:45
+#: src/apps/event/views/event.py:45
 msgid "event home"
 msgstr ""
 
-#: event/views/event.py:75
+#: src/apps/event/views/event.py:75
 msgid "event detail"
 msgstr ""
 
-#: event/views/event.py:111 person/views/historic.py:73
-#: publicwork/views/historic.py:44
+#: src/apps/event/views/event.py:111 src/apps/person/views/historic.py:73
+#: src/apps/publicwork/views/historic.py:44
 msgid "Create historic"
 msgstr ""
 
-#: event/views/event.py:134
+#: src/apps/event/views/event.py:134
 msgid "update event"
 msgstr ""
 
-#: event/views/event.py:152
+#: src/apps/event/views/event.py:152
 msgid ""
 "\n"
 "        You cannot delete an event if it has frequencies launched.\n"
@@ -1207,1703 +1262,1486 @@ msgid ""
 "        "
 msgstr ""
 
-#: event/views/frequencies.py:96 person/views/frequency_ps.py:108
-#: workgroup/views/mentoring.py:332
+#: src/apps/event/views/frequencies.py:96
+#: src/apps/person/views/frequency_ps.py:108
+#: src/apps/workgroup/views/mentoring.py:332
 msgid "insert frequencies"
 msgstr ""
 
-#: person/admin.py:30
+#: src/apps/person/admin.py:31
 #, python-format
 msgid "%d person was successfully marked as 'inactive'."
 msgid_plural "%d persons were successfully marked as 'inactives'."
 msgstr[0] ""
 msgstr[1] ""
 
-#: person/admin.py:43
+#: src/apps/person/admin.py:44
 #, python-format
 msgid "%d person was successfully marked as 'active'."
 msgid_plural "%d persons were successfully marked as 'actives'."
 msgstr[0] ""
 msgstr[1] ""
 
-#: person/models.py:34 person/models.py:99
-#: person/templates/person/elements/tab_pupil.html:14 publicwork/models.py:29
-#: publicwork/models.py:83 publicwork/templates/publicwork/seeker/info.html:32
-#: workgroup/templates/workgroup/member/info.html:24
+#: src/apps/person/models.py:34 src/apps/person/models.py:99
+#: src/apps/person/templates/person/elements/tab_pupil.html:14
+#: src/apps/publicwork/models.py:29 src/apps/publicwork/models.py:83
+#: src/apps/publicwork/templates/publicwork/seeker/info.html:32
+#: src/apps/workgroup/templates/workgroup/member/info.html:24
 msgid "birth"
 msgstr ""
 
-#: person/models.py:36 person/templates/person/elements/tab_profile.html:10
-#: publicwork/models.py:31 publicwork/models.py:85
-#: publicwork/templates/publicwork/seeker/info.html:40 user/models.py:92
-#: user/templates/user/profile/elements/tab_profile.html:9
-#: workgroup/templates/workgroup/member/info.html:34
+#: src/apps/person/models.py:36
+#: src/apps/person/templates/person/elements/tab_profile.html:10
+#: src/apps/publicwork/models.py:31 src/apps/publicwork/models.py:85
+#: src/apps/publicwork/templates/publicwork/seeker/info.html:40
+#: src/apps/user/models.py:92
+#: src/apps/user/templates/user/profile/elements/tab_profile.html:9
+#: src/apps/workgroup/templates/workgroup/member/info.html:34
 msgid "gender"
 msgstr ""
 
-#: person/models.py:39 person/models.py:98
-#: person/templates/person/elements/tab_pupil.html:24
+#: src/apps/person/models.py:39 src/apps/person/models.py:98
+#: src/apps/person/templates/person/elements/tab_pupil.html:24
 msgid "id card"
 msgstr ""
 
-#: person/models.py:52 user/models.py:49
+#: src/apps/person/models.py:52 src/apps/user/models.py:49
 msgid "email address"
 msgstr ""
 
-#: person/models.py:54 user/models.py:109
+#: src/apps/person/models.py:54 src/apps/user/models.py:109
 msgid "emergency contact"
 msgstr ""
 
-#: person/models.py:57 user/models.py:112
+#: src/apps/person/models.py:57 src/apps/user/models.py:112
 msgid "emergency phone"
 msgstr ""
 
-#: person/models.py:63
-#: person/templates/person/invitation/elements/invite_list_item.html:23
+#: src/apps/person/models.py:63
+#: src/apps/person/templates/person/invitation/elements/invite_list_item.html:23
 msgid "invited on"
 msgstr ""
 
-#: person/models.py:65
-#: person/templates/person/invitation/elements/invite_list_item.html:21
+#: src/apps/person/models.py:65
+#: src/apps/person/templates/person/invitation/elements/invite_list_item.html:21
 msgid "imported on"
 msgstr ""
 
-#: person/models.py:78
+#: src/apps/person/models.py:78
 msgid "invitation"
 msgstr ""
 
-#: person/models.py:79 person/views/invitation.py:41
+#: src/apps/person/models.py:79 src/apps/person/views/invitation.py:42
 msgid "invitations"
 msgstr ""
 
-#: person/models.py:138
+#: src/apps/person/models.py:138
 msgid "people"
 msgstr ""
 
-#: person/models.py:150 publicwork/models.py:141
+#: src/apps/person/models.py:150 src/apps/publicwork/models.py:141
 msgid "occurrence"
 msgstr ""
 
-#: person/models.py:170 publicwork/models.py:161
+#: src/apps/person/models.py:170 src/apps/publicwork/models.py:161
 msgid "historic"
 msgstr ""
 
-#: person/models.py:171 publicwork/models.py:162
+#: src/apps/person/models.py:171 src/apps/publicwork/models.py:162
 msgid "historics"
 msgstr ""
 
-#: person/templates/person/confirm/insert.html:14
-#: publicwork/templates/publicwork/confirm/insert.html:14
-#: publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:9
-#: workgroup/templates/workgroup/confirm/insert.html:14
-#: workgroup/templates/workgroup/elements/confirm_add_frequency.html:9
-#: workgroup/templates/workgroup/elements/confirm_to_insert_membership.html:9
+#: src/apps/person/templates/person/confirm/insert.html:14
+#: src/apps/publicwork/templates/publicwork/confirm/insert.html:14
+#: src/apps/publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:9
+#: src/apps/workgroup/templates/workgroup/confirm/insert.html:14
+#: src/apps/workgroup/templates/workgroup/elements/confirm_add_frequency.html:9
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_insert_membership.html:9
 msgid "Are you shure you want to insert"
 msgstr ""
 
-#: person/templates/person/elements/confirm_to_import.html:9
+#: src/apps/person/templates/person/elements/confirm_to_import.html:9
 msgid "Are you shure you want to import"
 msgstr ""
 
-#: person/templates/person/elements/confirm_to_import.html:16
+#: src/apps/person/templates/person/elements/confirm_to_import.html:16
 msgid "as a"
 msgstr ""
 
-#: person/templates/person/elements/confirm_to_import.html:16
-#: person/templates/person/info.html:18
+#: src/apps/person/templates/person/elements/confirm_to_import.html:16
+#: src/apps/person/templates/person/info.html:18
 msgid "Pupil"
 msgstr ""
 
-#: person/templates/person/elements/event_list_item.html:26
+#: src/apps/person/templates/person/elements/event_list_item.html:26
 msgid "Select"
 msgstr ""
 
-#: person/templates/person/elements/header.html:17
-#: publicwork/templates/publicwork/groups/elements/frequency_list_item.html:8
-#: publicwork/templates/publicwork/groups/elements/group_list_item.html:13
-#: publicwork/templates/publicwork/lecture/elements/lecture_list_item.html:18
-#: publicwork/templates/publicwork/lecture/header.html:10
-#: publicwork/templates/publicwork/seeker/elements/seeker_list_item.html:42
+#: src/apps/person/templates/person/elements/header.html:17
+#: src/apps/publicwork/templates/publicwork/groups/elements/frequency_list_item.html:8
+#: src/apps/publicwork/templates/publicwork/groups/elements/group_list_item.html:13
+#: src/apps/publicwork/templates/publicwork/lecture/elements/lecture_list_item.html:18
+#: src/apps/publicwork/templates/publicwork/lecture/header.html:10
+#: src/apps/publicwork/templates/publicwork/seeker/elements/seeker_list_item.html:42
 msgid "only view"
 msgstr ""
 
-#: person/templates/person/elements/reports_menu.html:9
-#: publicwork/templates/publicwork/home.html:50
-#: publicwork/templates/publicwork/reports/menu.html:5
-#: treasury/templates/treasury/home.html:37
-#: treasury/templates/treasury/reports/menu.html:5
+#: src/apps/person/templates/person/elements/reports_menu.html:9
+#: src/apps/publicwork/templates/publicwork/home.html:50
+#: src/apps/publicwork/templates/publicwork/reports/menu.html:5
+#: src/apps/treasury/templates/treasury/home.html:37
+#: src/apps/treasury/templates/treasury/reports/menu.html:5
 msgid "Reports"
 msgstr ""
 
-#: person/templates/person/elements/reports_menu.html:12
+#: src/apps/person/templates/person/elements/reports_menu.html:12
 msgid "Installed People"
 msgstr ""
 
-#: person/templates/person/elements/reports_menu.html:13
+#: src/apps/person/templates/person/elements/reports_menu.html:13
 msgid "Occurrences per period"
 msgstr ""
 
-#: person/templates/person/elements/tab_profile.html:22
-#: user/templates/user/profile/elements/tab_profile.html:21
+#: src/apps/person/templates/person/elements/tab_profile.html:22
+#: src/apps/user/templates/user/profile/elements/tab_profile.html:21
 msgid "sos contact"
 msgstr ""
 
-#: person/templates/person/elements/tab_pupil.html:19
-#: publicwork/templates/publicwork/seeker/info.html:36
-#: workgroup/templates/workgroup/member/info.html:28
+#: src/apps/person/templates/person/elements/tab_pupil.html:19
+#: src/apps/publicwork/templates/publicwork/seeker/info.html:36
+#: src/apps/workgroup/templates/workgroup/member/info.html:28
 msgid "years"
 msgstr ""
 
-#: person/templates/person/forms/historic-ant.html:24
-#: person/templates/person/historic.html:7
-#: person/templates/person/navbar.html:50
-#: person/templates/person/navbar.html:143
-#: publicwork/templates/publicwork/seeker/create_historic.html:9
-#: publicwork/templates/publicwork/seeker/historic.html:7
-#: publicwork/templates/publicwork/seeker/navbar.html:27
-#: publicwork/templates/publicwork/seeker/navbar.html:92
-#: user/templates/user/profile/historic.html:3
-#: user/templates/user/profile/navbar-ant.html:19
-#: user/templates/user/profile/navbar.html:22
-#: workgroup/templates/workgroup/member/historic.html:7
-#: workgroup/templates/workgroup/member/navbar.html:27
+#: src/apps/person/templates/person/forms/historic-ant.html:24
+#: src/apps/person/templates/person/historic.html:7
+#: src/apps/person/templates/person/navbar.html:50
+#: src/apps/person/templates/person/navbar.html:143
+#: src/apps/publicwork/templates/publicwork/seeker/create_historic.html:9
+#: src/apps/publicwork/templates/publicwork/seeker/historic.html:7
+#: src/apps/publicwork/templates/publicwork/seeker/navbar.html:27
+#: src/apps/publicwork/templates/publicwork/seeker/navbar.html:92
+#: src/apps/user/templates/user/profile/historic.html:3
+#: src/apps/user/templates/user/profile/navbar-ant.html:19
+#: src/apps/user/templates/user/profile/navbar.html:22
+#: src/apps/workgroup/templates/workgroup/member/historic.html:7
+#: src/apps/workgroup/templates/workgroup/member/navbar.html:27
 msgid "Historic"
 msgstr ""
 
-#: person/templates/person/forms/membership.html:23
-#: person/templates/person/membership.html:7
-#: person/templates/person/navbar.html:62
-#: person/templates/person/navbar.html:163
+#: src/apps/person/templates/person/forms/membership.html:23
+#: src/apps/person/templates/person/membership.html:7
+#: src/apps/person/templates/person/navbar.html:62
+#: src/apps/person/templates/person/navbar.html:163
 msgid "Membership"
 msgstr ""
 
-#: person/templates/person/forms/membership_update.html:14
-#: workgroup/templates/workgroup/forms/membership_update.html:14
+#: src/apps/person/templates/person/forms/membership_update.html:14
+#: src/apps/workgroup/templates/workgroup/forms/membership_update.html:14
 msgid "Update Membership"
 msgstr ""
 
-#: person/templates/person/forms/pupil_fields.html:19
+#: src/apps/person/templates/person/forms/pupil_fields.html:19
 msgid "To update 'aspect' and 'status', use the 'Historic' tab."
 msgstr ""
 
-#: person/templates/person/forms/update_pupil.html:43
+#: src/apps/person/templates/person/forms/update_pupil.html:43
 msgid "update"
 msgstr ""
 
-#: person/templates/person/frequencies.html:20
+#: src/apps/person/templates/person/frequencies.html:20
 msgid "frequency not found"
 msgstr ""
 
-#: person/templates/person/frequency_insert.html:18
-#: workgroup/templates/workgroup/member/add_frequency.html:19
+#: src/apps/person/templates/person/frequency_insert.html:18
+#: src/apps/workgroup/templates/workgroup/member/add_frequency.html:19
 msgid "Insert Frequency"
 msgstr ""
 
-#: person/templates/person/historic.html:20
+#: src/apps/person/templates/person/historic.html:20
 msgid "historic not found"
 msgstr ""
 
-#: person/templates/person/import_from_seekers.html:12
+#: src/apps/person/templates/person/import_from_seekers.html:12
 msgid "Seekers who will become pupils"
 msgstr ""
 
-#: person/templates/person/import_from_seekers.html:59
+#: src/apps/person/templates/person/import_from_seekers.html:59
 msgid "no seekers found"
 msgstr ""
 
-#: person/templates/person/invitation/confirm/resend_invitation.html:14
+#: src/apps/person/templates/person/invitation/confirm/resend_invitation.html:14
 msgid "Are you shure you want to resend invitation to"
 msgstr ""
 
-#: person/templates/person/invitation/congratulations.html:7
-#: person/templates/person/invitation/emails/to_congratulate.html:4
-#: publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:4
-#: publicwork/templates/publicwork/insert_yourself/emails/to_congratulate.html:4
+#: src/apps/person/templates/person/invitation/congratulations.html:7
+#: src/apps/person/templates/person/invitation/emails/to_congratulate.html:4
+#: src/apps/publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:4
+#: src/apps/publicwork/templates/publicwork/insert_yourself/emails/to_congratulate.html:4
 msgid "Congratulations"
 msgstr ""
 
-#: person/templates/person/invitation/elements/invite_list.html:32
+#: src/apps/person/templates/person/invitation/elements/invite_list.html:32
 msgid "invitations not found"
 msgstr ""
 
-#: person/templates/person/invitation/elements/invite_list_item.html:35
+#: src/apps/person/templates/person/invitation/elements/invite_list_item.html:35
 msgid "migration"
 msgstr ""
 
-#: person/templates/person/invitation/elements/invite_list_item.html:48
+#: src/apps/person/templates/person/invitation/elements/invite_list_item.html:48
 msgid "Invite Again"
 msgstr ""
 
-#: person/templates/person/invitation/elements/invite_list_item.html:59
+#: src/apps/person/templates/person/invitation/elements/invite_list_item.html:59
 msgid "Remove"
 msgstr ""
 
-#: person/templates/person/invitation/form_feedback.html:29
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:33
+#: src/apps/person/templates/person/invitation/form_feedback.html:29
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:33
 msgid "Invalid reCAPTCHA, please try again."
 msgstr ""
 
-#: person/templates/person/invitation/form_feedback.html:34
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:51
-#: publicwork/templates/publicwork/insert_yourself/pos_email_feedback.html:10
+#: src/apps/person/templates/person/invitation/form_feedback.html:34
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:51
+#: src/apps/publicwork/templates/publicwork/insert_yourself/pos_email_feedback.html:10
 msgid "This page can be closed"
 msgstr ""
 
-#: person/templates/person/invitation/forms/data_registration.html:89
+#: src/apps/person/templates/person/invitation/forms/data_registration.html:90
 msgid "Password"
 msgstr ""
 
-#: person/templates/person/invitation/forms/data_registration.html:110
+#: src/apps/person/templates/person/invitation/forms/data_registration.html:111
 msgid "Repeat the password"
 msgstr ""
 
-#: person/templates/person/invitation/forms/data_registration.html:128
+#: src/apps/person/templates/person/invitation/forms/data_registration.html:129
 msgid "I have read and agree to become a pupil and I am aware of the "
 msgstr ""
 
-#: person/templates/person/invitation/forms/data_registration.html:132
+#: src/apps/person/templates/person/invitation/forms/data_registration.html:133
 msgid "Data Policy"
 msgstr ""
 
-#: person/templates/person/invitation/forms/data_registration.html:134
-#: publicwork/templates/publicwork/insert_yourself/form.html:60
+#: src/apps/person/templates/person/invitation/forms/data_registration.html:135
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form.html:60
 msgid "of Golden Rosicrucian."
 msgstr ""
 
-#: person/templates/person/invitation/forms/data_registration.html:145
-#: publicwork/templates/publicwork/groups/actions.html:11
-#: publicwork/templates/publicwork/insert_yourself/form.html:69
+#: src/apps/person/templates/person/invitation/forms/data_registration.html:149
+#: src/apps/publicwork/templates/publicwork/groups/actions.html:11
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form.html:69
 msgid "Register"
 msgstr ""
 
-#: person/templates/person/membership.html:24
+#: src/apps/person/templates/person/membership.html:24
 msgid "membership not found"
 msgstr ""
 
-#: person/templates/person/membership_ps_insert.html:18
-#: workgroup/templates/workgroup/membership_insert.html:19
+#: src/apps/person/templates/person/membership_ps_insert.html:18
+#: src/apps/workgroup/templates/workgroup/membership_insert.html:19
 msgid "Insert Membership"
 msgstr ""
 
-#: person/templates/person/navbar.html:7 person/templates/person/navbar.html:94
-#: treasury/templates/treasury/order/elements/person_div.html:6
+#: src/apps/person/templates/person/navbar.html:7
+#: src/apps/person/templates/person/navbar.html:94
+#: src/apps/treasury/templates/treasury/order/elements/person_div.html:6
 msgid "Person"
 msgstr ""
 
-#: person/templates/person/navbar.html:18
+#: src/apps/person/templates/person/navbar.html:18
 msgid "Invitations"
 msgstr ""
 
-#: person/templates/person/navbar.html:29
+#: src/apps/person/templates/person/navbar.html:29
 msgid "Tools"
 msgstr ""
 
-#: person/templates/person/navbar.html:32
+#: src/apps/person/templates/person/navbar.html:32
 msgid "Import from Seekers"
 msgstr ""
 
-#: person/templates/person/navbar.html:81
+#: src/apps/person/templates/person/navbar.html:81
 msgid "Invite person"
 msgstr ""
 
-#: person/templates/person/navbar.html:106 rcadmin/common.py:128
+#: src/apps/person/templates/person/navbar.html:106 src/rcadmin/common.py:128
 msgid "Badge"
 msgstr ""
 
-#: person/templates/person/navbar.html:153
-#: publicwork/templates/publicwork/seeker/navbar.html:79
-#: workgroup/templates/workgroup/member/navbar.html:40
+#: src/apps/person/templates/person/navbar.html:153
+#: src/apps/publicwork/templates/publicwork/seeker/navbar.html:79
+#: src/apps/workgroup/templates/workgroup/member/navbar.html:40
 msgid "Frequency"
 msgstr ""
 
-#: person/templates/person/persons.html:15
+#: src/apps/person/templates/person/persons.html:15
 msgid "persons not found in the search"
 msgstr ""
 
-#: person/templates/person/workgroups.html:14
-#: publicwork/templates/publicwork/groups/groups.html:15
-#: workgroup/templates/workgroup/mentoring/groups.html:53
-#: workgroup/templates/workgroup/workgroups.html:15
+#: src/apps/person/templates/person/workgroups.html:14
+#: src/apps/publicwork/templates/publicwork/groups/groups.html:15
+#: src/apps/workgroup/templates/workgroup/mentoring/groups.html:53
+#: src/apps/workgroup/templates/workgroup/workgroups.html:15
 msgid "groups not found"
 msgstr ""
 
-#: person/views/frequency_ps.py:46
+#: src/apps/person/views/frequency_ps.py:46
 msgid "frequencies list"
 msgstr ""
 
-#: person/views/historic.py:49
+#: src/apps/person/views/historic.py:49
 msgid "historic list"
 msgstr ""
 
-#: person/views/historic.py:116
+#: src/apps/person/views/historic.py:116
 msgid "Update Historic"
 msgstr ""
 
-#: person/views/invitation.py:32
+#: src/apps/person/views/invitation.py:33
 msgid "The Invitation has been sent!"
 msgstr ""
 
-#: person/views/invitation.py:109
+#: src/apps/person/views/invitation.py:110
 msgid "Invite new pupil"
 msgstr ""
 
-#: person/views/invitation.py:161
+#: src/apps/person/views/invitation.py:162
 msgid "pupil registration"
 msgstr ""
 
-#: person/views/invitation.py:288
+#: src/apps/person/views/invitation.py:290
 msgid "create pupil"
 msgstr ""
 
-#: person/views/invitation.py:297
+#: src/apps/person/views/invitation.py:299
 msgid "congratulations"
 msgstr ""
 
-#: person/views/membership_ps.py:52
+#: src/apps/person/views/membership_ps.py:52
 msgid "membership list"
 msgstr ""
 
-#: person/views/membership_ps.py:106
+#: src/apps/person/views/membership_ps.py:106
 msgid "insert membership"
 msgstr ""
 
-#: person/views/person.py:43
+#: src/apps/person/views/person.py:43
 msgid "The Person has been updated!"
 msgstr ""
 
-#: person/views/person.py:82
+#: src/apps/person/views/person.py:82
 msgid "person home"
 msgstr ""
 
-#: person/views/person.py:99
+#: src/apps/person/views/person.py:99
 msgid "person detail"
 msgstr ""
 
-#: person/views/person.py:151
+#: src/apps/person/views/person.py:151
 msgid "Create person"
 msgstr ""
 
-#: person/views/person.py:194
+#: src/apps/person/views/person.py:194
 msgid "Update profile"
 msgstr ""
 
-#: person/views/person.py:237
+#: src/apps/person/views/person.py:237
 msgid "Update pupil"
 msgstr ""
 
-#: person/views/reports.py:52 person/views/reports.py:62
+#: src/apps/person/views/reports.py:58 src/apps/person/views/reports.py:68
 msgid "installed per period"
 msgstr ""
 
-#: person/views/reports.py:91 person/views/reports.py:104
+#: src/apps/person/views/reports.py:102 src/apps/person/views/reports.py:115
 msgid "occurrences per period"
 msgstr ""
 
-#: person/views/tools.py:24
+#: src/apps/person/views/tools.py:24
 msgid "import from seekers"
 msgstr ""
 
-#: person/views/tools.py:75
+#: src/apps/person/views/tools.py:75
 msgid "confirm to import"
 msgstr ""
 
-#: publicwork/models.py:47
+#: src/apps/publicwork/models.py:47
 msgid "solicited on"
 msgstr ""
 
-#: publicwork/models.py:65
+#: src/apps/publicwork/models.py:65
 msgid "temporary registration of seeker"
 msgstr ""
 
-#: publicwork/models.py:66
+#: src/apps/publicwork/models.py:66
 msgid "temporary registration of seekers"
 msgstr ""
 
-#: publicwork/models.py:101
+#: src/apps/publicwork/models.py:101
 msgid "status date"
 msgstr ""
 
-#: publicwork/models.py:131 publicwork/models.py:138 publicwork/models.py:211
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:13
-#: publicwork/templates/publicwork/listener/confirm/insert.html:25
+#: src/apps/publicwork/models.py:131 src/apps/publicwork/models.py:138
+#: src/apps/publicwork/models.py:211
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:13
+#: src/apps/publicwork/templates/publicwork/listener/confirm/insert.html:25
 msgid "seeker"
 msgstr ""
 
-#: publicwork/models.py:132
+#: src/apps/publicwork/models.py:132
 msgid "seekers"
 msgstr ""
 
-#: publicwork/models.py:177
+#: src/apps/publicwork/models.py:177
 msgid "theme"
 msgstr ""
 
-#: publicwork/models.py:183 publicwork/models.py:222
+#: src/apps/publicwork/models.py:183 src/apps/publicwork/models.py:222
 msgid "listeners"
 msgstr ""
 
-#: publicwork/models.py:200 publicwork/models.py:208
-#: publicwork/templates/publicwork/listener/confirm/insert.html:35
-#: publicwork/templates/publicwork/listener/forms/listener.html:26
-#: publicwork/templates/publicwork/seeker/forms/frequency.html:35
+#: src/apps/publicwork/models.py:200 src/apps/publicwork/models.py:208
+#: src/apps/publicwork/templates/publicwork/listener/confirm/insert.html:35
+#: src/apps/publicwork/templates/publicwork/listener/forms/listener.html:26
+#: src/apps/publicwork/templates/publicwork/seeker/forms/frequency.html:35
 msgid "lecture"
 msgstr ""
 
-#: publicwork/models.py:201
+#: src/apps/publicwork/models.py:201
 msgid "lectures"
 msgstr ""
 
-#: publicwork/models.py:221
+#: src/apps/publicwork/models.py:221
 msgid "listener"
 msgstr ""
 
-#: publicwork/models.py:235
+#: src/apps/publicwork/models.py:235
 msgid "mentors"
 msgstr ""
 
-#: publicwork/models.py:238 workgroup/models.py:23
+#: src/apps/publicwork/models.py:238 src/apps/workgroup/models.py:23
 msgid "members"
 msgstr ""
 
-#: publicwork/models.py:254
+#: src/apps/publicwork/models.py:254
 msgid "publicwork group"
 msgstr ""
 
-#: publicwork/models.py:255
+#: src/apps/publicwork/models.py:255
 msgid "publicwork groups"
 msgstr ""
 
-#: publicwork/templates/publicwork/groups/add_member.html:3
+#: src/apps/publicwork/templates/publicwork/groups/add_member.html:3
 msgid "Insert Member"
 msgstr ""
 
-#: publicwork/templates/publicwork/groups/add_mentor.html:3
+#: src/apps/publicwork/templates/publicwork/groups/add_mentor.html:3
 msgid "Insert Mentor"
 msgstr ""
 
-#: publicwork/templates/publicwork/groups/confirm_remove_member.html:9
+#: src/apps/publicwork/templates/publicwork/groups/confirm_remove_member.html:9
 msgid "Are you shure you want to remove:"
 msgstr ""
 
-#: publicwork/templates/publicwork/groups/elements/frequency_list_item.html:24
-#: publicwork/templates/publicwork/seeker/info.html:27
-#: workgroup/templates/workgroup/member/elements/hx/member_updated.html:13
-#: workgroup/templates/workgroup/member/elements/member_list_item.html:14
+#: src/apps/publicwork/templates/publicwork/groups/elements/frequency_list_item.html:24
+#: src/apps/publicwork/templates/publicwork/seeker/info.html:27
+#: src/apps/workgroup/templates/workgroup/member/elements/hx/member_updated.html:13
+#: src/apps/workgroup/templates/workgroup/member/elements/member_list_item.html:14
 msgid "since"
 msgstr ""
 
-#: publicwork/templates/publicwork/groups/header.html:9
-#: publicwork/templates/publicwork/seeker/header.html:8
-#: user/templates/user/profile/elements/header.html:19
+#: src/apps/publicwork/templates/publicwork/groups/header.html:9
+#: src/apps/publicwork/templates/publicwork/seeker/header.html:8
+#: src/apps/user/templates/user/profile/elements/header.html:19
 msgid "another center - only view"
 msgstr ""
 
-#: publicwork/templates/publicwork/groups/lectures.html:15
-#: publicwork/templates/publicwork/lecture/lectures.html:15
-#: publicwork/templates/publicwork/listener/lectures.html:15
+#: src/apps/publicwork/templates/publicwork/groups/lectures.html:15
+#: src/apps/publicwork/templates/publicwork/lecture/lectures.html:15
+#: src/apps/publicwork/templates/publicwork/listener/lectures.html:15
 msgid "lectures not found"
 msgstr ""
 
-#: publicwork/templates/publicwork/groups/navbar.html:6
-#: publicwork/templates/publicwork/navbar.html:77
-#: workgroup/templates/workgroup/mentoring/navbar.html:7
+#: src/apps/publicwork/templates/publicwork/groups/navbar.html:6
+#: src/apps/publicwork/templates/publicwork/navbar.html:77
+#: src/apps/workgroup/templates/workgroup/mentoring/navbar.html:7
 msgid "Group"
 msgstr ""
 
-#: publicwork/templates/publicwork/groups/navbar.html:14
-#: workgroup/templates/workgroup/member/members.html:7
-#: workgroup/templates/workgroup/mentoring/members.html:7
-#: workgroup/templates/workgroup/mentoring/navbar.html:16
+#: src/apps/publicwork/templates/publicwork/groups/navbar.html:14
+#: src/apps/workgroup/templates/workgroup/member/members.html:7
+#: src/apps/workgroup/templates/workgroup/mentoring/members.html:7
+#: src/apps/workgroup/templates/workgroup/mentoring/navbar.html:16
 msgid "Members"
 msgstr ""
 
-#: publicwork/templates/publicwork/groups/navbar.html:34
-#: publicwork/templates/publicwork/navbar.html:51
-#: publicwork/templates/publicwork/seeker/navbar.html:7
+#: src/apps/publicwork/templates/publicwork/groups/navbar.html:34
+#: src/apps/publicwork/templates/publicwork/navbar.html:51
+#: src/apps/publicwork/templates/publicwork/seeker/navbar.html:7
 msgid "Seeker"
 msgstr ""
 
-#: publicwork/templates/publicwork/groups/navbar.html:73
-#: workgroup/templates/workgroup/navbar.html:55
+#: src/apps/publicwork/templates/publicwork/groups/navbar.html:73
+#: src/apps/workgroup/templates/workgroup/navbar.html:55
 msgid "Del"
 msgstr ""
 
-#: publicwork/templates/publicwork/groups/seekers.html:32
-#: publicwork/templates/publicwork/listener/seekers.html:23
-#: publicwork/templates/publicwork/seeker/seekers.html:21
+#: src/apps/publicwork/templates/publicwork/groups/seekers.html:32
+#: src/apps/publicwork/templates/publicwork/listener/seekers.html:23
+#: src/apps/publicwork/templates/publicwork/seeker/seekers.html:21
 msgid "seekers not found"
 msgstr ""
 
-#: publicwork/templates/publicwork/groups/select_lecture.html:3
+#: src/apps/publicwork/templates/publicwork/groups/select_lecture.html:3
 msgid "Select a lecture"
 msgstr ""
 
-#: publicwork/templates/publicwork/groups/who_participated.html:3
-#: publicwork/templates/publicwork/lecture/navbar.html:7
-#: publicwork/templates/publicwork/navbar.html:64
+#: src/apps/publicwork/templates/publicwork/groups/who_participated.html:3
+#: src/apps/publicwork/templates/publicwork/lecture/navbar.html:7
+#: src/apps/publicwork/templates/publicwork/navbar.html:64
 msgid "Lecture"
 msgstr ""
 
-#: publicwork/templates/publicwork/groups/who_participated.html:16
-#: workgroup/templates/workgroup/mentoring/who_participated.html:16
+#: src/apps/publicwork/templates/publicwork/groups/who_participated.html:16
+#: src/apps/workgroup/templates/workgroup/mentoring/who_participated.html:16
 msgid "Who participated?"
 msgstr ""
 
-#: publicwork/templates/publicwork/home.html:19
-#: publicwork/templates/publicwork/listener/seekers.html:8
-#: publicwork/templates/publicwork/navbar.html:16
+#: src/apps/publicwork/templates/publicwork/home.html:19
+#: src/apps/publicwork/templates/publicwork/listener/seekers.html:8
+#: src/apps/publicwork/templates/publicwork/navbar.html:16
 msgid "Seekers"
 msgstr ""
 
-#: publicwork/templates/publicwork/home.html:30
-#: publicwork/templates/publicwork/navbar.html:22
+#: src/apps/publicwork/templates/publicwork/home.html:30
+#: src/apps/publicwork/templates/publicwork/navbar.html:22
 msgid "Lectures"
 msgstr ""
 
-#: publicwork/templates/publicwork/home.html:42
-#: publicwork/templates/publicwork/navbar.html:29
-#: workgroup/templates/workgroup/mentoring/groups.html:4
+#: src/apps/publicwork/templates/publicwork/home.html:42
+#: src/apps/publicwork/templates/publicwork/navbar.html:29
+#: src/apps/workgroup/templates/workgroup/mentoring/groups.html:4
 msgid "Groups"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/congratulations.html:4
+#: src/apps/publicwork/templates/publicwork/insert_yourself/congratulations.html:4
 msgid "Congratulations!"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/congratulations.html:5
-#: publicwork/templates/publicwork/insert_yourself/emails/to_congratulate.html:5
+#: src/apps/publicwork/templates/publicwork/insert_yourself/congratulations.html:5
+#: src/apps/publicwork/templates/publicwork/insert_yourself/emails/to_congratulate.html:5
 msgid "Your registration was successful!"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/congratulations.html:6
-#: publicwork/templates/publicwork/insert_yourself/emails/to_congratulate.html:6
+#: src/apps/publicwork/templates/publicwork/insert_yourself/congratulations.html:6
+#: src/apps/publicwork/templates/publicwork/insert_yourself/emails/to_congratulate.html:6
 msgid ""
 "You will be included in a “Welcome” group and in the next few days, one of "
 "the students responsible for this group should contact you (by message, call "
 "or email), to give you directions and upcoming activities."
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/congratulations.html:7
-#: publicwork/templates/publicwork/insert_yourself/emails/to_congratulate.html:7
+#: src/apps/publicwork/templates/publicwork/insert_yourself/congratulations.html:7
+#: src/apps/publicwork/templates/publicwork/insert_yourself/emails/to_congratulate.html:7
 msgid "If this does not occur within 7 days, please contact us via email: "
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/congratulations.html:10
-#: publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:14
-#: publicwork/templates/publicwork/insert_yourself/emails/to_congratulate.html:10
-#: publicwork/templates/publicwork/insert_yourself/expired_token.html:11
+#: src/apps/publicwork/templates/publicwork/insert_yourself/congratulations.html:10
+#: src/apps/publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:14
+#: src/apps/publicwork/templates/publicwork/insert_yourself/emails/to_congratulate.html:10
+#: src/apps/publicwork/templates/publicwork/insert_yourself/expired_token.html:11
 msgid "Best regards"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/congratulations.html:11
-#: publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:15
-#: publicwork/templates/publicwork/insert_yourself/emails/to_congratulate.html:11
-#: publicwork/templates/publicwork/insert_yourself/expired_token.html:12
+#: src/apps/publicwork/templates/publicwork/insert_yourself/congratulations.html:11
+#: src/apps/publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:15
+#: src/apps/publicwork/templates/publicwork/insert_yourself/emails/to_congratulate.html:11
+#: src/apps/publicwork/templates/publicwork/insert_yourself/expired_token.html:12
 msgid "team rc@dmin"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:6
+#: src/apps/publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:6
 msgid ""
 "You are receiving this email because you have signed up to join the Golden "
 "Rosicrucian Spiritual School \"Welcome\" group."
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:8
+#: src/apps/publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:8
 msgid "Please click on the link below to confirm your registration."
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:10
+#: src/apps/publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:10
 msgid "confirmation link"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:12
+#: src/apps/publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:12
 msgid "If you have not made this request, please disregard this email."
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:20
+#: src/apps/publicwork/templates/publicwork/insert_yourself/emails/to_confirm.html:20
 msgid ""
 "if you can not click on the link, copy a url below and paste in your browser:"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/expired_token.html:4
+#: src/apps/publicwork/templates/publicwork/insert_yourself/expired_token.html:4
 msgid "Token expired"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/expired_token.html:5
+#: src/apps/publicwork/templates/publicwork/insert_yourself/expired_token.html:5
 msgid "Your registration request has expired. "
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/expired_token.html:6
+#: src/apps/publicwork/templates/publicwork/insert_yourself/expired_token.html:6
 msgid "If it is of interest to you, re-register through the link:"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/expired_token.html:7
+#: src/apps/publicwork/templates/publicwork/insert_yourself/expired_token.html:7
 msgid "I want to participate!"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/expired_token.html:8
+#: src/apps/publicwork/templates/publicwork/insert_yourself/expired_token.html:8
 msgid "If you want to report a problem, please contact us via email: "
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form.html:20
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form.html:20
 msgid "Dear friend"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form.html:22
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form.html:22
 msgid ""
 "We are very happy to hear that you want to participate in the activities of "
 "the Spiritual School of the Golden Rosicrucian!"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form.html:23
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form.html:23
 msgid ""
 "As you are arriving now, some of our students will accompany you in this "
 "first moment, through a “Welcome” group, in which you are our guest."
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form.html:24
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form.html:24
 msgid ""
 "In this group, you will meet and participate in the main activities of our "
 "students (Templar Services, Conferences and meetings), in order to have a "
 "very clear understanding of what it is to be a Golden Rosicrucian student."
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form.html:25
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form.html:25
 msgid ""
 "Participating in this group does not represent any commitment to the School "
 "and you can leave it whenever you want."
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form.html:26
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form.html:26
 msgid ""
 "After this period, we hope that you will have more clarity about the path "
 "proposed by the School and whether it makes sense to follow it or not."
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form.html:27
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form.html:27
 msgid ""
 "Initially, we need you to provide us with some data to register in our "
 "system and confirm that you accept our data usage policy."
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form.html:29
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form.html:29
 msgid "Please fill in the form below:"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form.html:56
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form.html:56
 msgid "I have read and accepted the terms of"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form.html:59
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form.html:59
 msgid "data use policy"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:9
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:9
 msgid "E-mail already registered"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:11
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:11
 msgid "The e-mail"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:11
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:11
 msgid "is already registered for a"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:13
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:13
 msgid "student"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:19
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:19
 msgid "You can login to the system"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:20
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:20
 msgid "by clicking here"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:22
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:22
 msgid "Or send us an email to"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:24
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:24
 msgid "If you have found something wrong, send us an email to"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:28
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:28
 msgid "reporting the problem."
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:37
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:37
 msgid "Email has been sent!"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:38
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:38
 msgid "We send a confirmation link to the email:"
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:41
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:41
 msgid ""
 "Please check your email inbox and click on the link to continue with your "
 "registration."
 msgstr ""
 
-#: publicwork/templates/publicwork/insert_yourself/form_feedback.html:44
-#: user/templates/user/auth/password_reset_done.html:7
+#: src/apps/publicwork/templates/publicwork/insert_yourself/form_feedback.html:44
+#: src/apps/user/templates/user/auth/password_reset_done.html:7
 msgid "If they haven't arrived in a few minutes, check your spam folder."
 msgstr ""
 
-#: publicwork/templates/publicwork/lecture/navbar.html:20
-#: publicwork/templates/publicwork/listener/listeners.html:7
+#: src/apps/publicwork/templates/publicwork/lecture/navbar.html:20
+#: src/apps/publicwork/templates/publicwork/listener/listeners.html:7
 msgid "Listeners"
 msgstr ""
 
-#: publicwork/templates/publicwork/listener/add.html:19
+#: src/apps/publicwork/templates/publicwork/listener/add.html:19
 msgid "Add listener"
 msgstr ""
 
-#: publicwork/templates/publicwork/listener/confirm/insert.html:49
-#: publicwork/templates/publicwork/listener/forms/listener.html:40
-#: publicwork/templates/publicwork/seeker/forms/frequency.html:49
-#: workgroup/templates/workgroup/forms/member_frequency.html:54
+#: src/apps/publicwork/templates/publicwork/listener/confirm/insert.html:49
+#: src/apps/publicwork/templates/publicwork/listener/forms/listener.html:40
+#: src/apps/publicwork/templates/publicwork/seeker/forms/frequency.html:49
+#: src/apps/workgroup/templates/workgroup/forms/member_frequency.html:54
 msgid "local"
 msgstr ""
 
-#: publicwork/templates/publicwork/listener/elements/listener_list_item.html:22
-#: rcadmin/common.py:124
+#: src/apps/publicwork/templates/publicwork/listener/elements/listener_list_item.html:22
+#: src/rcadmin/common.py:124
 msgid "installed"
 msgstr ""
 
-#: publicwork/templates/publicwork/listener/listeners.html:18
+#: src/apps/publicwork/templates/publicwork/listener/listeners.html:18
 msgid "no listeners found"
 msgstr ""
 
-#: publicwork/templates/publicwork/seeker/historic.html:23
-#: workgroup/templates/workgroup/member/historic.html:18
+#: src/apps/publicwork/templates/publicwork/seeker/historic.html:23
+#: src/apps/workgroup/templates/workgroup/member/historic.html:18
 msgid "no historics found"
 msgstr ""
 
-#: publicwork/templates/publicwork/seeker/info.html:35
+#: src/apps/publicwork/templates/publicwork/seeker/info.html:35
 msgid "age"
 msgstr ""
 
-#: publicwork/templates/publicwork/seeker/info.html:53
+#: src/apps/publicwork/templates/publicwork/seeker/info.html:53
 msgid "group"
 msgstr ""
 
-#: publicwork/views/group.py:80
+#: src/apps/publicwork/views/group.py:80
 msgid "public work - groups"
 msgstr ""
 
-#: publicwork/views/group.py:124
+#: src/apps/publicwork/views/group.py:124
 msgid "group detail"
 msgstr ""
 
-#: publicwork/views/group.py:155
+#: src/apps/publicwork/views/group.py:155
 msgid "Create group"
 msgstr ""
 
-#: publicwork/views/group.py:184
+#: src/apps/publicwork/views/group.py:184
 msgid "Update group"
 msgstr ""
 
-#: publicwork/views/group.py:261
+#: src/apps/publicwork/views/group.py:261
 msgid "group detail | frequencies"
 msgstr ""
 
-#: publicwork/views/group.py:347
+#: src/apps/publicwork/views/group.py:347
 msgid "add frequencies"
 msgstr ""
 
-#: publicwork/views/group.py:431
+#: src/apps/publicwork/views/group.py:431
 msgid "group add member"
 msgstr ""
 
-#: publicwork/views/group.py:475
+#: src/apps/publicwork/views/group.py:475
 msgid "The mentor has been inserted on group!"
 msgstr ""
 
-#: publicwork/views/group.py:529
+#: src/apps/publicwork/views/group.py:529
 msgid "group add mentor"
 msgstr ""
 
-#: publicwork/views/historic.py:83
+#: src/apps/publicwork/views/historic.py:83
 msgid "Update historic"
 msgstr ""
 
-#: publicwork/views/insert_yourself.py:100
+#: src/apps/publicwork/views/insert_yourself.py:100
 msgid "create seeker"
 msgstr ""
 
-#: publicwork/views/insert_yourself.py:107
+#: src/apps/publicwork/views/insert_yourself.py:107
 msgid "insert yourself as a seeker"
 msgstr ""
 
-#: publicwork/views/lecture.py:52
+#: src/apps/publicwork/views/lecture.py:52
 msgid "lecture home"
 msgstr ""
 
-#: publicwork/views/lecture.py:88
+#: src/apps/publicwork/views/lecture.py:88
 msgid "lecture detail"
 msgstr ""
 
-#: publicwork/views/lecture.py:118
+#: src/apps/publicwork/views/lecture.py:118
 msgid "Create lecture"
 msgstr ""
 
-#: publicwork/views/lecture.py:154
+#: src/apps/publicwork/views/lecture.py:154
 msgid "Update lecture"
 msgstr ""
 
-#: publicwork/views/lecture.py:170
+#: src/apps/publicwork/views/lecture.py:170
 msgid "The lecture has been deleted!"
 msgstr ""
 
-#: publicwork/views/listener.py:37 publicwork/views/listener.py:153
+#: src/apps/publicwork/views/listener.py:37
+#: src/apps/publicwork/views/listener.py:153
 msgid "The seeker has been inserted on lecture!"
 msgstr ""
 
-#: publicwork/views/listener.py:46 publicwork/views/listener.py:162
-#: workgroup/views/mentoring.py:305
+#: src/apps/publicwork/views/listener.py:46
+#: src/apps/publicwork/views/listener.py:162
+#: src/apps/workgroup/views/mentoring.py:305
 msgid "Confirm to insert"
 msgstr ""
 
-#: publicwork/views/listener.py:84
+#: src/apps/publicwork/views/listener.py:84
 msgid "add listener"
 msgstr ""
 
-#: publicwork/views/listener.py:100
+#: src/apps/publicwork/views/listener.py:100
 msgid "The Listener has been updated!"
 msgstr ""
 
-#: publicwork/views/listener.py:109
+#: src/apps/publicwork/views/listener.py:109
 msgid "Update listener"
 msgstr ""
 
-#: publicwork/views/listener.py:192
+#: src/apps/publicwork/views/listener.py:192
 msgid "add frequency"
 msgstr ""
 
-#: publicwork/views/listener.py:225
-#: workgroup/templates/workgroup/member/update_frequency.html:24
+#: src/apps/publicwork/views/listener.py:225
+#: src/apps/workgroup/templates/workgroup/member/update_frequency.html:24
 msgid "Update frequency"
 msgstr ""
 
-#: publicwork/views/report.py:27
+#: src/apps/publicwork/views/report.py:28
 msgid "Public work"
 msgstr ""
 
-#: publicwork/views/report.py:91 publicwork/views/report.py:102
+#: src/apps/publicwork/views/report.py:95
+#: src/apps/publicwork/views/report.py:106
 msgid "frequencies per period"
 msgstr ""
 
-#: publicwork/views/report.py:138 publicwork/views/report.py:148
+#: src/apps/publicwork/views/report.py:143
+#: src/apps/publicwork/views/report.py:153
 msgid "lectures per period"
 msgstr ""
 
-#: publicwork/views/report.py:188 publicwork/views/report.py:199
+#: src/apps/publicwork/views/report.py:193
+#: src/apps/publicwork/views/report.py:204
 msgid "status per center"
 msgstr ""
 
-#: publicwork/views/seeker.py:61
+#: src/apps/publicwork/views/seeker.py:61
 msgid "seeker home"
 msgstr ""
 
-#: publicwork/views/seeker.py:80
+#: src/apps/publicwork/views/seeker.py:80
 msgid "seeker detail"
 msgstr ""
 
-#: publicwork/views/seeker.py:112
+#: src/apps/publicwork/views/seeker.py:112
 msgid "Create seeker"
 msgstr ""
 
-#: publicwork/views/seeker.py:141
+#: src/apps/publicwork/views/seeker.py:141
 msgid "Update seeker"
 msgstr ""
 
-#: publicwork/views/seeker.py:223
+#: src/apps/publicwork/views/seeker.py:223
 msgid "seeker detail | frequencies"
 msgstr ""
 
-#: publicwork/views/seeker.py:260
+#: src/apps/publicwork/views/seeker.py:260
 msgid "seeker detail | historic"
 msgstr ""
 
-#: rcadmin/common.py:22
-msgid "Golden Rosycross"
-msgstr ""
-
-#: rcadmin/common.py:26
-msgid "male"
-msgstr ""
-
-#: rcadmin/common.py:27
-msgid "female"
-msgstr ""
-
-#: rcadmin/common.py:28
-msgid "do not inform"
-msgstr ""
-
-#: rcadmin/common.py:33
-msgid "contact room"
-msgstr ""
-
-#: rcadmin/common.py:37
-msgid "1st. Aspect"
-msgstr ""
-
-#: rcadmin/common.py:38
-msgid "2nd. Aspect"
-msgstr ""
-
-#: rcadmin/common.py:39
-msgid "3rd. Aspect"
-msgstr ""
-
-#: rcadmin/common.py:40
-msgid "4th. Aspect"
-msgstr ""
-
-#: rcadmin/common.py:41
-msgid "Grail"
-msgstr ""
-
-#: rcadmin/common.py:42
-msgid "5th. Aspect"
-msgstr ""
-
-#: rcadmin/common.py:43
-msgid "6th. Aspect"
-msgstr ""
-
-#: rcadmin/common.py:48
-msgid "licensed"
-msgstr ""
-
-#: rcadmin/common.py:49
-msgid "dead"
-msgstr ""
-
-#: rcadmin/common.py:50
-msgid "disconnected"
-msgstr ""
-
-#: rcadmin/common.py:51
-msgid "removed"
-msgstr ""
-
-#: rcadmin/common.py:54
-msgid "transfered"
-msgstr ""
-
-#: rcadmin/common.py:55
-msgid "regressed"
-msgstr ""
-
-#: rcadmin/common.py:56 rcadmin/common.py:86
-msgid "other"
-msgstr ""
-
-#: rcadmin/common.py:57
-msgid "preparatório"
-msgstr ""
-
-#: rcadmin/common.py:58
-msgid "probatório"
-msgstr ""
-
-#: rcadmin/common.py:59
-msgid "professo"
-msgstr ""
-
-#: rcadmin/common.py:64
-msgid "pupil"
-msgstr ""
-
-#: rcadmin/common.py:65
-msgid "web pupil"
-msgstr ""
-
-#: rcadmin/common.py:66
-msgid "gest"
-msgstr ""
-
-#: rcadmin/common.py:69
-msgid "mentor"
-msgstr ""
-
-#: rcadmin/common.py:70 rcadmin/common.py:116
-msgid "contact"
-msgstr ""
-
-#: rcadmin/common.py:71 rcadmin/common.py:122
-msgid "member"
-msgstr ""
-
-#: rcadmin/common.py:75
-msgid "maintenance"
-msgstr ""
-
-#: rcadmin/common.py:76
-msgid "admin"
-msgstr ""
-
-#: rcadmin/common.py:79
-msgid "opened"
-msgstr ""
-
-#: rcadmin/common.py:80
-msgid "closed"
-msgstr ""
-
-#: rcadmin/common.py:83
-msgid "service"
-msgstr ""
-
-#: rcadmin/common.py:84
-msgid "conference"
-msgstr ""
-
-#: rcadmin/common.py:85 rcadmin/common.py:117
-msgid "meeting"
-msgstr ""
-
-#: rcadmin/common.py:89
-msgid "canceled"
-msgstr ""
-
-#: rcadmin/common.py:90
-#: treasury/templates/treasury/elements/cash_balance.html:26
-#: treasury/templates/treasury/elements/payform_by_type.html:19
-#: treasury/templates/treasury/elements/payment_by_paytype.html:19
-#: treasury/templates/treasury/elements/period_payments.html:26
-msgid "pending"
-msgstr ""
-
-#: rcadmin/common.py:91
-msgid "concluded"
-msgstr ""
-
-#: rcadmin/common.py:94
-msgid "monthly"
-msgstr ""
-
-#: rcadmin/common.py:95
-msgid "by event"
-msgstr ""
-
-#: rcadmin/common.py:96
-msgid "campaign"
-msgstr ""
-
-#: rcadmin/common.py:99 rcadmin/common.py:110
-msgid "pix"
-msgstr ""
-
-#: rcadmin/common.py:100
-msgid "cash"
-msgstr ""
-
-#: rcadmin/common.py:101
-msgid "check"
-msgstr ""
-
-#: rcadmin/common.py:102
-msgid "pre check"
-msgstr ""
-
-#: rcadmin/common.py:103
-msgid "debit"
-msgstr ""
-
-#: rcadmin/common.py:104
-msgid "credit"
-msgstr ""
-
-#: rcadmin/common.py:105 rcadmin/common.py:111
-msgid "deposit"
-msgstr ""
-
-#: rcadmin/common.py:106 rcadmin/common.py:112
-msgid "transfer"
-msgstr ""
-
-#: rcadmin/common.py:107
-msgid "bank slip"
-msgstr ""
-
-#: rcadmin/common.py:114
-msgid "Brazil"
-msgstr ""
-
-#: rcadmin/common.py:120
-msgid "observation"
-msgstr ""
-
-#: rcadmin/common.py:121
-msgid "new"
-msgstr ""
-
-#: rcadmin/common.py:123
-msgid "installing"
-msgstr ""
-
-#: rcadmin/common.py:125
-msgid "stand by"
-msgstr ""
-
-#: rcadmin/common.py:126
-msgid "restriction"
-msgstr ""
-
-#: rcadmin/common.py:128
-msgid "Secretary"
-msgstr ""
-
-#: rcadmin/common.py:227
-msgid ""
-"Phone number must be entered in the format: '+1234567890'.             Up to "
-"15 digits allowed."
-msgstr ""
-
-#: treasury/models.py:26 treasury/models.py:36
+#: src/apps/treasury/models.py:26 src/apps/treasury/models.py:36
 msgid "pay type"
 msgstr ""
 
-#: treasury/models.py:27
+#: src/apps/treasury/models.py:27
 msgid "pay types"
 msgstr ""
 
-#: treasury/models.py:52
+#: src/apps/treasury/models.py:52
 msgid "reference month"
 msgstr ""
 
-#: treasury/models.py:53 treasury/models.py:137
+#: src/apps/treasury/models.py:53 src/apps/treasury/models.py:137
 msgid "value"
 msgstr ""
 
-#: treasury/models.py:78
-#: treasury/templates/treasury/elements/payments_summary.html:17
-#: treasury/templates/treasury/elements/payments_summary.html:35
+#: src/apps/treasury/models.py:78
+#: src/apps/treasury/templates/treasury/elements/payments_summary.html:17
+#: src/apps/treasury/templates/treasury/elements/payments_summary.html:35
 msgid "payment"
 msgstr ""
 
-#: treasury/models.py:79 treasury/models.py:177
-#: user/templates/user/profile/payments.html:15
+#: src/apps/treasury/models.py:79 src/apps/treasury/models.py:177
+#: src/apps/user/templates/user/profile/payments.html:15
 msgid "payments"
 msgstr ""
 
-#: treasury/models.py:91
+#: src/apps/treasury/models.py:91
 msgid "bank and flag"
 msgstr ""
 
-#: treasury/models.py:92
+#: src/apps/treasury/models.py:92
 msgid "banks and flags"
 msgstr ""
 
-#: treasury/models.py:129
+#: src/apps/treasury/models.py:129
 msgid "bank flag"
 msgstr ""
 
-#: treasury/models.py:132
+#: src/apps/treasury/models.py:132
 msgid "control number"
 msgstr ""
 
-#: treasury/models.py:158
+#: src/apps/treasury/models.py:158
 msgid "form of payment"
 msgstr ""
 
-#: treasury/models.py:159 treasury/models.py:179
+#: src/apps/treasury/models.py:159 src/apps/treasury/models.py:179
 msgid "form of payments"
 msgstr ""
 
-#: treasury/models.py:181
+#: src/apps/treasury/models.py:181
 msgid "amount"
 msgstr ""
 
-#: treasury/models.py:188
+#: src/apps/treasury/models.py:188
 msgid "self payed"
 msgstr ""
 
-#: treasury/models.py:205
+#: src/apps/treasury/models.py:205
 msgid "order"
 msgstr ""
 
-#: treasury/models.py:206
+#: src/apps/treasury/models.py:206
 msgid "orders"
 msgstr ""
 
-#: treasury/templates/treasury/bankflag/bankflags.html:56
-#: treasury/templates/treasury/form_of_payment/forms_of_payments.html:67
-#: treasury/templates/treasury/order/orders.html:16
+#: src/apps/treasury/templates/treasury/bankflag/bankflags.html:56
+#: src/apps/treasury/templates/treasury/form_of_payment/forms_of_payments.html:67
+#: src/apps/treasury/templates/treasury/order/orders.html:16
 msgid "forms of payments not found"
 msgstr ""
 
-#: treasury/templates/treasury/bankflag/navbar.html:6
+#: src/apps/treasury/templates/treasury/bankflag/navbar.html:6
 msgid "Banks and Flags"
 msgstr ""
 
-#: treasury/templates/treasury/elements/confirm_delete.html:9
+#: src/apps/treasury/templates/treasury/elements/cash_balance.html:26
+#: src/apps/treasury/templates/treasury/elements/payform_by_type.html:19
+#: src/apps/treasury/templates/treasury/elements/payment_by_paytype.html:19
+#: src/apps/treasury/templates/treasury/elements/period_payments.html:26
+#: src/rcadmin/common.py:90
+msgid "pending"
+msgstr ""
+
+#: src/apps/treasury/templates/treasury/elements/confirm_delete.html:9
 msgid "You want to delete"
 msgstr ""
 
-#: treasury/templates/treasury/elements/confirm_delete.html:11
+#: src/apps/treasury/templates/treasury/elements/confirm_delete.html:11
 msgid "But this is part of a payment order"
 msgstr ""
 
-#: treasury/templates/treasury/elements/confirm_delete.html:13
+#: src/apps/treasury/templates/treasury/elements/confirm_delete.html:13
 msgid "You can only delete it using the payment order"
 msgstr ""
 
-#: treasury/templates/treasury/elements/confirm_delete.html:16
-#: workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:9
+#: src/apps/treasury/templates/treasury/elements/confirm_delete.html:16
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:9
 msgid "Are you shure you want to delete"
 msgstr ""
 
-#: treasury/templates/treasury/elements/payform_by_type.html:12
-#: treasury/templates/treasury/elements/payment_by_paytype.html:12
+#: src/apps/treasury/templates/treasury/elements/payform_by_type.html:12
+#: src/apps/treasury/templates/treasury/elements/payment_by_paytype.html:12
 msgid "partial"
 msgstr ""
 
-#: treasury/templates/treasury/elements/payform_by_type.html:27
-#: treasury/templates/treasury/elements/payment_by_paytype.html:27
-#: treasury/templates/treasury/elements/payments_summary.html:25
-#: treasury/templates/treasury/elements/payments_summary.html:36
-#: treasury/templates/treasury/order/detail.html:48
-#: treasury/templates/treasury/order/detail.html:63
-#: treasury/templates/treasury/order/elements/payforms_div.html:26
-#: treasury/templates/treasury/order/elements/payments_div.html:26
-#: user/templates/user/profile/elements/payments_div.html:26
+#: src/apps/treasury/templates/treasury/elements/payform_by_type.html:27
+#: src/apps/treasury/templates/treasury/elements/payment_by_paytype.html:27
+#: src/apps/treasury/templates/treasury/elements/payments_summary.html:25
+#: src/apps/treasury/templates/treasury/elements/payments_summary.html:36
+#: src/apps/treasury/templates/treasury/order/detail.html:48
+#: src/apps/treasury/templates/treasury/order/detail.html:63
+#: src/apps/treasury/templates/treasury/order/elements/payforms_div.html:26
+#: src/apps/treasury/templates/treasury/order/elements/payments_div.html:26
+#: src/apps/user/templates/user/profile/elements/payments_div.html:26
 msgid "TOTAL"
 msgstr ""
 
-#: treasury/templates/treasury/elements/payments_summary.html:4
+#: src/apps/treasury/templates/treasury/elements/payments_summary.html:4
 msgid "Summary"
 msgstr ""
 
-#: treasury/templates/treasury/elements/payments_summary.html:7
+#: src/apps/treasury/templates/treasury/elements/payments_summary.html:7
 msgid "last 30 days"
 msgstr ""
 
-#: treasury/templates/treasury/elements/payments_summary.html:31
+#: src/apps/treasury/templates/treasury/elements/payments_summary.html:31
 msgid "Payment made by pupil"
 msgstr ""
 
-#: treasury/templates/treasury/elements/search_person.html:7
+#: src/apps/treasury/templates/treasury/elements/search_person.html:7
 msgid "Type pupil name"
 msgstr ""
 
-#: treasury/templates/treasury/elements/search_person.html:12
+#: src/apps/treasury/templates/treasury/elements/search_person.html:12
 msgid "Use"
 msgstr ""
 
-#: treasury/templates/treasury/elements/treasury_navbar.html:18
-#: treasury/templates/treasury/home.html:23
-#: treasury/templates/treasury/navbar.html:16 treasury/views/order.py:52
+#: src/apps/treasury/templates/treasury/elements/treasury_navbar.html:18
+#: src/apps/treasury/templates/treasury/home.html:23
+#: src/apps/treasury/templates/treasury/navbar.html:16
+#: src/apps/treasury/views/order.py:52
 msgid "Orders"
 msgstr ""
 
-#: treasury/templates/treasury/elements/treasury_navbar.html:30
-#: treasury/templates/treasury/elements/treasury_navbar.html:39
-#: treasury/templates/treasury/home.html:29
-#: treasury/templates/treasury/navbar.html:32
-#: treasury/templates/treasury/navbar.html:43
-#: user/templates/user/profile/navbar.html:64
+#: src/apps/treasury/templates/treasury/elements/treasury_navbar.html:30
+#: src/apps/treasury/templates/treasury/elements/treasury_navbar.html:39
+#: src/apps/treasury/templates/treasury/home.html:29
+#: src/apps/treasury/templates/treasury/navbar.html:32
+#: src/apps/treasury/templates/treasury/navbar.html:43
+#: src/apps/user/templates/user/profile/navbar.html:64
 msgid "New order"
 msgstr ""
 
-#: treasury/templates/treasury/form_of_payment/forms_of_payments.html:4
-#: treasury/templates/treasury/form_of_payment/navbar.html:6
+#: src/apps/treasury/templates/treasury/form_of_payment/forms_of_payments.html:4
+#: src/apps/treasury/templates/treasury/form_of_payment/navbar.html:6
 msgid "Forms of Payments"
 msgstr ""
 
-#: treasury/templates/treasury/home.html:17
+#: src/apps/treasury/templates/treasury/home.html:17
 msgid "Actions"
 msgstr ""
 
-#: treasury/templates/treasury/home.html:43
-#: treasury/templates/treasury/reports/menu.html:7
+#: src/apps/treasury/templates/treasury/home.html:43
+#: src/apps/treasury/templates/treasury/reports/menu.html:7
 msgid "Cash balance"
 msgstr ""
 
-#: treasury/templates/treasury/home.html:49
-#: treasury/templates/treasury/reports/menu.html:8
-#: treasury/templates/treasury/reports/period_payments.html:10
-#: treasury/views/reports.py:112
+#: src/apps/treasury/templates/treasury/home.html:49
+#: src/apps/treasury/templates/treasury/reports/menu.html:8
+#: src/apps/treasury/templates/treasury/reports/period_payments.html:10
+#: src/apps/treasury/views/reports.py:112
 msgid "Period payments"
 msgstr ""
 
-#: treasury/templates/treasury/home.html:55
-#: treasury/templates/treasury/reports/payments_by_person copy.html:12
-#: treasury/templates/treasury/reports/payments_by_person.html:10
+#: src/apps/treasury/templates/treasury/home.html:55
+#: src/apps/treasury/templates/treasury/reports/payments_by_person copy.html:12
+#: src/apps/treasury/templates/treasury/reports/payments_by_person.html:10
 msgid "Payments by person"
 msgstr ""
 
-#: treasury/templates/treasury/order/create.html:24
+#: src/apps/treasury/templates/treasury/order/create.html:24
 msgid "Order"
 msgstr ""
 
-#: treasury/templates/treasury/order/create.html:39
-#: user/templates/user/profile/elements/controllers_div.html:9
-#: user/templates/user/profile/elements/how_to_pay.html:50
+#: src/apps/treasury/templates/treasury/order/create.html:39
+#: src/apps/user/templates/user/profile/elements/controllers_div.html:9
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:50
 msgid "Pay now"
 msgstr ""
 
-#: treasury/templates/treasury/order/detail.html:7
+#: src/apps/treasury/templates/treasury/order/detail.html:7
 msgid "Order Detail"
 msgstr ""
 
-#: treasury/templates/treasury/order/detail.html:9
-#: treasury/templates/treasury/order/elements/order_list_item.html:18
+#: src/apps/treasury/templates/treasury/order/detail.html:9
+#: src/apps/treasury/templates/treasury/order/elements/order_list_item.html:18
 msgid "made by the pupil"
 msgstr ""
 
-#: treasury/templates/treasury/order/detail.html:56
+#: src/apps/treasury/templates/treasury/order/detail.html:56
 msgid "Forms of Payment"
 msgstr ""
 
-#: treasury/templates/treasury/order/detail.html:81
+#: src/apps/treasury/templates/treasury/order/detail.html:81
 msgid "Voucher"
 msgstr ""
 
-#: treasury/templates/treasury/order/elements/others_div.html:9
-#: user/templates/user/profile/elements/payform_div copy.html:31
-#: user/templates/user/profile/elements/payform_div.html:23
+#: src/apps/treasury/templates/treasury/order/elements/others_div.html:9
+#: src/apps/user/templates/user/profile/elements/payform_div copy.html:31
+#: src/apps/user/templates/user/profile/elements/payform_div.html:23
 msgid "Description"
 msgstr ""
 
-#: treasury/templates/treasury/order/elements/others_div.html:20
+#: src/apps/treasury/templates/treasury/order/elements/others_div.html:20
 msgid "Status"
 msgstr ""
 
-#: treasury/templates/treasury/order/elements/payform.html:27
+#: src/apps/treasury/templates/treasury/order/elements/payform.html:27
 msgid "Do you really want to delete this payment method?"
 msgstr ""
 
-#: treasury/templates/treasury/order/elements/payform_add.html:12
-#: treasury/templates/treasury/order/elements/payform_add.html:23
+#: src/apps/treasury/templates/treasury/order/elements/payform_add.html:12
+#: src/apps/treasury/templates/treasury/order/elements/payform_add.html:23
 msgid "Add payform"
 msgstr ""
 
-#: treasury/templates/treasury/order/elements/payforms_div.html:6
+#: src/apps/treasury/templates/treasury/order/elements/payforms_div.html:6
 msgid "Payforms"
 msgstr ""
 
-#: treasury/templates/treasury/order/elements/payforms_div.html:33
+#: src/apps/treasury/templates/treasury/order/elements/payforms_div.html:33
 msgid "due"
 msgstr ""
 
-#: treasury/templates/treasury/order/elements/payment.html:30
-#: user/templates/user/profile/elements/payment.html:30
+#: src/apps/treasury/templates/treasury/order/elements/payment.html:30
+#: src/apps/user/templates/user/profile/elements/payment.html:30
 msgid "Do you really want to delete this payment?"
 msgstr ""
 
-#: treasury/templates/treasury/order/elements/payment_add.html:14
-#: user/templates/user/profile/elements/add_payment.html:12
-#: user/templates/user/profile/elements/add_payment.html:25
-#: user/templates/user/profile/elements/payment_add.html:14
+#: src/apps/treasury/templates/treasury/order/elements/payment_add.html:14
+#: src/apps/user/templates/user/profile/elements/add_payment.html:12
+#: src/apps/user/templates/user/profile/elements/add_payment.html:25
+#: src/apps/user/templates/user/profile/elements/payment_add.html:14
 msgid "Add payment"
 msgstr ""
 
-#: treasury/templates/treasury/order/elements/search_results.html:16
+#: src/apps/treasury/templates/treasury/order/elements/search_results.html:16
 msgid "No search results"
 msgstr ""
 
-#: treasury/templates/treasury/payment/payments.html:82
-#: user/templates/user/profile/payments.html:25
+#: src/apps/treasury/templates/treasury/payment/payments.html:82
+#: src/apps/user/templates/user/profile/payments.html:25
 msgid "payments not found"
 msgstr ""
 
-#: treasury/templates/treasury/paytype/navbar.html:6
-#: treasury/templates/treasury/paytype/paytypes.html:4
+#: src/apps/treasury/templates/treasury/paytype/navbar.html:6
+#: src/apps/treasury/templates/treasury/paytype/paytypes.html:4
 msgid "Types of payment"
 msgstr ""
 
-#: treasury/templates/treasury/paytype/paytypes.html:60
+#: src/apps/treasury/templates/treasury/paytype/paytypes.html:60
 msgid "types of payments not found"
 msgstr ""
 
-#: treasury/templates/treasury/reports/cash_balance.html:10
-#: treasury/views/reports.py:79
+#: src/apps/treasury/templates/treasury/reports/cash_balance.html:10
+#: src/apps/treasury/views/reports.py:79
 msgid "Cash Balance"
 msgstr ""
 
-#: treasury/templates/treasury/reports/menu.html:9
-#: treasury/views/reports.py:155
+#: src/apps/treasury/templates/treasury/reports/menu.html:9
+#: src/apps/treasury/views/reports.py:155
 msgid "Payment by person"
 msgstr ""
 
-#: treasury/templates/treasury/reports/payments_by_person copy.html:43
-#: treasury/templates/treasury/reports/payments_by_person.html:25
+#: src/apps/treasury/templates/treasury/reports/payments_by_person copy.html:43
+#: src/apps/treasury/templates/treasury/reports/payments_by_person.html:25
 msgid "select a person"
 msgstr ""
 
-#: treasury/views/bankflag.py:33
+#: src/apps/treasury/views/bankflag.py:33
 msgid "The Bank or Flag has been created!"
 msgstr ""
 
-#: treasury/views/bankflag.py:43
+#: src/apps/treasury/views/bankflag.py:43
 msgid "Create Bank or flag"
 msgstr ""
 
-#: treasury/views/bankflag.py:56
+#: src/apps/treasury/views/bankflag.py:56
 msgid "The Bank or Flag has been updated!"
 msgstr ""
 
-#: treasury/views/bankflag.py:65
+#: src/apps/treasury/views/bankflag.py:65
 msgid "Update Bank or Flag"
 msgstr ""
 
-#: treasury/views/bankflag.py:78
+#: src/apps/treasury/views/bankflag.py:78
 msgid "The Bank or Flag has been inactivated!"
 msgstr ""
 
-#: treasury/views/bankflag.py:81
+#: src/apps/treasury/views/bankflag.py:81
 msgid "The Bank or Flag has been deleted!"
 msgstr ""
 
-#: treasury/views/form_of_payment.py:21
+#: src/apps/treasury/views/form_of_payment.py:21
 msgid "Forms of Payables"
 msgstr ""
 
-#: treasury/views/form_of_payment.py:33
+#: src/apps/treasury/views/form_of_payment.py:33
 msgid "The Form of Payment has been created!"
 msgstr ""
 
-#: treasury/views/form_of_payment.py:43
+#: src/apps/treasury/views/form_of_payment.py:43
 msgid "Create Form of Payment"
 msgstr ""
 
-#: treasury/views/form_of_payment.py:56
+#: src/apps/treasury/views/form_of_payment.py:56
 msgid "The Form of Payment has been updated!"
 msgstr ""
 
-#: treasury/views/form_of_payment.py:65
+#: src/apps/treasury/views/form_of_payment.py:65
 msgid "Update Form of Payment"
 msgstr ""
 
-#: treasury/views/form_of_payment.py:77
+#: src/apps/treasury/views/form_of_payment.py:77
 msgid "The Form of Payment has been deleted!"
 msgstr ""
 
-#: treasury/views/order.py:97 treasury/views/order.py:209
+#: src/apps/treasury/views/order.py:97 src/apps/treasury/views/order.py:209
 msgid "Create Order"
 msgstr ""
 
-#: treasury/views/order.py:292
+#: src/apps/treasury/views/order.py:292
 msgid "Add Form of Payment"
 msgstr ""
 
-#: treasury/views/order.py:453
+#: src/apps/treasury/views/order.py:453
 msgid "View Order"
 msgstr ""
 
-#: treasury/views/order.py:465
+#: src/apps/treasury/views/order.py:465
 msgid "Edit Order"
 msgstr ""
 
-#: treasury/views/payments.py:33
+#: src/apps/treasury/views/payments.py:33
 msgid "The Payment has been created!"
 msgstr ""
 
-#: treasury/views/payments.py:39 treasury/views/payments.py:62
+#: src/apps/treasury/views/payments.py:39
+#: src/apps/treasury/views/payments.py:62
 msgid "Payment"
 msgstr ""
 
-#: treasury/views/payments.py:43
+#: src/apps/treasury/views/payments.py:43
 msgid "Create Payment"
 msgstr ""
 
-#: treasury/views/payments.py:56
+#: src/apps/treasury/views/payments.py:56
 msgid "The Payment has been updated!"
 msgstr ""
 
-#: treasury/views/payments.py:65
+#: src/apps/treasury/views/payments.py:65
 msgid "Update Payment"
 msgstr ""
 
-#: treasury/views/payments.py:77
+#: src/apps/treasury/views/payments.py:77
 msgid "The Payment has been deleted!"
 msgstr ""
 
-#: treasury/views/paytypes.py:33
+#: src/apps/treasury/views/paytypes.py:33
 msgid "The PayType has been created!"
 msgstr ""
 
-#: treasury/views/paytypes.py:43
+#: src/apps/treasury/views/paytypes.py:43
 msgid "Create type of payment"
 msgstr ""
 
-#: treasury/views/paytypes.py:56
+#: src/apps/treasury/views/paytypes.py:56
 msgid "The types of payment has been updated!"
 msgstr ""
 
-#: treasury/views/paytypes.py:65
+#: src/apps/treasury/views/paytypes.py:65
 msgid "Update type of payment"
 msgstr ""
 
-#: treasury/views/paytypes.py:78
+#: src/apps/treasury/views/paytypes.py:78
 msgid "The types of payment has been inactivated!"
 msgstr ""
 
-#: treasury/views/paytypes.py:81
+#: src/apps/treasury/views/paytypes.py:81
 msgid "The types of payment has been deleted!"
 msgstr ""
 
-#: treasury/views/reports.py:45
+#: src/apps/treasury/views/reports.py:45
 msgid "treasury"
 msgstr ""
 
-#: user/admin.py:153
+#: src/apps/user/admin.py:153
 #, python-format
 msgid "%(name)s object with primary key %(key)r does not exist."
 msgstr ""
 
-#: user/admin.py:167
+#: src/apps/user/admin.py:167
 msgid "Password changed successfully."
 msgstr ""
 
-#: user/admin.py:188
+#: src/apps/user/admin.py:188
 #, python-format
 msgid "Change password: %s"
 msgstr ""
 
-#: user/models.py:52
+#: src/apps/user/models.py:52
 msgid "Enter a valid email.  <<REQUIRED>>"
 msgstr ""
 
-#: user/models.py:55
+#: src/apps/user/models.py:55
 msgid "staff status"
 msgstr ""
 
-#: user/models.py:58
+#: src/apps/user/models.py:58
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
 
-#: user/models.py:65
+#: src/apps/user/models.py:65
 msgid ""
 "Designates whether this user should be treated as "
 "active.                     Unselect this instead of deleting accounts."
 msgstr ""
 
-#: user/models.py:69
+#: src/apps/user/models.py:69
 msgid "date joined"
 msgstr ""
 
-#: user/models.py:77
+#: src/apps/user/models.py:77
 msgid "users"
 msgstr ""
 
-#: user/models.py:90
+#: src/apps/user/models.py:90
 msgid "social name"
 msgstr ""
 
-#: user/models.py:136
+#: src/apps/user/models.py:136
 msgid "profile"
 msgstr ""
 
-#: user/models.py:137
+#: src/apps/user/models.py:137
 msgid "profiles"
 msgstr ""
 
-#: user/templates/user/auth/login.html:9
+#: src/apps/user/templates/user/auth/login.html:9
 msgid "Your email and/or password didn't match. Please try again."
 msgstr ""
 
-#: user/templates/user/auth/login.html:16
+#: src/apps/user/templates/user/auth/login.html:16
 msgid ""
 "Your account doesn't have access to this page. To proceed, please login with "
 "an account that has access."
 msgstr ""
 
-#: user/templates/user/auth/login.html:20
+#: src/apps/user/templates/user/auth/login.html:20
 msgid "Please login to see this page."
 msgstr ""
 
-#: user/templates/user/auth/login.html:27
+#: src/apps/user/templates/user/auth/login.html:27
 msgid "Please sign in"
 msgstr ""
 
-#: user/templates/user/auth/login.html:29
-#: user/templates/user/profile/scan_qrcode_event.html:26
+#: src/apps/user/templates/user/auth/login.html:29
+#: src/apps/user/templates/user/profile/scan_qrcode_event.html:26
 msgid "Sign in"
 msgstr ""
 
-#: user/templates/user/auth/login.html:33
+#: src/apps/user/templates/user/auth/login.html:33
 msgid "Lost password?"
 msgstr ""
 
-#: user/templates/user/auth/login.html:34
+#: src/apps/user/templates/user/auth/login.html:34
 msgid "I want to participate"
 msgstr ""
 
-#: user/templates/user/auth/logout.html:6
+#: src/apps/user/templates/user/auth/logout.html:6
 msgid "Logged out!"
 msgstr ""
 
-#: user/templates/user/auth/logout.html:7
-#: user/templates/user/auth/password_reset_done.html:8
+#: src/apps/user/templates/user/auth/logout.html:7
+#: src/apps/user/templates/user/auth/password_reset_done.html:8
 msgid "Click here to login again."
 msgstr ""
 
-#: user/templates/user/auth/password_change_done.html:6
+#: src/apps/user/templates/user/auth/password_change_done.html:6
 msgid "Success!"
 msgstr ""
 
-#: user/templates/user/auth/password_change_done.html:7
+#: src/apps/user/templates/user/auth/password_change_done.html:7
 msgid "Your password was changed."
 msgstr ""
 
-#: user/templates/user/auth/password_change_form.html:11
-#: user/templates/user/auth/password_reset_confirm.html:25
+#: src/apps/user/templates/user/auth/password_change_form.html:11
+#: src/apps/user/templates/user/auth/password_reset_confirm.html:25
 msgid "Change my password"
 msgstr ""
 
-#: user/templates/user/auth/password_change_form.html:23
+#: src/apps/user/templates/user/auth/password_change_form.html:23
 msgid "Change password"
 msgstr ""
 
-#: user/templates/user/auth/password_change_form.html:30
+#: src/apps/user/templates/user/auth/password_change_form.html:30
 msgid "Please correct the error below."
 msgstr ""
 
-#: user/templates/user/auth/password_change_form.html:32
+#: src/apps/user/templates/user/auth/password_change_form.html:32
 msgid "Please correct the errors below."
 msgstr ""
 
-#: user/templates/user/auth/password_change_form.html:37
+#: src/apps/user/templates/user/auth/password_change_form.html:37
 msgid ""
 "Please enter your old password, for security's sake, and then enter your new "
 "password twice so we can verify you typed it in correctly."
 msgstr ""
 
-#: user/templates/user/auth/password_reset_complete.html:6
+#: src/apps/user/templates/user/auth/password_reset_complete.html:6
 msgid "The password has been changed!"
 msgstr ""
 
-#: user/templates/user/auth/password_reset_complete.html:8
+#: src/apps/user/templates/user/auth/password_reset_complete.html:8
 msgid "log in again?"
 msgstr ""
 
-#: user/templates/user/auth/password_reset_confirm.html:7
+#: src/apps/user/templates/user/auth/password_reset_confirm.html:7
 msgid "Please enter (and confirm) your new password."
 msgstr ""
 
-#: user/templates/user/auth/password_reset_confirm.html:28
+#: src/apps/user/templates/user/auth/password_reset_confirm.html:28
 msgid "Password reset failed"
 msgstr ""
 
-#: user/templates/user/auth/password_reset_confirm.html:29
+#: src/apps/user/templates/user/auth/password_reset_confirm.html:29
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used. Please request a new password reset."
 msgstr ""
 
-#: user/templates/user/auth/password_reset_done.html:6
+#: src/apps/user/templates/user/auth/password_reset_done.html:6
 msgid "We've emailed you instructions for setting your password."
 msgstr ""
 
-#: user/templates/user/auth/password_reset_email.html:4
+#: src/apps/user/templates/user/auth/password_reset_email.html:4
 #, python-format
 msgid ""
 "\n"
@@ -2911,287 +2749,518 @@ msgid ""
 "user account at %(site_name)s.\n"
 msgstr ""
 
-#: user/templates/user/auth/password_reset_email.html:8
+#: src/apps/user/templates/user/auth/password_reset_email.html:8
 msgid "Please go to the following page and choose a new password:"
 msgstr ""
 
-#: user/templates/user/auth/password_reset_email.html:14
+#: src/apps/user/templates/user/auth/password_reset_email.html:14
 msgid "Your username, in case you've forgotten:"
 msgstr ""
 
-#: user/templates/user/auth/password_reset_email.html:16
+#: src/apps/user/templates/user/auth/password_reset_email.html:16
 msgid "Thanks for using our site!"
 msgstr ""
 
-#: user/templates/user/auth/password_reset_email.html:18
+#: src/apps/user/templates/user/auth/password_reset_email.html:18
 #, python-format
 msgid "The %(site_name)s team."
 msgstr ""
 
-#: user/templates/user/auth/password_reset_form.html:9
+#: src/apps/user/templates/user/auth/password_reset_form.html:9
 msgid "Enter your email"
 msgstr ""
 
-#: user/templates/user/auth/password_reset_form.html:16
+#: src/apps/user/templates/user/auth/password_reset_form.html:16
 msgid "Reset password"
 msgstr ""
 
-#: user/templates/user/profile/confirm_del.html:9
+#: src/apps/user/templates/user/profile/confirm_del.html:9
 msgid "Are you sure you want to delete?"
 msgstr ""
 
-#: user/templates/user/profile/elements/controllers_div.html:20
-#: user/templates/user/profile/elements/how_to_pay.html:5
+#: src/apps/user/templates/user/profile/elements/controllers_div.html:20
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:5
 msgid "How to pay"
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:13
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:13
 msgid "pix-key"
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:18
-#: user/templates/user/profile/elements/how_to_pay.html:24
-#: user/templates/user/profile/elements/how_to_pay.html:32
-#: user/templates/user/profile/elements/how_to_pay.html:41
-#: user/templates/user/profile/elements/how_to_pay.html:48
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:18
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:24
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:32
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:41
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:48
 msgid "step"
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:19
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:19
 msgid "Transfer, deposit or PIX at your bank."
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:20
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:20
 msgid "For PIX use image or pix-key above."
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:25
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:25
 msgid "Enter payments by clicking: "
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:27
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:27
 msgid "and filling out the form."
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:28
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:28
 msgid "Repeat this process for each payment."
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:33
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:33
 msgid "Fill in the payment method fields."
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:34
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:34
 msgid "Do not forget to inform the bank "
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:35
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:35
 msgid "Bank flag"
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:36
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:36
 msgid "and the transaction id number "
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:37
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:37
 msgid "Ctrl number"
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:42
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:42
 msgid ""
 "Select and upload the digital voucher provided by your bank, through the "
 "field:"
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:43
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:43
 msgid "Voucher img"
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:44
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:44
 msgid "(only in .jpg format for now)"
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:49
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:49
 msgid "When all payment method fields are filled in, the button: "
 msgstr ""
 
-#: user/templates/user/profile/elements/how_to_pay.html:51
+#: src/apps/user/templates/user/profile/elements/how_to_pay.html:51
 msgid " will be enabled. Click on it to submit your payment."
 msgstr ""
 
-#: user/templates/user/profile/elements/payform_div copy.html:6
-#: user/templates/user/profile/elements/payform_div.html:4
+#: src/apps/user/templates/user/profile/elements/payform_div copy.html:6
+#: src/apps/user/templates/user/profile/elements/payform_div.html:4
 msgid "Form of Payment"
 msgstr ""
 
-#: user/templates/user/profile/frequencies.html:22
-#: user/templates/user/profile/historic.html:22
-#: user/templates/user/profile/payments.html:15
+#: src/apps/user/templates/user/profile/frequencies.html:22
+#: src/apps/user/templates/user/profile/historic.html:22
+#: src/apps/user/templates/user/profile/payments.html:15
 msgid "Here showing your last"
 msgstr ""
 
-#: user/templates/user/profile/frequencies.html:23
-#: user/templates/user/profile/historic.html:23
-#: user/templates/user/profile/payments.html:16
+#: src/apps/user/templates/user/profile/frequencies.html:23
+#: src/apps/user/templates/user/profile/historic.html:23
+#: src/apps/user/templates/user/profile/payments.html:16
 msgid "To find out more, contact the"
 msgstr ""
 
-#: user/templates/user/profile/frequencies.html:23
-#: user/templates/user/profile/historic.html:23
-#: user/templates/user/profile/payments.html:16
+#: src/apps/user/templates/user/profile/frequencies.html:23
+#: src/apps/user/templates/user/profile/historic.html:23
+#: src/apps/user/templates/user/profile/payments.html:16
 msgid "secretariat"
 msgstr ""
 
-#: user/templates/user/profile/historic.html:22
+#: src/apps/user/templates/user/profile/historic.html:22
 msgid "occurrences"
 msgstr ""
 
-#: user/templates/user/profile/historic.html:32
+#: src/apps/user/templates/user/profile/historic.html:32
 msgid "no historic found"
 msgstr ""
 
-#: user/templates/user/profile/navbar.html:44
+#: src/apps/user/templates/user/profile/navbar.html:44
 msgid "Change"
 msgstr ""
 
-#: user/templates/user/profile/navbar.html:54
+#: src/apps/user/templates/user/profile/navbar.html:54
 msgid "Scan QR-CODE"
 msgstr ""
 
-#: user/templates/user/profile/new_order.html:19
+#: src/apps/user/templates/user/profile/new_order.html:19
 msgid "New Order"
 msgstr ""
 
-#: user/templates/user/profile/payment.html:26
+#: src/apps/user/templates/user/profile/payment.html:26
 msgid "self paid"
 msgstr ""
 
-#: user/templates/user/profile/payments.html:3
+#: src/apps/user/templates/user/profile/payments.html:3
 msgid "Latest payments"
 msgstr ""
 
-#: user/templates/user/profile/scan_qrcode_event.html:21
+#: src/apps/user/templates/user/profile/scan_qrcode_event.html:21
 msgid "Scan the Event QR-CODE"
 msgstr ""
 
-#: user/views.py:30
+#: src/apps/user/views.py:30
 msgid "The Profile has been updated!"
 msgstr ""
 
-#: user/views.py:78
+#: src/apps/user/views.py:78
 msgid "update profile"
 msgstr ""
 
-#: user/views.py:153
+#: src/apps/user/views.py:153
 #, python-format
 msgid "You are registered for the event: %s"
 msgstr ""
 
-#: user/views.py:248
+#: src/apps/user/views.py:248
 msgid "Create my order"
 msgstr ""
 
-#: user/views.py:337
+#: src/apps/user/views.py:337
 msgid "Create my order - add payment"
 msgstr ""
 
-#: workgroup/models.py:39 workgroup/models.py:46
+#: src/apps/workgroup/models.py:39 src/apps/workgroup/models.py:46
 msgid "workgroup"
 msgstr ""
 
-#: workgroup/models.py:40 workgroup/views/workgroup.py:57
+#: src/apps/workgroup/models.py:40 src/apps/workgroup/views/workgroup.py:59
 msgid "workgroups"
 msgstr ""
 
-#: workgroup/models.py:52
+#: src/apps/workgroup/models.py:52
 msgid "role"
 msgstr ""
 
-#: workgroup/models.py:60
+#: src/apps/workgroup/models.py:60
 msgid "membership"
 msgstr ""
 
-#: workgroup/models.py:61
+#: src/apps/workgroup/models.py:61
 msgid "memberships"
 msgstr ""
 
-#: workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:13
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:13
 msgid "This working group has"
 msgstr ""
 
-#: workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:13
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:13
 msgid "members associated with it"
 msgstr ""
 
-#: workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:23
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:23
 msgid "and"
 msgstr ""
 
-#: workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:23
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:23
 msgid "other(s)"
 msgstr ""
 
-#: workgroup/templates/workgroup/member/members.html:22
-#: workgroup/templates/workgroup/mentoring/frequencies.html:23
-#: workgroup/templates/workgroup/mentoring/members.html:19
+#: src/apps/workgroup/templates/workgroup/member/members.html:22
+#: src/apps/workgroup/templates/workgroup/mentoring/frequencies.html:23
+#: src/apps/workgroup/templates/workgroup/mentoring/members.html:19
 msgid "members not found"
 msgstr ""
 
-#: workgroup/templates/workgroup/member/navbar.html:7
-#: workgroup/templates/workgroup/navbar.html:35
+#: src/apps/workgroup/templates/workgroup/member/navbar.html:7
+#: src/apps/workgroup/templates/workgroup/navbar.html:35
 msgid "Member"
 msgstr ""
 
-#: workgroup/templates/workgroup/mentoring/select_event.html:3
+#: src/apps/workgroup/templates/workgroup/mentoring/select_event.html:3
 msgid "Select an event"
 msgstr ""
 
-#: workgroup/templates/workgroup/navbar.html:7
-#: workgroup/templates/workgroup/navbar.html:25
+#: src/apps/workgroup/templates/workgroup/navbar.html:7
+#: src/apps/workgroup/templates/workgroup/navbar.html:25
 msgid "Workgroup"
 msgstr ""
 
-#: workgroup/views/membership.py:39
+#: src/apps/workgroup/views/membership.py:39
 msgid "The person has been inserted on workgroup!"
 msgstr ""
 
-#: workgroup/views/membership.py:80
+#: src/apps/workgroup/views/membership.py:80
 msgid "create membership"
 msgstr ""
 
-#: workgroup/views/mentoring.py:57
+#: src/apps/workgroup/views/mentoring.py:57
 msgid "mentoring"
 msgstr ""
 
-#: workgroup/views/mentoring.py:109 workgroup/views/mentoring.py:159
-#: workgroup/views/workgroup.py:95
+#: src/apps/workgroup/views/mentoring.py:109
+#: src/apps/workgroup/views/mentoring.py:159
+#: src/apps/workgroup/views/workgroup.py:99
 msgid "workgroup detail"
 msgstr ""
 
-#: workgroup/views/mentoring.py:178
+#: src/apps/workgroup/views/mentoring.py:178
 msgid "member detail"
 msgstr ""
 
-#: workgroup/views/mentoring.py:221
+#: src/apps/workgroup/views/mentoring.py:221
 msgid "member detail | frequencies"
 msgstr ""
 
-#: workgroup/views/mentoring.py:255
+#: src/apps/workgroup/views/mentoring.py:255
 msgid "member detail | historic"
 msgstr ""
 
-#: workgroup/views/mentoring.py:384
+#: src/apps/workgroup/views/mentoring.py:384
 msgid "Confirm to update"
 msgstr ""
 
-#: workgroup/views/mentoring.py:493
+#: src/apps/workgroup/views/mentoring.py:493
 msgid "workgroup add members"
 msgstr ""
 
-#: workgroup/views/workgroup.py:138
+#: src/apps/workgroup/views/workgroup.py:143
 msgid "Create workgroup"
 msgstr ""
 
-#: workgroup/views/workgroup.py:169
+#: src/apps/workgroup/views/workgroup.py:174
 msgid "Update workgroup"
+msgstr ""
+
+#: src/rcadmin/common.py:22
+msgid "Golden Rosycross"
+msgstr ""
+
+#: src/rcadmin/common.py:26
+msgid "male"
+msgstr ""
+
+#: src/rcadmin/common.py:27
+msgid "female"
+msgstr ""
+
+#: src/rcadmin/common.py:28
+msgid "do not inform"
+msgstr ""
+
+#: src/rcadmin/common.py:33
+msgid "contact room"
+msgstr ""
+
+#: src/rcadmin/common.py:37
+msgid "1st. Aspect"
+msgstr ""
+
+#: src/rcadmin/common.py:38
+msgid "2nd. Aspect"
+msgstr ""
+
+#: src/rcadmin/common.py:39
+msgid "3rd. Aspect"
+msgstr ""
+
+#: src/rcadmin/common.py:40
+msgid "4th. Aspect"
+msgstr ""
+
+#: src/rcadmin/common.py:41
+msgid "Grail"
+msgstr ""
+
+#: src/rcadmin/common.py:42
+msgid "5th. Aspect"
+msgstr ""
+
+#: src/rcadmin/common.py:43
+msgid "6th. Aspect"
+msgstr ""
+
+#: src/rcadmin/common.py:48
+msgid "licensed"
+msgstr ""
+
+#: src/rcadmin/common.py:49
+msgid "dead"
+msgstr ""
+
+#: src/rcadmin/common.py:50
+msgid "disconnected"
+msgstr ""
+
+#: src/rcadmin/common.py:51
+msgid "removed"
+msgstr ""
+
+#: src/rcadmin/common.py:54
+msgid "transfered"
+msgstr ""
+
+#: src/rcadmin/common.py:55
+msgid "regressed"
+msgstr ""
+
+#: src/rcadmin/common.py:56 src/rcadmin/common.py:86
+msgid "other"
+msgstr ""
+
+#: src/rcadmin/common.py:57
+msgid "preparatório"
+msgstr ""
+
+#: src/rcadmin/common.py:58
+msgid "probatório"
+msgstr ""
+
+#: src/rcadmin/common.py:59
+msgid "professo"
+msgstr ""
+
+#: src/rcadmin/common.py:64
+msgid "pupil"
+msgstr ""
+
+#: src/rcadmin/common.py:65
+msgid "web pupil"
+msgstr ""
+
+#: src/rcadmin/common.py:66
+msgid "gest"
+msgstr ""
+
+#: src/rcadmin/common.py:69
+msgid "mentor"
+msgstr ""
+
+#: src/rcadmin/common.py:70 src/rcadmin/common.py:116
+msgid "contact"
+msgstr ""
+
+#: src/rcadmin/common.py:71 src/rcadmin/common.py:122
+msgid "member"
+msgstr ""
+
+#: src/rcadmin/common.py:75
+msgid "maintenance"
+msgstr ""
+
+#: src/rcadmin/common.py:76
+msgid "admin"
+msgstr ""
+
+#: src/rcadmin/common.py:79
+msgid "opened"
+msgstr ""
+
+#: src/rcadmin/common.py:80
+msgid "closed"
+msgstr ""
+
+#: src/rcadmin/common.py:83
+msgid "service"
+msgstr ""
+
+#: src/rcadmin/common.py:84
+msgid "conference"
+msgstr ""
+
+#: src/rcadmin/common.py:85 src/rcadmin/common.py:117
+msgid "meeting"
+msgstr ""
+
+#: src/rcadmin/common.py:89
+msgid "canceled"
+msgstr ""
+
+#: src/rcadmin/common.py:91
+msgid "concluded"
+msgstr ""
+
+#: src/rcadmin/common.py:94
+msgid "monthly"
+msgstr ""
+
+#: src/rcadmin/common.py:95
+msgid "by event"
+msgstr ""
+
+#: src/rcadmin/common.py:96
+msgid "campaign"
+msgstr ""
+
+#: src/rcadmin/common.py:99 src/rcadmin/common.py:110
+msgid "pix"
+msgstr ""
+
+#: src/rcadmin/common.py:100
+msgid "cash"
+msgstr ""
+
+#: src/rcadmin/common.py:101
+msgid "check"
+msgstr ""
+
+#: src/rcadmin/common.py:102
+msgid "pre check"
+msgstr ""
+
+#: src/rcadmin/common.py:103
+msgid "debit"
+msgstr ""
+
+#: src/rcadmin/common.py:104
+msgid "credit"
+msgstr ""
+
+#: src/rcadmin/common.py:105 src/rcadmin/common.py:111
+msgid "deposit"
+msgstr ""
+
+#: src/rcadmin/common.py:106 src/rcadmin/common.py:112
+msgid "transfer"
+msgstr ""
+
+#: src/rcadmin/common.py:107
+msgid "bank slip"
+msgstr ""
+
+#: src/rcadmin/common.py:114
+msgid "Brazil"
+msgstr ""
+
+#: src/rcadmin/common.py:120
+msgid "observation"
+msgstr ""
+
+#: src/rcadmin/common.py:121
+msgid "new"
+msgstr ""
+
+#: src/rcadmin/common.py:123
+msgid "installing"
+msgstr ""
+
+#: src/rcadmin/common.py:125
+msgid "stand by"
+msgstr ""
+
+#: src/rcadmin/common.py:126
+msgid "restriction"
+msgstr ""
+
+#: src/rcadmin/common.py:128
+msgid "Secretary"
+msgstr ""
+
+#: src/rcadmin/common.py:227
+msgid ""
+"Phone number must be entered in the format: '+1234567890'.             Up to "
+"15 digits allowed."
 msgstr ""

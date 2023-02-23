@@ -88,7 +88,12 @@ def search_person(request, obj, _from, _to):
         query.add(q, Q.AND)
 
     count = obj.objects.filter(query).count()
-    objects = obj.objects.filter(query).order_by("name_sa")[_from:_to]
+    objects = (
+        obj.objects.select_related("user", "center", "made_by")
+        .prefetch_related("user__profile")
+        .filter(query)
+        .order_by("name_sa")[_from:_to]
+    )
 
     return (objects, count)
 

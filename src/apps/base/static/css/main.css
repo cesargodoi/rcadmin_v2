@@ -196,6 +196,9 @@ a.article-title:hover {
   background: -webkit-linear-gradient(top, var(--color-background) 0%, #c4cdd3 100%);
   background: linear-gradient(to bottom, var(--color-background) 0%, #c4cdd3 100%);
   border: 0;
+
+  box-shadow: 5px 5px 15px -11px rgba(0, 0, 0, 0.1);
+  transition: all .25s ease-in-out;
 }
 
 .card-principal-title {
@@ -207,7 +210,17 @@ a.article-title:hover {
 }
 
 .card-principal-col-lg-3 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-principal-backimage:hover {
+  scale: 1.03;
+  background: -moz-linear-gradient(top, var(--color-background) 0%, #b3bbc0 100%);
+  background: -webkit-linear-gradient(top, var(--color-background) 0%, #b3bbc0 100%);
+  background: linear-gradient(to bottom, var(--color-background) 0%, #b3bbc0 100%);
+
+  box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.1);
+  transition: all .25s ease-in-out;
 }
 
 .round-circle {

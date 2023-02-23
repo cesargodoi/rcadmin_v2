@@ -1,7 +1,7 @@
 import os
-import dynaconf  # noqa
-
 from pathlib import Path
+
+import dynaconf  # noqa
 
 SECRET_KEY = (
     "django-insecure-b7d*13+ri7&-^h+7g^*!t#_nctn%47147+s2-l6l^hf)ki=i5l"
@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     "crispy_forms",
     "django_htmx",
     "django_extensions",
+    "debug_toolbar",  # comment this line to disallow debug_toolbar
     "rosetta",
     "apps.user",
     "apps.base",
@@ -35,6 +36,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
@@ -45,6 +47,9 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_htmx.middleware.HtmxMiddleware",
 ]
+
+if DEBUG is False:
+    del MIDDLEWARE[0]
 
 ROOT_URLCONF = "rcadmin.urls"
 
@@ -98,7 +103,7 @@ LANGUAGES = [
     ("pt-br", "Portuguese"),
 ]
 LOCALE_PATHS = [
-    "home/base/dev/projects/rcadmin/rcadmin/locale",
+    BASE_DIR / "locale",
 ]
 
 LOAD_DOTENV = True
@@ -119,6 +124,7 @@ APP_NAME = "rc@admin"
 
 DEFAULT_SETTINGS_PATHS = ["settings.yaml", ".secrets.yaml"]
 
+INTERNAL_IPS = ["127.0.0.1"]  # comment this line to disallow debug_toolbar
 
 # Dynaconf
 os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
