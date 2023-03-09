@@ -1,31 +1,31 @@
 # import requests
 import json
-
 from datetime import date, datetime, timedelta
-from django.urls import reverse
-from django.shortcuts import redirect, render
+
 from django.contrib.auth.decorators import login_required, permission_required
 
 # from django.conf import settings
 from django.contrib.auth.models import Group
 from django.http import HttpResponse
 from django.http.request import QueryDict
+from django.shortcuts import redirect, render
 from django.template.loader import render_to_string
+from django.urls import reverse
 from django.utils.translation import gettext as _
 
+from apps.base.searchs import search_invitations
+from apps.publicwork.models import Seeker
+from apps.user.models import User
 from rcadmin.common import (
     clear_session,
     get_pagination,
-    send_email,
     sanitize_name,
+    send_email,
 )
-from apps.base.searchs import search_invitations
 
-from ..views.historic import adjust_person_side
-from ..models import Invitation, Historic
 from ..forms import InvitationForm, PupilRegistrationForm
-from apps.publicwork.models import Seeker
-from apps.user.models import User
+from ..models import Historic, Invitation
+from ..views.historic import adjust_person_side
 
 modal_updated_triggers = json.dumps(
     {
@@ -180,8 +180,8 @@ def confirm_invitation(request, token):
         }
         return redirect("reg_feedback")
 
-    # compare token date (30 day)
-    token_time = invite.invited_on.replace(tzinfo=None) + timedelta(days=30)
+    # compare token date (60 day)
+    token_time = invite.invited_on.replace(tzinfo=None) + timedelta(days=60)
     if datetime.utcnow() > token_time:
         request.session["fbk"] = {"type": "expired_token"}
         return redirect("reg_feedback")
