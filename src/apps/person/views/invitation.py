@@ -2,9 +2,8 @@
 import json
 from datetime import date, datetime, timedelta
 
+from django.conf import settings
 from django.contrib.auth.decorators import login_required, permission_required
-
-# from django.conf import settings
 from django.contrib.auth.models import Group
 from django.http import HttpResponse
 from django.http.request import QueryDict
@@ -113,7 +112,9 @@ def invite(request):
 
 
 def send_invitation(request, invite):
-    address = "https://rcadmin.rosacruzaurea.org.br"
+    address = "https://{}.rosacruzaurea.org.br".format(
+        "rcadmin" if settings.APP_NAME == "rc@admin" else "pitagoras"
+    )
     _link = f"{address}{reverse('confirm_invitation', args=[invite.pk])}"
     action = "migration" if invite.migration else "invitation"
     send_email(
