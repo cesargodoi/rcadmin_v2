@@ -6,8 +6,8 @@ from .views import (
     invitation,
     membership_ps,
     person,
-    tools,
     reports,
+    tools,
 )
 
 # person
@@ -132,7 +132,7 @@ urlpatterns += [
     ),
 ]
 
-# import from seekers
+# tools
 urlpatterns += [
     path(
         "tools/import-from-seekers",
@@ -143,6 +143,21 @@ urlpatterns += [
         "tools/import-from-seekers/<int:id>",
         tools.import_seeker,
         name="import_seeker",
+    ),
+    path(
+        "tools/pupil-transfer",
+        tools.pupil_transfer,
+        name="pupil_transfer",
+    ),
+    path(
+        "tools/search-pupil-to-transfer/",
+        tools.search_pupil_to_transfer,
+        name="search_pupil_to_transfer",
+    ),
+    path(
+        "tools/select-pupil-to-transfer/",
+        tools.select_pupil_to_transfer,
+        name="select_pupil_to_transfer",
     ),
 ]
 

@@ -2,13 +2,15 @@ from django.contrib import messages
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.models import Group
-from django.shortcuts import redirect, render
+from django.shortcuts import HttpResponse, redirect, render
 from django.utils.translation import gettext as _
+from django.views.decorators.http import require_http_methods
 
-from rcadmin.common import paginator
-from apps.user.models import User
-
+from apps.person.forms import TransferPupilForm
+from apps.person.models import Person
 from apps.publicwork.models import Seeker
+from apps.user.models import User
+from rcadmin.common import paginator
 
 
 @login_required
@@ -23,7 +25,7 @@ def import_from_seekers(request):
         "object_list": object_list,
         "title": _("import from seekers"),
     }
-    return render(request, "person/import_from_seekers.html", context)
+    return render(request, "person/tools/import_from_seekers.html", context)
 
 
 @login_required
@@ -75,3 +77,43 @@ def import_seeker(request, id):
         "title": _("confirm to import"),
     }
     return render(request, "person/elements/confirm_to_import.html", context)
+
+
+#  pupil transfer
+def pupil_transfer(request):
+    if not request.session.get("transfer"):
+        request.session["transfer"] = {"person": {}}
+
+    form = TransferPupilForm()
+
+    context = {
+        "form": form,
+        "title": _("pupil transfer"),
+    }
+    return render(request, "person/tools/pupil_transfer.html", context)
+
+
+@require_http_methods(["GET"])
+def search_pupil_to_transfer(request):
+    template_name = "person/tools/elements/search_results.html"
+    results = (
+        Person.objects.filter(
+            name__icontains=request.GET.get("term"),
+            center=request.user.person.center,
+        )[:10]
+        if request.GET.get("term")
+        else None
+    )
+
+    context = {"results": results}
+    return render(request, template_name, context)
+
+
+@require_http_methods(["GET"])
+def select_pupil_to_transfer(request):
+    _name = request.GET.get("name")
+    _id = request.GET.get("id")
+    request.session["transfer"]["person"] = {"name": _name, "id": _id}
+    request.session.modified = True
+    print(request.session["transfer"])
+    return HttpResponse(_name)

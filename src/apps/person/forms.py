@@ -1,10 +1,11 @@
 from django import forms
 
-# from django.utils.translation import gettext_lazy as _
-from rcadmin.common import HIDDEN_AUTH_FIELDS
 from apps.user.models import Profile, User
 
-from .models import Historic, Person, Invitation
+# from django.utils.translation import gettext_lazy as _
+from rcadmin.common import HIDDEN_AUTH_FIELDS
+
+from .models import Historic, Invitation, Person
 
 
 class UserForm(forms.ModelForm):
@@ -167,4 +168,20 @@ class PupilRegistrationForm(forms.ModelForm):
             ),
             "center": forms.HiddenInput(),
             "invited_on": forms.HiddenInput(),
+        }
+
+
+class TransferPupilForm(forms.ModelForm):
+    transfer_date = forms.DateField()
+    widgets = {
+        "transfer_date": forms.widgets.DateInput(
+            format="%Y-%m-%d", attrs={"type": "date"}
+        ),
+    }
+
+    class Meta:
+        model = Person
+        fields = ["center", "observations"]
+        widgets = {
+            "observations": forms.Textarea(attrs={"rows": 2}),
         }
