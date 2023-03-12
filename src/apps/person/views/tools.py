@@ -3,6 +3,7 @@ from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.models import Group
 from django.shortcuts import HttpResponse, redirect, render
+from django.utils import timezone
 from django.utils.translation import gettext as _
 from django.views.decorators.http import require_http_methods
 
@@ -84,7 +85,12 @@ def pupil_transfer(request):
     if not request.session.get("transfer"):
         request.session["transfer"] = {"person": {}}
 
-    form = TransferPupilForm()
+    form = TransferPupilForm(
+        initial={
+            "made_by": request.user,
+            "transfer_date": timezone.now(),
+        }
+    )
 
     context = {
         "form": form,

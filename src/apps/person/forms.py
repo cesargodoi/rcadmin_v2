@@ -1,8 +1,7 @@
 from django import forms
+from django.utils.translation import gettext_lazy as _
 
 from apps.user.models import Profile, User
-
-# from django.utils.translation import gettext_lazy as _
 from rcadmin.common import HIDDEN_AUTH_FIELDS
 
 from .models import Historic, Invitation, Person
@@ -172,16 +171,23 @@ class PupilRegistrationForm(forms.ModelForm):
 
 
 class TransferPupilForm(forms.ModelForm):
-    transfer_date = forms.DateField()
-    widgets = {
-        "transfer_date": forms.widgets.DateInput(
+    def __init__(self, *args, **kwargs):
+        super(TransferPupilForm, self).__init__(*args, **kwargs)
+        self.fields["center"].required = True
+        self.fields["center"].label = _("Transfer to Center")
+        self.fields["observations"].required = True
+
+    transfer_date = forms.DateField(
+        widget=forms.widgets.DateInput(
             format="%Y-%m-%d", attrs={"type": "date"}
-        ),
-    }
+        )
+    )
 
     class Meta:
         model = Person
-        fields = ["center", "observations"]
+        fields = ["center", "observations", "made_by"]
+
         widgets = {
             "observations": forms.Textarea(attrs={"rows": 2}),
+            "made_by": forms.HiddenInput(),
         }

@@ -7,10 +7,33 @@
 
 {% include "person/navbar.html" %}
 
+
 <article class="media content-section mb-1">
   <div class="media-body">
 
     <h4>{% trans 'Transferring the pupil' %}</h4>
+
+    <div id="div_id_pupil" class="form-group">     
+      <label for="id_pupil" class=" requiredField">
+        {% trans 'Pupil name' %}<span class="asteriskField">*</span>
+      </label>
+      <div class="form-control search-group">
+        <input 
+          type="search" 
+          name="pupil" 
+          {% if request.session.transfer.person %}
+            value="{{ request.session.transfer.person.name }}"
+          {% endif %} 
+          class="search-name" 
+          required="" 
+          id="id_pupil"
+        >
+        <button class="search-button" id="toChange">
+          <i class="fa-solid fa-search"></i>
+        </button>
+      </div>
+    </div>
+
 
     <div class="row">
       <div class="col-sm-8 mt-2">
@@ -34,10 +57,20 @@
         </div>
       </div>
     </div>
-
+    <br>
     <form method="POST">
       {% csrf_token %}
-      {{ form | crispy }}
+      <div class="row">
+        <div class="col-sm-6">{{ form.center | as_crispy_field }}</div>
+        <div class="col-sm-6">{{ form.transfer_date | as_crispy_field }}</div>
+      </div>
+      {{ form.observations | as_crispy_field }}
+      <div class="text-right mt-4 mb-4">
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-check"></i>
+          {% trans 'Confirm the transfer' %}
+        </button>
+      </div>
     </form>
 
   </div>
@@ -46,7 +79,5 @@
 {% endblock %}
 
 {% block scripts %}
-
-<script type="text/javascript" src="{% static 'js/tools/pupil_transfer.js' %}" defer></script>
-
+<script type="text/javascript" src="{% static 'js/pupilTransfer.js' %}" defer></script>
 {% endblock %}
