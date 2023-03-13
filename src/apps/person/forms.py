@@ -188,3 +188,22 @@ class TransferPupilForm(forms.ModelForm):
         fields = ["center", "observations"]
 
         widgets = {"observations": forms.Textarea(attrs={"rows": 1})}
+
+
+class ChangeOfAspectForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(ChangeOfAspectForm, self).__init__(*args, **kwargs)
+        self.fields["aspect"].required = True
+        self.fields["aspect"].label = _("Select new Aspect")
+        self.fields["observations"].label = _("Some observations")
+
+    class Meta:
+        model = Person
+        fields = ["aspect", "aspect_date", "observations"]
+
+        widgets = {
+            "observations": forms.Textarea(attrs={"rows": 1}),
+            "aspect_date": forms.widgets.DateInput(
+                format="%Y-%m-%d", attrs={"type": "date"}
+            ),
+        }

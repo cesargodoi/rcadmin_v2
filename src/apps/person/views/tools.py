@@ -7,7 +7,7 @@ from django.utils import timezone
 from django.utils.translation import gettext as _
 from django.views.decorators.http import require_http_methods
 
-from apps.person.forms import TransferPupilForm
+from apps.person.forms import ChangeOfAspectForm, TransferPupilForm
 from apps.person.models import Historic, Person
 from apps.publicwork.models import Seeker
 from apps.user.models import User
@@ -81,13 +81,15 @@ def import_seeker(request, id):
 
 
 #  pupil transfer
+@login_required
+@permission_required("person.add_historic")
 def pupil_transfer(request):
     if request.method == "POST":
-        person = Person.objects.get(name=request.session["transfer"])
+        person = Person.objects.get(name=request.session["pupil_name"])
         old_center = person.center
         person.center_id = request.POST["center"]
         person.save()
-        transfer = dict(
+        new_transfer = dict(
             person=person,
             occurrence="TRF",
             date=request.POST["transfer_date"],
@@ -95,14 +97,14 @@ def pupil_transfer(request):
             made_by=request.user,
         )
         if request.POST.get("observations"):
-            transfer["description"] += " | {}".format(
+            new_transfer["description"] += " | {}".format(
                 request.POST["observations"]
             )
-        Historic.objects.create(**transfer)
+        Historic.objects.create(**new_transfer)
         return redirect("person_home")
 
-    if not request.session.get("transfer"):
-        request.session["transfer"] = ""
+    if not request.session.get("pupil_name"):
+        request.session["pupil_name"] = ""
 
     context = {
         "form": TransferPupilForm(initial={"transfer_date": timezone.now()}),
@@ -111,8 +113,45 @@ def pupil_transfer(request):
     return render(request, "person/tools/pupil_transfer.html", context)
 
 
+#  change of aspect
+@login_required
+@permission_required("person.add_historic")
+def change_of_aspect(request):
+    if request.method == "POST":
+        person = Person.objects.get(name=request.session["pupil_name"])
+        old_aspect = person.get_aspect_display()
+        person.aspect = request.POST["aspect"]
+        person.aspect_date = request.POST["aspect_date"]
+        person.save()
+        new_aspect = dict(
+            person=person,
+            occurrence=request.POST["aspect"],
+            date=request.POST["aspect_date"],
+            description=f"{old_aspect} ➔ {person.get_aspect_display()}",
+            made_by=request.user,
+        )
+        if request.POST.get("observations"):
+            new_aspect["description"] += " | {}".format(
+                request.POST["observations"]
+            )
+        Historic.objects.create(**new_aspect)
+        return redirect("person_home")
+
+    if not request.session.get("pupil_name"):
+        request.session["pupil_name"] = ""
+
+    context = {
+        "form": ChangeOfAspectForm(initial={"aspect_date": timezone.now()}),
+        "title": _("pupil transfer"),
+    }
+    return render(request, "person/tools/change_of_aspect.html", context)
+
+
+#  handlers
+@login_required
+@permission_required("person.add_historic")
 @require_http_methods(["GET"])
-def search_pupil_to_transfer(request):
+def search_pupil_by_name(request):
     template_name = "person/tools/elements/search_results.html"
     results = (
         Person.objects.filter(
@@ -128,8 +167,10 @@ def search_pupil_to_transfer(request):
     return render(request, template_name, context)
 
 
+@login_required
+@permission_required("person.add_historic")
 @require_http_methods(["GET"])
-def select_pupil_to_transfer(request):
-    request.session["transfer"] = request.GET.get("name")
+def select_pupil_by_name(request):
+    request.session["pupil_name"] = request.GET.get("name")
     request.session.modified = True
     return HttpResponse(request.GET.get("name"))

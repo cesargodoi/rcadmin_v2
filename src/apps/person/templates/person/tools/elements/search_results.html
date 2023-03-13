@@ -4,7 +4,7 @@
     <li 
       class="list-group-item text-secondary"
       style="cursor: pointer;"
-      hx-get="{% url 'select_pupil_to_transfer' %}"
+      hx-get="{% url 'select_pupil_by_name' %}"
       hx-vals='{"name": "{{ person.name }}"}'
       hx-target="#personName"
       hx-swap="innerHTML"

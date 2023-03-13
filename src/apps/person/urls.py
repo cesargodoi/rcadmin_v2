@@ -134,6 +134,7 @@ urlpatterns += [
 
 # tools
 urlpatterns += [
+    # import from seekers
     path(
         "tools/import-from-seekers",
         tools.import_from_seekers,
@@ -144,20 +145,37 @@ urlpatterns += [
         tools.import_seeker,
         name="import_seeker",
     ),
+    # pupil transfer
     path(
-        "tools/pupil-transfer",
+        "tools/pupil-transfer/",
         tools.pupil_transfer,
         name="pupil_transfer",
     ),
+    # path(
+    #     "tools/search-pupil-to-transfer/",
+    #     tools.search_pupil_to_transfer,
+    #     name="search_pupil_to_transfer",
+    # ),
+    # path(
+    #     "tools/select-pupil-to-transfer/",
+    #     tools.select_pupil_to_transfer,
+    #     name="select_pupil_to_transfer",
+    # ),
+    # change of aspect
     path(
-        "tools/search-pupil-to-transfer/",
-        tools.search_pupil_to_transfer,
-        name="search_pupil_to_transfer",
+        "tools/change-of-aspect/",
+        tools.change_of_aspect,
+        name="change_of_aspect",
     ),
     path(
-        "tools/select-pupil-to-transfer/",
-        tools.select_pupil_to_transfer,
-        name="select_pupil_to_transfer",
+        "tools/search-pupil-by-name/",
+        tools.search_pupil_by_name,
+        name="search_pupil_by_name",
+    ),
+    path(
+        "tools/select-pupil-by-name,/",
+        tools.select_pupil_by_name,
+        name="select_pupil_by_name",
     ),
 ]
 

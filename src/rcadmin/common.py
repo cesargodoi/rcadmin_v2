@@ -1,15 +1,13 @@
 import re
-
 from unicodedata import normalize
 
 from django import forms
-from django.template.loader import render_to_string
 from django.core.mail import send_mail
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-from django.http.response import Http404
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.core.validators import RegexValidator
+from django.http.response import Http404
+from django.template.loader import render_to_string
 from django.utils.translation import gettext_lazy as _
-
 
 # hidden auth fields
 HIDDEN_AUTH_FIELDS = {
@@ -50,15 +48,7 @@ STATUS = (
     ("DIS", _("disconnected")),
     ("REM", _("removed")),
 )
-OCCURRENCES = (
-    ("TRF", _("transfered")),
-    ("RGS", _("regressed")),
-    ("OTH", _("other")),
-    ("PRP", _("preparatório")),
-    ("PRB", _("probatório")),
-    ("PRF", _("professo")),
-)
-OCCURRENCES += ASPECTS
+OCCURRENCES = (("OTH", _("other")),)
 OCCURRENCES += STATUS
 PERSON_TYPES = (
     ("PUP", _("pupil")),

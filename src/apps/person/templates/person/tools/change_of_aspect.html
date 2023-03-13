@@ -1,0 +1,32 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  {% include "person/navbar.html" %}
+    <article class="media content-section mb-1">
+      <div class="media-body">
+        <h4>{% trans 'Change of Aspect' %}</h4>
+        {% include "person/tools/elements/select_person_by_name.html" %}
+        <form method="POST">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-sm-6">{{ form.aspect | as_crispy_field }}</div>
+            <div class="col-sm-6">{{ form.aspect_date | as_crispy_field }}</div>
+          </div>
+          {{ form.observations | as_crispy_field }}
+          <div class="text-right mt-4 mb-4">
+            <button id="submitBtn" type="submit" class="btn btn-primary">
+              <i class="fas fa-check"></i>
+              {% trans 'Confirm the change of Aspect' %}
+            </button>
+          </div>
+        </form>
+      </div>
+    </article>
+{% endblock %}
+
+{% block scripts %}
+  <script type="text/javascript" src="{% static 'js/pupilTransfer.js' %}" defer></script>
+{% endblock %}
