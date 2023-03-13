@@ -485,7 +485,11 @@ p {
 }
 
 /* pupil transfer */
-.search-group {
+.selected-name-group {
+  position: relative;
+}
+
+.search-name-group {
   position: relative;
 }
 

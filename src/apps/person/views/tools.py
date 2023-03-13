@@ -8,7 +8,7 @@ from django.utils.translation import gettext as _
 from django.views.decorators.http import require_http_methods
 
 from apps.person.forms import TransferPupilForm
-from apps.person.models import Person
+from apps.person.models import Historic, Person
 from apps.publicwork.models import Seeker
 from apps.user.models import User
 from rcadmin.common import paginator
@@ -82,18 +82,30 @@ def import_seeker(request, id):
 
 #  pupil transfer
 def pupil_transfer(request):
-    if not request.session.get("transfer"):
-        request.session["transfer"] = {"person": {}}
+    if request.method == "POST":
+        person = Person.objects.get(name=request.session["transfer"])
+        old_center = person.center
+        person.center_id = request.POST["center"]
+        person.save()
+        transfer = dict(
+            person=person,
+            occurrence="TRF",
+            date=request.POST["transfer_date"],
+            description=f"{old_center} ➔ {person.center}",
+            made_by=request.user,
+        )
+        if request.POST.get("observations"):
+            transfer["description"] += " | {}".format(
+                request.POST["observations"]
+            )
+        Historic.objects.create(**transfer)
+        return redirect("person_home")
 
-    form = TransferPupilForm(
-        initial={
-            "made_by": request.user,
-            "transfer_date": timezone.now(),
-        }
-    )
+    if not request.session.get("transfer"):
+        request.session["transfer"] = ""
 
     context = {
-        "form": form,
+        "form": TransferPupilForm(initial={"transfer_date": timezone.now()}),
         "title": _("pupil transfer"),
     }
     return render(request, "person/tools/pupil_transfer.html", context)
@@ -106,6 +118,7 @@ def search_pupil_to_transfer(request):
         Person.objects.filter(
             name__icontains=request.GET.get("term"),
             center=request.user.person.center,
+            is_active=True,
         )[:10]
         if request.GET.get("term")
         else None
@@ -117,9 +130,6 @@ def search_pupil_to_transfer(request):
 
 @require_http_methods(["GET"])
 def select_pupil_to_transfer(request):
-    _name = request.GET.get("name")
-    _id = request.GET.get("id")
-    request.session["transfer"]["person"] = {"name": _name, "id": _id}
+    request.session["transfer"] = request.GET.get("name")
     request.session.modified = True
-    print(request.session["transfer"])
-    return HttpResponse(_name)
+    return HttpResponse(request.GET.get("name"))

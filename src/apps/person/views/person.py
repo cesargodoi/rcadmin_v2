@@ -1,8 +1,6 @@
 import json
-
 from datetime import date
 
-from django.template.loader import render_to_string
 from django.contrib import messages
 from django.contrib.auth.decorators import (
     login_required,
@@ -13,29 +11,29 @@ from django.contrib.auth.models import Group
 from django.http import HttpResponse
 from django.http.response import Http404
 from django.shortcuts import redirect, render
-from django.utils import timezone
+from django.template.loader import render_to_string
 from django.urls import reverse
+from django.utils import timezone
 from django.utils.translation import gettext as _
 
+from apps.base.searchs import search_person
+from apps.user.models import User
 from rcadmin.common import (
     ASPECTS,
     STATUS,
     clear_session,
     get_template_and_pagination,
 )
-from apps.user.models import User
-from apps.base.searchs import search_person
 
 from ..forms import (
+    ImageFormUpdate,
     PersonForm,
     ProfileForm,
-    UserForm,
     ProfileFormUpdate,
     PupilFormUpdate,
-    ImageFormUpdate,
+    UserForm,
 )
 from ..models import Historic, Person
-
 
 modal_updated_triggers = json.dumps(
     {
@@ -48,6 +46,9 @@ modal_updated_triggers = json.dumps(
 @login_required
 @permission_required("person.view_person")
 def person_home(request):
+    if request.session.get("transfer"):
+        clear_session(request, ["transfer"])
+
     LIMIT, template_name, _from, _to, page = get_template_and_pagination(
         request, "person/home.html", "person/elements/person_list.html"
     )

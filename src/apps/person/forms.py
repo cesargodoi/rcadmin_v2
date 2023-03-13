@@ -175,7 +175,7 @@ class TransferPupilForm(forms.ModelForm):
         super(TransferPupilForm, self).__init__(*args, **kwargs)
         self.fields["center"].required = True
         self.fields["center"].label = _("Transfer to Center")
-        self.fields["observations"].required = True
+        self.fields["observations"].label = _("Some observations")
 
     transfer_date = forms.DateField(
         widget=forms.widgets.DateInput(
@@ -185,9 +185,6 @@ class TransferPupilForm(forms.ModelForm):
 
     class Meta:
         model = Person
-        fields = ["center", "observations", "made_by"]
+        fields = ["center", "observations"]
 
-        widgets = {
-            "observations": forms.Textarea(attrs={"rows": 2}),
-            "made_by": forms.HiddenInput(),
-        }
+        widgets = {"observations": forms.Textarea(attrs={"rows": 1})}

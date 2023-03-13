@@ -1,32 +1,39 @@
-const searchForm = document.getElementById("searchForm");
+const term = document.getElementById("term");
+const submitBtn = document.getElementById("submitBtn");
 const personName = document.getElementById("personName");
 const personNames = document.getElementById('personNames');
 const toChange = document.getElementById('toChange');
+const selectedNameGroup = document.getElementById('selectedNameGroup');
+const searchNameGroup = document.getElementById('searchNameGroup');
 
 // onload page
 document.body.addEventListener('htmx:load', (event) => {
-  if (personName.innerText) {
-    searchForm.classList.add('d-none');
-    toChange.classList.remove('d-none');
+  if (personName.innerText == /\w+/) {
+    selectedNameGroup.classList.remove('d-none');
+    searchNameGroup.classList.add('d-none');
+    submitBtn.disabled = false;
   } else {
-    searchForm.classList.remove('d-none');
-    toChange.classList.add('d-none');
+    searchNameGroup.classList.remove('d-none');
+    selectedNameGroup.classList.add('d-none');
+    term.focus();
+    submitBtn.disabled = true;
   };
 })
 
 // on change name
-htmx.on("#personName", "htmx:beforeSwap", (event) => {
-  searchForm.classList.add('d-none');
-  toChange.classList.remove('d-none');
+htmx.on("#selectedNameGroup", "htmx:beforeSwap", (event) => {
+  selectedNameGroup.classList.remove('d-none');
+  searchNameGroup.classList.add('d-none');
+  personNames.children[0].innerHTML = '';
+  submitBtn.disabled = false;
 });
 
 // click on toChange link
 htmx.on("#toChange", "click", (event) => {
-  searchForm.classList.remove('d-none');
-  toChange.classList.add('d-none');
-  personName.innerText = '';
-  searchForm.children[0].children[0].value = '';
-  if (personNames.children[0]) {
-    personNames.children[0].innerHTML = '';
-  }
+  searchNameGroup.classList.remove('d-none');
+  term.focus();
+  selectedNameGroup.classList.add('d-none');
+  personName.innerHTML = '';
+  term.value = '';
+  submitBtn.disabled = true;
 });

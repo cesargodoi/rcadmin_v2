@@ -1,12 +1,11 @@
 {% load i18n %}
-
 <ul class="list-group">
   {% for person in results %}
     <li 
       class="list-group-item text-secondary"
       style="cursor: pointer;"
       hx-get="{% url 'select_pupil_to_transfer' %}"
-      hx-vals='{"name": "{{ person.name }}", "id": "{{ person.id }}"}'
+      hx-vals='{"name": "{{ person.name }}"}'
       hx-target="#personName"
       hx-swap="innerHTML"
     >
