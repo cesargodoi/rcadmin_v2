@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-23 16:24-0300\n"
-"PO-Revision-Date: 2023-02-23 16:25-0306\n"
+"POT-Creation-Date: 2023-03-13 20:00-0300\n"
+"PO-Revision-Date: 2023-03-13 20:00-0306\n"
 "Last-Translator: Anonymous User <cesar.godoi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -168,7 +168,7 @@ msgstr "Confirmar"
 #: src/apps/person/templates/person/forms/membership.html:17
 #: src/apps/person/templates/person/frequency_insert.html:12
 #: src/apps/person/templates/person/membership_ps_insert.html:12
-#: src/apps/person/templates/person/navbar.html:179
+#: src/apps/person/templates/person/navbar.html:181
 #: src/apps/publicwork/templates/publicwork/groups/actions.html:23
 #: src/apps/publicwork/templates/publicwork/groups/navbar.html:106
 #: src/apps/publicwork/templates/publicwork/lecture/navbar.html:54
@@ -231,43 +231,43 @@ msgid "all"
 msgstr "todos"
 
 #: src/apps/base/templates/base/elements/menu.html:6
-#: src/apps/base/templates/base/home.html:70
+#: src/apps/base/templates/base/home.html:59
 #: src/apps/center/templates/center/navbar.html:5
 msgid "Centers"
 msgstr "Núcleos"
 
 #: src/apps/base/templates/base/elements/menu.html:11
-#: src/apps/base/templates/base/home.html:81
+#: src/apps/base/templates/base/home.html:70
 #: src/apps/person/templates/person/navbar.html:7
 msgid "Persons"
 msgstr "Alunos"
 
 #: src/apps/base/templates/base/elements/menu.html:14
-#: src/apps/base/templates/base/home.html:90
+#: src/apps/base/templates/base/home.html:79
 #: src/apps/event/templates/event/navbar.html:7
 msgid "Events"
 msgstr "Eventos"
 
 #: src/apps/base/templates/base/elements/menu.html:17
-#: src/apps/base/templates/base/home.html:99
+#: src/apps/base/templates/base/home.html:88
 #: src/apps/workgroup/templates/workgroup/navbar.html:7
 msgid "Workgroups"
 msgstr "Grupos"
 
 #: src/apps/base/templates/base/elements/menu.html:24
-#: src/apps/base/templates/base/home.html:112
+#: src/apps/base/templates/base/home.html:101
 #: src/apps/workgroup/templates/workgroup/mentoring/navbar.html:7
 msgid "Mentoring"
 msgstr "Mentoria"
 
 #: src/apps/base/templates/base/elements/menu.html:32
-#: src/apps/base/templates/base/home.html:126
+#: src/apps/base/templates/base/home.html:115
 #: src/apps/publicwork/templates/publicwork/navbar.html:7
 msgid "Public Work"
 msgstr "Trabalho Público"
 
 #: src/apps/base/templates/base/elements/menu.html:40
-#: src/apps/base/templates/base/home.html:140
+#: src/apps/base/templates/base/home.html:129
 #: src/apps/treasury/templates/treasury/elements/treasury_navbar.html:5
 #: src/apps/treasury/templates/treasury/navbar.html:6
 msgid "Treasury"
@@ -323,18 +323,18 @@ msgstr "Importar pessoas"
 msgid "Loading..."
 msgstr "Carregando..."
 
-#: src/apps/base/templates/base/elements/navbar.html:46
+#: src/apps/base/templates/base/elements/navbar.html:50
 #: src/apps/person/templates/person/info.html:12
 #: src/apps/user/templates/user/profile/navbar-ant.html:4
 #: src/apps/user/templates/user/profile/navbar.html:7
 msgid "Profile"
 msgstr "Perfil"
 
-#: src/apps/base/templates/base/elements/navbar.html:50
+#: src/apps/base/templates/base/elements/navbar.html:54
 msgid "Logout"
 msgstr "Sair"
 
-#: src/apps/base/templates/base/elements/navbar.html:69
+#: src/apps/base/templates/base/elements/navbar.html:73
 msgid "Login"
 msgstr "Entrar"
 
@@ -376,8 +376,7 @@ msgstr "Atualizar"
 msgid "Welcome to"
 msgstr "Bem-vindo"
 
-#: src/apps/base/templates/base/home.html:59
-#| msgid "Profile"
+#: src/apps/base/templates/base/home.html:142
 msgid "My Profile"
 msgstr "Meu Perfil"
 
@@ -482,7 +481,7 @@ msgstr "definir os termos de relatório"
 #: src/apps/person/models.py:91 src/apps/publicwork/models.py:76
 #: src/apps/publicwork/models.py:172 src/apps/publicwork/models.py:229
 #: src/apps/treasury/models.py:172 src/apps/workgroup/models.py:13
-#: src/rcadmin/common.py:31
+#: src/rcadmin/common.py:30
 msgid "center"
 msgstr "núcleo"
 
@@ -620,7 +619,7 @@ msgstr "Limpar"
 #: src/apps/event/models.py:100 src/apps/person/models.py:104
 #: src/apps/person/templates/person/elements/tab_pupil.html:28
 #: src/apps/workgroup/templates/workgroup/member/info.html:14
-#: src/rcadmin/common.py:74
+#: src/rcadmin/common.py:78
 msgid "aspect"
 msgstr "discipulado"
 
@@ -715,7 +714,7 @@ msgstr "chave pix"
 
 #: src/apps/center/models.py:69
 #: src/apps/center/templates/center/elements/header.html:21
-#: src/rcadmin/common.py:32
+#: src/rcadmin/common.py:31
 msgid "conference center"
 msgstr "centro de conferência"
 
@@ -949,7 +948,7 @@ msgstr "Adicionar"
 
 #: src/apps/center/templates/center/elements/tabs.html:11
 #: src/apps/person/templates/person/detail.html:16
-#: src/apps/person/templates/person/navbar.html:44
+#: src/apps/person/templates/person/navbar.html:46
 #: src/apps/publicwork/templates/publicwork/seeker/detail.html:19
 #: src/apps/publicwork/templates/publicwork/seeker/navbar.html:15
 #: src/apps/user/templates/user/profile/detail.html:15
@@ -973,7 +972,7 @@ msgstr "Adicionar Responsável"
 
 #: src/apps/center/templates/center/navbar.html:38
 #: src/apps/event/templates/event/navbar.html:56
-#: src/apps/person/templates/person/navbar.html:117
+#: src/apps/person/templates/person/navbar.html:119
 #: src/apps/publicwork/templates/publicwork/lecture/navbar.html:43
 #: src/apps/publicwork/templates/publicwork/seeker/navbar.html:56
 #: src/apps/treasury/templates/treasury/order/detail.html:122
@@ -981,7 +980,7 @@ msgid "Delete"
 msgstr "Apagar"
 
 #: src/apps/center/templates/center/navbar.html:49
-#: src/apps/person/templates/person/navbar.html:128
+#: src/apps/person/templates/person/navbar.html:130
 #: src/apps/publicwork/templates/publicwork/groups/navbar.html:84
 #: src/apps/publicwork/templates/publicwork/seeker/navbar.html:67
 msgid "Reinsert"
@@ -1003,7 +1002,7 @@ msgstr "Criar núcleo"
 msgid "Update info"
 msgstr "Atualizar informações"
 
-#: src/apps/center/views.py:175 src/apps/person/views/person.py:271
+#: src/apps/center/views.py:175 src/apps/person/views/person.py:272
 #: src/apps/user/views.py:110
 msgid "Update image"
 msgstr "Atualizar imagem"
@@ -1118,7 +1117,7 @@ msgstr "é multi-data"
 #: src/apps/event/templates/event/frequencies.html:6
 #: src/apps/event/templates/event/navbar.html:35
 #: src/apps/person/templates/person/frequencies.html:7
-#: src/apps/person/templates/person/navbar.html:56
+#: src/apps/person/templates/person/navbar.html:58
 #: src/apps/publicwork/templates/publicwork/groups/frequencies.html:7
 #: src/apps/publicwork/templates/publicwork/groups/navbar.html:20
 #: src/apps/publicwork/templates/publicwork/groups/navbar.html:96
@@ -1152,6 +1151,7 @@ msgid "Insert Frequencies"
 msgstr "Inserir Frequências"
 
 #: src/apps/event/templates/event/elements/frequencies-add.html:31
+#: src/apps/person/templates/person/forms/pupil_fields.html:15
 msgid "Important"
 msgstr "Importante"
 
@@ -1247,7 +1247,7 @@ msgstr "evento"
 msgid "event detail"
 msgstr "detalhes do evento"
 
-#: src/apps/event/views/event.py:111 src/apps/person/views/historic.py:73
+#: src/apps/event/views/event.py:111 src/apps/person/views/historic.py:74
 #: src/apps/publicwork/views/historic.py:44
 msgid "Create historic"
 msgstr "Criar histórico"
@@ -1288,6 +1288,23 @@ msgid "%d person was successfully marked as 'active'."
 msgid_plural "%d persons were successfully marked as 'actives'."
 msgstr[0] "%d pessoa foi marcada com sucesso como 'ativa'."
 msgstr[1] "%d pessoas foram marcadas com sucesso como 'ativas'."
+
+#: src/apps/person/forms.py:187
+msgid "Transfer to Center"
+msgstr "Transferência para o Núcleo"
+
+#: src/apps/person/forms.py:188 src/apps/person/forms.py:209
+msgid "Some observations"
+msgstr "Algumas observações"
+
+#: src/apps/person/forms.py:189
+#| msgid "Transfer to Center"
+msgid "Transfer date"
+msgstr "Data de transferência"
+
+#: src/apps/person/forms.py:208
+msgid "Select new Aspect"
+msgstr "Selecione o novo Aspecto"
 
 #: src/apps/person/models.py:34 src/apps/person/models.py:99
 #: src/apps/person/templates/person/elements/tab_pupil.html:14
@@ -1338,7 +1355,7 @@ msgstr "importado em"
 msgid "invitation"
 msgstr "convite"
 
-#: src/apps/person/models.py:79 src/apps/person/views/invitation.py:42
+#: src/apps/person/models.py:79 src/apps/person/views/invitation.py:41
 msgid "invitations"
 msgstr "convites"
 
@@ -1422,8 +1439,8 @@ msgstr "anos"
 
 #: src/apps/person/templates/person/forms/historic-ant.html:24
 #: src/apps/person/templates/person/historic.html:7
-#: src/apps/person/templates/person/navbar.html:50
-#: src/apps/person/templates/person/navbar.html:143
+#: src/apps/person/templates/person/navbar.html:52
+#: src/apps/person/templates/person/navbar.html:145
 #: src/apps/publicwork/templates/publicwork/seeker/create_historic.html:9
 #: src/apps/publicwork/templates/publicwork/seeker/historic.html:7
 #: src/apps/publicwork/templates/publicwork/seeker/navbar.html:27
@@ -1438,8 +1455,8 @@ msgstr "Histórico"
 
 #: src/apps/person/templates/person/forms/membership.html:23
 #: src/apps/person/templates/person/membership.html:7
-#: src/apps/person/templates/person/navbar.html:62
-#: src/apps/person/templates/person/navbar.html:163
+#: src/apps/person/templates/person/navbar.html:64
+#: src/apps/person/templates/person/navbar.html:165
 msgid "Membership"
 msgstr "Grupos"
 
@@ -1448,9 +1465,26 @@ msgstr "Grupos"
 msgid "Update Membership"
 msgstr "Atualizar Membro"
 
-#: src/apps/person/templates/person/forms/pupil_fields.html:19
-msgid "To update 'aspect' and 'status', use the 'Historic' tab."
-msgstr "Para atualizar 'aspecto' e 'status', use a aba 'Histórico'."
+#: src/apps/person/templates/person/forms/pupil_fields.html:18
+msgid "To update 'status', use: "
+msgstr "Para atualizar o 'status', use:"
+
+#: src/apps/person/templates/person/forms/pupil_fields.html:20
+msgid "on 'Historic' tab."
+msgstr "na aba 'Historico'."
+
+#: src/apps/person/templates/person/forms/pupil_fields.html:23
+msgid "To update 'aspect', use the tool: "
+msgstr "Para atualizar o 'aspecto', use a ferramenta:"
+
+#: src/apps/person/templates/person/forms/pupil_fields.html:25
+#: src/apps/person/templates/person/forms/pupil_fields.html:30
+msgid "on 'person > tools' menu."
+msgstr "no menu 'Alunos > Ferramentas'. "
+
+#: src/apps/person/templates/person/forms/pupil_fields.html:28
+msgid "To change 'center', use the tool: "
+msgstr "Para alterar o 'núcleo', use a ferramenta:"
 
 #: src/apps/person/templates/person/forms/update_pupil.html:43
 msgid "update"
@@ -1468,14 +1502,6 @@ msgstr "Inserir frequência"
 #: src/apps/person/templates/person/historic.html:20
 msgid "historic not found"
 msgstr "histórico não encontrado"
-
-#: src/apps/person/templates/person/import_from_seekers.html:12
-msgid "Seekers who will become pupils"
-msgstr "Buscadores que se tornarão alunos"
-
-#: src/apps/person/templates/person/import_from_seekers.html:59
-msgid "no seekers found"
-msgstr "nenhum buscador encontrado"
 
 #: src/apps/person/templates/person/invitation/confirm/resend_invitation.html:14
 msgid "Are you shure you want to resend invitation to"
@@ -1552,7 +1578,7 @@ msgid "Insert Membership"
 msgstr "Inserir Membro"
 
 #: src/apps/person/templates/person/navbar.html:7
-#: src/apps/person/templates/person/navbar.html:94
+#: src/apps/person/templates/person/navbar.html:96
 #: src/apps/treasury/templates/treasury/order/elements/person_div.html:6
 msgid "Person"
 msgstr "Aluno"
@@ -1569,15 +1595,24 @@ msgstr "Ferramentas"
 msgid "Import from Seekers"
 msgstr "Importar de Buscadores"
 
-#: src/apps/person/templates/person/navbar.html:81
+#: src/apps/person/templates/person/navbar.html:33
+msgid "Pupil Transfer"
+msgstr "Transferência de Aluno"
+
+#: src/apps/person/templates/person/navbar.html:34
+#: src/apps/person/templates/person/tools/change_of_aspect.html:10
+msgid "Change of Aspect"
+msgstr "Mudança de Aspecto"
+
+#: src/apps/person/templates/person/navbar.html:83
 msgid "Invite person"
 msgstr "Convidar pessoa"
 
-#: src/apps/person/templates/person/navbar.html:106 src/rcadmin/common.py:128
+#: src/apps/person/templates/person/navbar.html:108 src/rcadmin/common.py:142
 msgid "Badge"
 msgstr "Carteirinha"
 
-#: src/apps/person/templates/person/navbar.html:153
+#: src/apps/person/templates/person/navbar.html:155
 #: src/apps/publicwork/templates/publicwork/seeker/navbar.html:79
 #: src/apps/workgroup/templates/workgroup/member/navbar.html:40
 msgid "Frequency"
@@ -1586,6 +1621,35 @@ msgstr "Frequência"
 #: src/apps/person/templates/person/persons.html:15
 msgid "persons not found in the search"
 msgstr "pessoas não encontradas na pesquisa"
+
+#: src/apps/person/templates/person/tools/change_of_aspect.html:22
+msgid "Confirm the change of Aspect"
+msgstr "Confirme a mudança de Aspecto"
+
+#: src/apps/person/templates/person/tools/elements/search_results.html:15
+#: src/apps/treasury/templates/treasury/order/elements/search_results.html:16
+msgid "No search results"
+msgstr "Nenhum resultado de pesquisa"
+
+#: src/apps/person/templates/person/tools/elements/select_person_by_name.html:6
+msgid "Pupil name"
+msgstr "Nome do aluno"
+
+#: src/apps/person/templates/person/tools/import_from_seekers.html:12
+msgid "Seekers who will become pupils"
+msgstr "Buscadores que se tornarão alunos"
+
+#: src/apps/person/templates/person/tools/import_from_seekers.html:59
+msgid "no seekers found"
+msgstr "nenhum buscador encontrado"
+
+#: src/apps/person/templates/person/tools/pupil_transfer.html:10
+msgid "Pupil transfer"
+msgstr "Transferência de aluno"
+
+#: src/apps/person/templates/person/tools/pupil_transfer.html:22
+msgid "Confirm the transfer"
+msgstr "Confirme a transferência"
 
 #: src/apps/person/templates/person/workgroups.html:14
 #: src/apps/publicwork/templates/publicwork/groups/groups.html:15
@@ -1598,31 +1662,31 @@ msgstr "grupos não encontrados"
 msgid "frequencies list"
 msgstr "lista de frequências"
 
-#: src/apps/person/views/historic.py:49
+#: src/apps/person/views/historic.py:50
 msgid "historic list"
 msgstr "lista de histórico"
 
-#: src/apps/person/views/historic.py:116
+#: src/apps/person/views/historic.py:117
 msgid "Update Historic"
 msgstr "Atualizar Histórico"
 
-#: src/apps/person/views/invitation.py:33
+#: src/apps/person/views/invitation.py:32
 msgid "The Invitation has been sent!"
 msgstr "O convite foi enviado"
 
-#: src/apps/person/views/invitation.py:110
+#: src/apps/person/views/invitation.py:109
 msgid "Invite new pupil"
 msgstr "Convidar novo aluno"
 
-#: src/apps/person/views/invitation.py:162
+#: src/apps/person/views/invitation.py:163
 msgid "pupil registration"
 msgstr "registro de aluno"
 
-#: src/apps/person/views/invitation.py:290
+#: src/apps/person/views/invitation.py:291
 msgid "create pupil"
 msgstr "criar aluno"
 
-#: src/apps/person/views/invitation.py:299
+#: src/apps/person/views/invitation.py:300
 msgid "congratulations"
 msgstr "parabéns"
 
@@ -1634,27 +1698,27 @@ msgstr "lista de membros"
 msgid "insert membership"
 msgstr "inserir membro"
 
-#: src/apps/person/views/person.py:43
+#: src/apps/person/views/person.py:41
 msgid "The Person has been updated!"
 msgstr "O Aluno foi atualizado"
 
-#: src/apps/person/views/person.py:82
+#: src/apps/person/views/person.py:83
 msgid "person home"
 msgstr "aluno"
 
-#: src/apps/person/views/person.py:99
+#: src/apps/person/views/person.py:100
 msgid "person detail"
 msgstr "detalhes do aluno"
 
-#: src/apps/person/views/person.py:151
+#: src/apps/person/views/person.py:152
 msgid "Create person"
 msgstr "Criar aluno"
 
-#: src/apps/person/views/person.py:194
+#: src/apps/person/views/person.py:195
 msgid "Update profile"
 msgstr "Atualizar perfil"
 
-#: src/apps/person/views/person.py:237
+#: src/apps/person/views/person.py:238
 msgid "Update pupil"
 msgstr "Atualizar aluno"
 
@@ -1666,13 +1730,17 @@ msgstr "Instalados por período"
 msgid "occurrences per period"
 msgstr "Ocorrências por período"
 
-#: src/apps/person/views/tools.py:24
+#: src/apps/person/views/tools.py:27
 msgid "import from seekers"
 msgstr "importar de buscadores"
 
-#: src/apps/person/views/tools.py:75
+#: src/apps/person/views/tools.py:78
 msgid "confirm to import"
 msgstr "confirme para importar"
+
+#: src/apps/person/views/tools.py:111 src/apps/person/views/tools.py:145
+msgid "pupil transfer"
+msgstr "transferência de aluno"
 
 #: src/apps/publicwork/models.py:47
 msgid "solicited on"
@@ -2067,7 +2135,7 @@ msgid "local"
 msgstr "local"
 
 #: src/apps/publicwork/templates/publicwork/listener/elements/listener_list_item.html:22
-#: src/rcadmin/common.py:124
+#: src/rcadmin/common.py:137
 msgid "installed"
 msgstr "instalado"
 
@@ -2312,7 +2380,7 @@ msgstr "Bancos e Cartões"
 #: src/apps/treasury/templates/treasury/elements/payform_by_type.html:19
 #: src/apps/treasury/templates/treasury/elements/payment_by_paytype.html:19
 #: src/apps/treasury/templates/treasury/elements/period_payments.html:26
-#: src/rcadmin/common.py:90
+#: src/rcadmin/common.py:97
 msgid "pending"
 msgstr "pendente"
 
@@ -2479,10 +2547,6 @@ msgstr "Tem certeza que deseja apagar este pagamento"
 #: src/apps/user/templates/user/profile/elements/payment_add.html:14
 msgid "Add payment"
 msgstr "Adicionar contribuição"
-
-#: src/apps/treasury/templates/treasury/order/elements/search_results.html:16
-msgid "No search results"
-msgstr "Nenhum resultado de pesquisa"
 
 #: src/apps/treasury/templates/treasury/payment/payments.html:82
 #: src/apps/user/templates/user/profile/payments.html:25
@@ -3087,23 +3151,23 @@ msgstr "Criar grupo de trabalho"
 msgid "Update workgroup"
 msgstr "Atualizar grupo de trabalho"
 
-#: src/rcadmin/common.py:22
+#: src/rcadmin/common.py:20
 msgid "Golden Rosycross"
 msgstr "Rosacruz Áurea"
 
-#: src/rcadmin/common.py:26
+#: src/rcadmin/common.py:24
 msgid "male"
 msgstr "masculino"
 
-#: src/rcadmin/common.py:27
+#: src/rcadmin/common.py:25
 msgid "female"
 msgstr "feminino"
 
-#: src/rcadmin/common.py:28
+#: src/rcadmin/common.py:26
 msgid "do not inform"
 msgstr "prefiro não informar"
 
-#: src/rcadmin/common.py:33
+#: src/rcadmin/common.py:32
 msgid "contact room"
 msgstr "sala de contato"
 
@@ -3151,173 +3215,169 @@ msgstr "desconectado"
 msgid "removed"
 msgstr "removido"
 
-#: src/rcadmin/common.py:54
-msgid "transfered"
-msgstr "transferido"
-
-#: src/rcadmin/common.py:55
-msgid "regressed"
-msgstr "retrogradado"
-
-#: src/rcadmin/common.py:56 src/rcadmin/common.py:86
+#: src/rcadmin/common.py:55 src/rcadmin/common.py:92
 msgid "other"
 msgstr "outro"
 
-#: src/rcadmin/common.py:57
-msgid "preparatório"
-msgstr "preparatório"
-
-#: src/rcadmin/common.py:58
-msgid "probatório"
-msgstr "probatório"
-
-#: src/rcadmin/common.py:59
-msgid "professo"
-msgstr "professo"
-
-#: src/rcadmin/common.py:64
-msgid "pupil"
-msgstr "aluno"
-
-#: src/rcadmin/common.py:65
-msgid "web pupil"
-msgstr "aluno web"
-
-#: src/rcadmin/common.py:66
-msgid "gest"
-msgstr "convidado"
-
-#: src/rcadmin/common.py:69
-msgid "mentor"
-msgstr "mentor"
-
-#: src/rcadmin/common.py:70 src/rcadmin/common.py:116
-msgid "contact"
-msgstr "contato"
-
-#: src/rcadmin/common.py:71 src/rcadmin/common.py:122
-msgid "member"
-msgstr "membro"
-
-#: src/rcadmin/common.py:75
-msgid "maintenance"
-msgstr "manutenção"
-
-#: src/rcadmin/common.py:76
-msgid "admin"
-msgstr "admin"
-
-#: src/rcadmin/common.py:79
-msgid "opened"
-msgstr "aberto"
-
-#: src/rcadmin/common.py:80
-msgid "closed"
-msgstr "fechado"
-
-#: src/rcadmin/common.py:83
-msgid "service"
-msgstr "serviço"
-
-#: src/rcadmin/common.py:84
-msgid "conference"
-msgstr "conferência"
-
-#: src/rcadmin/common.py:85 src/rcadmin/common.py:117
-msgid "meeting"
-msgstr "reunião"
-
-#: src/rcadmin/common.py:89
-msgid "canceled"
-msgstr "cancelado"
-
-#: src/rcadmin/common.py:91
-msgid "concluded"
-msgstr "concluído"
-
-#: src/rcadmin/common.py:94
-msgid "monthly"
-msgstr "mensal"
-
-#: src/rcadmin/common.py:95
-msgid "by event"
-msgstr "por evento"
-
-#: src/rcadmin/common.py:96
-msgid "campaign"
-msgstr "campanha"
-
-#: src/rcadmin/common.py:99 src/rcadmin/common.py:110
-msgid "pix"
-msgstr "pix"
-
-#: src/rcadmin/common.py:100
-msgid "cash"
-msgstr "dinheiro"
-
-#: src/rcadmin/common.py:101
-msgid "check"
-msgstr "cheque"
-
-#: src/rcadmin/common.py:102
-msgid "pre check"
-msgstr "cheque-pré"
-
-#: src/rcadmin/common.py:103
-msgid "debit"
-msgstr "débito"
-
-#: src/rcadmin/common.py:104
-msgid "credit"
-msgstr "crédito"
-
-#: src/rcadmin/common.py:105 src/rcadmin/common.py:111
-msgid "deposit"
-msgstr "depósito"
-
-#: src/rcadmin/common.py:106 src/rcadmin/common.py:112
+#: src/rcadmin/common.py:56 src/rcadmin/common.py:115
+#: src/rcadmin/common.py:122
 msgid "transfer"
 msgstr "transferência"
 
-#: src/rcadmin/common.py:107
+#: src/rcadmin/common.py:66
+msgid "pupil"
+msgstr "aluno"
+
+#: src/rcadmin/common.py:67
+msgid "web pupil"
+msgstr "aluno web"
+
+#: src/rcadmin/common.py:68
+msgid "gest"
+msgstr "convidado"
+
+#: src/rcadmin/common.py:72
+msgid "mentor"
+msgstr "mentor"
+
+#: src/rcadmin/common.py:73 src/rcadmin/common.py:128
+msgid "contact"
+msgstr "contato"
+
+#: src/rcadmin/common.py:74 src/rcadmin/common.py:135
+msgid "member"
+msgstr "membro"
+
+#: src/rcadmin/common.py:79
+msgid "maintenance"
+msgstr "manutenção"
+
+#: src/rcadmin/common.py:80
+msgid "admin"
+msgstr "admin"
+
+#: src/rcadmin/common.py:84
+msgid "opened"
+msgstr "aberto"
+
+#: src/rcadmin/common.py:85
+msgid "closed"
+msgstr "fechado"
+
+#: src/rcadmin/common.py:89
+msgid "service"
+msgstr "serviço"
+
+#: src/rcadmin/common.py:90
+msgid "conference"
+msgstr "conferência"
+
+#: src/rcadmin/common.py:91 src/rcadmin/common.py:129
+msgid "meeting"
+msgstr "reunião"
+
+#: src/rcadmin/common.py:96
+msgid "canceled"
+msgstr "cancelado"
+
+#: src/rcadmin/common.py:98
+msgid "concluded"
+msgstr "concluído"
+
+#: src/rcadmin/common.py:102
+msgid "monthly"
+msgstr "mensal"
+
+#: src/rcadmin/common.py:103
+msgid "by event"
+msgstr "por evento"
+
+#: src/rcadmin/common.py:104
+msgid "campaign"
+msgstr "campanha"
+
+#: src/rcadmin/common.py:108 src/rcadmin/common.py:120
+msgid "pix"
+msgstr "pix"
+
+#: src/rcadmin/common.py:109
+msgid "cash"
+msgstr "dinheiro"
+
+#: src/rcadmin/common.py:110
+msgid "check"
+msgstr "cheque"
+
+#: src/rcadmin/common.py:111
+msgid "pre check"
+msgstr "cheque-pré"
+
+#: src/rcadmin/common.py:112
+msgid "debit"
+msgstr "débito"
+
+#: src/rcadmin/common.py:113
+msgid "credit"
+msgstr "crédito"
+
+#: src/rcadmin/common.py:114 src/rcadmin/common.py:121
+msgid "deposit"
+msgstr "depósito"
+
+#: src/rcadmin/common.py:116
 msgid "bank slip"
 msgstr "boleto bancário"
 
-#: src/rcadmin/common.py:114
+#: src/rcadmin/common.py:125
 msgid "Brazil"
 msgstr "Brasil"
 
-#: src/rcadmin/common.py:120
+#: src/rcadmin/common.py:133
 msgid "observation"
 msgstr "observação"
 
-#: src/rcadmin/common.py:121
+#: src/rcadmin/common.py:134
 msgid "new"
 msgstr "novo"
 
-#: src/rcadmin/common.py:123
+#: src/rcadmin/common.py:136
 msgid "installing"
 msgstr "instalando"
 
-#: src/rcadmin/common.py:125
+#: src/rcadmin/common.py:138
 msgid "stand by"
 msgstr "em espera"
 
-#: src/rcadmin/common.py:126
+#: src/rcadmin/common.py:139
 msgid "restriction"
 msgstr "restrição"
 
-#: src/rcadmin/common.py:128
+#: src/rcadmin/common.py:142
 msgid "Secretary"
 msgstr "Secretário(a)"
 
-#: src/rcadmin/common.py:227
+#: src/rcadmin/common.py:242
 msgid ""
 "Phone number must be entered in the format: '+1234567890'.             Up to"
 " 15 digits allowed."
 msgstr ""
 "O número de telefone deve ser inserido no formato: '+1234567890'. São "
 "permitidos até 15 dígitos."
+
+#~ msgid "transfered"
+#~ msgstr "transferido"
+
+#~ msgid "regressed"
+#~ msgstr "retrogradado"
+
+#~ msgid "preparatório"
+#~ msgstr "preparatório"
+
+#~ msgid "probatório"
+#~ msgstr "probatório"
+
+#~ msgid "professo"
+#~ msgstr "professo"
 
 #~ msgid "ranking"
 #~ msgstr "pontos"

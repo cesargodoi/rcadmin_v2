@@ -9,7 +9,8 @@
           name="ct_term" 
           class="form-control" 
           placeholder={% trans "center" %}
-          value="{% if not clear_search %}{{ request.session.search.ct_term }}{% endif %}">
+          value="{% if not clear_search %}{{ request.session.search.ct_term }}{% endif %}"
+        >
         <div class="input-group-append">
           <div class="input-group-text">
             <a 

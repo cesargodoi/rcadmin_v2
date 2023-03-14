@@ -2,7 +2,11 @@ from django import forms
 from django.utils.translation import gettext_lazy as _
 
 from apps.user.models import Profile, User
-from rcadmin.common import HIDDEN_AUTH_FIELDS
+from rcadmin.common import (
+    HIDDEN_AUTH_FIELDS,
+    OCCURRENCES,
+    OCCURRENCES_AND_STATUS,
+)
 
 from .models import Historic, Invitation, Person
 
@@ -33,6 +37,8 @@ class PersonForm(forms.ModelForm):
 
 
 class HistoricForm(forms.ModelForm):
+    occurrence = forms.ChoiceField(choices=OCCURRENCES_AND_STATUS)
+
     class Meta:
         model = Historic
         fields = "__all__"
@@ -44,6 +50,10 @@ class HistoricForm(forms.ModelForm):
             "person": forms.HiddenInput(),
             "made_by": forms.HiddenInput(),
         }
+
+
+class HistoricUpdateForm(HistoricForm):
+    occurrence = forms.ChoiceField(choices=OCCURRENCES)
 
 
 # partial forms
@@ -176,11 +186,12 @@ class TransferPupilForm(forms.ModelForm):
         self.fields["center"].required = True
         self.fields["center"].label = _("Transfer to Center")
         self.fields["observations"].label = _("Some observations")
+        self.fields["transfer_date"].label = _("Transfer date")
 
     transfer_date = forms.DateField(
         widget=forms.widgets.DateInput(
             format="%Y-%m-%d", attrs={"type": "date"}
-        )
+        ),
     )
 
     class Meta:

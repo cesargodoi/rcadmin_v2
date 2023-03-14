@@ -12,7 +12,6 @@
           </button>
         </div>
         <div class="modal-body">
-          
           <div class="form-group">
             <div class="input-group mt-3">
               <div class="input-group-prepend">
@@ -21,10 +20,7 @@
               <select class="form-control" name="status">
                 <option value="all" {% if stt.1 == request.session.search.status %}selected{% endif %}>{% trans 'all' %}</option>
                 {% for stt in status %}
-                <option value="{{ stt.0 }}"
-                        {% if stt.0 == request.session.search.status %}selected{% endif %}>
-                  {{ stt.1 }}
-                </option>
+                  <option value="{{ stt.0 }}" {% if stt.0 == request.session.search.status %}selected{% endif %}>{{ stt.1 }}</option>
                 {% endfor %}
               </select>
             </div>

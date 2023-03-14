@@ -9,7 +9,8 @@
           name="ps_term" 
           class="form-control" 
           placeholder={% trans "name" %}
-          value="{% if not clear_search %}{{ request.session.search.ps_term }}{% endif %}">
+          value="{% if not clear_search %}{{ request.session.search.ps_term }}{% endif %}"
+        >
         <div class="input-group-append">
           <div class="input-group-text">
             <a 

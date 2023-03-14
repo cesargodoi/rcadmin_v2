@@ -3,11 +3,13 @@
 <div class="form-row align-items-center">
   <div class="col-sm-2 mb-2">
     <div class="input-group">
-      <input name="pw_name"
-             class="dateinput form-control"
-             id="pw_name"
-             placeholder="group name"
-             {% if request.session.search.pw_name %}value={{ request.session.search.pw_name }}{% endif %}>
+      <input 
+        name="pw_name"
+        class="dateinput form-control"
+        id="pw_name"
+        placeholder="group name"
+        {% if request.session.search.pw_name %}value={{ request.session.search.pw_name }}{% endif %}
+      >
       <div class="input-group-append">
         <div class="input-group-text">
           <a href="?pw_name=+" class="text-secondary">

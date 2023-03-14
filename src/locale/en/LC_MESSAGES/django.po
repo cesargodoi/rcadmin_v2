@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-23 16:24-0300\n"
+"POT-Creation-Date: 2023-03-13 20:00-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -166,7 +166,7 @@ msgstr ""
 #: src/apps/person/templates/person/forms/membership.html:17
 #: src/apps/person/templates/person/frequency_insert.html:12
 #: src/apps/person/templates/person/membership_ps_insert.html:12
-#: src/apps/person/templates/person/navbar.html:179
+#: src/apps/person/templates/person/navbar.html:181
 #: src/apps/publicwork/templates/publicwork/groups/actions.html:23
 #: src/apps/publicwork/templates/publicwork/groups/navbar.html:106
 #: src/apps/publicwork/templates/publicwork/lecture/navbar.html:54
@@ -229,43 +229,43 @@ msgid "all"
 msgstr ""
 
 #: src/apps/base/templates/base/elements/menu.html:6
-#: src/apps/base/templates/base/home.html:70
+#: src/apps/base/templates/base/home.html:59
 #: src/apps/center/templates/center/navbar.html:5
 msgid "Centers"
 msgstr ""
 
 #: src/apps/base/templates/base/elements/menu.html:11
-#: src/apps/base/templates/base/home.html:81
+#: src/apps/base/templates/base/home.html:70
 #: src/apps/person/templates/person/navbar.html:7
 msgid "Persons"
 msgstr ""
 
 #: src/apps/base/templates/base/elements/menu.html:14
-#: src/apps/base/templates/base/home.html:90
+#: src/apps/base/templates/base/home.html:79
 #: src/apps/event/templates/event/navbar.html:7
 msgid "Events"
 msgstr ""
 
 #: src/apps/base/templates/base/elements/menu.html:17
-#: src/apps/base/templates/base/home.html:99
+#: src/apps/base/templates/base/home.html:88
 #: src/apps/workgroup/templates/workgroup/navbar.html:7
 msgid "Workgroups"
 msgstr ""
 
 #: src/apps/base/templates/base/elements/menu.html:24
-#: src/apps/base/templates/base/home.html:112
+#: src/apps/base/templates/base/home.html:101
 #: src/apps/workgroup/templates/workgroup/mentoring/navbar.html:7
 msgid "Mentoring"
 msgstr ""
 
 #: src/apps/base/templates/base/elements/menu.html:32
-#: src/apps/base/templates/base/home.html:126
+#: src/apps/base/templates/base/home.html:115
 #: src/apps/publicwork/templates/publicwork/navbar.html:7
 msgid "Public Work"
 msgstr ""
 
 #: src/apps/base/templates/base/elements/menu.html:40
-#: src/apps/base/templates/base/home.html:140
+#: src/apps/base/templates/base/home.html:129
 #: src/apps/treasury/templates/treasury/elements/treasury_navbar.html:5
 #: src/apps/treasury/templates/treasury/navbar.html:6
 msgid "Treasury"
@@ -321,18 +321,18 @@ msgstr ""
 msgid "Loading..."
 msgstr ""
 
-#: src/apps/base/templates/base/elements/navbar.html:46
+#: src/apps/base/templates/base/elements/navbar.html:50
 #: src/apps/person/templates/person/info.html:12
 #: src/apps/user/templates/user/profile/navbar-ant.html:4
 #: src/apps/user/templates/user/profile/navbar.html:7
 msgid "Profile"
 msgstr ""
 
-#: src/apps/base/templates/base/elements/navbar.html:50
+#: src/apps/base/templates/base/elements/navbar.html:54
 msgid "Logout"
 msgstr ""
 
-#: src/apps/base/templates/base/elements/navbar.html:69
+#: src/apps/base/templates/base/elements/navbar.html:73
 msgid "Login"
 msgstr ""
 
@@ -374,7 +374,7 @@ msgstr ""
 msgid "Welcome to"
 msgstr ""
 
-#: src/apps/base/templates/base/home.html:59
+#: src/apps/base/templates/base/home.html:142
 msgid "My Profile"
 msgstr ""
 
@@ -479,7 +479,7 @@ msgstr ""
 #: src/apps/person/models.py:91 src/apps/publicwork/models.py:76
 #: src/apps/publicwork/models.py:172 src/apps/publicwork/models.py:229
 #: src/apps/treasury/models.py:172 src/apps/workgroup/models.py:13
-#: src/rcadmin/common.py:31
+#: src/rcadmin/common.py:30
 msgid "center"
 msgstr ""
 
@@ -617,7 +617,7 @@ msgstr ""
 #: src/apps/event/models.py:100 src/apps/person/models.py:104
 #: src/apps/person/templates/person/elements/tab_pupil.html:28
 #: src/apps/workgroup/templates/workgroup/member/info.html:14
-#: src/rcadmin/common.py:74
+#: src/rcadmin/common.py:78
 msgid "aspect"
 msgstr ""
 
@@ -712,7 +712,7 @@ msgstr ""
 
 #: src/apps/center/models.py:69
 #: src/apps/center/templates/center/elements/header.html:21
-#: src/rcadmin/common.py:32
+#: src/rcadmin/common.py:31
 msgid "conference center"
 msgstr ""
 
@@ -946,7 +946,7 @@ msgstr ""
 
 #: src/apps/center/templates/center/elements/tabs.html:11
 #: src/apps/person/templates/person/detail.html:16
-#: src/apps/person/templates/person/navbar.html:44
+#: src/apps/person/templates/person/navbar.html:46
 #: src/apps/publicwork/templates/publicwork/seeker/detail.html:19
 #: src/apps/publicwork/templates/publicwork/seeker/navbar.html:15
 #: src/apps/user/templates/user/profile/detail.html:15
@@ -970,7 +970,7 @@ msgstr ""
 
 #: src/apps/center/templates/center/navbar.html:38
 #: src/apps/event/templates/event/navbar.html:56
-#: src/apps/person/templates/person/navbar.html:117
+#: src/apps/person/templates/person/navbar.html:119
 #: src/apps/publicwork/templates/publicwork/lecture/navbar.html:43
 #: src/apps/publicwork/templates/publicwork/seeker/navbar.html:56
 #: src/apps/treasury/templates/treasury/order/detail.html:122
@@ -978,7 +978,7 @@ msgid "Delete"
 msgstr ""
 
 #: src/apps/center/templates/center/navbar.html:49
-#: src/apps/person/templates/person/navbar.html:128
+#: src/apps/person/templates/person/navbar.html:130
 #: src/apps/publicwork/templates/publicwork/groups/navbar.html:84
 #: src/apps/publicwork/templates/publicwork/seeker/navbar.html:67
 msgid "Reinsert"
@@ -1000,7 +1000,7 @@ msgstr ""
 msgid "Update info"
 msgstr ""
 
-#: src/apps/center/views.py:175 src/apps/person/views/person.py:271
+#: src/apps/center/views.py:175 src/apps/person/views/person.py:272
 #: src/apps/user/views.py:110
 msgid "Update image"
 msgstr ""
@@ -1115,7 +1115,7 @@ msgstr ""
 #: src/apps/event/templates/event/frequencies.html:6
 #: src/apps/event/templates/event/navbar.html:35
 #: src/apps/person/templates/person/frequencies.html:7
-#: src/apps/person/templates/person/navbar.html:56
+#: src/apps/person/templates/person/navbar.html:58
 #: src/apps/publicwork/templates/publicwork/groups/frequencies.html:7
 #: src/apps/publicwork/templates/publicwork/groups/navbar.html:20
 #: src/apps/publicwork/templates/publicwork/groups/navbar.html:96
@@ -1149,6 +1149,7 @@ msgid "Insert Frequencies"
 msgstr ""
 
 #: src/apps/event/templates/event/elements/frequencies-add.html:31
+#: src/apps/person/templates/person/forms/pupil_fields.html:15
 msgid "Important"
 msgstr ""
 
@@ -1244,7 +1245,7 @@ msgstr ""
 msgid "event detail"
 msgstr ""
 
-#: src/apps/event/views/event.py:111 src/apps/person/views/historic.py:73
+#: src/apps/event/views/event.py:111 src/apps/person/views/historic.py:74
 #: src/apps/publicwork/views/historic.py:44
 msgid "Create historic"
 msgstr ""
@@ -1281,6 +1282,22 @@ msgid "%d person was successfully marked as 'active'."
 msgid_plural "%d persons were successfully marked as 'actives'."
 msgstr[0] ""
 msgstr[1] ""
+
+#: src/apps/person/forms.py:187
+msgid "Transfer to Center"
+msgstr ""
+
+#: src/apps/person/forms.py:188 src/apps/person/forms.py:209
+msgid "Some observations"
+msgstr ""
+
+#: src/apps/person/forms.py:189
+msgid "Transfer date"
+msgstr ""
+
+#: src/apps/person/forms.py:208
+msgid "Select new Aspect"
+msgstr ""
 
 #: src/apps/person/models.py:34 src/apps/person/models.py:99
 #: src/apps/person/templates/person/elements/tab_pupil.html:14
@@ -1331,7 +1348,7 @@ msgstr ""
 msgid "invitation"
 msgstr ""
 
-#: src/apps/person/models.py:79 src/apps/person/views/invitation.py:42
+#: src/apps/person/models.py:79 src/apps/person/views/invitation.py:41
 msgid "invitations"
 msgstr ""
 
@@ -1415,8 +1432,8 @@ msgstr ""
 
 #: src/apps/person/templates/person/forms/historic-ant.html:24
 #: src/apps/person/templates/person/historic.html:7
-#: src/apps/person/templates/person/navbar.html:50
-#: src/apps/person/templates/person/navbar.html:143
+#: src/apps/person/templates/person/navbar.html:52
+#: src/apps/person/templates/person/navbar.html:145
 #: src/apps/publicwork/templates/publicwork/seeker/create_historic.html:9
 #: src/apps/publicwork/templates/publicwork/seeker/historic.html:7
 #: src/apps/publicwork/templates/publicwork/seeker/navbar.html:27
@@ -1431,8 +1448,8 @@ msgstr ""
 
 #: src/apps/person/templates/person/forms/membership.html:23
 #: src/apps/person/templates/person/membership.html:7
-#: src/apps/person/templates/person/navbar.html:62
-#: src/apps/person/templates/person/navbar.html:163
+#: src/apps/person/templates/person/navbar.html:64
+#: src/apps/person/templates/person/navbar.html:165
 msgid "Membership"
 msgstr ""
 
@@ -1441,8 +1458,25 @@ msgstr ""
 msgid "Update Membership"
 msgstr ""
 
-#: src/apps/person/templates/person/forms/pupil_fields.html:19
-msgid "To update 'aspect' and 'status', use the 'Historic' tab."
+#: src/apps/person/templates/person/forms/pupil_fields.html:18
+msgid "To update 'status', use: "
+msgstr ""
+
+#: src/apps/person/templates/person/forms/pupil_fields.html:20
+msgid "on 'Historic' tab."
+msgstr ""
+
+#: src/apps/person/templates/person/forms/pupil_fields.html:23
+msgid "To update 'aspect', use the tool: "
+msgstr ""
+
+#: src/apps/person/templates/person/forms/pupil_fields.html:25
+#: src/apps/person/templates/person/forms/pupil_fields.html:30
+msgid "on 'person > tools' menu."
+msgstr ""
+
+#: src/apps/person/templates/person/forms/pupil_fields.html:28
+msgid "To change 'center', use the tool: "
 msgstr ""
 
 #: src/apps/person/templates/person/forms/update_pupil.html:43
@@ -1460,14 +1494,6 @@ msgstr ""
 
 #: src/apps/person/templates/person/historic.html:20
 msgid "historic not found"
-msgstr ""
-
-#: src/apps/person/templates/person/import_from_seekers.html:12
-msgid "Seekers who will become pupils"
-msgstr ""
-
-#: src/apps/person/templates/person/import_from_seekers.html:59
-msgid "no seekers found"
 msgstr ""
 
 #: src/apps/person/templates/person/invitation/confirm/resend_invitation.html:14
@@ -1545,7 +1571,7 @@ msgid "Insert Membership"
 msgstr ""
 
 #: src/apps/person/templates/person/navbar.html:7
-#: src/apps/person/templates/person/navbar.html:94
+#: src/apps/person/templates/person/navbar.html:96
 #: src/apps/treasury/templates/treasury/order/elements/person_div.html:6
 msgid "Person"
 msgstr ""
@@ -1562,15 +1588,24 @@ msgstr ""
 msgid "Import from Seekers"
 msgstr ""
 
-#: src/apps/person/templates/person/navbar.html:81
+#: src/apps/person/templates/person/navbar.html:33
+msgid "Pupil Transfer"
+msgstr ""
+
+#: src/apps/person/templates/person/navbar.html:34
+#: src/apps/person/templates/person/tools/change_of_aspect.html:10
+msgid "Change of Aspect"
+msgstr ""
+
+#: src/apps/person/templates/person/navbar.html:83
 msgid "Invite person"
 msgstr ""
 
-#: src/apps/person/templates/person/navbar.html:106 src/rcadmin/common.py:128
+#: src/apps/person/templates/person/navbar.html:108 src/rcadmin/common.py:142
 msgid "Badge"
 msgstr ""
 
-#: src/apps/person/templates/person/navbar.html:153
+#: src/apps/person/templates/person/navbar.html:155
 #: src/apps/publicwork/templates/publicwork/seeker/navbar.html:79
 #: src/apps/workgroup/templates/workgroup/member/navbar.html:40
 msgid "Frequency"
@@ -1578,6 +1613,35 @@ msgstr ""
 
 #: src/apps/person/templates/person/persons.html:15
 msgid "persons not found in the search"
+msgstr ""
+
+#: src/apps/person/templates/person/tools/change_of_aspect.html:22
+msgid "Confirm the change of Aspect"
+msgstr ""
+
+#: src/apps/person/templates/person/tools/elements/search_results.html:15
+#: src/apps/treasury/templates/treasury/order/elements/search_results.html:16
+msgid "No search results"
+msgstr ""
+
+#: src/apps/person/templates/person/tools/elements/select_person_by_name.html:6
+msgid "Pupil name"
+msgstr ""
+
+#: src/apps/person/templates/person/tools/import_from_seekers.html:12
+msgid "Seekers who will become pupils"
+msgstr ""
+
+#: src/apps/person/templates/person/tools/import_from_seekers.html:59
+msgid "no seekers found"
+msgstr ""
+
+#: src/apps/person/templates/person/tools/pupil_transfer.html:10
+msgid "Pupil transfer"
+msgstr ""
+
+#: src/apps/person/templates/person/tools/pupil_transfer.html:22
+msgid "Confirm the transfer"
 msgstr ""
 
 #: src/apps/person/templates/person/workgroups.html:14
@@ -1591,31 +1655,31 @@ msgstr ""
 msgid "frequencies list"
 msgstr ""
 
-#: src/apps/person/views/historic.py:49
+#: src/apps/person/views/historic.py:50
 msgid "historic list"
 msgstr ""
 
-#: src/apps/person/views/historic.py:116
+#: src/apps/person/views/historic.py:117
 msgid "Update Historic"
 msgstr ""
 
-#: src/apps/person/views/invitation.py:33
+#: src/apps/person/views/invitation.py:32
 msgid "The Invitation has been sent!"
 msgstr ""
 
-#: src/apps/person/views/invitation.py:110
+#: src/apps/person/views/invitation.py:109
 msgid "Invite new pupil"
 msgstr ""
 
-#: src/apps/person/views/invitation.py:162
+#: src/apps/person/views/invitation.py:163
 msgid "pupil registration"
 msgstr ""
 
-#: src/apps/person/views/invitation.py:290
+#: src/apps/person/views/invitation.py:291
 msgid "create pupil"
 msgstr ""
 
-#: src/apps/person/views/invitation.py:299
+#: src/apps/person/views/invitation.py:300
 msgid "congratulations"
 msgstr ""
 
@@ -1627,27 +1691,27 @@ msgstr ""
 msgid "insert membership"
 msgstr ""
 
-#: src/apps/person/views/person.py:43
+#: src/apps/person/views/person.py:41
 msgid "The Person has been updated!"
 msgstr ""
 
-#: src/apps/person/views/person.py:82
+#: src/apps/person/views/person.py:83
 msgid "person home"
 msgstr ""
 
-#: src/apps/person/views/person.py:99
+#: src/apps/person/views/person.py:100
 msgid "person detail"
 msgstr ""
 
-#: src/apps/person/views/person.py:151
+#: src/apps/person/views/person.py:152
 msgid "Create person"
 msgstr ""
 
-#: src/apps/person/views/person.py:194
+#: src/apps/person/views/person.py:195
 msgid "Update profile"
 msgstr ""
 
-#: src/apps/person/views/person.py:237
+#: src/apps/person/views/person.py:238
 msgid "Update pupil"
 msgstr ""
 
@@ -1659,12 +1723,16 @@ msgstr ""
 msgid "occurrences per period"
 msgstr ""
 
-#: src/apps/person/views/tools.py:24
+#: src/apps/person/views/tools.py:27
 msgid "import from seekers"
 msgstr ""
 
-#: src/apps/person/views/tools.py:75
+#: src/apps/person/views/tools.py:78
 msgid "confirm to import"
+msgstr ""
+
+#: src/apps/person/views/tools.py:111 src/apps/person/views/tools.py:145
+msgid "pupil transfer"
 msgstr ""
 
 #: src/apps/publicwork/models.py:47
@@ -2030,7 +2098,7 @@ msgid "local"
 msgstr ""
 
 #: src/apps/publicwork/templates/publicwork/listener/elements/listener_list_item.html:22
-#: src/rcadmin/common.py:124
+#: src/rcadmin/common.py:137
 msgid "installed"
 msgstr ""
 
@@ -2275,7 +2343,7 @@ msgstr ""
 #: src/apps/treasury/templates/treasury/elements/payform_by_type.html:19
 #: src/apps/treasury/templates/treasury/elements/payment_by_paytype.html:19
 #: src/apps/treasury/templates/treasury/elements/period_payments.html:26
-#: src/rcadmin/common.py:90
+#: src/rcadmin/common.py:97
 msgid "pending"
 msgstr ""
 
@@ -2440,10 +2508,6 @@ msgstr ""
 #: src/apps/user/templates/user/profile/elements/add_payment.html:25
 #: src/apps/user/templates/user/profile/elements/payment_add.html:14
 msgid "Add payment"
-msgstr ""
-
-#: src/apps/treasury/templates/treasury/order/elements/search_results.html:16
-msgid "No search results"
 msgstr ""
 
 #: src/apps/treasury/templates/treasury/payment/payments.html:82
@@ -3035,23 +3099,23 @@ msgstr ""
 msgid "Update workgroup"
 msgstr ""
 
-#: src/rcadmin/common.py:22
+#: src/rcadmin/common.py:20
 msgid "Golden Rosycross"
 msgstr ""
 
-#: src/rcadmin/common.py:26
+#: src/rcadmin/common.py:24
 msgid "male"
 msgstr ""
 
-#: src/rcadmin/common.py:27
+#: src/rcadmin/common.py:25
 msgid "female"
 msgstr ""
 
-#: src/rcadmin/common.py:28
+#: src/rcadmin/common.py:26
 msgid "do not inform"
 msgstr ""
 
-#: src/rcadmin/common.py:33
+#: src/rcadmin/common.py:32
 msgid "contact room"
 msgstr ""
 
@@ -3099,167 +3163,147 @@ msgstr ""
 msgid "removed"
 msgstr ""
 
-#: src/rcadmin/common.py:54
-msgid "transfered"
-msgstr ""
-
-#: src/rcadmin/common.py:55
-msgid "regressed"
-msgstr ""
-
-#: src/rcadmin/common.py:56 src/rcadmin/common.py:86
+#: src/rcadmin/common.py:55 src/rcadmin/common.py:92
 msgid "other"
 msgstr ""
 
-#: src/rcadmin/common.py:57
-msgid "preparatório"
-msgstr ""
-
-#: src/rcadmin/common.py:58
-msgid "probatório"
-msgstr ""
-
-#: src/rcadmin/common.py:59
-msgid "professo"
-msgstr ""
-
-#: src/rcadmin/common.py:64
-msgid "pupil"
-msgstr ""
-
-#: src/rcadmin/common.py:65
-msgid "web pupil"
-msgstr ""
-
-#: src/rcadmin/common.py:66
-msgid "gest"
-msgstr ""
-
-#: src/rcadmin/common.py:69
-msgid "mentor"
-msgstr ""
-
-#: src/rcadmin/common.py:70 src/rcadmin/common.py:116
-msgid "contact"
-msgstr ""
-
-#: src/rcadmin/common.py:71 src/rcadmin/common.py:122
-msgid "member"
-msgstr ""
-
-#: src/rcadmin/common.py:75
-msgid "maintenance"
-msgstr ""
-
-#: src/rcadmin/common.py:76
-msgid "admin"
-msgstr ""
-
-#: src/rcadmin/common.py:79
-msgid "opened"
-msgstr ""
-
-#: src/rcadmin/common.py:80
-msgid "closed"
-msgstr ""
-
-#: src/rcadmin/common.py:83
-msgid "service"
-msgstr ""
-
-#: src/rcadmin/common.py:84
-msgid "conference"
-msgstr ""
-
-#: src/rcadmin/common.py:85 src/rcadmin/common.py:117
-msgid "meeting"
-msgstr ""
-
-#: src/rcadmin/common.py:89
-msgid "canceled"
-msgstr ""
-
-#: src/rcadmin/common.py:91
-msgid "concluded"
-msgstr ""
-
-#: src/rcadmin/common.py:94
-msgid "monthly"
-msgstr ""
-
-#: src/rcadmin/common.py:95
-msgid "by event"
-msgstr ""
-
-#: src/rcadmin/common.py:96
-msgid "campaign"
-msgstr ""
-
-#: src/rcadmin/common.py:99 src/rcadmin/common.py:110
-msgid "pix"
-msgstr ""
-
-#: src/rcadmin/common.py:100
-msgid "cash"
-msgstr ""
-
-#: src/rcadmin/common.py:101
-msgid "check"
-msgstr ""
-
-#: src/rcadmin/common.py:102
-msgid "pre check"
-msgstr ""
-
-#: src/rcadmin/common.py:103
-msgid "debit"
-msgstr ""
-
-#: src/rcadmin/common.py:104
-msgid "credit"
-msgstr ""
-
-#: src/rcadmin/common.py:105 src/rcadmin/common.py:111
-msgid "deposit"
-msgstr ""
-
-#: src/rcadmin/common.py:106 src/rcadmin/common.py:112
+#: src/rcadmin/common.py:56 src/rcadmin/common.py:115 src/rcadmin/common.py:122
 msgid "transfer"
 msgstr ""
 
-#: src/rcadmin/common.py:107
+#: src/rcadmin/common.py:66
+msgid "pupil"
+msgstr ""
+
+#: src/rcadmin/common.py:67
+msgid "web pupil"
+msgstr ""
+
+#: src/rcadmin/common.py:68
+msgid "gest"
+msgstr ""
+
+#: src/rcadmin/common.py:72
+msgid "mentor"
+msgstr ""
+
+#: src/rcadmin/common.py:73 src/rcadmin/common.py:128
+msgid "contact"
+msgstr ""
+
+#: src/rcadmin/common.py:74 src/rcadmin/common.py:135
+msgid "member"
+msgstr ""
+
+#: src/rcadmin/common.py:79
+msgid "maintenance"
+msgstr ""
+
+#: src/rcadmin/common.py:80
+msgid "admin"
+msgstr ""
+
+#: src/rcadmin/common.py:84
+msgid "opened"
+msgstr ""
+
+#: src/rcadmin/common.py:85
+msgid "closed"
+msgstr ""
+
+#: src/rcadmin/common.py:89
+msgid "service"
+msgstr ""
+
+#: src/rcadmin/common.py:90
+msgid "conference"
+msgstr ""
+
+#: src/rcadmin/common.py:91 src/rcadmin/common.py:129
+msgid "meeting"
+msgstr ""
+
+#: src/rcadmin/common.py:96
+msgid "canceled"
+msgstr ""
+
+#: src/rcadmin/common.py:98
+msgid "concluded"
+msgstr ""
+
+#: src/rcadmin/common.py:102
+msgid "monthly"
+msgstr ""
+
+#: src/rcadmin/common.py:103
+msgid "by event"
+msgstr ""
+
+#: src/rcadmin/common.py:104
+msgid "campaign"
+msgstr ""
+
+#: src/rcadmin/common.py:108 src/rcadmin/common.py:120
+msgid "pix"
+msgstr ""
+
+#: src/rcadmin/common.py:109
+msgid "cash"
+msgstr ""
+
+#: src/rcadmin/common.py:110
+msgid "check"
+msgstr ""
+
+#: src/rcadmin/common.py:111
+msgid "pre check"
+msgstr ""
+
+#: src/rcadmin/common.py:112
+msgid "debit"
+msgstr ""
+
+#: src/rcadmin/common.py:113
+msgid "credit"
+msgstr ""
+
+#: src/rcadmin/common.py:114 src/rcadmin/common.py:121
+msgid "deposit"
+msgstr ""
+
+#: src/rcadmin/common.py:116
 msgid "bank slip"
 msgstr ""
 
-#: src/rcadmin/common.py:114
+#: src/rcadmin/common.py:125
 msgid "Brazil"
 msgstr ""
 
-#: src/rcadmin/common.py:120
+#: src/rcadmin/common.py:133
 msgid "observation"
 msgstr ""
 
-#: src/rcadmin/common.py:121
+#: src/rcadmin/common.py:134
 msgid "new"
 msgstr ""
 
-#: src/rcadmin/common.py:123
+#: src/rcadmin/common.py:136
 msgid "installing"
 msgstr ""
 
-#: src/rcadmin/common.py:125
+#: src/rcadmin/common.py:138
 msgid "stand by"
 msgstr ""
 
-#: src/rcadmin/common.py:126
+#: src/rcadmin/common.py:139
 msgid "restriction"
 msgstr ""
 
-#: src/rcadmin/common.py:128
+#: src/rcadmin/common.py:142
 msgid "Secretary"
 msgstr ""
 
-#: src/rcadmin/common.py:227
+#: src/rcadmin/common.py:242
 msgid ""
 "Phone number must be entered in the format: '+1234567890'.             Up to "
 "15 digits allowed."

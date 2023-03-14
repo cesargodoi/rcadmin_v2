@@ -151,22 +151,13 @@ urlpatterns += [
         tools.pupil_transfer,
         name="pupil_transfer",
     ),
-    # path(
-    #     "tools/search-pupil-to-transfer/",
-    #     tools.search_pupil_to_transfer,
-    #     name="search_pupil_to_transfer",
-    # ),
-    # path(
-    #     "tools/select-pupil-to-transfer/",
-    #     tools.select_pupil_to_transfer,
-    #     name="select_pupil_to_transfer",
-    # ),
     # change of aspect
     path(
         "tools/change-of-aspect/",
         tools.change_of_aspect,
         name="change_of_aspect",
     ),
+    # handlers
     path(
         "tools/search-pupil-by-name/",
         tools.search_pupil_by_name,
