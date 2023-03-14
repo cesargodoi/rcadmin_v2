@@ -18,24 +18,20 @@
       <div class="input-group-prepend">
         <div class="input-group-text">{% trans 'to' %}</div>
       </div>
-      <input type="date" 
-             name="dt2" 
-             id="dt2"
-             class="form-control dateinput" 
-             value="{{ request.session.search.dt2 }}">
+      <input 
+        type="date" 
+        name="dt2" 
+        id="dt2"
+        class="form-control dateinput" 
+        value="{{ request.session.search.dt2 }}"
+      >
     </div>
   </div>
   <div class="col-sm-2 mb-2">
     <select class="form-control" name="lc_type">
-      <option value="all"
-              {% if request.session.search.lc_type == 'all' %}selected{% endif %}>
-              {% trans 'types' %}
-      </option>
+      <option value="all" {% if request.session.search.lc_type == 'all' %}selected{% endif %}>{% trans 'types' %}</option>
       {% for key, value in type_list %}
-      <option value="{{ key }}"
-              {% if key == request.session.search.lc_type %}selected{% endif %}>
-        {{ value }}
-      </option>
+        <option value="{{ key }}" {% if key == request.session.search.lc_type %}selected{% endif %}>{{ value }}</option>
       {% endfor %}
     </select>
   </div>

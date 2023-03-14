@@ -2,12 +2,8 @@
 {% load i18n %}
 {% load crispy_forms_tags %}
 
-
 <div class="row">
-  <div class="col-md-12">{{ form.name | as_crispy_field }}</div>
-</div>
-<div class="row">
-  <div class="col-md-8">{{ form.center | as_crispy_field }}</div>
+  <div class="col-md-8">{{ form.name | as_crispy_field }}</div>
   <div class="col-md-4">{{ form.person_type | as_crispy_field }}</div>
 </div>
 <div class="row">
@@ -16,6 +12,23 @@
 </div>
 {{ form.observations | as_crispy_field }}
 <div class="alert alert-warning">
-  {% trans "To update 'aspect' and 'status', use the 'Historic' tab." %}
+  <h4 class="text-secondary">{% trans 'Important' %}</h4>
+  <ul>
+    <li>
+      {% trans "To update 'status', use: " %} 
+      <span class="text-primary">+ {% trans 'Historic' %} </span> 
+      {% trans "on 'Historic' tab." %}
+    </li>
+    <li>
+      {% trans "To update 'aspect', use the tool: " %} 
+      <span class="text-primary">{% trans 'Change of Aspect' %} </span> 
+      {% trans "on 'person > tools' menu." %}
+    </li>
+    <li>
+      {% trans "To change 'center', use the tool: " %} 
+      <span class="text-primary">{% trans 'Pupil Transfer' %} </span> 
+      {% trans "on 'person > tools' menu." %}
+    </li>
+  </ul>
 </div>
 

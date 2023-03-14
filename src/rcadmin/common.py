@@ -1,15 +1,13 @@
 import re
-
 from unicodedata import normalize
 
 from django import forms
-from django.template.loader import render_to_string
 from django.core.mail import send_mail
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-from django.http.response import Http404
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.core.validators import RegexValidator
+from django.http.response import Http404
+from django.template.loader import render_to_string
 from django.utils.translation import gettext_lazy as _
-
 
 # hidden auth fields
 HIDDEN_AUTH_FIELDS = {
@@ -27,13 +25,14 @@ GENDER_TYPES = (
     ("F", _("female")),
     ("-", _("do not inform")),
 )
+
 CENTER_TYPES = (
     ("CNT", _("center")),
     ("CNF", _("conference center")),
     ("CTT", _("contact room")),
 )
+
 ASPECTS = (
-    ("--", "--"),
     ("A1", _("1st. Aspect")),
     ("A2", _("2nd. Aspect")),
     ("A3", _("3rd. Aspect")),
@@ -42,59 +41,68 @@ ASPECTS = (
     ("A5", _("5th. Aspect")),
     ("A6", _("6th. Aspect")),
 )
+
 STATUS = (
-    ("---", "---"),
     ("ACT", _("active")),
     ("LIC", _("licensed")),
     ("DEA", _("dead")),
     ("DIS", _("disconnected")),
     ("REM", _("removed")),
 )
+
 OCCURRENCES = (
-    ("TRF", _("transfered")),
-    ("RGS", _("regressed")),
     ("OTH", _("other")),
-    ("PRP", _("preparatório")),
-    ("PRB", _("probatório")),
-    ("PRF", _("professo")),
+    ("TRF", _("transfer")),
 )
-OCCURRENCES += ASPECTS
+
 OCCURRENCES += STATUS
+
+OCCURRENCES_AND_STATUS = OCCURRENCES
+
+OCCURRENCES += ASPECTS
+
 PERSON_TYPES = (
     ("PUP", _("pupil")),
     ("WEB", _("web pupil")),
     ("GST", _("gest")),
 )
+
 ROLE_TYPES = (
     ("MTR", _("mentor")),
     ("CTT", _("contact")),
     ("MBR", _("member")),
 )
+
 WORKGROUP_TYPES = (
     ("ASP", _("aspect")),
     ("MNT", _("maintenance")),
     ("ADM", _("admin")),
 )
+
 EVENT_STATUS = (
     ("OPN", _("opened")),
     ("CLS", _("closed")),
 )
+
 ACTIVITY_TYPES = (
     ("SRV", _("service")),
     ("CNF", _("conference")),
     ("MET", _("meeting")),
     ("OTH", _("other")),
 )
+
 ORDER_STATUS = (
     ("CCL", _("canceled")),
     ("PND", _("pending")),
     ("CCD", _("concluded")),
 )
+
 PAY_TYPES = (
     ("MON", _("monthly")),
     ("EVE", _("by event")),
     ("CAM", _("campaign")),
 )
+
 PAYFORM_TYPES = (
     ("PIX", _("pix")),
     ("CSH", _("cash")),
@@ -106,16 +114,20 @@ PAYFORM_TYPES = (
     ("TRF", _("transfer")),
     ("SLP", _("bank slip")),
 )
+
 PROFILE_PAYFORM_TYPES = (
     ("PIX", _("pix")),
     ("DPT", _("deposit")),
     ("TRF", _("transfer")),
 )
+
 COUNTRIES = (("BR", _("Brazil")),)
+
 LECTURE_TYPES = (
     ("CTT", _("contact")),
     ("MET", _("meeting")),
 )
+
 SEEKER_STATUS = [
     ("OBS", _("observation")),
     ("NEW", _("new")),
@@ -125,7 +137,9 @@ SEEKER_STATUS = [
     ("STD", _("stand by")),
     ("RST", _("restriction")),
 ]
+
 RESPOSABILITIES = (("BDG", _("Badge")), ("SCR", _("Secretary")))
+
 BR_REGIONS = {
     "SP": ["SP"],
     "RJ": ["RJ", "ES"],

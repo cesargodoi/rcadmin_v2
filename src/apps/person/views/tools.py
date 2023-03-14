@@ -2,13 +2,16 @@ from django.contrib import messages
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.models import Group
-from django.shortcuts import redirect, render
+from django.shortcuts import HttpResponse, redirect, render
+from django.utils import timezone
 from django.utils.translation import gettext as _
+from django.views.decorators.http import require_http_methods
 
-from rcadmin.common import paginator
-from apps.user.models import User
-
+from apps.person.forms import ChangeOfAspectForm, TransferPupilForm
+from apps.person.models import Historic, Person
 from apps.publicwork.models import Seeker
+from apps.user.models import User
+from rcadmin.common import paginator
 
 
 @login_required
@@ -23,7 +26,7 @@ def import_from_seekers(request):
         "object_list": object_list,
         "title": _("import from seekers"),
     }
-    return render(request, "person/import_from_seekers.html", context)
+    return render(request, "person/tools/import_from_seekers.html", context)
 
 
 @login_required
@@ -75,3 +78,99 @@ def import_seeker(request, id):
         "title": _("confirm to import"),
     }
     return render(request, "person/elements/confirm_to_import.html", context)
+
+
+#  pupil transfer
+@login_required
+@permission_required("person.add_historic")
+def pupil_transfer(request):
+    if request.method == "POST":
+        person = Person.objects.get(name=request.session["pupil_name"])
+        old_center = person.center
+        person.center_id = request.POST["center"]
+        person.save()
+        new_transfer = dict(
+            person=person,
+            occurrence="TRF",
+            date=request.POST["transfer_date"],
+            description=f"{old_center} ➔ {person.center}",
+            made_by=request.user,
+        )
+        if request.POST.get("observations"):
+            new_transfer["description"] += " | {}".format(
+                request.POST["observations"]
+            )
+        Historic.objects.create(**new_transfer)
+        return redirect("person_home")
+
+    if not request.session.get("pupil_name"):
+        request.session["pupil_name"] = ""
+
+    context = {
+        "form": TransferPupilForm(initial={"transfer_date": timezone.now()}),
+        "title": _("pupil transfer"),
+    }
+    return render(request, "person/tools/pupil_transfer.html", context)
+
+
+#  change of aspect
+@login_required
+@permission_required("person.add_historic")
+def change_of_aspect(request):
+    if request.method == "POST":
+        person = Person.objects.get(name=request.session["pupil_name"])
+        old_aspect = person.get_aspect_display()
+        person.aspect = request.POST["aspect"]
+        person.aspect_date = request.POST["aspect_date"]
+        person.save()
+        new_aspect = dict(
+            person=person,
+            occurrence=request.POST["aspect"],
+            date=request.POST["aspect_date"],
+            description=f"{old_aspect} ➔ {person.get_aspect_display()}",
+            made_by=request.user,
+        )
+        if request.POST.get("observations"):
+            new_aspect["description"] += " | {}".format(
+                request.POST["observations"]
+            )
+        Historic.objects.create(**new_aspect)
+        return redirect("person_home")
+
+    if not request.session.get("pupil_name"):
+        request.session["pupil_name"] = ""
+
+    context = {
+        "form": ChangeOfAspectForm(initial={"aspect_date": timezone.now()}),
+        "title": _("pupil transfer"),
+    }
+    return render(request, "person/tools/change_of_aspect.html", context)
+
+
+#  handlers
+@login_required
+@permission_required("person.add_historic")
+@require_http_methods(["GET"])
+def search_pupil_by_name(request):
+    template_name = "person/tools/elements/search_results.html"
+    results = (
+        Person.objects.filter(
+            name__icontains=request.GET.get("term"),
+            center=request.user.person.center,
+            is_active=True,
+        )[:10]
+        if request.GET.get("term")
+        else None
+    )
+
+    context = {"results": results}
+    return render(request, template_name, context)
+
+
+@login_required
+@permission_required("person.add_historic")
+@require_http_methods(["GET"])
+def select_pupil_by_name(request):
+    request.session["pupil_name"] = request.GET.get("name")
+    request.session.modified = True
+    return HttpResponse(request.GET.get("name"))

@@ -483,3 +483,31 @@ p {
 .font-title {
   color: #444444;
 }
+
+/* pupil transfer */
+.selected-name-group {
+  position: relative;
+}
+
+.search-name-group {
+  position: relative;
+}
+
+.search-name,
+.search-button {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.search-name {
+  width: 100%;
+  padding-right: 1.8rem;
+}
+
+.search-button {
+  cursor: pointer;
+  position: absolute;
+  top: .4rem;
+  right: .4rem;
+}

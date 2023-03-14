@@ -1,16 +1,17 @@
 from datetime import datetime
 
-from django.http import QueryDict
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, permission_required
-from django.views.decorators.http import require_http_methods
+from django.http import QueryDict
 from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import gettext as _
+from django.views.decorators.http import require_http_methods
 
 from rcadmin.common import get_template_and_pagination
-from ..forms import HistoricForm
+
+from ..forms import HistoricForm, HistoricUpdateForm
 from ..models import Historic, Person
 
 
@@ -91,7 +92,7 @@ def historic_update(request, person_id, pk):
 
     if request.method == "POST":
         data = QueryDict(request.body).dict()
-        form = HistoricForm(data, instance=historic)
+        form = HistoricUpdateForm(data, instance=historic)
         if form.is_valid():
             form.save()
             adjust_person_side(
@@ -114,7 +115,7 @@ def historic_update(request, person_id, pk):
     template_name = "person/forms/historic.html"
     context = {
         "title": _("Update Historic"),
-        "form": HistoricForm(instance=historic),
+        "form": HistoricUpdateForm(instance=historic),
         "callback_link": reverse("historic_update", args=[person_id, pk]),
         "target": f"HST{pk}",
         "swap": "innerHTML",

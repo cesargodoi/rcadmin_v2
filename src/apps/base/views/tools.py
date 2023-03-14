@@ -2,12 +2,13 @@ import os
 import re
 from datetime import datetime
 
-from apps.base.sanitize_to_import import SanitizeCsv
-from apps.center.models import Center
 from django.conf import settings
 from django.contrib.auth.decorators import user_passes_test
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import HttpResponse, render
 from django.utils.translation import gettext as _
+
+from apps.base.sanitize_to_import import SanitizeCsv
+from apps.center.models import Center
 from scripts.import_people import run as _import_people
 
 from ..forms import CenterForm

@@ -6,11 +6,13 @@
       <div class="input-group-prepend">
         <div class="input-group-text">{% trans 'from' %}</div>
       </div>
-      <input type="date" 
-            name="dt1" 
-            id="dt1"
-            class="form-control dateinput" 
-            value="{{ request.session.search.dt1 }}">
+      <input 
+        type="date" 
+        name="dt1" 
+        id="dt1"
+        class="form-control dateinput" 
+        value="{{ request.session.search.dt1 }}"
+      >
     </div>
   </div>
   <div class="col-sm-3 mb-2">
@@ -18,24 +20,20 @@
       <div class="input-group-prepend">
         <div class="input-group-text">{% trans 'to' %}</div>
       </div>
-      <input type="date" 
-              name="dt2" 
-              id="dt2"
-              class="form-control dateinput" 
-              value="{{ request.session.search.dt2 }}">
+      <input 
+        type="date" 
+        name="dt2" 
+        id="dt2"
+        class="form-control dateinput" 
+        value="{{ request.session.search.dt2 }}"
+      >
     </div>
   </div>
   <div class="col-sm-2 mb-2">
     <select class="form-control" name="ev_type">
-      <option value="all"
-              {% if request.session.search.ev_type == 'all' %}selected{% endif %}>
-              {% trans 'all types' %}
-      </option>
+      <option value="all" {% if request.session.search.ev_type == 'all' %}selected{% endif %}>{% trans 'all types' %}</option>
       {% for tp in type_list %}
-      <option value="{% if tp.0 != '---' %}{{ tp.0 }}{% endif %}"
-              {% if tp.0 == request.session.search.ev_type %}selected{% endif %}>
-        {% if tp.0 == "---" %}{% trans 'type' %}{% else %}{{ tp.1 }}{% endif %}
-      </option>
+        <option value="{{ tp.0 }}" {% if tp.0 == request.session.search.ev_type %}selected{% endif %}>{{ tp.1 }}</option>
       {% endfor %}
     </select>
   </div>

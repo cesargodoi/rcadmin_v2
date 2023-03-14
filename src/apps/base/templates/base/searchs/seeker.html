@@ -18,11 +18,13 @@
   </div>
   <div class="col-sm-2 mb-2">
     <div class="input-group">
-      <input name="sk_city"
-             class="dateinput form-control"
-             id="sk_city"
-             placeholder="city"
-             {% if request.session.search.sk_city %}value={{ request.session.search.sk_city }}{% endif %}>
+      <input 
+        name="sk_city"
+        class="dateinput form-control"
+        id="sk_city"
+        placeholder="city"
+        {% if request.session.search.sk_city %}value={{ request.session.search.sk_city }}{% endif %}
+      >
       <div class="input-group-append">
         <div class="input-group-text">
           <a href="?sk_city=+" class="text-secondary">
@@ -48,15 +50,9 @@
   </div>
   <div class="col-sm-2 mb-2">
     <select class="form-control" name="sk_status">
-      <option value="all"
-              {% if request.session.search.sk_status == 'all' %}selected{% endif %}>
-              {% trans 'status' %}
-      </option>
+      <option value="all" {% if request.session.search.sk_status == 'all' %}selected{% endif %}>{% trans 'status' %}</option>
       {% for stt in status_list %}
-      <option value="{% if stt.0 == '--' %}all{% else %}{{ stt.0 }}{% endif %}"
-              {% if stt.0 == request.session.search.sk_status %}selected{% endif %}>
-        {% if stt.0 == "--" %}{% trans 'status' %}{% else %}{{ stt.1 }}{% endif %}
-      </option>
+        <option value="{{ stt.0 }}" {% if stt.0 == request.session.search.sk_status %}selected{% endif %}>{{ stt.1 }}</option>
       {% endfor %}
     </select>
   </div>

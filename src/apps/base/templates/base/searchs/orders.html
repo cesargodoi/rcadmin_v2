@@ -6,11 +6,13 @@
       <div class="input-group-prepend">
         <div class="input-group-text">{% trans 'from' %}</div>
       </div>
-      <input type="date" 
+      <input 
+        type="date" 
         name="dt1" 
         class="form-control dateinput" 
         id="dt1" 
-        {% if request.session.search.dt1 %}value={{ request.session.search.dt1 }}{% endif %}>
+        {% if request.session.search.dt1 %}value={{ request.session.search.dt1 }}{% endif %}
+      >
     </div>
   </div>
   <div class="col-sm-3 mb-2">
@@ -18,20 +20,24 @@
       <div class="input-group-prepend">
         <div class="input-group-text">{% trans 'to' %}</div>
       </div>
-      <input type="date" 
+      <input 
+        type="date" 
         name="dt2" 
         class="form-control dateinput" 
         id="dt2" 
-        {% if request.session.search.dt2 %}value={{ request.session.search.dt2 }}{% endif %}>
+        {% if request.session.search.dt2 %}value={{ request.session.search.dt2 }}{% endif %}
+      >
     </div>
   </div>
   <div class="col-sm-2 mb-2">
     <div class="input-group">
-      <input name="od_name" 
-            class="form-control" 
-            id="od_name"
-            placeholder="person"
-            {% if request.session.search.od_name %}value={{ request.session.search.od_name }}{% endif %}>
+      <input 
+        name="od_name" 
+        class="form-control" 
+        id="od_name"
+        placeholder="person"
+        {% if request.session.search.od_name %}value={{ request.session.search.od_name }}{% endif %}
+      >
       <div class="input-group-append">
         <div class="input-group-text">
           <a href="?od_name=+" class="text-secondary">
@@ -43,16 +49,9 @@
   </div>
   <div class="col-sm-2 mb-2">
     <select class="form-control" name="od_status" id="od_status">
-      <option value="all"
-              {% if request.session.search.od_status == 'all' %}selected{% endif %}>
-              {% trans 'all status' %}
-      </option>
+      <option value="all" {% if request.session.search.od_status == 'all' %}selected{% endif %}>{% trans 'all status' %}</option>
       {% for stt in status_list %}
-      <option 
-        value="{{ stt.0 }}" 
-        {% if stt.0 == request.session.search.od_status %}selected{% endif %}>
-        {{ stt.1 }}
-      </option>
+        <option value="{{ stt.0 }}" {% if stt.0 == request.session.search.od_status %}selected{% endif %}>{{ stt.1 }}</option>
       {% endfor %}
     </select>
   </div>

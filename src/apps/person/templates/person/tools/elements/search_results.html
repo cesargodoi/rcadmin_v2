@@ -1,0 +1,17 @@
+{% load i18n %}
+<ul class="list-group">
+  {% for person in results %}
+    <li 
+      class="list-group-item text-secondary"
+      style="cursor: pointer;"
+      hx-get="{% url 'select_pupil_by_name' %}"
+      hx-vals='{"name": "{{ person.name }}"}'
+      hx-target="#personName"
+      hx-swap="innerHTML"
+    >
+      {{ person.name }}
+    </li>
+  {% empty %}
+    <li class="list-group-item text-secondary">{% trans 'No search results' %}</li>
+  {% endfor %}
+</ul>

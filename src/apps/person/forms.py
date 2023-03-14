@@ -1,10 +1,14 @@
 from django import forms
+from django.utils.translation import gettext_lazy as _
 
-# from django.utils.translation import gettext_lazy as _
-from rcadmin.common import HIDDEN_AUTH_FIELDS
 from apps.user.models import Profile, User
+from rcadmin.common import (
+    HIDDEN_AUTH_FIELDS,
+    OCCURRENCES,
+    OCCURRENCES_AND_STATUS,
+)
 
-from .models import Historic, Person, Invitation
+from .models import Historic, Invitation, Person
 
 
 class UserForm(forms.ModelForm):
@@ -33,6 +37,8 @@ class PersonForm(forms.ModelForm):
 
 
 class HistoricForm(forms.ModelForm):
+    occurrence = forms.ChoiceField(choices=OCCURRENCES_AND_STATUS)
+
     class Meta:
         model = Historic
         fields = "__all__"
@@ -44,6 +50,10 @@ class HistoricForm(forms.ModelForm):
             "person": forms.HiddenInput(),
             "made_by": forms.HiddenInput(),
         }
+
+
+class HistoricUpdateForm(HistoricForm):
+    occurrence = forms.ChoiceField(choices=OCCURRENCES)
 
 
 # partial forms
@@ -167,4 +177,44 @@ class PupilRegistrationForm(forms.ModelForm):
             ),
             "center": forms.HiddenInput(),
             "invited_on": forms.HiddenInput(),
+        }
+
+
+class TransferPupilForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(TransferPupilForm, self).__init__(*args, **kwargs)
+        self.fields["center"].required = True
+        self.fields["center"].label = _("Transfer to Center")
+        self.fields["observations"].label = _("Some observations")
+        self.fields["transfer_date"].label = _("Transfer date")
+
+    transfer_date = forms.DateField(
+        widget=forms.widgets.DateInput(
+            format="%Y-%m-%d", attrs={"type": "date"}
+        ),
+    )
+
+    class Meta:
+        model = Person
+        fields = ["center", "observations"]
+
+        widgets = {"observations": forms.Textarea(attrs={"rows": 1})}
+
+
+class ChangeOfAspectForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(ChangeOfAspectForm, self).__init__(*args, **kwargs)
+        self.fields["aspect"].required = True
+        self.fields["aspect"].label = _("Select new Aspect")
+        self.fields["observations"].label = _("Some observations")
+
+    class Meta:
+        model = Person
+        fields = ["aspect", "aspect_date", "observations"]
+
+        widgets = {
+            "observations": forms.Textarea(attrs={"rows": 1}),
+            "aspect_date": forms.widgets.DateInput(
+                format="%Y-%m-%d", attrs={"type": "date"}
+            ),
         }
