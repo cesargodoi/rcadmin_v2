@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-13 20:00-0300\n"
+"POT-Creation-Date: 2023-03-14 09:32-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,14 +86,89 @@ msgstr ""
 msgid "Go back"
 msgstr ""
 
-#: src/apps/base/templates/base/confirm_delete.html:8
-msgid "Atention!"
+#: src/apps/base/templates/base/confirm/warning.html:6
+#: src/apps/center/templates/center/confirm/delete.html:9
+#: src/apps/center/templates/center/confirm/delete_hx.html:9
+#: src/apps/center/templates/center/confirm/reinsert.html:7
+#: src/apps/event/templates/event/confirm/delete.html:6
+#: src/apps/person/templates/person/confirm/delete.html:6
+#: src/apps/person/templates/person/confirm/insert.html:7
+#: src/apps/person/templates/person/confirm/reinsert.html:7
+#: src/apps/person/templates/person/elements/confirm_to_delete_freq.html:8
+#: src/apps/person/templates/person/elements/confirm_to_import.html:8
+#: src/apps/person/templates/person/elements/confirm_to_reinsert_person.html:8
+#: src/apps/person/templates/person/invitation/confirm/delete.html:9
+#: src/apps/person/templates/person/invitation/confirm/resend_invitation.html:7
+#: src/apps/person/templates/person/invitation/confirm/warning.html:6
+#: src/apps/publicwork/templates/publicwork/confirm/delete.html:6
+#: src/apps/publicwork/templates/publicwork/confirm/insert.html:7
+#: src/apps/publicwork/templates/publicwork/confirm/reinsert.html:7
+#: src/apps/publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:8
+#: src/apps/publicwork/templates/publicwork/groups/confirm_remove_member.html:8
+#: src/apps/publicwork/templates/publicwork/seeker/confirm/delete.html:6
+#: src/apps/publicwork/templates/publicwork/seeker/confirm_to_reinsert.html:8
+#: src/apps/treasury/templates/treasury/elements/confirm_delete.html:7
+#: src/apps/user/templates/user/profile/confirm_del.html:8
+#: src/apps/workgroup/templates/workgroup/confirm/delete.html:6
+#: src/apps/workgroup/templates/workgroup/confirm/insert.html:7
+#: src/apps/workgroup/templates/workgroup/elements/confirm_add_frequency.html:8
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:8
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_insert_membership.html:8
+msgid "Atention"
 msgstr ""
 
-#: src/apps/base/templates/base/confirm_delete.html:9
-msgid "Are you sure you want to delete"
+#: src/apps/base/templates/base/confirm/warning.html:15
+msgid "Are you shure you want to"
 msgstr ""
 
+#: src/apps/base/templates/base/confirm/warning.html:31
+#: src/apps/center/templates/center/confirm/delete.html:33
+#: src/apps/center/templates/center/confirm/delete_hx.html:33
+#: src/apps/center/templates/center/confirm/reinsert.html:29
+#: src/apps/center/templates/center/forms/add_responsible.html:33
+#: src/apps/center/templates/center/forms/create_center.html:60
+#: src/apps/center/templates/center/forms/update_image.html:35
+#: src/apps/center/templates/center/forms/update_info.html:87
+#: src/apps/center/templates/center/forms/update_others.html:35
+#: src/apps/event/templates/event/confirm/delete.html:39
+#: src/apps/event/templates/event/forms/event.html:64
+#: src/apps/person/templates/person/confirm/delete.html:33
+#: src/apps/person/templates/person/confirm/insert.html:31
+#: src/apps/person/templates/person/confirm/reinsert.html:31
+#: src/apps/person/templates/person/forms/create_person.html:60
+#: src/apps/person/templates/person/forms/historic.html:43
+#: src/apps/person/templates/person/forms/membership_update.html:33
+#: src/apps/person/templates/person/forms/update_image.html:37
+#: src/apps/person/templates/person/forms/update_profile.html:35
+#: src/apps/person/templates/person/forms/update_pupil.html:35
+#: src/apps/person/templates/person/invitation/confirm/delete.html:30
+#: src/apps/person/templates/person/invitation/confirm/resend_invitation.html:29
+#: src/apps/person/templates/person/invitation/confirm/warning.html:27
+#: src/apps/person/templates/person/invitation/forms/invite_pupil.html:48
+#: src/apps/publicwork/templates/publicwork/confirm/delete.html:31
+#: src/apps/publicwork/templates/publicwork/confirm/insert.html:29
+#: src/apps/publicwork/templates/publicwork/confirm/reinsert.html:29
+#: src/apps/publicwork/templates/publicwork/groups/forms/group.html:38
+#: src/apps/publicwork/templates/publicwork/lecture/forms/lecture.html:61
+#: src/apps/publicwork/templates/publicwork/listener/confirm/insert.html:66
+#: src/apps/publicwork/templates/publicwork/listener/forms/listener.html:58
+#: src/apps/publicwork/templates/publicwork/seeker/confirm/delete.html:29
+#: src/apps/publicwork/templates/publicwork/seeker/forms/frequency.html:67
+#: src/apps/publicwork/templates/publicwork/seeker/forms/historic.html:57
+#: src/apps/publicwork/templates/publicwork/seeker/forms/seeker.html:84
+#: src/apps/treasury/templates/treasury/order/create.html:47
+#: src/apps/user/templates/user/forms/updt_image.html:37
+#: src/apps/user/templates/user/forms/updt_profile.html:35
+#: src/apps/user/templates/user/profile/elements/controllers_div.html:28
+#: src/apps/workgroup/templates/workgroup/confirm/delete.html:31
+#: src/apps/workgroup/templates/workgroup/confirm/insert.html:29
+#: src/apps/workgroup/templates/workgroup/forms/member_frequency.html:71
+#: src/apps/workgroup/templates/workgroup/forms/membership_update.html:44
+#: src/apps/workgroup/templates/workgroup/forms/workgroup.html:47
+msgid "Cancel"
+msgstr ""
+
+#: src/apps/base/templates/base/confirm/warning.html:35
 #: src/apps/base/templates/base/confirm_delete.html:18
 #: src/apps/center/templates/center/confirm/delete.html:37
 #: src/apps/center/templates/center/confirm/delete_hx.html:37
@@ -105,10 +180,10 @@ msgstr ""
 #: src/apps/center/templates/center/forms/update_others.html:43
 #: src/apps/event/templates/event/confirm/delete.html:47
 #: src/apps/event/templates/event/forms/event.html:71
-#: src/apps/person/templates/person/confirm/delete.html:42
-#: src/apps/person/templates/person/confirm/delete.html:47
-#: src/apps/person/templates/person/confirm/insert.html:36
-#: src/apps/person/templates/person/confirm/reinsert.html:36
+#: src/apps/person/templates/person/confirm/delete.html:44
+#: src/apps/person/templates/person/confirm/delete.html:49
+#: src/apps/person/templates/person/confirm/insert.html:38
+#: src/apps/person/templates/person/confirm/reinsert.html:38
 #: src/apps/person/templates/person/elements/confirm_to_delete_freq.html:19
 #: src/apps/person/templates/person/elements/confirm_to_import.html:22
 #: src/apps/person/templates/person/elements/confirm_to_reinsert_person.html:18
@@ -149,6 +224,14 @@ msgstr ""
 #: src/apps/workgroup/templates/workgroup/forms/membership_update.html:51
 #: src/apps/workgroup/templates/workgroup/forms/workgroup.html:54
 msgid "Confirm"
+msgstr ""
+
+#: src/apps/base/templates/base/confirm_delete.html:8
+msgid "Atention!"
+msgstr ""
+
+#: src/apps/base/templates/base/confirm_delete.html:9
+msgid "Are you sure you want to delete"
 msgstr ""
 
 #: src/apps/base/templates/base/confirm_delete.html:22
@@ -210,21 +293,21 @@ msgstr ""
 #: src/apps/base/templates/base/data_policy/modal.html:25
 #: src/apps/base/templates/base/import_people.html:172
 #: src/apps/base/templates/base/import_people.html:195
-#: src/apps/base/templates/base/searchs/modal_frequencies.html:64
+#: src/apps/base/templates/base/searchs/modal_frequencies.html:67
 #: src/apps/base/templates/base/searchs/modal_import_fields_to_persons.html:33
 #: src/apps/base/templates/base/searchs/modal_import_people.html:21
-#: src/apps/base/templates/base/searchs/modal_lectures.html:64
-#: src/apps/base/templates/base/searchs/modal_period.html:40
-#: src/apps/base/templates/base/searchs/modal_status.html:34
+#: src/apps/base/templates/base/searchs/modal_lectures.html:67
+#: src/apps/base/templates/base/searchs/modal_period.html:44
+#: src/apps/base/templates/base/searchs/modal_status.html:30
 #: src/apps/center/templates/center/elements/modal_pix.html:27
 msgid "Close"
 msgstr ""
 
 #: src/apps/base/templates/base/elements/checkbox_all.html:12
-#: src/apps/base/templates/base/searchs/modal_frequencies.html:42
-#: src/apps/base/templates/base/searchs/modal_frequencies.html:58
-#: src/apps/base/templates/base/searchs/modal_lectures.html:58
-#: src/apps/base/templates/base/searchs/modal_status.html:22
+#: src/apps/base/templates/base/searchs/modal_frequencies.html:46
+#: src/apps/base/templates/base/searchs/modal_frequencies.html:61
+#: src/apps/base/templates/base/searchs/modal_lectures.html:61
+#: src/apps/base/templates/base/searchs/modal_status.html:21
 msgid "all"
 msgstr ""
 
@@ -483,15 +566,15 @@ msgstr ""
 msgid "center"
 msgstr ""
 
-#: src/apps/base/templates/base/searchs/center.html:29
-#: src/apps/base/templates/base/searchs/event.html:46
-#: src/apps/base/templates/base/searchs/invite_person.html:29
-#: src/apps/base/templates/base/searchs/lecture.html:46
-#: src/apps/base/templates/base/searchs/orders.html:62
-#: src/apps/base/templates/base/searchs/person.html:44
-#: src/apps/base/templates/base/searchs/pw_group.html:38
-#: src/apps/base/templates/base/searchs/seeker.html:69
-#: src/apps/base/templates/base/searchs/workgroup.html:35
+#: src/apps/base/templates/base/searchs/center.html:30
+#: src/apps/base/templates/base/searchs/event.html:44
+#: src/apps/base/templates/base/searchs/invite_person.html:30
+#: src/apps/base/templates/base/searchs/lecture.html:42
+#: src/apps/base/templates/base/searchs/orders.html:61
+#: src/apps/base/templates/base/searchs/person.html:42
+#: src/apps/base/templates/base/searchs/pw_group.html:40
+#: src/apps/base/templates/base/searchs/seeker.html:65
+#: src/apps/base/templates/base/searchs/workgroup.html:36
 msgid "Search"
 msgstr ""
 
@@ -505,30 +588,20 @@ msgstr ""
 msgid "from"
 msgstr ""
 
-#: src/apps/base/templates/base/searchs/event.html:19
+#: src/apps/base/templates/base/searchs/event.html:21
 #: src/apps/base/templates/base/searchs/lecture.html:19
-#: src/apps/base/templates/base/searchs/modal_frequencies.html:29
-#: src/apps/base/templates/base/searchs/modal_lectures.html:29
-#: src/apps/base/templates/base/searchs/modal_period.html:29
-#: src/apps/base/templates/base/searchs/orders.html:19
+#: src/apps/base/templates/base/searchs/modal_frequencies.html:31
+#: src/apps/base/templates/base/searchs/modal_lectures.html:31
+#: src/apps/base/templates/base/searchs/modal_period.html:31
+#: src/apps/base/templates/base/searchs/orders.html:21
 #: src/apps/event/templates/event/header.html:9
 #: src/apps/treasury/templates/treasury/elements/search_dates.html:19
 msgid "to"
 msgstr ""
 
-#: src/apps/base/templates/base/searchs/event.html:32
-#: src/apps/base/templates/base/searchs/workgroup.html:24
+#: src/apps/base/templates/base/searchs/event.html:34
+#: src/apps/base/templates/base/searchs/workgroup.html:25
 msgid "all types"
-msgstr ""
-
-#: src/apps/base/templates/base/searchs/event.html:37
-#: src/apps/base/templates/base/searchs/modal_lectures.html:39
-#: src/apps/center/models.py:62 src/apps/event/models.py:19
-#: src/apps/person/models.py:101
-#: src/apps/person/templates/person/elements/tab_pupil.html:10
-#: src/apps/publicwork/models.py:175 src/apps/treasury/models.py:18
-#: src/apps/treasury/models.py:122 src/apps/workgroup/models.py:16
-msgid "type"
 msgstr ""
 
 #: src/apps/base/templates/base/searchs/invite_person.html:11
@@ -551,21 +624,20 @@ msgstr ""
 msgid "Frequencies per period"
 msgstr ""
 
-#: src/apps/base/templates/base/searchs/modal_frequencies.html:39
-#: src/apps/base/templates/base/searchs/modal_status.html:19
-#: src/apps/base/templates/base/searchs/person.html:35
+#: src/apps/base/templates/base/searchs/modal_frequencies.html:43
+#: src/apps/base/templates/base/searchs/modal_status.html:18
+#: src/apps/base/templates/base/searchs/person.html:32
 #: src/apps/base/templates/base/searchs/seeker.html:53
-#: src/apps/base/templates/base/searchs/seeker.html:58
 #: src/apps/person/templates/person/elements/tab_pupil.html:40
 #: src/apps/publicwork/templates/publicwork/seeker/info.html:24
 #: src/apps/treasury/templates/treasury/order/detail.html:30
 msgid "status"
 msgstr ""
 
-#: src/apps/base/templates/base/searchs/modal_frequencies.html:65
-#: src/apps/base/templates/base/searchs/modal_lectures.html:65
-#: src/apps/base/templates/base/searchs/modal_period.html:41
-#: src/apps/base/templates/base/searchs/modal_status.html:35
+#: src/apps/base/templates/base/searchs/modal_frequencies.html:68
+#: src/apps/base/templates/base/searchs/modal_lectures.html:68
+#: src/apps/base/templates/base/searchs/modal_period.html:45
+#: src/apps/base/templates/base/searchs/modal_status.html:31
 msgid "Generate"
 msgstr ""
 
@@ -585,6 +657,15 @@ msgstr ""
 msgid "Lectures per period"
 msgstr ""
 
+#: src/apps/base/templates/base/searchs/modal_lectures.html:43
+#: src/apps/center/models.py:62 src/apps/event/models.py:19
+#: src/apps/person/models.py:101
+#: src/apps/person/templates/person/elements/tab_pupil.html:10
+#: src/apps/publicwork/models.py:175 src/apps/treasury/models.py:18
+#: src/apps/treasury/models.py:122 src/apps/workgroup/models.py:16
+msgid "type"
+msgstr ""
+
 #: src/apps/base/templates/base/searchs/modal_period.html:9
 msgid "Period"
 msgstr ""
@@ -595,11 +676,11 @@ msgstr ""
 msgid "Status per center"
 msgstr ""
 
-#: src/apps/base/templates/base/searchs/orders.html:48
+#: src/apps/base/templates/base/searchs/orders.html:52
 msgid "all status"
 msgstr ""
 
-#: src/apps/base/templates/base/searchs/person.html:9
+#: src/apps/base/templates/base/searchs/person.html:10
 #: src/apps/event/models.py:97 src/apps/person/models.py:137
 #: src/apps/person/models.py:147 src/apps/treasury/models.py:43
 #: src/apps/treasury/models.py:175
@@ -609,19 +690,19 @@ msgstr ""
 msgid "person"
 msgstr ""
 
-#: src/apps/base/templates/base/searchs/person.html:14
+#: src/apps/base/templates/base/searchs/person.html:16
 msgid "Clean"
 msgstr ""
 
-#: src/apps/base/templates/base/searchs/person.html:25
+#: src/apps/base/templates/base/searchs/person.html:24
 #: src/apps/event/models.py:100 src/apps/person/models.py:104
 #: src/apps/person/templates/person/elements/tab_pupil.html:28
 #: src/apps/workgroup/templates/workgroup/member/info.html:14
-#: src/rcadmin/common.py:78
+#: src/rcadmin/common.py:77
 msgid "aspect"
 msgstr ""
 
-#: src/apps/base/views/tools.py:24
+#: src/apps/base/views/tools.py:25
 msgid "import people"
 msgstr ""
 
@@ -783,40 +864,10 @@ msgstr ""
 msgid "person not found"
 msgstr ""
 
-#: src/apps/center/templates/center/confirm/delete.html:9
-#: src/apps/center/templates/center/confirm/delete_hx.html:9
-#: src/apps/center/templates/center/confirm/reinsert.html:7
-#: src/apps/event/templates/event/confirm/delete.html:6
-#: src/apps/person/templates/person/confirm/delete.html:6
-#: src/apps/person/templates/person/confirm/insert.html:7
-#: src/apps/person/templates/person/confirm/reinsert.html:7
-#: src/apps/person/templates/person/elements/confirm_to_delete_freq.html:8
-#: src/apps/person/templates/person/elements/confirm_to_import.html:8
-#: src/apps/person/templates/person/elements/confirm_to_reinsert_person.html:8
-#: src/apps/person/templates/person/invitation/confirm/delete.html:9
-#: src/apps/person/templates/person/invitation/confirm/resend_invitation.html:7
-#: src/apps/person/templates/person/invitation/confirm/warning.html:6
-#: src/apps/publicwork/templates/publicwork/confirm/delete.html:6
-#: src/apps/publicwork/templates/publicwork/confirm/insert.html:7
-#: src/apps/publicwork/templates/publicwork/confirm/reinsert.html:7
-#: src/apps/publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:8
-#: src/apps/publicwork/templates/publicwork/groups/confirm_remove_member.html:8
-#: src/apps/publicwork/templates/publicwork/seeker/confirm/delete.html:6
-#: src/apps/publicwork/templates/publicwork/seeker/confirm_to_reinsert.html:8
-#: src/apps/treasury/templates/treasury/elements/confirm_delete.html:7
-#: src/apps/user/templates/user/profile/confirm_del.html:8
-#: src/apps/workgroup/templates/workgroup/confirm/delete.html:6
-#: src/apps/workgroup/templates/workgroup/confirm/insert.html:7
-#: src/apps/workgroup/templates/workgroup/elements/confirm_add_frequency.html:8
-#: src/apps/workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:8
-#: src/apps/workgroup/templates/workgroup/elements/confirm_to_insert_membership.html:8
-msgid "Atention"
-msgstr ""
-
 #: src/apps/center/templates/center/confirm/delete.html:17
 #: src/apps/center/templates/center/confirm/delete_hx.html:17
 #: src/apps/event/templates/event/confirm/delete.html:15
-#: src/apps/person/templates/person/confirm/delete.html:14
+#: src/apps/person/templates/person/confirm/delete.html:15
 #: src/apps/person/templates/person/elements/confirm_to_delete_freq.html:9
 #: src/apps/person/templates/person/invitation/confirm/delete.html:17
 #: src/apps/publicwork/templates/publicwork/confirm/delete.html:14
@@ -825,54 +876,8 @@ msgstr ""
 msgid "Are you shure you want to remove"
 msgstr ""
 
-#: src/apps/center/templates/center/confirm/delete.html:33
-#: src/apps/center/templates/center/confirm/delete_hx.html:33
-#: src/apps/center/templates/center/confirm/reinsert.html:29
-#: src/apps/center/templates/center/forms/add_responsible.html:33
-#: src/apps/center/templates/center/forms/create_center.html:60
-#: src/apps/center/templates/center/forms/update_image.html:35
-#: src/apps/center/templates/center/forms/update_info.html:87
-#: src/apps/center/templates/center/forms/update_others.html:35
-#: src/apps/event/templates/event/confirm/delete.html:39
-#: src/apps/event/templates/event/forms/event.html:64
-#: src/apps/person/templates/person/confirm/delete.html:31
-#: src/apps/person/templates/person/confirm/insert.html:29
-#: src/apps/person/templates/person/confirm/reinsert.html:29
-#: src/apps/person/templates/person/forms/create_person.html:60
-#: src/apps/person/templates/person/forms/historic.html:43
-#: src/apps/person/templates/person/forms/membership_update.html:33
-#: src/apps/person/templates/person/forms/update_image.html:37
-#: src/apps/person/templates/person/forms/update_profile.html:35
-#: src/apps/person/templates/person/forms/update_pupil.html:35
-#: src/apps/person/templates/person/invitation/confirm/delete.html:30
-#: src/apps/person/templates/person/invitation/confirm/resend_invitation.html:29
-#: src/apps/person/templates/person/invitation/confirm/warning.html:27
-#: src/apps/person/templates/person/invitation/forms/invite_pupil.html:48
-#: src/apps/publicwork/templates/publicwork/confirm/delete.html:31
-#: src/apps/publicwork/templates/publicwork/confirm/insert.html:29
-#: src/apps/publicwork/templates/publicwork/confirm/reinsert.html:29
-#: src/apps/publicwork/templates/publicwork/groups/forms/group.html:38
-#: src/apps/publicwork/templates/publicwork/lecture/forms/lecture.html:61
-#: src/apps/publicwork/templates/publicwork/listener/confirm/insert.html:66
-#: src/apps/publicwork/templates/publicwork/listener/forms/listener.html:58
-#: src/apps/publicwork/templates/publicwork/seeker/confirm/delete.html:29
-#: src/apps/publicwork/templates/publicwork/seeker/forms/frequency.html:67
-#: src/apps/publicwork/templates/publicwork/seeker/forms/historic.html:57
-#: src/apps/publicwork/templates/publicwork/seeker/forms/seeker.html:84
-#: src/apps/treasury/templates/treasury/order/create.html:47
-#: src/apps/user/templates/user/forms/updt_image.html:37
-#: src/apps/user/templates/user/forms/updt_profile.html:35
-#: src/apps/user/templates/user/profile/elements/controllers_div.html:28
-#: src/apps/workgroup/templates/workgroup/confirm/delete.html:31
-#: src/apps/workgroup/templates/workgroup/confirm/insert.html:29
-#: src/apps/workgroup/templates/workgroup/forms/member_frequency.html:71
-#: src/apps/workgroup/templates/workgroup/forms/membership_update.html:44
-#: src/apps/workgroup/templates/workgroup/forms/workgroup.html:47
-msgid "Cancel"
-msgstr ""
-
 #: src/apps/center/templates/center/confirm/reinsert.html:14
-#: src/apps/person/templates/person/confirm/reinsert.html:14
+#: src/apps/person/templates/person/confirm/reinsert.html:15
 #: src/apps/person/templates/person/elements/confirm_to_reinsert_person.html:9
 #: src/apps/publicwork/templates/publicwork/confirm/reinsert.html:14
 #: src/apps/publicwork/templates/publicwork/seeker/confirm_to_reinsert.html:9
@@ -1041,7 +1046,7 @@ msgstr ""
 #: src/apps/publicwork/models.py:103 src/apps/publicwork/models.py:185
 #: src/apps/publicwork/models.py:240 src/apps/treasury/models.py:20
 #: src/apps/treasury/models.py:85 src/apps/user/models.py:62
-#: src/rcadmin/common.py:47
+#: src/rcadmin/common.py:46
 msgid "active"
 msgstr ""
 
@@ -1269,19 +1274,20 @@ msgstr ""
 msgid "insert frequencies"
 msgstr ""
 
-#: src/apps/person/admin.py:31
+#: src/apps/person/admin.py:24
+msgid "Make inactive"
+msgstr ""
+
+#: src/apps/person/admin.py:30 src/apps/person/admin.py:45
 #, python-format
 msgid "%d person was successfully marked as 'inactive'."
-msgid_plural "%d persons were successfully marked as 'inactives'."
+msgid_plural "%d pupil were successfully marked as 'inactives'."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/apps/person/admin.py:44
-#, python-format
-msgid "%d person was successfully marked as 'active'."
-msgid_plural "%d persons were successfully marked as 'actives'."
-msgstr[0] ""
-msgstr[1] ""
+#: src/apps/person/admin.py:39
+msgid "Make active"
+msgstr ""
 
 #: src/apps/person/forms.py:187
 msgid "Transfer to Center"
@@ -1368,7 +1374,7 @@ msgstr ""
 msgid "historics"
 msgstr ""
 
-#: src/apps/person/templates/person/confirm/insert.html:14
+#: src/apps/person/templates/person/confirm/insert.html:15
 #: src/apps/publicwork/templates/publicwork/confirm/insert.html:14
 #: src/apps/publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:9
 #: src/apps/workgroup/templates/workgroup/confirm/insert.html:14
@@ -1431,6 +1437,7 @@ msgid "years"
 msgstr ""
 
 #: src/apps/person/templates/person/forms/historic-ant.html:24
+#: src/apps/person/templates/person/forms/pupil_fields.html:19
 #: src/apps/person/templates/person/historic.html:7
 #: src/apps/person/templates/person/navbar.html:52
 #: src/apps/person/templates/person/navbar.html:145
@@ -1470,6 +1477,12 @@ msgstr ""
 msgid "To update 'aspect', use the tool: "
 msgstr ""
 
+#: src/apps/person/templates/person/forms/pupil_fields.html:24
+#: src/apps/person/templates/person/navbar.html:34
+#: src/apps/person/templates/person/tools/change_of_aspect.html:10
+msgid "Change of Aspect"
+msgstr ""
+
 #: src/apps/person/templates/person/forms/pupil_fields.html:25
 #: src/apps/person/templates/person/forms/pupil_fields.html:30
 msgid "on 'person > tools' menu."
@@ -1477,6 +1490,11 @@ msgstr ""
 
 #: src/apps/person/templates/person/forms/pupil_fields.html:28
 msgid "To change 'center', use the tool: "
+msgstr ""
+
+#: src/apps/person/templates/person/forms/pupil_fields.html:29
+#: src/apps/person/templates/person/navbar.html:33
+msgid "Pupil Transfer"
 msgstr ""
 
 #: src/apps/person/templates/person/forms/update_pupil.html:43
@@ -1588,20 +1606,11 @@ msgstr ""
 msgid "Import from Seekers"
 msgstr ""
 
-#: src/apps/person/templates/person/navbar.html:33
-msgid "Pupil Transfer"
-msgstr ""
-
-#: src/apps/person/templates/person/navbar.html:34
-#: src/apps/person/templates/person/tools/change_of_aspect.html:10
-msgid "Change of Aspect"
-msgstr ""
-
 #: src/apps/person/templates/person/navbar.html:83
 msgid "Invite person"
 msgstr ""
 
-#: src/apps/person/templates/person/navbar.html:108 src/rcadmin/common.py:142
+#: src/apps/person/templates/person/navbar.html:108 src/rcadmin/common.py:141
 msgid "Badge"
 msgstr ""
 
@@ -1615,7 +1624,11 @@ msgstr ""
 msgid "persons not found in the search"
 msgstr ""
 
-#: src/apps/person/templates/person/tools/change_of_aspect.html:22
+#: src/apps/person/templates/person/tools/change_of_aspect.html:14
+msgid "Are you sure you want to change the aspect?"
+msgstr ""
+
+#: src/apps/person/templates/person/tools/change_of_aspect.html:25
 msgid "Confirm the change of Aspect"
 msgstr ""
 
@@ -1640,7 +1653,11 @@ msgstr ""
 msgid "Pupil transfer"
 msgstr ""
 
-#: src/apps/person/templates/person/tools/pupil_transfer.html:22
+#: src/apps/person/templates/person/tools/pupil_transfer.html:14
+msgid "Are you sure you want to transfer the pupil?"
+msgstr ""
+
+#: src/apps/person/templates/person/tools/pupil_transfer.html:25
 msgid "Confirm the transfer"
 msgstr ""
 
@@ -2098,7 +2115,7 @@ msgid "local"
 msgstr ""
 
 #: src/apps/publicwork/templates/publicwork/listener/elements/listener_list_item.html:22
-#: src/rcadmin/common.py:137
+#: src/rcadmin/common.py:136
 msgid "installed"
 msgstr ""
 
@@ -2343,7 +2360,7 @@ msgstr ""
 #: src/apps/treasury/templates/treasury/elements/payform_by_type.html:19
 #: src/apps/treasury/templates/treasury/elements/payment_by_paytype.html:19
 #: src/apps/treasury/templates/treasury/elements/period_payments.html:26
-#: src/rcadmin/common.py:97
+#: src/rcadmin/common.py:96
 msgid "pending"
 msgstr ""
 
@@ -3119,191 +3136,191 @@ msgstr ""
 msgid "contact room"
 msgstr ""
 
-#: src/rcadmin/common.py:37
+#: src/rcadmin/common.py:36
 msgid "1st. Aspect"
 msgstr ""
 
-#: src/rcadmin/common.py:38
+#: src/rcadmin/common.py:37
 msgid "2nd. Aspect"
 msgstr ""
 
-#: src/rcadmin/common.py:39
+#: src/rcadmin/common.py:38
 msgid "3rd. Aspect"
 msgstr ""
 
-#: src/rcadmin/common.py:40
+#: src/rcadmin/common.py:39
 msgid "4th. Aspect"
 msgstr ""
 
-#: src/rcadmin/common.py:41
+#: src/rcadmin/common.py:40
 msgid "Grail"
 msgstr ""
 
-#: src/rcadmin/common.py:42
+#: src/rcadmin/common.py:41
 msgid "5th. Aspect"
 msgstr ""
 
-#: src/rcadmin/common.py:43
+#: src/rcadmin/common.py:42
 msgid "6th. Aspect"
 msgstr ""
 
-#: src/rcadmin/common.py:48
+#: src/rcadmin/common.py:47
 msgid "licensed"
 msgstr ""
 
-#: src/rcadmin/common.py:49
+#: src/rcadmin/common.py:48
 msgid "dead"
 msgstr ""
 
-#: src/rcadmin/common.py:50
+#: src/rcadmin/common.py:49
 msgid "disconnected"
 msgstr ""
 
-#: src/rcadmin/common.py:51
+#: src/rcadmin/common.py:50
 msgid "removed"
 msgstr ""
 
-#: src/rcadmin/common.py:55 src/rcadmin/common.py:92
+#: src/rcadmin/common.py:54 src/rcadmin/common.py:91
 msgid "other"
 msgstr ""
 
-#: src/rcadmin/common.py:56 src/rcadmin/common.py:115 src/rcadmin/common.py:122
+#: src/rcadmin/common.py:55 src/rcadmin/common.py:114 src/rcadmin/common.py:121
 msgid "transfer"
 msgstr ""
 
-#: src/rcadmin/common.py:66
+#: src/rcadmin/common.py:65
 msgid "pupil"
 msgstr ""
 
-#: src/rcadmin/common.py:67
+#: src/rcadmin/common.py:66
 msgid "web pupil"
 msgstr ""
 
-#: src/rcadmin/common.py:68
+#: src/rcadmin/common.py:67
 msgid "gest"
 msgstr ""
 
-#: src/rcadmin/common.py:72
+#: src/rcadmin/common.py:71
 msgid "mentor"
 msgstr ""
 
-#: src/rcadmin/common.py:73 src/rcadmin/common.py:128
+#: src/rcadmin/common.py:72 src/rcadmin/common.py:127
 msgid "contact"
 msgstr ""
 
-#: src/rcadmin/common.py:74 src/rcadmin/common.py:135
+#: src/rcadmin/common.py:73 src/rcadmin/common.py:134
 msgid "member"
 msgstr ""
 
-#: src/rcadmin/common.py:79
+#: src/rcadmin/common.py:78
 msgid "maintenance"
 msgstr ""
 
-#: src/rcadmin/common.py:80
+#: src/rcadmin/common.py:79
 msgid "admin"
 msgstr ""
 
-#: src/rcadmin/common.py:84
+#: src/rcadmin/common.py:83
 msgid "opened"
 msgstr ""
 
-#: src/rcadmin/common.py:85
+#: src/rcadmin/common.py:84
 msgid "closed"
 msgstr ""
 
-#: src/rcadmin/common.py:89
+#: src/rcadmin/common.py:88
 msgid "service"
 msgstr ""
 
-#: src/rcadmin/common.py:90
+#: src/rcadmin/common.py:89
 msgid "conference"
 msgstr ""
 
-#: src/rcadmin/common.py:91 src/rcadmin/common.py:129
+#: src/rcadmin/common.py:90 src/rcadmin/common.py:128
 msgid "meeting"
 msgstr ""
 
-#: src/rcadmin/common.py:96
+#: src/rcadmin/common.py:95
 msgid "canceled"
 msgstr ""
 
-#: src/rcadmin/common.py:98
+#: src/rcadmin/common.py:97
 msgid "concluded"
 msgstr ""
 
-#: src/rcadmin/common.py:102
+#: src/rcadmin/common.py:101
 msgid "monthly"
 msgstr ""
 
-#: src/rcadmin/common.py:103
+#: src/rcadmin/common.py:102
 msgid "by event"
 msgstr ""
 
-#: src/rcadmin/common.py:104
+#: src/rcadmin/common.py:103
 msgid "campaign"
 msgstr ""
 
-#: src/rcadmin/common.py:108 src/rcadmin/common.py:120
+#: src/rcadmin/common.py:107 src/rcadmin/common.py:119
 msgid "pix"
 msgstr ""
 
-#: src/rcadmin/common.py:109
+#: src/rcadmin/common.py:108
 msgid "cash"
 msgstr ""
 
-#: src/rcadmin/common.py:110
+#: src/rcadmin/common.py:109
 msgid "check"
 msgstr ""
 
-#: src/rcadmin/common.py:111
+#: src/rcadmin/common.py:110
 msgid "pre check"
 msgstr ""
 
-#: src/rcadmin/common.py:112
+#: src/rcadmin/common.py:111
 msgid "debit"
 msgstr ""
 
-#: src/rcadmin/common.py:113
+#: src/rcadmin/common.py:112
 msgid "credit"
 msgstr ""
 
-#: src/rcadmin/common.py:114 src/rcadmin/common.py:121
+#: src/rcadmin/common.py:113 src/rcadmin/common.py:120
 msgid "deposit"
 msgstr ""
 
-#: src/rcadmin/common.py:116
+#: src/rcadmin/common.py:115
 msgid "bank slip"
 msgstr ""
 
-#: src/rcadmin/common.py:125
+#: src/rcadmin/common.py:124
 msgid "Brazil"
 msgstr ""
 
-#: src/rcadmin/common.py:133
+#: src/rcadmin/common.py:132
 msgid "observation"
 msgstr ""
 
-#: src/rcadmin/common.py:134
+#: src/rcadmin/common.py:133
 msgid "new"
 msgstr ""
 
-#: src/rcadmin/common.py:136
+#: src/rcadmin/common.py:135
 msgid "installing"
 msgstr ""
 
-#: src/rcadmin/common.py:138
+#: src/rcadmin/common.py:137
 msgid "stand by"
 msgstr ""
 
-#: src/rcadmin/common.py:139
+#: src/rcadmin/common.py:138
 msgid "restriction"
 msgstr ""
 
-#: src/rcadmin/common.py:142
+#: src/rcadmin/common.py:141
 msgid "Secretary"
 msgstr ""
 
-#: src/rcadmin/common.py:242
+#: src/rcadmin/common.py:241
 msgid ""
 "Phone number must be entered in the format: '+1234567890'.             Up to "
 "15 digits allowed."

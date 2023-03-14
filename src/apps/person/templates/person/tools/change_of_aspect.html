@@ -9,7 +9,10 @@
       <div class="media-body">
         <h4>{% trans 'Change of Aspect' %}</h4>
         {% include "person/tools/elements/select_person_by_name.html" %}
-        <form method="POST">
+        <form 
+          hx-post="{{ request.path }}" 
+          hx-confirm="{% trans 'Are you sure you want to change the aspect?' %}"
+        >
           {% csrf_token %}
           <div class="row">
             <div class="col-sm-6">{{ form.aspect | as_crispy_field }}</div>

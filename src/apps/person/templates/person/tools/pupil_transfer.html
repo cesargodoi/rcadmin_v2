@@ -9,7 +9,10 @@
       <div class="media-body">
         <h4>{% trans 'Pupil transfer' %}</h4>
         {% include "person/tools/elements/select_person_by_name.html" %}
-        <form method="POST">
+        <form 
+          hx-post="{{ request.path }}" 
+          hx-confirm="{% trans 'Are you sure you want to transfer the pupil?' %}"
+        >
           {% csrf_token %}
           <div class="row">
             <div class="col-sm-6">{{ form.center | as_crispy_field }}</div>

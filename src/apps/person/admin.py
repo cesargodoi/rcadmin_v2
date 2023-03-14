@@ -1,7 +1,8 @@
 from django.contrib import admin, messages
+from django.utils.translation import gettext_lazy as _
 from django.utils.translation import ngettext
 
-from .models import Historic, Person, Invitation
+from .models import Historic, Invitation, Person
 
 
 @admin.register(Invitation)
@@ -20,69 +21,52 @@ class InvitationAdmin(admin.ModelAdmin):
     ]
 
 
+@admin.action(description=_("Make inactive"))
+def make_inactive(self, request, queryset):
+    updated = queryset.update(is_active=False)
+    self.message_user(
+        request,
+        ngettext(
+            "%d person was successfully marked as 'inactive'.",
+            "%d pupil were successfully marked as 'inactives'.",
+            updated,
+        )
+        % updated,
+        messages.SUCCESS,
+    )
+
+
+@admin.action(description=_("Make active"))
+def make_active(self, request, queryset):
+    updated = queryset.update(is_active=True)
+    self.message_user(
+        request,
+        ngettext(
+            "%d person was successfully marked as 'inactive'.",
+            "%d pupil were successfully marked as 'inactives'.",
+            updated,
+        )
+        % updated,
+        messages.SUCCESS,
+    )
+
+
 @admin.register(Person)
 class PersonAdmin(admin.ModelAdmin):
-    # actions
-    def make_inactive(self, request, queryset):
-        updated = queryset.update(is_active=False)
-        self.message_user(
-            request,
-            ngettext(
-                "%d person was successfully marked as 'inactive'.",
-                "%d persons were successfully marked as 'inactives'.",
-                updated,
-            )
-            % updated,
-            messages.SUCCESS,
-        )
-
-    def make_active(self, request, queryset):
-        updated = queryset.update(is_active=True)
-        self.message_user(
-            request,
-            ngettext(
-                "%d person was successfully marked as 'active'.",
-                "%d persons were successfully marked as 'actives'.",
-                updated,
-            )
-            % updated,
-            messages.SUCCESS,
-        )
-
-    make_inactive.short_description = "Mark selected persons as 'inactive'."
-    make_active.short_description = "Mark selected persons as 'active'."
-
     actions = [make_inactive, make_active]
     list_filter = ["aspect", "status", "is_active"]
     search_fields = ["name"]
-    list_display = [
-        "name",
-        "person_type",
-        "aspect",
-        "status",
-    ]
+    list_display = ["name", "person_type", "aspect", "status"]
 
     readonly_fields = ("created_on", "modified_on", "made_by")
     fieldsets = [
         (
             None,
-            {
-                "fields": [
-                    "user",
-                    "center",
-                    "reg",
-                ]
-            },
+            {"fields": ["user", "center"]},
         ),
         (
             "Personal Informations",
-            {
-                "fields": [
-                    "name",
-                    "id_card",
-                    "birth",
-                ]
-            },
+            {"fields": ["name", "id_card", "birth"]},
         ),
         (
             "Pupil Informations",
@@ -98,14 +82,7 @@ class PersonAdmin(admin.ModelAdmin):
         ),
         (
             "Auth Informations",
-            {
-                "fields": [
-                    "is_active",
-                    "created_on",
-                    "modified_on",
-                    "made_by",
-                ]
-            },
+            {"fields": ["is_active", "created_on", "modified_on", "made_by"]},
         ),
     ]
 
