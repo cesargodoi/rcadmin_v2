@@ -1,0 +1,42 @@
+{% extends "base/base.html" %}
+{% load base_extras %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+
+{% include 'presidium/elements/navbar.html' %}
+
+<div class="row">
+  <div class="col-lg-8 mb-4">
+    {% include "presidium/elements/summary.html" %}
+  </div>
+  <div class="col-lg-4 mb-4">
+    <div class="card-treasury-new bg-light mb-3">
+      <div class="card-header-treasury-new">{% trans 'Reports' %}</div>
+      <ul class="list-group list-group-flush">
+        <a type="button" 
+          class="list-group-item-treasury-new list-group-item-action text-info" 
+          href="{% url 'presidium:occurrences_per_period' %}">
+          <i class="fas fa-eye"></i> 
+          {% trans 'Occurrences per period' %}
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% include "base/elements/modal_form.html" %}
+
+{% endblock content %}
+
+{% block scripts %}
+  <script>
+    function manageData(url) {
+      htmx.ajax('GET', url, '#formBody')
+    }
+  </script>
+
+  <script src="{% static 'js/modal_form.js' %}" defer></script>
+
+{% endblock scripts %}

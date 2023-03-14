@@ -511,3 +511,25 @@ p {
   top: .4rem;
   right: .4rem;
 }
+
+/* presidium home */
+.presidium-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.presidium-card {
+  width: 9.5rem;
+  /* box-shadow: -7px 8px 13px 12px rgba(0, 0, 0, 0.2); */
+  box-shadow: -5px 4px 8px 5px rgba(0, 0, 0, 0.1);
+  transition: all .25s ease-in-out;
+  background-color: var(--background-cabecalho) !important;
+
+}
+
+.presidium-card:hover {
+  scale: 1.03;
+  transition: all .25s ease-in-out;
+}

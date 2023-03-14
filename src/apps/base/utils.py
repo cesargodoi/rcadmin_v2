@@ -36,7 +36,7 @@ def get_installed_per_period_dict(request, obj):
     return _dict
 
 
-def get_occurrences_per_period_dict(request, obj):
+def get_occurrences_per_period_dict(request, obj, presidium=False):
     put_search_in_session(request)
     search = request.session["search"]
     get_period(request, search)
@@ -46,6 +46,8 @@ def get_occurrences_per_period_dict(request, obj):
         Q(person__center=request.user.person.center),
         Q(date__range=[search["dt1"], search["dt2"]]),
     ]
+    if presidium:
+        _query.remove(Q(person__center=request.user.person.center))
     # generating query
     query = Q()
     for q in _query:
@@ -63,6 +65,8 @@ def get_occurrences_per_period_dict(request, obj):
             description=_obj.description,
             date=_obj.date,
         )
+        if presidium:
+            row["center"] = str(_obj.person.center)
         _dict.append(row)
     return _dict
 
