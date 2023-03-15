@@ -5,7 +5,7 @@ from django.utils import timezone
 
 
 #  person - reports  ##########################################################
-def get_installed_per_period_dict(request, obj):
+def get_installed_per_period_dict(request, obj, presidium=False):
     put_search_in_session(request)
     search = request.session["search"]
     get_period(request, search)
@@ -17,26 +17,30 @@ def get_installed_per_period_dict(request, obj):
         Q(aspect="A1"),
         Q(aspect_date__range=[search["dt1"], search["dt2"]]),
     ]
+    if presidium:
+        _query.remove(Q(center=request.user.person.center))
     # generating query
     query = Q()
     for q in _query:
         query.add(q, Q.AND)
 
     _dict = []
-    for _obj in obj.objects.filter(query).order_by("-aspect_date"):
+    for _obj in obj.objects.filter(query).order_by(
+        "center__name", "-aspect_date"
+    ):
         row = dict(
             pk=_obj.pk,
             name=_obj.short_name,
             local=f"{_obj.user.profile.city} ({_obj.user.profile.state})",
-            status=_obj.get_status_display(),
-            aspect=_obj.get_aspect_display(),
             date=_obj.aspect_date,
         )
+        if presidium:
+            row["center"] = str(_obj.center)
         _dict.append(row)
     return _dict
 
 
-def get_occurrences_per_period_dict(request, obj):
+def get_occurrences_per_period_dict(request, obj, presidium=False):
     put_search_in_session(request)
     search = request.session["search"]
     get_period(request, search)
@@ -46,13 +50,17 @@ def get_occurrences_per_period_dict(request, obj):
         Q(person__center=request.user.person.center),
         Q(date__range=[search["dt1"], search["dt2"]]),
     ]
+    if presidium:
+        _query.remove(Q(person__center=request.user.person.center))
     # generating query
     query = Q()
     for q in _query:
         query.add(q, Q.AND)
 
     _dict = []
-    for _obj in obj.objects.filter(query).order_by("-date"):
+    for _obj in obj.objects.filter(query).order_by(
+        "person__center__name", "-date"
+    ):
         row = dict(
             pk=_obj.pk,
             name=_obj.person.short_name,
@@ -63,6 +71,8 @@ def get_occurrences_per_period_dict(request, obj):
             description=_obj.description,
             date=_obj.date,
         )
+        if presidium:
+            row["center"] = str(_obj.person.center)
         _dict.append(row)
     return _dict
 

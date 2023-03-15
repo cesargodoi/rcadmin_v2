@@ -1,0 +1,32 @@
+{% load i18n %}
+
+<article class="media align-items-stretch flex-column content-section mb-1">
+  <div class="d-flex justify-content-between">
+    <h4 class="mb-3">{% trans 'Our Pupils' %}</h4>
+    <div class="pt-2">
+      <a href="#">{% trans 'by aspect' %}</a>&nbsp;&nbsp;&nbsp;
+      <a href="#">{% trans 'by center' %}</a>
+    </div>
+  </div>
+  <div class="mb-3 presidium-cards">
+    {% for asp in aspect_count %}
+      <div 
+        class="card text-center presidium-card is-link"
+        onclick="manageData('{% url 'presidium:aspect_per_centers' asp.asp %}')"
+      >   
+        <h2><i class="fa-sharp fa-solid fa-users mt-4"></i></h2>
+        <div class="card-body">
+          <h5 class="card-title">{{ asp.aspect }}</h5>
+          <p class="card-text">{{ asp.count }} {% trans 'pupils' %}</p>
+        </div>
+      </div>
+    {% endfor %}
+    <div class="card text-center presidium-card">
+      <h2><i class="fa-sharp fa-solid fa-users mt-4"></i></h2>
+      <div class="card-body">
+        <h5 class="card-title">{% trans 'Total' %}</h5>
+        <p class="card-text">{{ total }} {% trans 'pupils' %}</p>
+      </div>
+    </div>
+  </div>
+</article>

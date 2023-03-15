@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []  # type: ignore
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "apps.event",
     "apps.treasury",
     "apps.publicwork",
+    "apps.presidium",
 ]
 
 MIDDLEWARE = [

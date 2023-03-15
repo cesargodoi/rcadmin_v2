@@ -17,6 +17,7 @@ urlpatterns = [
     path("event/", include("apps.event.urls")),
     path("treasury/", include("apps.treasury.urls")),
     path("publicwork/", include("apps.publicwork.urls")),
+    path("presidium/", include("apps.presidium.urls")),
 ]
 
 handler404 = "apps.base.views.base.error_404"

@@ -1,18 +1,18 @@
 import pandas as pd
-
-from django.shortcuts import render
 from django.contrib.auth.decorators import login_required, permission_required
-from django.utils.translation import gettext as _
+from django.shortcuts import render
 from django.urls import reverse
+from django.utils.translation import gettext as _
 
-from ..models import Person, Historic
-from apps.center.models import Responsible
 from apps.base.utils import (
     get_installed_per_period_dict,
     get_occurrences_per_period_dict,
-    get_report_file_title,
     get_period_subtitle,
+    get_report_file_title,
 )
+from apps.center.models import Responsible
+
+from ..models import Historic, Person
 
 
 @login_required
@@ -30,20 +30,14 @@ def person_badge(request, person_id):
 
 
 @login_required
-@permission_required("publicwork.view_lecture")
+@permission_required("person.view_person")
 def installed_per_period(request):
     if request.GET.get("dt1") and request.GET.get("dt2"):
         # get person dict
         _dict = get_installed_per_period_dict(request, Person)
         if _dict:
             # select columns to report
-            columns = [
-                "name",
-                "local",
-                "status",
-                "aspect",
-                "date",
-            ]
+            columns = ["name", "local", "date"]
             # generate pandas dataframe
             report_data = pd.DataFrame(_dict, columns=columns)
             #  adjust index
@@ -74,7 +68,7 @@ def installed_per_period(request):
 
 
 @login_required
-@permission_required("publicwork.view_lecture")
+@permission_required("person.view_person")
 def occurrences_per_period(request):
     if request.GET.get("dt1") and request.GET.get("dt2"):
         # get person dict
