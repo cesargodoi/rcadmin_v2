@@ -20,10 +20,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "debug_toolbar",
     "crispy_forms",
     "django_htmx",
     "django_extensions",
-    "debug_toolbar",  # comment this line to disallow debug_toolbar
     "rosetta",
     "apps.user",
     "apps.base",
@@ -49,7 +49,9 @@ MIDDLEWARE = [
     "django_htmx.middleware.HtmxMiddleware",
 ]
 
+# removing debug_toobar in production
 if DEBUG is False:
+    del INSTALLED_APPS[6]
     del MIDDLEWARE[0]
 
 ROOT_URLCONF = "rcadmin.urls"
