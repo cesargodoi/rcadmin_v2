@@ -37,13 +37,7 @@ def installed_per_period(request):
         _dict = get_installed_per_period_dict(request, Person)
         if _dict:
             # select columns to report
-            columns = [
-                "name",
-                "local",
-                "status",
-                "aspect",
-                "date",
-            ]
+            columns = ["name", "local", "date"]
             # generate pandas dataframe
             report_data = pd.DataFrame(_dict, columns=columns)
             #  adjust index

@@ -4,6 +4,12 @@ body {
   margin-top: 5rem;
 }
 
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1350px;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -517,7 +523,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 20px;
+  gap: 15px;
 }
 
 .presidium-card {
@@ -525,7 +531,7 @@ p {
   /* box-shadow: -7px 8px 13px 12px rgba(0, 0, 0, 0.2); */
   box-shadow: -5px 4px 8px 5px rgba(0, 0, 0, 0.1);
   transition: all .25s ease-in-out;
-  background-color: var(--background-cabecalho) !important;
+  /* background-color: var(--background-cabecalho) !important; */
 
 }
 

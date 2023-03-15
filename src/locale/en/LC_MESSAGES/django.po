@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-14 09:32-0300\n"
+"POT-Creation-Date: 2023-03-15 13:59-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,7 @@ msgstr ""
 #: src/apps/base/forms.py:10 src/apps/base/templates/base/import_people.html:50
 #: src/apps/center/templates/center/navbar.html:5
 #: src/apps/center/templates/center/navbar.html:23
+#: src/apps/presidium/templates/presidium/elements/pupils_by_aspect_per_centers.html:12
 msgid "Center"
 msgstr ""
 
@@ -86,89 +87,14 @@ msgstr ""
 msgid "Go back"
 msgstr ""
 
-#: src/apps/base/templates/base/confirm/warning.html:6
-#: src/apps/center/templates/center/confirm/delete.html:9
-#: src/apps/center/templates/center/confirm/delete_hx.html:9
-#: src/apps/center/templates/center/confirm/reinsert.html:7
-#: src/apps/event/templates/event/confirm/delete.html:6
-#: src/apps/person/templates/person/confirm/delete.html:6
-#: src/apps/person/templates/person/confirm/insert.html:7
-#: src/apps/person/templates/person/confirm/reinsert.html:7
-#: src/apps/person/templates/person/elements/confirm_to_delete_freq.html:8
-#: src/apps/person/templates/person/elements/confirm_to_import.html:8
-#: src/apps/person/templates/person/elements/confirm_to_reinsert_person.html:8
-#: src/apps/person/templates/person/invitation/confirm/delete.html:9
-#: src/apps/person/templates/person/invitation/confirm/resend_invitation.html:7
-#: src/apps/person/templates/person/invitation/confirm/warning.html:6
-#: src/apps/publicwork/templates/publicwork/confirm/delete.html:6
-#: src/apps/publicwork/templates/publicwork/confirm/insert.html:7
-#: src/apps/publicwork/templates/publicwork/confirm/reinsert.html:7
-#: src/apps/publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:8
-#: src/apps/publicwork/templates/publicwork/groups/confirm_remove_member.html:8
-#: src/apps/publicwork/templates/publicwork/seeker/confirm/delete.html:6
-#: src/apps/publicwork/templates/publicwork/seeker/confirm_to_reinsert.html:8
-#: src/apps/treasury/templates/treasury/elements/confirm_delete.html:7
-#: src/apps/user/templates/user/profile/confirm_del.html:8
-#: src/apps/workgroup/templates/workgroup/confirm/delete.html:6
-#: src/apps/workgroup/templates/workgroup/confirm/insert.html:7
-#: src/apps/workgroup/templates/workgroup/elements/confirm_add_frequency.html:8
-#: src/apps/workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:8
-#: src/apps/workgroup/templates/workgroup/elements/confirm_to_insert_membership.html:8
-msgid "Atention"
+#: src/apps/base/templates/base/confirm_delete.html:8
+msgid "Atention!"
 msgstr ""
 
-#: src/apps/base/templates/base/confirm/warning.html:15
-msgid "Are you shure you want to"
+#: src/apps/base/templates/base/confirm_delete.html:9
+msgid "Are you sure you want to delete"
 msgstr ""
 
-#: src/apps/base/templates/base/confirm/warning.html:31
-#: src/apps/center/templates/center/confirm/delete.html:33
-#: src/apps/center/templates/center/confirm/delete_hx.html:33
-#: src/apps/center/templates/center/confirm/reinsert.html:29
-#: src/apps/center/templates/center/forms/add_responsible.html:33
-#: src/apps/center/templates/center/forms/create_center.html:60
-#: src/apps/center/templates/center/forms/update_image.html:35
-#: src/apps/center/templates/center/forms/update_info.html:87
-#: src/apps/center/templates/center/forms/update_others.html:35
-#: src/apps/event/templates/event/confirm/delete.html:39
-#: src/apps/event/templates/event/forms/event.html:64
-#: src/apps/person/templates/person/confirm/delete.html:33
-#: src/apps/person/templates/person/confirm/insert.html:31
-#: src/apps/person/templates/person/confirm/reinsert.html:31
-#: src/apps/person/templates/person/forms/create_person.html:60
-#: src/apps/person/templates/person/forms/historic.html:43
-#: src/apps/person/templates/person/forms/membership_update.html:33
-#: src/apps/person/templates/person/forms/update_image.html:37
-#: src/apps/person/templates/person/forms/update_profile.html:35
-#: src/apps/person/templates/person/forms/update_pupil.html:35
-#: src/apps/person/templates/person/invitation/confirm/delete.html:30
-#: src/apps/person/templates/person/invitation/confirm/resend_invitation.html:29
-#: src/apps/person/templates/person/invitation/confirm/warning.html:27
-#: src/apps/person/templates/person/invitation/forms/invite_pupil.html:48
-#: src/apps/publicwork/templates/publicwork/confirm/delete.html:31
-#: src/apps/publicwork/templates/publicwork/confirm/insert.html:29
-#: src/apps/publicwork/templates/publicwork/confirm/reinsert.html:29
-#: src/apps/publicwork/templates/publicwork/groups/forms/group.html:38
-#: src/apps/publicwork/templates/publicwork/lecture/forms/lecture.html:61
-#: src/apps/publicwork/templates/publicwork/listener/confirm/insert.html:66
-#: src/apps/publicwork/templates/publicwork/listener/forms/listener.html:58
-#: src/apps/publicwork/templates/publicwork/seeker/confirm/delete.html:29
-#: src/apps/publicwork/templates/publicwork/seeker/forms/frequency.html:67
-#: src/apps/publicwork/templates/publicwork/seeker/forms/historic.html:57
-#: src/apps/publicwork/templates/publicwork/seeker/forms/seeker.html:84
-#: src/apps/treasury/templates/treasury/order/create.html:47
-#: src/apps/user/templates/user/forms/updt_image.html:37
-#: src/apps/user/templates/user/forms/updt_profile.html:35
-#: src/apps/user/templates/user/profile/elements/controllers_div.html:28
-#: src/apps/workgroup/templates/workgroup/confirm/delete.html:31
-#: src/apps/workgroup/templates/workgroup/confirm/insert.html:29
-#: src/apps/workgroup/templates/workgroup/forms/member_frequency.html:71
-#: src/apps/workgroup/templates/workgroup/forms/membership_update.html:44
-#: src/apps/workgroup/templates/workgroup/forms/workgroup.html:47
-msgid "Cancel"
-msgstr ""
-
-#: src/apps/base/templates/base/confirm/warning.html:35
 #: src/apps/base/templates/base/confirm_delete.html:18
 #: src/apps/center/templates/center/confirm/delete.html:37
 #: src/apps/center/templates/center/confirm/delete_hx.html:37
@@ -226,14 +152,6 @@ msgstr ""
 msgid "Confirm"
 msgstr ""
 
-#: src/apps/base/templates/base/confirm_delete.html:8
-msgid "Atention!"
-msgstr ""
-
-#: src/apps/base/templates/base/confirm_delete.html:9
-msgid "Are you sure you want to delete"
-msgstr ""
-
 #: src/apps/base/templates/base/confirm_delete.html:22
 #: src/apps/base/templates/base/form.html:17
 #: src/apps/base/templates/base/import_people.html:38
@@ -250,6 +168,7 @@ msgstr ""
 #: src/apps/person/templates/person/frequency_insert.html:12
 #: src/apps/person/templates/person/membership_ps_insert.html:12
 #: src/apps/person/templates/person/navbar.html:181
+#: src/apps/presidium/templates/presidium/elements/navbar.html:46
 #: src/apps/publicwork/templates/publicwork/groups/actions.html:23
 #: src/apps/publicwork/templates/publicwork/groups/navbar.html:106
 #: src/apps/publicwork/templates/publicwork/lecture/navbar.html:54
@@ -314,6 +233,8 @@ msgstr ""
 #: src/apps/base/templates/base/elements/menu.html:6
 #: src/apps/base/templates/base/home.html:59
 #: src/apps/center/templates/center/navbar.html:5
+#: src/apps/presidium/templates/presidium/presidium_home.html:15
+#: src/apps/presidium/templates/presidium/presidium_home.html:83
 msgid "Centers"
 msgstr ""
 
@@ -401,6 +322,7 @@ msgstr ""
 #: src/apps/base/templates/base/elements/modal_form.html:5
 #: src/apps/center/templates/center/home.html:26
 #: src/apps/person/templates/person/invitation/invitation_home.html:19
+#: src/apps/presidium/templates/presidium/presidium_home.html:43
 msgid "Loading..."
 msgstr ""
 
@@ -864,6 +786,36 @@ msgstr ""
 msgid "person not found"
 msgstr ""
 
+#: src/apps/center/templates/center/confirm/delete.html:9
+#: src/apps/center/templates/center/confirm/delete_hx.html:9
+#: src/apps/center/templates/center/confirm/reinsert.html:7
+#: src/apps/event/templates/event/confirm/delete.html:6
+#: src/apps/person/templates/person/confirm/delete.html:6
+#: src/apps/person/templates/person/confirm/insert.html:7
+#: src/apps/person/templates/person/confirm/reinsert.html:7
+#: src/apps/person/templates/person/elements/confirm_to_delete_freq.html:8
+#: src/apps/person/templates/person/elements/confirm_to_import.html:8
+#: src/apps/person/templates/person/elements/confirm_to_reinsert_person.html:8
+#: src/apps/person/templates/person/invitation/confirm/delete.html:9
+#: src/apps/person/templates/person/invitation/confirm/resend_invitation.html:7
+#: src/apps/person/templates/person/invitation/confirm/warning.html:6
+#: src/apps/publicwork/templates/publicwork/confirm/delete.html:6
+#: src/apps/publicwork/templates/publicwork/confirm/insert.html:7
+#: src/apps/publicwork/templates/publicwork/confirm/reinsert.html:7
+#: src/apps/publicwork/templates/publicwork/groups/confirm_add_member_or_mentor.html:8
+#: src/apps/publicwork/templates/publicwork/groups/confirm_remove_member.html:8
+#: src/apps/publicwork/templates/publicwork/seeker/confirm/delete.html:6
+#: src/apps/publicwork/templates/publicwork/seeker/confirm_to_reinsert.html:8
+#: src/apps/treasury/templates/treasury/elements/confirm_delete.html:7
+#: src/apps/user/templates/user/profile/confirm_del.html:8
+#: src/apps/workgroup/templates/workgroup/confirm/delete.html:6
+#: src/apps/workgroup/templates/workgroup/confirm/insert.html:7
+#: src/apps/workgroup/templates/workgroup/elements/confirm_add_frequency.html:8
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_delete_workgroup.html:8
+#: src/apps/workgroup/templates/workgroup/elements/confirm_to_insert_membership.html:8
+msgid "Atention"
+msgstr ""
+
 #: src/apps/center/templates/center/confirm/delete.html:17
 #: src/apps/center/templates/center/confirm/delete_hx.html:17
 #: src/apps/event/templates/event/confirm/delete.html:15
@@ -874,6 +826,52 @@ msgstr ""
 #: src/apps/publicwork/templates/publicwork/seeker/confirm/delete.html:14
 #: src/apps/workgroup/templates/workgroup/confirm/delete.html:14
 msgid "Are you shure you want to remove"
+msgstr ""
+
+#: src/apps/center/templates/center/confirm/delete.html:33
+#: src/apps/center/templates/center/confirm/delete_hx.html:33
+#: src/apps/center/templates/center/confirm/reinsert.html:29
+#: src/apps/center/templates/center/forms/add_responsible.html:33
+#: src/apps/center/templates/center/forms/create_center.html:60
+#: src/apps/center/templates/center/forms/update_image.html:35
+#: src/apps/center/templates/center/forms/update_info.html:87
+#: src/apps/center/templates/center/forms/update_others.html:35
+#: src/apps/event/templates/event/confirm/delete.html:39
+#: src/apps/event/templates/event/forms/event.html:64
+#: src/apps/person/templates/person/confirm/delete.html:33
+#: src/apps/person/templates/person/confirm/insert.html:31
+#: src/apps/person/templates/person/confirm/reinsert.html:31
+#: src/apps/person/templates/person/forms/create_person.html:60
+#: src/apps/person/templates/person/forms/historic.html:43
+#: src/apps/person/templates/person/forms/membership_update.html:33
+#: src/apps/person/templates/person/forms/update_image.html:37
+#: src/apps/person/templates/person/forms/update_profile.html:35
+#: src/apps/person/templates/person/forms/update_pupil.html:35
+#: src/apps/person/templates/person/invitation/confirm/delete.html:30
+#: src/apps/person/templates/person/invitation/confirm/resend_invitation.html:29
+#: src/apps/person/templates/person/invitation/confirm/warning.html:27
+#: src/apps/person/templates/person/invitation/forms/invite_pupil.html:48
+#: src/apps/publicwork/templates/publicwork/confirm/delete.html:31
+#: src/apps/publicwork/templates/publicwork/confirm/insert.html:29
+#: src/apps/publicwork/templates/publicwork/confirm/reinsert.html:29
+#: src/apps/publicwork/templates/publicwork/groups/forms/group.html:38
+#: src/apps/publicwork/templates/publicwork/lecture/forms/lecture.html:61
+#: src/apps/publicwork/templates/publicwork/listener/confirm/insert.html:66
+#: src/apps/publicwork/templates/publicwork/listener/forms/listener.html:58
+#: src/apps/publicwork/templates/publicwork/seeker/confirm/delete.html:29
+#: src/apps/publicwork/templates/publicwork/seeker/forms/frequency.html:67
+#: src/apps/publicwork/templates/publicwork/seeker/forms/historic.html:57
+#: src/apps/publicwork/templates/publicwork/seeker/forms/seeker.html:84
+#: src/apps/treasury/templates/treasury/order/create.html:47
+#: src/apps/user/templates/user/forms/updt_image.html:37
+#: src/apps/user/templates/user/forms/updt_profile.html:35
+#: src/apps/user/templates/user/profile/elements/controllers_div.html:28
+#: src/apps/workgroup/templates/workgroup/confirm/delete.html:31
+#: src/apps/workgroup/templates/workgroup/confirm/insert.html:29
+#: src/apps/workgroup/templates/workgroup/forms/member_frequency.html:71
+#: src/apps/workgroup/templates/workgroup/forms/membership_update.html:44
+#: src/apps/workgroup/templates/workgroup/forms/workgroup.html:47
+msgid "Cancel"
 msgstr ""
 
 #: src/apps/center/templates/center/confirm/reinsert.html:14
@@ -889,6 +887,8 @@ msgid "centers not found"
 msgstr ""
 
 #: src/apps/center/templates/center/elements/header.html:11
+#: src/apps/presidium/templates/presidium/elements/summary.html:20
+#: src/apps/presidium/templates/presidium/elements/summary.html:28
 msgid "pupils"
 msgstr ""
 
@@ -1410,6 +1410,8 @@ msgid "only view"
 msgstr ""
 
 #: src/apps/person/templates/person/elements/reports_menu.html:9
+#: src/apps/presidium/templates/presidium/elements/reports_menu.html:5
+#: src/apps/presidium/templates/presidium/presidium_home.html:49
 #: src/apps/publicwork/templates/publicwork/home.html:50
 #: src/apps/publicwork/templates/publicwork/reports/menu.html:5
 #: src/apps/treasury/templates/treasury/home.html:37
@@ -1422,6 +1424,8 @@ msgid "Installed People"
 msgstr ""
 
 #: src/apps/person/templates/person/elements/reports_menu.html:13
+#: src/apps/presidium/templates/presidium/elements/reports_menu.html:7
+#: src/apps/presidium/templates/presidium/presidium_home.html:61
 msgid "Occurrences per period"
 msgstr ""
 
@@ -1732,11 +1736,13 @@ msgstr ""
 msgid "Update pupil"
 msgstr ""
 
-#: src/apps/person/views/reports.py:58 src/apps/person/views/reports.py:68
+#: src/apps/person/views/reports.py:52 src/apps/person/views/reports.py:62
+#: src/apps/presidium/views.py:134 src/apps/presidium/views.py:143
 msgid "installed per period"
 msgstr ""
 
-#: src/apps/person/views/reports.py:102 src/apps/person/views/reports.py:115
+#: src/apps/person/views/reports.py:96 src/apps/person/views/reports.py:109
+#: src/apps/presidium/views.py:175 src/apps/presidium/views.py:187
 msgid "occurrences per period"
 msgstr ""
 
@@ -1750,6 +1756,76 @@ msgstr ""
 
 #: src/apps/person/views/tools.py:111 src/apps/person/views/tools.py:145
 msgid "pupil transfer"
+msgstr ""
+
+#: src/apps/presidium/templates/presidium/elements/navbar.html:6
+msgid "Presidium"
+msgstr ""
+
+#: src/apps/presidium/templates/presidium/elements/navbar.html:24
+#: src/apps/presidium/templates/presidium/elements/navbar.html:35
+#: src/apps/treasury/templates/treasury/elements/treasury_navbar.html:30
+#: src/apps/treasury/templates/treasury/elements/treasury_navbar.html:39
+#: src/apps/treasury/templates/treasury/home.html:29
+#: src/apps/treasury/templates/treasury/navbar.html:32
+#: src/apps/treasury/templates/treasury/navbar.html:43
+#: src/apps/user/templates/user/profile/navbar.html:64
+msgid "New order"
+msgstr ""
+
+#: src/apps/presidium/templates/presidium/elements/pupils_by_aspect.html:11
+#: src/apps/presidium/templates/presidium/elements/pupils_by_aspect.html:19
+#: src/apps/presidium/templates/presidium/elements/pupils_by_center.html:11
+#: src/apps/presidium/templates/presidium/elements/pupils_by_center.html:19
+#: src/rcadmin/common.py:65
+msgid "pupil"
+msgstr ""
+
+#: src/apps/presidium/templates/presidium/elements/pupils_by_aspect.html:18
+#: src/apps/presidium/templates/presidium/elements/pupils_by_center.html:18
+#: src/apps/presidium/templates/presidium/elements/summary.html:27
+msgid "Total"
+msgstr ""
+
+#: src/apps/presidium/templates/presidium/elements/pupils_by_aspect_per_centers.html:13
+#: src/apps/presidium/templates/presidium/elements/pupils_by_center_per_aspects.html:13
+msgid "Pupils"
+msgstr ""
+
+#: src/apps/presidium/templates/presidium/elements/pupils_by_center_per_aspects.html:12
+msgid "Aspect"
+msgstr ""
+
+#: src/apps/presidium/templates/presidium/elements/summary.html:5
+msgid "Our Pupils"
+msgstr ""
+
+#: src/apps/presidium/templates/presidium/elements/summary.html:7
+msgid "by aspect"
+msgstr ""
+
+#: src/apps/presidium/templates/presidium/elements/summary.html:8
+msgid "by center"
+msgstr ""
+
+#: src/apps/presidium/templates/presidium/presidium_home.html:15
+msgid "Our Pupils by"
+msgstr ""
+
+#: src/apps/presidium/templates/presidium/presidium_home.html:25
+msgid "by centers"
+msgstr ""
+
+#: src/apps/presidium/templates/presidium/presidium_home.html:33
+msgid "by aspects"
+msgstr ""
+
+#: src/apps/presidium/templates/presidium/presidium_home.html:55
+msgid "Installed per period"
+msgstr ""
+
+#: src/apps/presidium/templates/presidium/presidium_home.html:86
+msgid "Aspects"
 msgstr ""
 
 #: src/apps/publicwork/models.py:47
@@ -2423,15 +2499,6 @@ msgstr ""
 #: src/apps/treasury/templates/treasury/navbar.html:16
 #: src/apps/treasury/views/order.py:52
 msgid "Orders"
-msgstr ""
-
-#: src/apps/treasury/templates/treasury/elements/treasury_navbar.html:30
-#: src/apps/treasury/templates/treasury/elements/treasury_navbar.html:39
-#: src/apps/treasury/templates/treasury/home.html:29
-#: src/apps/treasury/templates/treasury/navbar.html:32
-#: src/apps/treasury/templates/treasury/navbar.html:43
-#: src/apps/user/templates/user/profile/navbar.html:64
-msgid "New order"
 msgstr ""
 
 #: src/apps/treasury/templates/treasury/form_of_payment/forms_of_payments.html:4
@@ -3186,10 +3253,6 @@ msgstr ""
 
 #: src/rcadmin/common.py:55 src/rcadmin/common.py:114 src/rcadmin/common.py:121
 msgid "transfer"
-msgstr ""
-
-#: src/rcadmin/common.py:65
-msgid "pupil"
 msgstr ""
 
 #: src/rcadmin/common.py:66

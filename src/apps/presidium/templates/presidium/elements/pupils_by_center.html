@@ -1,0 +1,22 @@
+{% load i18n %}
+<div class="mb-3 presidium-cards">
+  {% for obj in object_list %}
+    <div 
+      class="card text-center presidium-card is-link"
+      onclick="manageData('{% url 'presidium:pupils_by_center_per_aspects' obj.center_id %}')"
+    >   
+      <h2><i class="fa-sharp fa-solid fa-users mt-4"></i></h2>
+      <div class="card-body mb-2">
+        <p class="card-text">{{ obj.count }} {% trans 'pupil' %}{{ obj.count|pluralize }}</p>
+        <h5 class="card-title">{{ obj.center }}</h5>
+      </div>
+    </div>
+  {% endfor %}
+  <div class="card text-center presidium-card">
+    <h2><i class="fa-sharp fa-solid fa-users mt-4"></i></h2>
+    <div class="card-body mb-2">
+      <p class="card-text">{{ total }} {% trans 'pupil' %}{{ total|pluralize }}</p>
+      <h5 class="card-title">{% trans 'Total' %}</h5>
+    </div>
+  </div>
+</div>
