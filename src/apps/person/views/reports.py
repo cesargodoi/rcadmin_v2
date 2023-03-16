@@ -55,7 +55,6 @@ def installed_per_period(request):
                 "goback": reverse("person_home") + "?init=on",
                 "search": "base/searchs/modal_period.html",
             }
-
             return render(request, "base/reports/show_report.html", context)
 
     context = {
@@ -63,7 +62,6 @@ def installed_per_period(request):
         "goback": reverse("person_home") + "?init=on",
         "search": "base/searchs/modal_period.html",
     }
-
     return render(request, "base/reports/show_report.html", context)
 
 
@@ -71,10 +69,8 @@ def installed_per_period(request):
 @permission_required("person.view_person")
 def occurrences_per_period(request):
     if request.GET.get("dt1") and request.GET.get("dt2"):
-        # get person dict
         _dict = get_occurrences_per_period_dict(request, Historic)
         if _dict:
-            # select columns to report
             columns = [
                 "name",
                 "local",
@@ -82,11 +78,11 @@ def occurrences_per_period(request):
                 "description",
                 "date",
             ]
-            # generate pandas dataframe
             report_data = pd.DataFrame(_dict, columns=columns)
-            #  adjust index
+            report_data["description"] = report_data["description"].str.slice(
+                0, 30
+            )
             report_data.index += 1
-            # prepare file.xslx
             request.session["data_to_file"] = {
                 "name": get_report_file_title(request, "Occurrences"),
                 "content": report_data.to_json(orient="records"),
@@ -102,7 +98,6 @@ def occurrences_per_period(request):
                 "goback": reverse("person_home") + "?init=on",
                 "search": "base/searchs/modal_period.html",
             }
-
             return render(request, "base/reports/show_report.html", context)
 
     context = {
@@ -110,5 +105,4 @@ def occurrences_per_period(request):
         "goback": reverse("person_home") + "?init=on",
         "search": "base/searchs/modal_period.html",
     }
-
     return render(request, "base/reports/show_report.html", context)

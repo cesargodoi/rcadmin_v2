@@ -164,6 +164,9 @@ def occurrences_per_period(request):
                 "date",
             ]
             report_data = pd.DataFrame(_dict, columns=columns)
+            report_data["description"] = report_data["description"].str.slice(
+                0, 30
+            )
             report_data.fillna("", inplace=True)
             report_data.index += 1
             request.session["data_to_file"] = {
