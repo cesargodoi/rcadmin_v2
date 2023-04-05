@@ -3,6 +3,7 @@ from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.models import Group
 from django.shortcuts import HttpResponse, redirect, render
+from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import gettext as _
 from django.views.decorators.http import require_http_methods
@@ -101,7 +102,7 @@ def pupil_transfer(request):
                 request.POST["observations"]
             )
         Historic.objects.create(**new_transfer)
-        return redirect("person_home")
+        return HttpResponse(headers={"HX-Redirect": reverse("person_home")})
 
     if not request.session.get("pupil_name"):
         request.session["pupil_name"] = ""
@@ -135,7 +136,7 @@ def change_of_aspect(request):
                 request.POST["observations"]
             )
         Historic.objects.create(**new_aspect)
-        return redirect("person_home")
+        return HttpResponse(headers={"HX-Redirect": reverse("person_home")})
 
     if not request.session.get("pupil_name"):
         request.session["pupil_name"] = ""

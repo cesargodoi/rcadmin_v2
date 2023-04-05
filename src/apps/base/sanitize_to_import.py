@@ -5,27 +5,23 @@ import pandas as pd
 
 # lists to sanitize class
 COLUMNS = [
-    "reg",
     "name",
-    "birth",
+    "obs",
     "gender",
-    "cpf",
-    "id_card",
+    "birth",
     "_address",
-    "address",
-    "number",
-    "complement",
     "district",
     "city",
     "state",
-    "country",
     "zip",
+    "country",
+    "cpf",
+    "id_card",
     "phone",
     "cell_phone",
     "email",
     "sos_contact",
     "sos_phone",
-    "obs",
     "obs2",
     "A1",
     "A2",
@@ -39,14 +35,22 @@ COLUMNS = [
     "date",
 ]
 
-DATES = ["birth", "A1", "A2", "A3", "A4", "GR", "A5", "A6", "date"]
-
 
 class SanitizeCsv:
+    columns = COLUMNS[:]
+    date_columns = ["birth", "A1", "A2", "A3", "A4", "GR", "A5", "A6", "date"]
+    string_columns = [
+        "zip",
+        "id_card",
+        "phone",
+        "cell_phone",
+        "sos_phone",
+    ]
+    long_address_columns = ["address", "number", "complement"]
+
     def __init__(self, file, path):
         self.file = file
         self.path = path
-        self.columns = COLUMNS[:]
         self.df = self.get_dataframe
 
     @property
@@ -55,42 +59,31 @@ class SanitizeCsv:
         df = pd.read_csv(StringIO(self.file.read().decode("utf-8")))
 
         # checking if the dataframe is malformed
+        if "_address" not in df.columns:
+            if "address" not in df.columns:
+                return False
+            self.columns.remove("_address")
+            self.columns += self.long_address_columns
+            self.string_columns += self.long_address_columns
         for col in df.columns:
-            print(col)
             if col not in self.columns:
-                print(f"{col} not in self.columns")
                 return False
 
         # adjust dates
-        for _dt in DATES:
+        for _dt in self.date_columns:
             df[_dt] = pd.to_datetime(df[_dt]).dt.date
 
         # adjusting some columns to be strings
-        for col in [
-            "reg",
-            "zip",
-            "id_card",
-            "phone",
-            "cell_phone",
-            "sos_phone",
-        ]:
+        for col in self.string_columns:
             df[col] = df[col].astype(str)
-
-        # choose _address or address, number, complement colunms
-        if "_address" in df.columns:
-            self.columns.remove("address")
-            self.columns.remove("number")
-            self.columns.remove("complement")
-        else:
-            self.columns.remove("_address")
 
         df[self.columns]
 
         return df.set_index("name")
 
     def adjust_data(self):
-        # split _address into address, number, complement
-        if "_address" in self.df.columns:
+        if "_address" in self.df:
+            # split _address into address, number, complement
             df_address = self.df["_address"].str.split(",", n=1, expand=True)
             df_address.columns = ["address", "_number"]
             # split number -> number, complement
@@ -112,13 +105,13 @@ class SanitizeCsv:
         objs = [
             col
             for col in self.df.columns
-            if col not in DATES and col != "email"
+            if col not in self.date_columns and col != "email"
         ]
         for _obj in objs:
             self.df[_obj] = self.df[_obj].fillna("")
 
         # clear phones
-        phones = [_ph for _ph in COLUMNS if "phone" in _ph]
+        phones = [_ph for _ph in self.columns if "phone" in _ph]
         if phones:
             for phone in phones:
                 self.df[phone] = (
