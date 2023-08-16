@@ -249,23 +249,24 @@ def order_add_payform(request):
             "id": max(_ids) + 1 if _ids else 1,
             "payform_type": {},
             "bank_flag": {},
-            "ctrl_number": None,
-            "complement": None,
+            "ctrl_number": "",
+            "complement": "",
             "value": 0.0,
-            "voucher_img": None,
+            "voucher_img": "",
         }
 
         if request.POST.get("payform_type"):
-            pftp = [
-                pft
-                for pft in PAYFORM_TYPES
-                if pft[0] == request.POST.get("payform_type")
+            new["payform_type"] = [
+                request.POST.get("payform_type"),
+                str(dict(PAYFORM_TYPES)[request.POST.get("payform_type")]),
             ]
-            new["payform_type"] = pftp[0]
 
         if request.POST.get("bank_flag"):
             bank_flag = BankFlags.objects.get(id=request.POST.get("bank_flag"))
-            new["bank_flag"] = {"name": bank_flag.name, "id": bank_flag.id}
+            new["bank_flag"] = {
+                "name": str(bank_flag.name),
+                "id": int(bank_flag.id),
+            }
 
         if request.POST.get("ctrl_number"):
             new["ctrl_number"] = request.POST.get("ctrl_number")

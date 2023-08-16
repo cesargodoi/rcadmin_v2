@@ -10,6 +10,9 @@ COLUMNS = [
     "gender",
     "birth",
     "_address",
+    "address",
+    "number",
+    "complement",
     "district",
     "city",
     "state",
@@ -71,7 +74,7 @@ class SanitizeCsv:
 
         # adjust dates
         for _dt in self.date_columns:
-            df[_dt] = pd.to_datetime(df[_dt]).dt.date
+            df[_dt] = pd.to_datetime(df[_dt], format="%d/%m/%y").dt.date
 
         # adjusting some columns to be strings
         for col in self.string_columns:
@@ -82,7 +85,10 @@ class SanitizeCsv:
         return df.set_index("name")
 
     def adjust_data(self):
-        if "_address" in self.df:
+        if "_address" in self.df.columns:
+            self.df.drop(
+                ["address", "number", "complement"], axis=1, inplace=True
+            )
             # split _address into address, number, complement
             df_address = self.df["_address"].str.split(",", n=1, expand=True)
             df_address.columns = ["address", "_number"]
