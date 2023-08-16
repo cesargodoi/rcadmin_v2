@@ -4,7 +4,7 @@
   <div class="media-body">
     <h5>{{ object.type.1|upper }}</h5>
     {% for item in object.items %}
-    {% include 'treasury/elements/cash_balance.html' %}
+      {% include 'treasury/elements/cash_balance.html' %}
     {% endfor %}
     <table class="table table-sm">
       {% if object.pending %}

@@ -267,9 +267,9 @@ def search_order(request, obj, _from, _to):
         Q(created_on__date__range=[search["dt1"], search["dt2"]]),
     ]
     # adding more complexity
-    if search["od_name"]:
+    if search.get("od_name"):
         _query.append(Q(person__name_sa__icontains=search["od_name"]))
-    if search["od_status"] != "all":
+    if search.get("od_status") and search.get("od_status") != "all":
         _query.append(Q(status=search["od_status"]))
     # generating query
     query = Q()

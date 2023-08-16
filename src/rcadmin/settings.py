@@ -20,7 +20,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "debug_toolbar",
+    # "debug_toolbar",
     "crispy_forms",
     "django_htmx",
     "django_extensions",
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    # "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
@@ -50,9 +50,9 @@ MIDDLEWARE = [
 ]
 
 # removing debug_toobar in production
-if DEBUG is False:
-    del INSTALLED_APPS[6]
-    del MIDDLEWARE[0]
+# if DEBUG is False:
+#     del INSTALLED_APPS[6]
+#     del MIDDLEWARE[0]
 
 ROOT_URLCONF = "rcadmin.urls"
 

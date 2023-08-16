@@ -21,8 +21,21 @@
   </div>
   <div class="col-lg-8">
     {% for object in object_list %}
-    {% include "treasury/elements/payform_by_type.html" %}
+      {% include "treasury/elements/payform_by_type.html" %}
     {% endfor %}
+
+    <article class="media content-section mb-2">
+      <div class="media-body">
+        <table class="table table-sm">
+          <tr>
+            <th class="text-right pt-3" style="border: none;">{% trans 'TOTAL DO PERÍODO' %}:</th>
+            <th class="text-right pt-3" style="border: none;" id="total" width="80px">
+              {{ last_payments_total|floatformat:2 }}
+            </th>
+          </tr>
+        </table>
+      </div>
+    </article>
 
     <div id="showModal"></div>
   </div>
