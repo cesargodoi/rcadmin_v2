@@ -100,8 +100,8 @@
           </div>
           <div class="col-2 font-weight-bold">
             {% trans 'Duplicate email' %}: &nbsp;&nbsp;
-            <span class="h5 text-light">{{ entry.duplicate_email }}</span>
-            {% if entry.duplicate_email %}
+            <span class="h5 text-light">{{ entry.duplicated_email }}</span>
+            {% if entry.duplicated_email %}
               <a href="{% url 'download_csv' entry.file %}?type=de">
                 <i class="fas fa-file-download"></i> 
               </a>

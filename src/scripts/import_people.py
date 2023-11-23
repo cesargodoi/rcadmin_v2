@@ -11,7 +11,12 @@ from django.urls import reverse
 from apps.center.models import Center
 from apps.person.models import Invitation
 from apps.user.models import User
-from rcadmin.common import cpf_validation, cpf_format, sanitize_name
+from rcadmin.common import (
+    cpf_validation,
+    cpf_format,
+    sanitize_name,
+    phone_format,
+)
 
 
 """
@@ -24,6 +29,7 @@ O arquivo vai ter que ser copiado para a pasta imports no servidor.
 def run(*args):
     # get args
     center_name, file_name = args[0], args[1]
+    print()
 
     # get center and file path
     start = datetime.now()
@@ -37,7 +43,7 @@ def run(*args):
     total = 0
     importeds = []
     without_email = []
-    duplicate_email = []
+    duplicated_email = []
     used_email = []
     to_send_email = []
 
@@ -55,29 +61,27 @@ def run(*args):
 
     try:
         with open(
-            f"{import_dir}/duplicate_email/duplicate_email__{file_name}.csv",
+            f"{import_dir}/duplicated_email/duplicated_email__{file_name}.csv",
             newline="",
         ) as de:
             _de_dict = csv.DictReader(de)
             for line in _de_dict:
-                duplicate_email.append(f"{line['name']} - {line['email']}")
-        total += len(duplicate_email)
+                duplicated_email.append(f"{line['name']} - {line['email']}")
+        total += len(duplicated_email)
     except Exception:
-        duplicate_email = []
+        duplicated_email = []
 
     # read file as a dict
     with open(file_path, newline="") as csvfile:
         _dict = csv.DictReader(csvfile)
         for row in _dict:
             total += 1
-            # new invite
             _invite = None
             # checking if email exists in User database
             if User.objects.filter(email=row["email"]):
                 used_email.append(row)
             else:
                 try:
-                    # try to create new invite
                     _invite = Invitation.objects.create(
                         center=center,
                         name=sanitize_name(row["name"]),
@@ -99,13 +103,13 @@ def run(*args):
                 _invite.district = row["district"]
                 _invite.city = row["city"]
                 _invite.state = row["state"]
-                _invite.country = center.country
+                _invite.country = row["country"]
                 _invite.zip_code = row["zip"].strip() or ""
-                _invite.phone = (
-                    row["cell_phone"].strip() or row["phone"].strip()
-                )
+                _invite.phone = phone_format(
+                    row["cell_phone"]
+                ) or phone_format(row["phone"])
                 _invite.sos_contact = sanitize_name(row["sos_contact"]) or ""
-                _invite.sos_phone = row["sos_phone"].strip()
+                _invite.sos_phone = phone_format(row["sos_phone"])
                 _invite.made_by = user
 
                 # try register id_card
@@ -187,11 +191,11 @@ def run(*args):
         report.write(f"\ntime:        {datetime.now() - start}")
         report.write("\n\n")
         report.write("  SUMMARY  ".center(80, "*"))
-        report.write(f"\n\n- ENTRIES:         {total}")
-        report.write(f"\n- IMPORTEDS:       {len(importeds)}")
-        report.write(f"\n- WITHOUT_EMAIL:   {len(without_email)}")
-        report.write(f"\n- DUPLICATE_EMAIL: {len(duplicate_email)}")
-        report.write(f"\n- USED_EMAIL:      {len(used_email)}")
+        report.write(f"\n\n- ENTRIES:          {total}")
+        report.write(f"\n- IMPORTEDS:        {len(importeds)}")
+        report.write(f"\n- WITHOUT_EMAIL:    {len(without_email)}")
+        report.write(f"\n- DUPLICATED_EMAIL: {len(duplicated_email)}")
+        report.write(f"\n- USED_EMAIL:       {len(used_email)}")
         report.write("\n\n")
         report.write("  DETAIL  ".center(80, "*"))
         if importeds:
@@ -202,12 +206,12 @@ def run(*args):
             report.write("\n\nWITHOUT EMAIL:")
             for n, item in enumerate(without_email):
                 report.write(f"\n  {n + 1} - {item}")
-        if duplicate_email:
-            report.write("\n\nDUPLICATE EMAIL:")
-            for n, item in enumerate(duplicate_email):
+        if duplicated_email:
+            report.write("\n\nDUPLICATED EMAIL:")
+            for n, item in enumerate(duplicated_email):
                 report.write(f"\n  {n + 1} - {item}")
         if used_email:
-            report.write("\n\nUSED_EMAIL:")
+            report.write("\n\nUSED EMAIL:")
             for n, item in enumerate(used_email):
                 _item = f"{sanitize_name(item['name'])} - {item['email']}"
                 report.write(f"\n  {n + 1} - {_item}")
