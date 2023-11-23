@@ -37,7 +37,6 @@ def import_people(request):
         context["show_report"] = "show"
 
     if request.method == "POST" and request.FILES["import_file"]:
-        # get file from request.FILES
         file = request.FILES["import_file"]
 
         # checking if the file has already been imported
@@ -67,7 +66,7 @@ def import_people(request):
 
         # call script import_people
         center = Center.objects.get(id=request.POST.get("conf_center"))
-        _import_people(center.name, file.name.split(".")[0])
+        _import_people(center.name, f"{file.name.split('.')[0]}")
 
         # read report file
         file_name = ".".join(_file[:-1])
@@ -134,8 +133,8 @@ def download_csv(request, file):
         _file = f"without_email__{file}"
         _path = f"{IMPORT_PATH}/without_email/{_file}"
     elif request.GET.get("type") == "de":
-        _file = f"duplicate_email__{file}"
-        _path = f"{IMPORT_PATH}/duplicate_email/{_file}"
+        _file = f"duplicated_email__{file}"
+        _path = f"{IMPORT_PATH}/duplicated_email/{_file}"
     elif request.GET.get("type") == "se":
         if file.split(".")[-1] != "csv":
             _file = f"to_send_email__{file.split(' ')[0]}__to_sign_lgpd.csv"

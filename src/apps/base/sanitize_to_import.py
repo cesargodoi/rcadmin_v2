@@ -6,10 +6,8 @@ import pandas as pd
 # lists to sanitize class
 COLUMNS = [
     "name",
-    "obs",
     "gender",
     "birth",
-    "_address",
     "address",
     "number",
     "complement",
@@ -25,6 +23,7 @@ COLUMNS = [
     "email",
     "sos_contact",
     "sos_phone",
+    "obs",
     "obs2",
     "A1",
     "A2",
@@ -58,55 +57,26 @@ class SanitizeCsv:
 
     @property
     def get_dataframe(self):
-        # getting dataframe
         df = pd.read_csv(StringIO(self.file.read().decode("utf-8")))
 
-        # checking if the dataframe is malformed
-        if "_address" not in df.columns:
-            if "address" not in df.columns:
-                return False
-            self.columns.remove("_address")
-            self.columns += self.long_address_columns
-            self.string_columns += self.long_address_columns
+        df = df.fillna("")
+
         for col in df.columns:
             if col not in self.columns:
                 return False
 
         # adjust dates
         for _dt in self.date_columns:
-            df[_dt] = pd.to_datetime(df[_dt], format="%d/%m/%y").dt.date
+            df[_dt] = pd.to_datetime(df[_dt], format="%Y-%m-%d").dt.date
 
         # adjusting some columns to be strings
         for col in self.string_columns:
             df[col] = df[col].astype(str)
 
         df[self.columns]
-
         return df.set_index("name")
 
     def adjust_data(self):
-        if "_address" in self.df.columns:
-            self.df.drop(
-                ["address", "number", "complement"], axis=1, inplace=True
-            )
-            # split _address into address, number, complement
-            df_address = self.df["_address"].str.split(",", n=1, expand=True)
-            df_address.columns = ["address", "_number"]
-            # split number -> number, complement
-            df_number = df_address["_number"].str.split(
-                " - ", n=1, expand=True
-            )
-            df_number.columns = ["number", "complement"]
-            df_number["number"] = df_number["number"].str.strip().fillna("")
-            # join df_number -> df_address
-            df_address = df_address.join(df_number)
-            # remove _number from df_address
-            df_address.drop("_number", axis=1, inplace=True)
-            # join df_address -> df
-            self.df = self.df.join(df_address)
-            # remove _address from df
-            self.df.drop("_address", axis=1, inplace=True)
-
         # remove NaN
         objs = [
             col
@@ -128,21 +98,31 @@ class SanitizeCsv:
 
     def generate_files(self):
         # without emails
-        without_emails = self.df[self.df["email"].isnull()]
+        without_emails = self.df[
+            self.df["email"].isnull() | (self.df["email"] == "")
+        ]
         if without_emails.shape[0] > 0:
             without_emails.to_csv(
                 f"{self.path}/without_email/without_email__{self.file}"
             )
+
         # with emails (with duplicated)
-        with_emails = self.df.loc[self.df["email"].notnull()]
+        with_emails = self.df[
+            self.df["email"].notnull() & (self.df["email"] != "")
+        ]
+
         # duplicated emails
-        duplicated_emails = with_emails.loc[
-            self.df["email"].duplicated(keep=False), :
+        duplicates = with_emails[
+            with_emails.duplicated(subset="email", keep=False)
+        ]
+        duplicated_emails = with_emails[
+            with_emails["email"].isin(duplicates["email"])
         ]
         if duplicated_emails.shape[0] > 0:
             duplicated_emails.to_csv(
-                f"{self.path}/duplicate_email/duplicate_email__{self.file}"
+                f"{self.path}/duplicated_email/duplicated_email__{self.file}"
             )
+
         # cleaned records to import
         if duplicated_emails.shape[0] > 0:
             cleaned_df = with_emails.drop_duplicates(
