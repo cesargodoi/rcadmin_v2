@@ -1,10 +1,11 @@
 import os
 
-from django.db.models.signals import post_save, post_delete
+from django.db.models.signals import pre_save, post_save, post_delete
 from django.dispatch import receiver
 
 from .models import User, Profile
 from apps.person.models import Person
+from rcadmin.common import remove_image_from_folder
 
 
 @receiver(post_save, sender=User)
@@ -23,6 +24,24 @@ def save_profile(sender, instance, **kwargs):
 
 
 @receiver(post_delete, sender=Profile)
-def delete_profile_image(sender, instance, **kwargs):
+def delete_profile_image(sender, instance, *args, **kwargs):
     if instance.image.name != "default_profile.jpg":
-        os.remove(instance.image.path)
+        image_path = instance.image.path
+        if os.path.exists(image_path):
+            remove_image_from_folder(image_path)
+
+
+@receiver(pre_save, sender=Profile)
+def update_profile_image(sender, instance, *args, **kwargs):
+    try:
+        old_instance = Profile.objects.get(pk=instance.pk)
+    except Exception:
+        old_instance = None
+
+    if old_instance and old_instance.image.name != "default_profile.jpg":
+        is_new_image = old_instance.image != instance.image
+        if is_new_image and old_instance.image:
+            remove_image_from_folder(old_instance.image.path)
+
+        if not instance.image:
+            instance.image.name = "default_profile.jpg"

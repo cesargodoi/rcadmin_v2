@@ -30,9 +30,19 @@ urlpatterns += [
 # frequencies
 urlpatterns += [
     path(
-        "<uuid:pk>/frequencies_add",
-        frequencies.frequencies_add,
-        name="frequencies_add",
+        "<uuid:pk>/add-frequencies",
+        frequencies.add_frequencies,
+        name="add_frequencies",
+    ),
+    path(
+        "<uuid:pk>/choose-initial/<str:char>",
+        frequencies.choose_initial,
+        name="choose_initial",
+    ),
+    path(
+        "<uuid:pk>/add-remove-frequency/<uuid:person_pk>",
+        frequencies.add_remove_frequency,
+        name="add_remove_frequency",
     ),
     path(
         "<uuid:pk>/frequency/<uuid:person_id>/delete",

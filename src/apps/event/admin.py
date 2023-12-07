@@ -62,7 +62,6 @@ class EventAdmin(admin.ModelAdmin):
                     "deadline",
                     "status",
                     "description",
-                    "qr_code",
                 ]
             },
         ),

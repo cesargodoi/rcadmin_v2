@@ -539,3 +539,40 @@ p {
   scale: 1.03;
   transition: all .25s ease-in-out;
 }
+
+/* add_frequencies */
+.chars {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.char {
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+}
+
+.freq-persons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  gap: .5rem;
+}
+
+.freq-person {
+  padding: .5rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.freq-person:hover {
+  background-color: #e2e6ea;
+}
+
+.freq-person-in-event {
+  border: 1px solid #016601;
+  background: #d3f5d3;
+  color: #016601;
+  font-weight: 700;
+}

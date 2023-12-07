@@ -2,6 +2,7 @@ import uuid
 import os
 
 from django.utils.translation import gettext_lazy as _
+from django.utils.text import slugify
 from datetime import datetime
 from PIL import Image, ImageOps
 from django.db import models
@@ -96,14 +97,14 @@ def voucher_img_filename(instance, filename):
     path = "voucher_pics"
     if filename:
         ext = filename.split(".")[-1]
-        new_filename = "{}_{}_{}".format(
+        new_filename = "{}_{}_${}".format(
             datetime.now().date(),
-            instance.payform_type,
+            slugify(instance.payform_type),
             instance.value,
         )
 
         if instance.bank_flag:
-            new_filename += f"_{instance.bank_flag}"
+            new_filename += f"_{slugify(instance.bank_flag)}"
 
         if instance.ctrl_number:
             new_filename += f"_{instance.ctrl_number}"

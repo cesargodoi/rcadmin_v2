@@ -1,0 +1,51 @@
+{% extends "base/base.html" %}
+{% load base_extras %}
+{% load i18n %}
+
+{% block content %}
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" id="submenu">
+  <a class="navbar-brand mr-0 mr-md-2" href="#">{% trans 'Event' %}</a>
+
+  <ul class="navbar-nav ml-md-auto">
+    <li class="nav-item">
+      <a class="nav-link px-1 mx-1 py-3 my-n2 text-info" href="{% url 'event_detail' object.pk %}">
+        <i class="fas fa-chevron-left"></i> 
+        {% trans 'Back' %}
+      </a>
+    </li>
+  </ul>
+</header>
+
+<article class="media content-section">
+  <div class="media-body">
+    <div id="eventHeader">
+      {% include 'event/header.html' %}
+    </div>
+    <br>
+    <h4>{% trans 'Add Frequencies' %}</h4>
+
+    <div class="btn-group chars" role="group">
+      {% for char in chars %}
+        <button 
+          type="button" 
+          class="btn btn-light char"
+          hx-get="{% url 'choose_initial' object.pk char %}"
+          hx-target="#frequencies"
+        >
+          {{ char }}
+        </button>
+      {% endfor %}
+    </div>
+
+    <div class="freq-persons" id="frequencies">
+
+      {% include "event/elements/frequencies.html" %}
+
+    </div>
+
+  </div>
+  
+</article>
+
+{% endblock content %}

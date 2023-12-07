@@ -30,7 +30,7 @@
     {% if nav == "detail" and not request.user|has_group:"presidium" %}
       <li class="nav-item">
         <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2 text-primary" 
-           href="{% url 'frequencies_add' object.pk %}">
+           href="{% url 'add_frequencies' object.pk %}">
           <i class="fas fa-plus"></i>
           {% trans 'Frequencies' %}
         </a>
