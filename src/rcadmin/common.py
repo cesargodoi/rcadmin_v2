@@ -1,4 +1,5 @@
 import re
+import os
 from unicodedata import normalize
 
 from django import forms
@@ -336,6 +337,13 @@ def get_filename(instance, field=None):
     ext = instance.image.name.split(".")[-1]
     name = "-".join(_name.split())
     return f"{name}.{ext}"
+
+
+def remove_image_from_folder(path):
+    try:
+        os.remove(path)
+    except (ValueError, FileNotFoundError):
+        ...
 
 
 def get_template_and_pagination(request, tmplt, tmplt_htmx, limit=10):

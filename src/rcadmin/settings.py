@@ -20,8 +20,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # "debug_toolbar",
     "crispy_forms",
+    "crispy_bootstrap4",
     "django_htmx",
     "django_extensions",
     "rosetta",
@@ -37,7 +37,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    # "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
@@ -73,6 +72,9 @@ TEMPLATES = [
     },
 ]
 TEMPLATE_CONTEXT_PROCESSORS = "Django.core.context_processors.i18n"
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 WSGI_APPLICATION = "rcadmin.wsgi.application"

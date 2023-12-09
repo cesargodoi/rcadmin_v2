@@ -1,0 +1,7 @@
+{% load i18n %}
+
+{% block content %}
+  {% for person in persons %}
+    {% include "event/elements/frequency.html" %}
+  {% endfor %}
+{% endblock content %}

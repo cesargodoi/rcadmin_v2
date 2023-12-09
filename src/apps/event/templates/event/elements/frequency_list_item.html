@@ -1,13 +1,9 @@
 {% load base_extras %}
 {% load i18n %}
 
-<div class="col-sm-2">
+<div class="col-sm-10">
   <small class="text-muted align-top">{{ forloop.counter|add:counter }}</small>
   &nbsp;&nbsp;
-  <strong>{{ obj.person.reg }}</strong>
-</div>
-
-<div class="col-sm-8">
   <strong>{{ obj.person.name }}</strong>
   <small>
     &nbsp;&nbsp;&nbsp;

@@ -2,6 +2,7 @@ from PIL import Image
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
+from django.utils.text import slugify
 from django.contrib.auth.models import (
     AbstractBaseUser,
     PermissionsMixin,
@@ -78,8 +79,8 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 
 def profile_pics(instance, filename):
-    filename = get_filename(instance, field="social_name")
-    return f"../profile_pics/{filename}"
+    ext = instance.image.name.split(".")[-1]
+    return f"profile_pics/{slugify(instance.user.email)}.{ext}"
 
 
 # Profile

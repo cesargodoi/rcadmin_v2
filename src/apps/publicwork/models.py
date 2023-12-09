@@ -1,6 +1,7 @@
 import uuid
 
 from django.utils.translation import gettext_lazy as _
+from django.utils.text import slugify
 from PIL import Image
 from django.conf import settings
 from django.utils import timezone
@@ -9,7 +10,6 @@ from rcadmin.common import (
     us_inter_char,
     short_name,
     phone_format,
-    get_filename,
     GENDER_TYPES,
     LECTURE_TYPES,
     SEEKER_STATUS,
@@ -17,9 +17,14 @@ from rcadmin.common import (
 )
 
 
+def temp_reg_of_seeker_pics(instance, filename):
+    ext = instance.image.name.split(".")[-1]
+    return f"temp_reg_of_seeker_pics/{slugify(instance.email)}.{ext}"
+
+
 def seeker_pics(instance, filename):
-    filename = get_filename(instance)
-    return f"seeker_pics/{filename}"
+    ext = instance.image.name.split(".")[-1]
+    return f"seeker_pics/{slugify(instance.email)}.{ext}"
 
 
 # Temporary Registration of Seeker
@@ -33,7 +38,7 @@ class TempRegOfSeeker(models.Model):
     image = models.ImageField(
         _("image"),
         default="default_profile.jpg",
-        upload_to=seeker_pics,
+        upload_to=temp_reg_of_seeker_pics,
         blank=True,
     )
     city = models.CharField(_("city"), max_length=50)

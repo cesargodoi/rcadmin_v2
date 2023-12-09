@@ -1,6 +1,6 @@
 import os
 
-from django.db.models.signals import post_save, post_delete
+from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 from .models import Event
@@ -18,8 +18,3 @@ def insert_lecture(sender, instance, created, **kwargs):
             description="inserted along with the service",
             made_by=instance.made_by,
         )
-
-
-@receiver(post_delete, sender=Event)
-def delete_event_qr_code_image(sender, instance, **kwargs):
-    os.remove(instance.qr_code.path)

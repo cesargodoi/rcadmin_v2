@@ -4,6 +4,7 @@ from PIL import Image
 from django.conf import settings
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.utils.text import slugify
 from rcadmin.common import (
     get_filename,
     phone_format,
@@ -14,8 +15,8 @@ from rcadmin.common import (
 
 
 def center_pics(instance, filename):
-    filename = get_filename(instance)
-    return f"center_pics/{filename}"
+    ext = instance.image.name.split(".")[-1]
+    return f"center_pics/{slugify(instance.name)}.{ext}"
 
 
 def center_pix_pics(instance, filename):
@@ -106,6 +107,8 @@ class Center(models.Model):
                 img.save(self.image.path)
         if self.pix_image and self.image.name != "default_center_pix.jpg":
             pix_img = Image.open(self.pix_image.path)
+            if pix_img.mode == "RGBA":
+                pix_img = pix_img.convert("RGB")
             if pix_img.height > 300 or pix_img.width > 300:
                 pix_img.thumbnail((300, 300))
                 pix_img.save(self.pix_image.path)

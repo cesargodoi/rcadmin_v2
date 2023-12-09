@@ -1,9 +1,11 @@
 import uuid
 import qrcode
+import os
 
 from io import BytesIO
 
 from django.utils.translation import gettext_lazy as _
+from django.utils.text import slugify
 from django.conf import settings
 from django.core.files import File
 from django.db import models
@@ -29,14 +31,16 @@ class Activity(models.Model):
         verbose_name_plural = _("activities")
 
 
+def event_qr_codes(instance, filename):
+    ext = filename.split(".")[-1]
+    return f"event_qr_codes/{str(instance.id)}.{ext}"
+
+
 #  Event
 class Event(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     activity = models.ForeignKey(
         Activity, on_delete=models.PROTECT, verbose_name=_("activity")
-    )
-    qr_code = models.ImageField(
-        _("qr code"), upload_to="event_qr_codes", blank=True
     )
     center = models.ForeignKey(
         "center.Center", on_delete=models.PROTECT, verbose_name=_("center")
@@ -68,19 +72,6 @@ class Event(models.Model):
 
     def __str__(self):
         return f"{self.activity} - {self.center} ({self.date})"
-
-    def save(self, *args, **kwargs):
-        # generating QR
-        if not self.qr_code:
-            qr_img = qrcode.make(self.id)
-            canvas = Image.new("RGB", (370, 370), "white")
-            canvas.paste(qr_img)
-            file_name = f"{self.id}.png"
-            buffer = BytesIO()
-            canvas.save(buffer, "PNG")
-            self.qr_code.save(file_name, File(buffer), save=False)
-            canvas.close()
-        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = _("event")
