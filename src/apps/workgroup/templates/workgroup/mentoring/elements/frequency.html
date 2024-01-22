@@ -1,8 +1,8 @@
 <div 
-  class="freq-person {% if member.in_event %}freq-person-in-event{% endif %}"
-  hx-get="{% url 'add_remove_frequency' object.pk member.pk %}"
+  class="freq-person {% if obj.in_event %}freq-person-in-event{% endif %}"
+  hx-get="{% url 'mentoring_add_remove_frequency' object.pk obj.pk %}"
   hx-target="this"
   hx-swap="outerHTML"
 >
-  <i class="fa-regular fa-square{% if member.in_event %}-check{% endif %}"></i>&nbsp;&nbsp; {{ member.name }}
+  <i class="fa-regular fa-square{% if obj.in_event %}-check{% endif %}"></i>&nbsp;&nbsp; {{ obj.name }}
 </div>

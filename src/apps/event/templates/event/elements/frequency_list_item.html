@@ -15,12 +15,14 @@
 
 <div class="col-sm-2 text-right">
   {% if not request.user|has_group:"presidium"%}
-    <button 
-      type="button" 
-      onclick="manageData('{{ obj.del_link }}')"
-      class="btn btn-light text-danger btn-sm"
-    >
-      <i class="fas fa-trash-alt"></i>
-    </button>
+    {% if object.status == 'OPN' %}
+      <button 
+        type="button" 
+        onclick="manageData('{{ obj.del_link }}')"
+        class="btn btn-light text-danger btn-sm"
+      >
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    {% endif %}
   {% endif %}
 </div>

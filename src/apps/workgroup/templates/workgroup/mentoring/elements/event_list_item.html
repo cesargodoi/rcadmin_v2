@@ -12,19 +12,11 @@
   <em class="small">{{ obj.center }}</em>
 </div>
 
-<div class="col-sm-1">
-  <strong>{{ obj.get_status_display }}</strong>
+<div class="col-sm-1 text-center">
+  <span class="text-{% if tab == "add_frequencies" and obj.status == 'OPN' %}success{% else %}danger{% endif %}"><strong>{{ obj.get_status_display }}</strong></span>
 </div>
 
 <div class="col-sm-2 text-right">  
-  {% if tab == "add_frequencies" and obj.status == 'OPN' %}
-    <a type="button" 
-      href="{% url 'mentoring_add_frequencies' group_pk %}?event_pk={{ obj.pk }}"
-      class="btn btn-light text-primary btn-sm">
-      <i class="fa-solid fa-arrow-right-to-bracket"></i>
-    </a>
-  {% else %}
-    <strong>{{ obj.frequencies.all|length }}</strong> 
-    <i class="fas fa-users"></i>  
-  {% endif %}
+  <strong>{{ obj.frequencies.all|length }}</strong> 
+  <i class="fas fa-users"></i>  
 </div>

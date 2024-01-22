@@ -420,86 +420,6 @@ def membership_remove_frequency(request, group_pk, person_pk, freq_pk):
     return render(request, template_name, context)
 
 
-# @login_required
-# @permission_required("workgroup.view_workgroup")
-# @user_passes_test(
-#     lambda u: "admin" in [pr.name for pr in u.groups.all()]
-#     or "mentoring" in [pr.name for pr in u.groups.all()]
-# )
-# def mentoring_add_frequencies(request, group_pk):
-#     LIMIT, template_name, _from, _to, page = get_template_and_pagination(
-#         request,
-#         "workgroup/mentoring/add_frequencies.html",
-#         "workgroup/mentoring/elements/event_list.html",
-#     )
-
-#     workgroup = Workgroup.objects.get(pk=group_pk)
-
-#     if request.GET.get("event_pk"):
-#         # get event
-#         event = Event.objects.get(pk=request.GET["event_pk"])
-#         # create and prepare frequencies object in session, if necessary
-#         if not request.session.get("frequencies"):
-#             request.session["frequencies"] = {
-#                 "event": {},
-#                 "listeners": [],
-#             }
-#             _members = workgroup.membership_set.all().order_by(
-#                 "person__name_sa"
-#             )
-#             members = [
-#                 mbr.person for mbr in _members if mbr.role_type == "MBR"
-#             ]
-#             preparing_the_session(request, members, event)
-
-#     if request.method == "POST":
-#         listeners = get_listeners_dict(request)
-#         if listeners:
-#             for listener in listeners:
-#                 new_freq = dict(
-#                     event=event,
-#                     person_id=listener["id"],
-#                     aspect=listener["asp"],
-#                     observations=listener["obs"],
-#                 )
-#                 Frequency.objects.create(**new_freq)
-#         return redirect("mentoring_group_detail", pk=group_pk)
-
-#     if request.GET.get("init"):
-#         object_list, count = None, None
-#         clear_session(request, ["search"])
-#     else:
-#         object_list, count = search_event(request, Event, _from, _to)
-
-#     mentors = [
-#         mtr.person.short_name
-#         for mtr in workgroup.membership_set.all().order_by("person__name_sa")
-#         if mtr.role_type == "MTR"
-#     ]
-
-#     if not request.htmx and object_list:
-#         message = f"{count} records were found in the database"
-#         messages.success(request, message)
-
-#     context = {
-#         "LIMIT": LIMIT,
-#         "page": page,
-#         "counter": (page - 1) * LIMIT,
-#         "object_list": object_list,
-#         "count": count,
-#         "object": workgroup,
-#         "mentors": mentors,
-#         "init": True if request.GET.get("init") else False,
-#         "goback_link": reverse("group_detail", args=[group_pk]),
-#         "title": _("workgroup add members"),
-#         "nav": "detail",
-#         "tab": "add_frequencies",
-#         "goback": reverse("mentoring_group_detail", args=[group_pk]),
-#         "group_pk": group_pk,
-#     }
-#     return render(request, template_name, context)
-
-
 @login_required
 @permission_required("workgroup.view_workgroup")
 @user_passes_test(
@@ -564,15 +484,17 @@ def mentoring_add_frequencies(request, group_pk):
     template_name = "workgroup/mentoring/add_frequencies.html"
     event = Event.objects.get(pk=request.GET.get("event_pk"))
     workgroup = Workgroup.objects.get(pk=group_pk)
-    members = workgroup.members.all()
-    chars = list({m.name_sa[0].upper() for m in members})
+    object_list = workgroup.members.all().filter(is_active=True)
+
+    chars = list({m.name_sa[0].upper() for m in object_list})
     chars.sort()
-    if len(members) > 10:
-        members = get_persons(event, members, "A")
+
+    if len(object_list) > 50:
+        object_list = get_persons(event, object_list, "A")
 
     context = {
         "object": event,
-        "members": members,
+        "object_list": object_list,
         "group_pk": group_pk,
         "chars": chars,
     }
@@ -583,22 +505,22 @@ def choose_initial(request, group_pk, char):
     template_name = "workgroup/mentoring/elements/frequencies.html"
     workgroup = Workgroup.objects.get(pk=group_pk)
     event = Event.objects.get(pk=request.GET.get("event_pk"))
-    persons = workgroup.members.all()
-    members = get_persons(event, persons, char)
+    members = workgroup.members.all()
+    object_list = get_persons(event, members, char)
 
-    context = {"members": members, "object": event}
+    context = {"object_list": object_list, "object": event}
     return HttpResponse(
         render_to_string(template_name, context, request),
     )
 
 
-def add_remove_frequency(request, pk, person_pk):
+def add_remove_frequency(request, event_pk, person_pk):
     template_name = "workgroup/mentoring/elements/frequency.html"
-    event = Event.objects.get(pk=pk)
+    event = Event.objects.get(pk=event_pk)
     _person = Person.objects.get(pk=person_pk)
 
     frequency, created = Frequency.objects.get_or_create(
-        event_id=pk, person_id=person_pk, aspect=_person.aspect
+        event_id=event_pk, person_id=person_pk, aspect=_person.aspect
     )
 
     person = dict(name=short_name(_person.name), pk=_person.pk)
@@ -609,7 +531,7 @@ def add_remove_frequency(request, pk, person_pk):
         person["in_event"] = False
         frequency.delete()
 
-    context = {"person": person, "object": event}
+    context = {"obj": person, "object": event}
     return HttpResponse(render_to_string(template_name, context, request))
 
 

@@ -79,6 +79,11 @@ urlpatterns += [
         name="mentoring_choose_initial",
     ),
     path(
+        "<uuid:event_pk>/add-remove-frequency/<uuid:person_pk>",
+        mentoring.add_remove_frequency,
+        name="mentoring_add_remove_frequency",
+    ),
+    path(
         "mentoring/<int:group_pk>/add-frequencies/",
         mentoring.mentoring_add_frequencies,
         name="mentoring_add_frequencies",

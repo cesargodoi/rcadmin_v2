@@ -24,28 +24,7 @@ def frequency_delete(request, pk, person_id):
 
     if request.method == "DELETE":
         event.frequencies.remove(person)
-
-        LIMIT, template_name, _from, _to, page = get_template_and_pagination(
-            request, "event/detail.html", "event/elements/frequency_list.html"
-        )
-
-        _object_list = event.frequency_set.all().order_by("person__name_sa")
-        count = len(_object_list)
-        object_list = _object_list[_from:_to]
-        # add action links
-        for item in object_list:
-            item.del_link = reverse(
-                "frequency_delete", args=[pk, item.person.pk]
-            )
-
-        context = {
-            "LIMIT": LIMIT,
-            "page": page,
-            "counter": (page - 1) * LIMIT,
-            "object_list": object_list,
-            "count": count,
-        }
-        return render(request, template_name, context)
+        return HttpResponse(headers={"HX-Refresh": "true"})
 
     template_name = "event/confirm/delete.html"
     context = {
@@ -61,12 +40,18 @@ def frequency_delete(request, pk, person_id):
 def add_frequencies(request, pk):
     template_name = "event/elements/add_frequencies.html"
     event = Event.objects.get(pk=pk)
-    persons = get_persons(event, request.user.person.center, "A")
+    persons = Person.objects.filter(
+        center=event.center, is_active=True
+    ).order_by("name_sa")
+    object_list = get_persons(event, persons, "A")
+
+    chars = list({m.name_sa[0].upper() for m in persons})
+    chars.sort()
 
     context = {
         "object": event,
-        "persons": persons,
-        "chars": [*"ABCDEFGHIJKLMNOPQRSTUVWXYZ"],
+        "object_list": object_list,
+        "chars": chars,
     }
     return render(request, template_name, context)
 
@@ -74,9 +59,12 @@ def add_frequencies(request, pk):
 def choose_initial(request, pk, char):
     template_name = "event/elements/frequencies.html"
     event = Event.objects.get(pk=pk)
-    persons = get_persons(event, request.user.person.center, char)
+    persons = Person.objects.filter(
+        center=event.center, is_active=True
+    ).order_by("name_sa")
+    object_list = get_persons(event, persons, char)
 
-    context = {"persons": persons, "object": event}
+    context = {"object_list": object_list, "object": event}
     return HttpResponse(
         render_to_string(template_name, context, request),
     )
@@ -99,17 +87,13 @@ def add_remove_frequency(request, pk, person_pk):
         person["in_event"] = False
         frequency.delete()
 
-    context = {"person": person, "object": event}
+    context = {"obj": person, "object": event}
     return HttpResponse(render_to_string(template_name, context, request))
 
 
 # handler
-def get_persons(event, center, char):
-    objects = Person.objects.filter(
-        center=center,
-        is_active=True,
-        name_sa__istartswith=char,
-    ).order_by("name_sa")
+def get_persons(event, persons, char):
+    objects = persons.filter(name_sa__istartswith=char).order_by("name_sa")
 
     persons = []
     for obj in objects:

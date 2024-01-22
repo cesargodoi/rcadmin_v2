@@ -12,8 +12,9 @@
   <em class="small">{{ obj.center }}</em>
 </div>
 
-<div class="col-sm-1">
-  <strong>{{ obj.get_status_display }}</strong>
+<div class="col-sm-1 text-center">
+  <span class="text-{% if obj.status == 'OPN' %}success{% else %}danger{% endif %}"><strong>{{ obj.get_status_display }}</strong></span>
+  {% comment %} <strong>{{ obj.get_status_display }}</strong> {% endcomment %}
 </div>
 
 <div class="col-sm-2 text-right">  

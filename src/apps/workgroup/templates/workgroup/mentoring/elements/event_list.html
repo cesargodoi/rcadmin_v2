@@ -2,29 +2,25 @@
  {% include "base/elements/search_result.html" %}
 {% endif %}
 {% for obj in object_list %}
-  {% if forloop.last and forloop.counter == LIMIT %}
-    <div 
-      class="row border-top border-secondary pb-2 pt-2 {% if not obj.is_active %}
-                                                         text-danger
-                                                       {% elif obj.center != request.user.person.center %}
-                                                         text-warning
-                                                       {% endif %}"
+  <div 
+    class="row border-top border-secondary pb-2 pt-2 {% if not obj.is_active %}
+                                                        text-danger
+                                                      {% elif obj.center != request.user.person.center %}
+                                                        text-warning
+                                                      {% endif %}
+                                                      {% if tab == 'add_frequencies' and obj.status == 'OPN' %}
+                                                        is-link
+                                                      {% endif %}"
+    {% if forloop.last and forloop.counter == LIMIT %}
       hx-get="{% url 'mentoring_get_event_list' group_pk %}?page={{ page|add:1 }}" 
       hx-trigger="revealed" 
       hx-swap="afterend"
       hx-target="this"
-    >
-  {% else %}
-    <div 
-      class="row border-top border-secondary pb-2 pt-2 {% if not obj.is_active %}
-                                                         text-danger
-                                                       {% elif obj.center != request.user.person.center %}
-                                                         text-warning
-                                                       {% endif %}"
-    >
-  {% endif %}
-
-  {% include "workgroup/mentoring/elements/event_list_item.html" %}
-
+    {% endif %}
+    {% if tab == "add_frequencies" and obj.status == 'OPN' %}
+      onclick="location.href='{% url 'mentoring_add_frequencies' group_pk %}?event_pk={{ obj.pk }}';"
+    {% endif %}
+  >
+    {% include "workgroup/mentoring/elements/event_list_item.html" %}
   </div>
 {% endfor %}
