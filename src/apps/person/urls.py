@@ -15,6 +15,7 @@ urlpatterns = [
     path("", person.person_home, name="person_home"),
     path("<uuid:id>/detail/", person.person_detail, name="person_detail"),
     path("create/", person.person_create, name="person_create"),
+    path("check_email/", person.check_email, name="person_check_email"),
     path(
         "<uuid:id>/update_profile/",
         person.update_profile,

@@ -1,4 +1,4 @@
-{% load base_extras %}
+{% load my_tags %}
 {% load i18n %}
 
 {% if updated %}
@@ -16,7 +16,7 @@
     {{ object.birth|date:"d/m/Y" }}
       &nbsp;&nbsp; 
       <small class="text-secondary">
-        {{ age }} {% trans 'years' %}
+        {{ object.birth|age }} {% trans 'years' %}
       </small>
   </div>
 </div>

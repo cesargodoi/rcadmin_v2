@@ -64,6 +64,26 @@ urlpatterns += [
         name="mentoring_member_historic",
     ),
     path(
+        "mentoring/<int:group_pk>/get-event/",
+        mentoring.mentoring_get_event,
+        name="mentoring_get_event",
+    ),
+    path(
+        "mentoring/<int:group_pk>/get-event-list/",
+        mentoring.mentoring_get_event_list,
+        name="mentoring_get_event_list",
+    ),
+    path(
+        "<int:group_pk>/choose-initial/<str:char>",
+        mentoring.choose_initial,
+        name="mentoring_choose_initial",
+    ),
+    path(
+        "<uuid:event_pk>/add-remove-frequency/<uuid:person_pk>",
+        mentoring.add_remove_frequency,
+        name="mentoring_add_remove_frequency",
+    ),
+    path(
         "mentoring/<int:group_pk>/add-frequencies/",
         mentoring.mentoring_add_frequencies,
         name="mentoring_add_frequencies",

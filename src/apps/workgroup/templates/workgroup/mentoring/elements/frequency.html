@@ -1,6 +1,6 @@
 <div 
   class="freq-person {% if obj.in_event %}freq-person-in-event{% endif %}"
-  hx-get="{% url 'add_remove_frequency' object.pk obj.pk %}"
+  hx-get="{% url 'mentoring_add_remove_frequency' object.pk obj.pk %}"
   hx-target="this"
   hx-swap="outerHTML"
 >

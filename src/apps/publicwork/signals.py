@@ -26,22 +26,20 @@ def insert_historic(sender, instance, created, **kwargs):
 
 @receiver(post_delete, sender=TempRegOfSeeker)
 def delete_temp_reg_of_seeker_image(sender, instance, *args, **kwargs):
-    if instance.image.name != "default_profile.jpg":
-        image_path = instance.image.path
-        if os.path.exists(image_path):
-            remove_image_from_folder(image_path)
+    if hasattr(instance, "image") and instance.image:
+        if instance.image.name != "default_profile.jpg":
+            image_path = instance.image.path
+            if os.path.exists(image_path):
+                remove_image_from_folder(image_path)
 
 
 @receiver(post_delete, sender=Seeker)
 def delete_seeker_image(sender, instance, *args, **kwargs):
-    if instance.image.name != "default_profile.jpg":
-        print("image_.name != default_profile.jpg ")
-        image_path = instance.image.path
-        if os.path.exists(image_path):
-            remove_image_from_folder(image_path)
-    else:
-        print("image_.name == default_profile.jpg ")
-        print()
+    if hasattr(instance, "image") and instance.image:
+        if instance.image.name != "default_profile.jpg":
+            image_path = instance.image.path
+            if os.path.exists(image_path):
+                remove_image_from_folder(image_path)
 
 
 @receiver(pre_save, sender=Seeker)

@@ -24,6 +24,5 @@ def test_update_form_of_payment(create_form_of_payment):
 def test_delete_form_of_payment(create_form_of_payment):
     for _ in range(4):
         create_form_of_payment()
-    form_of_payment = FormOfPayment.objects.last()
-    form_of_payment.delete()
+    FormOfPayment.objects.last().delete()
     assert FormOfPayment.objects.count() == 3

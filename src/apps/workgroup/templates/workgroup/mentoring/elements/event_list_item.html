@@ -1,0 +1,22 @@
+{% load my_tags %}
+{% load i18n %}
+<div class="col-sm-2">
+  <small class="text-muted align-top">{{ forloop.counter|add:counter }}</small>
+  &nbsp;&nbsp;
+  <strong>{{ obj.date|date:'d/m/y' }}</strong>
+</div>
+
+<div class="col-sm-7">
+  <strong>{{ obj.activity.name }}</strong>
+  &nbsp;&nbsp;&nbsp;
+  <em class="small">{{ obj.center }}</em>
+</div>
+
+<div class="col-sm-1 text-center">
+  <span class="text-{% if tab == "add_frequencies" and obj.status == 'OPN' %}success{% else %}danger{% endif %}"><strong>{{ obj.get_status_display }}</strong></span>
+</div>
+
+<div class="col-sm-2 text-right">  
+  <strong>{{ obj.frequencies.all|length }}</strong> 
+  <i class="fas fa-users"></i>  
+</div>

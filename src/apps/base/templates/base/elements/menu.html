@@ -1,4 +1,4 @@
-{% load base_extras %}
+{% load my_tags %}
 {% load i18n %}
 
 {% if request.user.is_superuser or request.user|has_group:"office" or request.user|has_group:"treasury" or request.user|has_group:"presidium" %}

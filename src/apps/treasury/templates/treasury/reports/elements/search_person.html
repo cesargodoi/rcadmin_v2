@@ -1,0 +1,27 @@
+{% load i18n %}
+<div class="input-group">
+  <input 
+    type="text"
+    class="form-control" 
+    name="term" 
+    placeholder="{% trans 'Type pupil name' %}"
+    hx-get="{% url 'reports_search_person' %}"
+    hx-target="#personNames"
+    hx-trigger="keyup changed delay:500ms"
+  >
+</div>
+<div class="float-right" style="position: absolute; z-index: 10; left: -1px;">
+  <div class="col-sm-12" id="personNames"></div>
+</div>
+
+{% block scripts %}
+  <script>
+    function searchByName(url) {
+      let term = document.querySelector('input[name="term"]');
+      term.value = '';
+      let personNames = document.querySelector("#personNames");
+      personNames.innerHTML = '';
+      htmx.ajax('GET', url, '#showPerson');
+    }
+  </script>
+{% endblock scripts %}

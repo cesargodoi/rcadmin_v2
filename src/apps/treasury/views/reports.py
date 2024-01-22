@@ -135,6 +135,7 @@ def payments_by_person(request):
     object_list = []
 
     if request.GET.get("person"):
+        template_name = "treasury/reports/elements/show_person.html"
         person = Person.objects.get(name=request.GET.get("person"))
         request.session["order"]["person"] = {
             "name": person.name,
@@ -142,13 +143,6 @@ def payments_by_person(request):
         }
         request.session.modified = True
         payments = person.payment_set.all().order_by("-created_on")
-        object_list = paginator(payments, page=request.GET.get("page"))
-    elif request.session["order"]["person"]:
-        person = Person.objects.get(
-            id=request.session["order"]["person"]["id"]
-        )
-        payments = person.payment_set.all().order_by("-created_on")
-
         object_list = paginator(payments, page=request.GET.get("page"))
 
     context = {
@@ -160,65 +154,20 @@ def payments_by_person(request):
     return render(request, template_name, context)
 
 
-# @login_required
-# @permission_required("treasury.view_order")
-# def payments_by_person(request):
-#     template_name = "treasury/reports/payments_by_person.html"
-#     if not request.session.get("order"):
-#         request.session["order"] = {
-#             "person": {},
-#             "payments": [],
-#             "payforms": [],
-#             "total_payments": 0.0,
-#             "total_payforms": 0.0,
-#             "missing": 0.0,
-#             "status": None,
-#             "description": "",
-#             "self_payed": False,
-#         }
-
-#     person = None
-#     object_list = []
-
-#     if request.GET.get("person"):
-#         person = Person.objects.get(name=request.GET.get("person"))
-#         request.session["order"]["person"] = {
-#             "name": person.name,
-#             "id": str(person.id),
-#         }
-#         request.session.modified = True
-#         payments = person.payment_set.all().order_by("-created_on")
-#         object_list = paginator(payments, page=request.GET.get("page"))
-#     elif request.session["order"]["person"]:
-#         person = Person.objects.get(
-#             id=request.session["order"]["person"]["id"]
-#         )
-#         payments = person.payment_set.all().order_by("-created_on")
-
-#         object_list = paginator(payments, page=request.GET.get("page"))
-
-#     context = {
-#         "title": _("Payment by person"),
-#         "object": person,
-#         "object_list": object_list,
-#         "nav": "reports",
-#     }
-#     return render(request, template_name, context)
-
-
 # helpers
-# get person by jQuery
+# get person by htmx
 def reports_search_person(request):
-    template_name = "treasury/reports/payment_by_person.html"
-    if request.is_ajax():
-        term = request.GET.get("term")
-        persons = Person.objects.filter(
-            name__icontains=term, center=request.user.person.center
-        )[:20]
-        results = [person.name for person in persons]
-        return JsonResponse(results, safe=False)
-
-    return render(request, template_name)
+    template_name = "treasury/reports/elements/search_results.html"
+    results = (
+        Person.objects.filter(
+            name__icontains=request.GET.get("term"),
+            center=request.user.person.center,
+        )[:10]
+        if request.GET.get("term")
+        else None
+    )
+    context = {"results": results}
+    return render(request, template_name, context)
 
 
 # search dates

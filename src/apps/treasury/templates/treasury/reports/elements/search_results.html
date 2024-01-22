@@ -1,0 +1,17 @@
+{% load i18n %}
+<ul class="list-group">
+  {% for person in results %}
+    <li 
+      class="list-group-item text-secondary is-link"
+      onclick="searchByName('{% url 'payments_by_person' %}?person={{ person.name }}')"
+    >
+      {{ person.name }}
+    </li>
+  {% empty %}
+    <li class="list-group-item text-secondary">{% trans 'No search results' %}</li>
+  {% endfor %}
+</ul>
+
+
+
+

@@ -1,7 +1,7 @@
 ; (function () {
   // Response targeting #formBody => show the modal
   htmx.on("#modalForm", "htmx:afterSwap", (event) => {
-    if (event.detail.target.id == "formBody") {
+    if (event.detail.target.id === "formBody") {
       $('#modalForm').modal('show');
     }
   })
@@ -14,11 +14,17 @@
   })
 
   // Close modal by event
-  htmx.on("closeModal", () => { $('#modalForm').modal('hide') })
+  htmx.on("closeModal", (event) => {
+    if (!closeModalAttribute && event.detail.target.id != 'innerResult') {
+      $('#modalForm').modal('hide');
+    }
+  });
 
   // Close modal (old style)
-  htmx.on("#modalForm", "htmx:beforeSend", (e) => {
-    $('#modalForm').modal('hide');
+  htmx.on("#modalForm", "htmx:beforeSend", (event) => {
+    if (event.detail.target.id != 'innerResult') {
+      $('#modalForm').modal('hide');
+    }
   });
 
   // Remove #formBody content after hiding

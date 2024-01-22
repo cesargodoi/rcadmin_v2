@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load crispy_forms_tags %}
 
-<form method="POST" action="{{ callback_link }}">
+<form method="POST" action="{{ request.path }}">
 
   {% csrf_token %}
 
@@ -21,7 +21,26 @@
   </div>
 
   <div class="modal-body">
-    {{ user_form.email | as_crispy_field }}
+    <div id="div_id_email" class="form-group">
+      <label for="id_email" class=" requiredField">
+        {% trans "Email" %}<span class="asteriskField">*</span>
+      </label> 
+      <div>
+        <input 
+          id="id_email"
+          type="email" 
+          name="email" 
+          maxlength="255" 
+          class="emailinput form-control" 
+          required="" 
+          hx-get="{% url 'person_check_email' %}"
+          hx-trigger="blur"
+          hx-swap="outherHTML"
+          hx-target="#innerResult"
+        >
+        <small class="text-danger" id="innerResult"></small>
+      </div>
+    </div>
     {{ person_form.name | as_crispy_field }}
 
     <div class="row">
@@ -60,6 +79,7 @@
         {% trans 'Cancel' %}
       </button>
       <button 
+        id="submit"
         type="submit"
         class="btn btn-primary"
       >
@@ -69,3 +89,17 @@
     </div>
   </div>
 </form>
+
+<script>
+  const input_email = document.getElementById('id_email');
+  const innerResult = document.getElementById('innerResult');
+  const submit = document.getElementById('submit');
+
+  htmx.on("#innerResult", "htmx:afterSwap", (event) => {
+    if (event.detail.xhr.response) {
+      submit.disabled = true;
+    } else {
+      submit.disabled = false;
+    }
+  })
+</script>

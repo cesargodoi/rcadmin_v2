@@ -1,4 +1,5 @@
 {% load static %}
+{% load my_tags %}
 {% load i18n %}
 
 <div class="row border-top border-secondary pt-3">
@@ -33,7 +34,7 @@
           <td>
             {{ object.birth|date:"d/m/Y" }}
             &nbsp;&nbsp; <small class="text-mute">{% trans 'age' %}</small> &nbsp;&nbsp;
-            {{ age }} {% trans 'years' %}
+            {{ object.birth|age }} {% trans 'years' %}
           </td>
         </tr>
         <tr>

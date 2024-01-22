@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import (
     user_passes_test,
 )
 from django.contrib.auth.models import Group
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.http.response import Http404
 from django.shortcuts import redirect, render
 from django.template.loader import render_to_string
@@ -23,6 +23,7 @@ from rcadmin.common import (
     STATUS,
     clear_session,
     get_template_and_pagination,
+    us_inter_char,
 )
 
 from ..forms import (
@@ -98,7 +99,6 @@ def person_detail(request, id):
     context = {
         "object": person,
         "title": _("person detail"),
-        "age": (date.today() - person.birth).days // 365,
         "nav": "detail",
         "tab": request.GET.get("tab") or "info",
         "date": timezone.now().date(),
@@ -111,9 +111,8 @@ def person_detail(request, id):
 def person_create(request):
     if request.method == "POST":
         try:
-            # creating a new user
+            # creating amodalForm new user and add to 'user' group
             new_user = User.objects.create_user(email=request.POST["email"])
-            # add user in "user" group
             new_user.groups.add(Group.objects.get(name="user"))
             # updating the user.profile
             profile_form = ProfileForm(request.POST, instance=new_user.profile)
@@ -133,6 +132,7 @@ def person_create(request):
             message = f"The Person '{request.POST['name']}' has been created!"
             messages.success(request, message)
             return redirect("person_detail", id=new_user.person.pk)
+
         except Exception:
             message = "There are some errors in the form, please correct them."
             messages.warning(request, message)
@@ -152,6 +152,21 @@ def person_create(request):
         "title": _("Create person"),
     }
     return render(request, template_name, context)
+
+
+@login_required
+def check_email(request):
+    if len(request.GET.get("email")) < 10:
+        return HttpResponse()
+
+    typed_email = us_inter_char(request.GET.get("email").lower())
+    used_email = User.objects.filter(email=typed_email).first()
+
+    if not used_email:
+        return HttpResponse()
+
+    message = _("This email is already in use. Please use another one.")
+    return HttpResponse(message)
 
 
 #  partial updates
@@ -216,11 +231,7 @@ def update_pupil(request, id):
             form.save()
 
             template_name = "person/elements/tab_pupil.html"
-            context = {
-                "object": person,
-                "age": (date.today() - person.birth).days // 365,
-                "updated": True,
-            }
+            context = {"object": person, "updated": True}
             return HttpResponse(
                 render_to_string(template_name, context, request),
                 headers={

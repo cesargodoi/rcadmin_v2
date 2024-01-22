@@ -54,9 +54,9 @@ def make_active(self, request, queryset):
 @admin.register(Person)
 class PersonAdmin(admin.ModelAdmin):
     actions = [make_inactive, make_active]
-    list_filter = ["aspect", "status", "is_active"]
+    list_filter = ["aspect", "status", "center", "is_active"]
     search_fields = ["name"]
-    list_display = ["name", "person_type", "aspect", "status"]
+    list_display = ["name", "person_type", "aspect", "center", "status"]
 
     readonly_fields = ("created_on", "modified_on", "made_by")
     fieldsets = [
