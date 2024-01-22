@@ -72,7 +72,6 @@ def seeker_detail(request, pk):
     belongs_center(request, pk, Seeker)
     seeker = Seeker.objects.get(pk=pk)
 
-    age = (date.today() - seeker.birth).days // 365
     if request.GET.get("pwg"):
         request.session["pwg"] = request.GET["pwg"]
     context = {
@@ -80,7 +79,6 @@ def seeker_detail(request, pk):
         "title": _("seeker detail"),
         "nav": "seeker",
         "tab": "info",
-        "age": age,
     }
     return render(request, "publicwork/seeker/detail.html", context)
 

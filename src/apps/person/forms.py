@@ -18,12 +18,21 @@ class UserForm(forms.ModelForm):
 
 
 class ProfileForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(ProfileForm, self).__init__(*args, **kwargs)
+        self.fields["city"].required = True
+        self.fields["state"].required = True
+
     class Meta:
         model = Profile
         fields = ["gender", "city", "state", "country"]
 
 
 class PersonForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(PersonForm, self).__init__(*args, **kwargs)
+        self.fields["birth"].required = True
+
     class Meta:
         model = Person
         fields = ["name", "birth", "is_active", "made_by", "observations"]
@@ -70,6 +79,7 @@ class PupilFormUpdate(forms.ModelForm):
         fields = "__all__"
         exclude = [
             "user",
+            "center",
             "status",
             "aspect",
             "aspect_date",

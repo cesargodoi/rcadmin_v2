@@ -1,3 +1,6 @@
+{% if page == 1 %}
+ {% include "base/elements/search_result.html" %}
+{% endif %}
 {% for obj in object_list %}
   {% if forloop.last and forloop.counter == LIMIT %}
     <div 
@@ -6,7 +9,7 @@
                                                        {% elif obj.center != request.user.person.center %}
                                                          text-warning
                                                        {% endif %}"
-      hx-get="{% url 'mentoring_add_frequencies' group_pk %}?page={{ page|add:1 }}" 
+      hx-get="{% url 'mentoring_get_event_list' group_pk %}?page={{ page|add:1 }}" 
       hx-trigger="revealed" 
       hx-swap="afterend"
       hx-target="this"
@@ -21,7 +24,7 @@
     >
   {% endif %}
 
-  {% include "event/elements/event_list_item.html" %}
+  {% include "workgroup/mentoring/elements/event_list_item.html" %}
 
   </div>
 {% endfor %}

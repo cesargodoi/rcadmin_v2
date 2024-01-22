@@ -1,0 +1,7 @@
+{% load i18n %}
+
+{% block content %}
+  {% for member in members %}
+    {% include "workgroup/mentoring/elements/frequency.html" %}
+  {% endfor %}
+{% endblock content %}

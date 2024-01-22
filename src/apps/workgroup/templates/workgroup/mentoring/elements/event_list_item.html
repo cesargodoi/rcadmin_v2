@@ -17,28 +17,14 @@
 </div>
 
 <div class="col-sm-2 text-right">  
-  {% if tab == "add_frequencies" and obj.is_active %}
+  {% if tab == "add_frequencies" and obj.status == 'OPN' %}
     <a type="button" 
       href="{% url 'mentoring_add_frequencies' group_pk %}?event_pk={{ obj.pk }}"
       class="btn btn-light text-primary btn-sm">
       <i class="fa-solid fa-arrow-right-to-bracket"></i>
     </a>
-  {% elif not nav == "home" and obj.is_active %}
-    {% if obj.pk not in pre_freqs %}
-      <button 
-        type="button" 
-        onclick="manageData('{{ obj.add_link }}?pk={{ obj.pk }}')"
-        class="btn btn-light text-primary btn-sm"
-      >
-        <i class="fas fa-plus"></i>
-      </button>
-    {% else %}
-      <i class="fas fa-user-check mr-1"></i>
-    {% endif %}
   {% else %}
-    {% if obj.frequencies.all|length > 0 and obj.is_active %}
-      <strong>{{ obj.frequencies.all|length }}</strong> 
-      <i class="fas fa-users"></i>  
-    {% endif %}
+    <strong>{{ obj.frequencies.all|length }}</strong> 
+    <i class="fas fa-users"></i>  
   {% endif %}
 </div>

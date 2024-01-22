@@ -1,0 +1,33 @@
+{% extends "base/base.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="text-right mb-2 mt-4">
+  <a class="btn btn-light mt-2 mr-3 text-info"
+      href="{% url 'mentoring_group_frequencies' group_pk %}">
+    <i class="fas fa-chevron-left"></i> 
+    {% trans 'Back' %}
+  </a>
+</div>
+
+<article class="media content-section">
+  <div class="media-body">
+    <h4>{% trans 'Select an event' %}</h4>
+
+    <form 
+      id="getEvents"
+      class="form-control-sm border-top" 
+      hx-get="{% url 'mentoring_get_event_list' group_pk %}?page={{ page|add:1 }}"
+      hx-trigger="submit"
+      hx-target="#results"
+      hx-swap="innerHTML"
+    >
+      {% include "base/searchs/event.html" %}
+    </form>
+    <br>
+    <div id="results"></div>
+  </div>
+</article>
+
+{% endblock content %}

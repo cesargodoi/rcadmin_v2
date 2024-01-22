@@ -1,4 +1,4 @@
-{% load base_extras %}
+{% load my_tags %}
 {% load i18n %}
 
 <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" id="submenu">
@@ -31,7 +31,7 @@
     {% if nav == "detail" %}
       {% if not request.session.frequencies.event and tab == "frequencies" %}
         <a class="nav-link pl-2 px-1 mx-1 py-3 my-n2 text-primary" 
-           href="{% url 'mentoring_add_frequencies' object.id %}?init=on">
+           href="{% url 'mentoring_get_event' object.id %}">
           <i class="fas fa-calendar-plus"></i>
           {% trans 'Frequencies' %}
         </a>

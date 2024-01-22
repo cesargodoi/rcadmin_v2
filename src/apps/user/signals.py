@@ -25,10 +25,11 @@ def save_profile(sender, instance, **kwargs):
 
 @receiver(post_delete, sender=Profile)
 def delete_profile_image(sender, instance, *args, **kwargs):
-    if instance.image.name != "default_profile.jpg":
-        image_path = instance.image.path
-        if os.path.exists(image_path):
-            remove_image_from_folder(image_path)
+    if hasattr(instance, "image") and instance.image:
+        if instance.image.name != "default_profile.jpg":
+            image_path = instance.image.path
+            if os.path.exists(image_path):
+                remove_image_from_folder(image_path)
 
 
 @receiver(pre_save, sender=Profile)
