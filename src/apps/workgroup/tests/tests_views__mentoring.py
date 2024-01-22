@@ -125,6 +125,7 @@ def test_access__mentoring_add_frequencies__user_by_type(
     center_factory,
     auto_login_user,
     create_workgroup,
+    create_event,
     user_type,
     status_code,
 ):
@@ -132,7 +133,10 @@ def test_access__mentoring_add_frequencies__user_by_type(
     center = center_factory.create()
     client, user = auto_login_user(group=user_type, center=center)
     workgroup = create_workgroup(center=center)
-    url = reverse("mentoring_add_frequencies", args=[workgroup.pk])
+    event = create_event(center=center)
+    url = "{}?event_pk={}".format(
+        reverse("mentoring_add_frequencies", args=[workgroup.pk]), event.pk
+    )
     response = client.get(url)
     assert response.status_code == status_code
 
