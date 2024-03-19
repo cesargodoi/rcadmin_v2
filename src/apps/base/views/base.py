@@ -23,18 +23,15 @@ def home(request):
 
 
 def change_color_scheme(request):
-    if request.is_ajax():
-        if (
-            not request.session.get("color_theme")
-            or request.session["color_theme"] == "light"
-        ):
-            request.session["color_theme"] = "dark"
-        else:
-            request.session["color_theme"] = "light"
+    if (
+        not request.session.get("color_theme")
+        or request.session["color_theme"] == "light"
+    ):
+        request.session["color_theme"] = "dark"
+    else:
+        request.session["color_theme"] = "light"
 
-        return JsonResponse({"change": True}, safe=False)
-
-    return render(request, "base/home.html")
+    return HttpResponse(headers={"HX-Refresh": "true"})
 
 
 def error_404(request, exception):

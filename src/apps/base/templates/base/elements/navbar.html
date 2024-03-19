@@ -55,7 +55,7 @@
                 </a>
                 <button type="button" 
                     class="btn_color" 
-                    onclick="changeColor()"
+                    hx-get="{% url 'change_color_scheme' %}"
                     data-toggle="tooltip" 
                     data-placement="right" 
                     title="{% if request.session.color_theme == 'dark' %}light{% else %}dark{% endif %}">
