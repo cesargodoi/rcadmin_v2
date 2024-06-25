@@ -95,8 +95,8 @@ class Profile(models.Model):
     image = models.ImageField(
         _("image"), default="default_profile.jpg", upload_to=profile_pics
     )
-    address = models.CharField(_("address"), max_length=50, blank=True)
-    number = models.CharField(_("number"), max_length=10, blank=True)
+    address = models.CharField(_("address"), max_length=100, blank=True)
+    number = models.CharField(_("number"), max_length=25, blank=True)
     complement = models.CharField(_("complement"), max_length=50, blank=True)
     district = models.CharField(_("district"), max_length=50, blank=True)
     city = models.CharField(_("city"), max_length=50, blank=True)
@@ -113,6 +113,10 @@ class Profile(models.Model):
         _("emergency phone"), max_length=20, blank=True
     )
 
+    def __init__(self, *args, **kwargs):
+        super(Profile, self).__init__(*args, **kwargs)
+        self._original_image = self.image
+
     def save(self, *args, **kwargs):
         if not self.social_name:
             self.social_name = (
@@ -122,7 +126,9 @@ class Profile(models.Model):
         self.sos_phone = phone_format(self.sos_phone)
         self.state = str(self.state).upper()
         super(Profile, self).save(*args, **kwargs)
-        if self.image:
+        if self.image and (
+            not self._original_image or self.image != self._original_image
+        ):
             img = Image.open(self.image.path)
             if img.filename.split("/")[-1] != "default_profile.jpg":
                 if img.height > 300 or img.width > 300:

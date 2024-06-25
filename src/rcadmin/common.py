@@ -34,6 +34,7 @@ CENTER_TYPES = (
 )
 
 ASPECTS = (
+    ("21", _("Project 21")),
     ("A1", _("1st. Aspect")),
     ("A2", _("2nd. Aspect")),
     ("A3", _("3rd. Aspect")),

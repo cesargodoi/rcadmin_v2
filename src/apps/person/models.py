@@ -38,8 +38,8 @@ class Invitation(models.Model):
     id_card = models.CharField(
         _("id card"), max_length=30, null=True, blank=True
     )
-    address = models.CharField(_("address"), max_length=50, blank=True)
-    number = models.CharField(_("number"), max_length=10, blank=True)
+    address = models.CharField(_("address"), max_length=100, blank=True)
+    number = models.CharField(_("number"), max_length=25, blank=True)
     complement = models.CharField(_("complement"), max_length=50, blank=True)
     district = models.CharField(_("district"), max_length=50, blank=True)
     city = models.CharField(_("city"), max_length=50, null=True, blank=True)

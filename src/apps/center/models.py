@@ -31,8 +31,8 @@ class Center(models.Model):
     short_name = models.CharField(
         _("short name"), max_length=25, null=True, blank=True
     )
-    address = models.CharField(_("address"), max_length=50, blank=True)
-    number = models.CharField(_("number"), max_length=10, blank=True)
+    address = models.CharField(_("address"), max_length=100, blank=True)
+    number = models.CharField(_("number"), max_length=25, blank=True)
     complement = models.CharField(_("complement"), max_length=50, blank=True)
     district = models.CharField(_("district"), max_length=50, blank=True)
     city = models.CharField(_("city"), max_length=50, blank=True)
@@ -105,7 +105,7 @@ class Center(models.Model):
             if img.height > 300 or img.width > 300:
                 img.thumbnail((300, 300))
                 img.save(self.image.path)
-        if self.pix_image and self.image.name != "default_center_pix.jpg":
+        if self.pix_image and self.pix_image.name != "default_center_pix.jpg":
             pix_img = Image.open(self.pix_image.path)
             if pix_img.mode == "RGBA":
                 pix_img = pix_img.convert("RGB")
